@@ -1,0 +1,149 @@
+1a. The teacher greets the student.
+1b. The teacher politely greets the student.
+1c. The diligent teacher greets the student.
+1d. The diligent teacher politely greets the student.
+
+2a. The teacher in the hallway greets the student.
+2b. The teacher in the hallway politely greets the student.
+2c. The diligent teacher in the hallway greets the student.
+2d. The diligent teacher in the hallway politely greets the student.
+
+3a. The teacher who arrived early greets the student.
+3b. The teacher who arrived early politely greets the student.
+3c. The diligent teacher who arrived early greets the student.
+3d. The diligent teacher who arrived early politely greets the student.
+
+4a. The teacher who the principal praised greets the student.
+4b. The teacher who the principal praised politely greets the student.
+4c. The diligent teacher who the principal praised greets the student.
+4d. The diligent teacher who the principal praised politely greets the student.
+
+5a. The teacher who helped the assistant who lives nearby greets the student.
+5b. The teacher who helped the assistant who lives nearby politely greets the student.
+5c. The diligent teacher who helped the assistant who lives nearby greets the student.
+5d. The diligent teacher who helped the assistant who lives nearby politely greets the student.
+
+6a. The teacher who the student who the coach trained admired greets the student.
+6b. The teacher who the student who the coach trained admired politely greets the student.
+6c. The diligent teacher who the student who the coach trained admired greets the student.
+6d. The diligent teacher who the student who the coach trained admired politely greets the student.
+
+1a. The chef prepares the meal.
+1b. The chef skillfully prepares the meal.
+1c. The experienced chef prepares the meal.
+1d. The experienced chef skillfully prepares the meal.
+
+2a. The chef by the kitchen prepares the meal.
+2b. The chef by the kitchen skillfully prepares the meal.
+2c. The experienced chef by the kitchen prepares the meal.
+2d. The experienced chef by the kitchen skillfully prepares the meal.
+
+3a. The chef who perfected the recipe prepares the meal.
+3b. The chef who perfected the recipe skillfully prepares the meal.
+3c. The experienced chef who perfected the recipe prepares the meal.
+3d. The experienced chef who perfected the recipe skillfully prepares the meal.
+
+4a. The chef who the customer admired prepares the meal.
+4b. The chef who the customer admired skillfully prepares the meal.
+4c. The experienced chef who the customer admired prepares the meal.
+4d. The experienced chef who the customer admired skillfully prepares the meal.
+
+5a. The chef who tasted the sauce that the waiter recommended prepares the meal.
+5b. The chef who tasted the sauce that the waiter recommended skillfully prepares the meal.
+5c. The experienced chef who tasted the sauce that the waiter recommended prepares the meal.
+5d. The experienced chef who tasted the sauce that the waiter recommended skillfully prepares the meal.
+
+6a. The chef who the guest who the manager invited trusted prepares the meal.
+6b. The chef who the guest who the manager invited trusted skillfully prepares the meal.
+6c. The experienced chef who the guest who the manager invited trusted prepares the meal.
+6d. The experienced chef who the guest who the manager invited trusted skillfully prepares the meal.
+
+1a. The driver starts the engine.
+1b. The driver carefully starts the engine.
+1c. The skilled driver starts the engine.
+1d. The skilled driver carefully starts the engine.
+
+2a. The driver at the garage starts the engine.
+2b. The driver at the garage carefully starts the engine.
+2c. The skilled driver at the garage starts the engine.
+2d. The skilled driver at the garage carefully starts the engine.
+
+3a. The driver who checked the tires starts the engine.
+3b. The driver who checked the tires carefully starts the engine.
+3c. The skilled driver who checked the tires starts the engine.
+3d. The skilled driver who checked the tires carefully starts the engine.
+
+4a. The driver who the mechanic inspected starts the engine.
+4b. The driver who the mechanic inspected carefully starts the engine.
+4c. The skilled driver who the mechanic inspected starts the engine.
+4d. The skilled driver who the mechanic inspected carefully starts the engine.
+
+5a. The driver who fixed the brakes that the technician recommended starts the engine.
+5b. The driver who fixed the brakes that the technician recommended carefully starts the engine.
+5c. The skilled driver who fixed the brakes that the technician recommended starts the engine.
+5d. The skilled driver who fixed the brakes that the technician recommended carefully starts the engine.
+
+6a. The driver who the inspector who the supervisor trusted praised starts the engine.
+6b. The driver who the inspector who the supervisor trusted praised carefully starts the engine.
+6c. The skilled driver who the inspector who the supervisor trusted praised starts the engine.
+6d. The skilled driver who the inspector who the supervisor trusted praised carefully starts the engine.
+
+1a. The gardener waters the plants.
+1b. The gardener gently waters the plants.
+1c. The careful gardener waters the plants.
+1d. The careful gardener gently waters the plants.
+
+2a. The gardener near the fountain waters the plants.
+2b. The gardener near the fountain gently waters the plants.
+2c. The careful gardener near the fountain waters the plants.
+2d. The careful gardener near the fountain gently waters the plants.
+
+3a. The gardener who trimmed the bushes waters the plants.
+3b. The gardener who trimmed the bushes gently waters the plants.
+3c. The careful gardener who trimmed the bushes waters the plants.
+3d. The careful gardener who trimmed the bushes gently waters the plants.
+
+4a. The gardener who the neighbor hired waters the plants.
+4b. The gardener who the neighbor hired gently waters the plants.
+4c. The careful gardener who the neighbor hired waters the plants.
+4d. The careful gardener who the neighbor hired gently waters the plants.
+
+5a. The gardener who planted the flowers that the landscaper designed waters the plants.
+5b. The gardener who planted the flowers that the landscaper designed gently waters the plants.
+5c. The careful gardener who planted the flowers that the landscaper designed waters the plants.
+5d. The careful gardener who planted the flowers that the landscaper designed gently waters the plants.
+
+6a. The gardener who the homeowner who the architect consulted praised waters the plants.
+6b. The gardener who the homeowner who the architect consulted praised gently waters the plants.
+6c. The careful gardener who the homeowner who the architect consulted praised waters the plants.
+6d. The careful gardener who the homeowner who the architect consulted praised gently waters the plants.
+
+1a. The author writes the story.
+1b. The author quickly writes the story.
+1c. The talented author writes the story.
+1d. The talented author quickly writes the story.
+
+2a. The author in the library writes the story.
+2b. The author in the library quickly writes the story.
+2c. The talented author in the library writes the story.
+2d. The talented author in the library quickly writes the story.
+
+3a. The author who revised the draft writes the story.
+3b. The author who revised the draft quickly writes the story.
+3c. The talented author who revised the draft writes the story.
+3d. The talented author who revised the draft quickly writes the story.
+
+4a. The author who the editor approved writes the story.
+4b. The author who the editor approved quickly writes the story.
+4c. The talented author who the editor approved writes the story.
+4d. The talented author who the editor approved quickly writes the story.
+
+5a. The author who reviewed the notes that the critic gave writes the story.
+5b. The author who reviewed the notes that the critic gave quickly writes the story.
+5c. The talented author who reviewed the notes that the critic gave writes the story.
+5d. The talented author who reviewed the notes that the critic gave quickly writes the story.
+
+6a. The author who the publisher who the agent met admired writes the story.
+6b. The author who the publisher who the agent met admired quickly writes the story.
+6c. The talented author who the publisher who the agent met admired writes the story.
+6d. The talented author who the publisher who the agent met admired quickly writes the story.
