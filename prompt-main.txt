@@ -1,17 +1,11 @@
-For each sentence, create six base variations, each with three additional variants:
+For each of the following sentences, create six base variations:
 
-Base variations:
 1) Baseline (SV): Simple Subject-Verb structure
 2) Control (S Prep V): Subject with Prepositional_Clause and Verb
 3) Standard-Subject (S RelSubj V): Subject with Subject Relative Clause and Verb
 4) Standard-Object (S RelObj V): Subject with Object Relative Clause and Verb
 5) Nested-Subject (S [RelSubj[Rel]] V): Subject with two embedded Relative Clauses, the first one being a Subject Relative Clause, and Verb
 6) Nested-Object (S [RelObj[Rel]] V): Subject with two embedded Relative Clauses, the first one being an Object Relative Clause, and Verb
-
-For each base variation, create these variants:
-a) +ADV: Add an adverb (always before the main verb)
-b) +ADJ: Add an adjective (always modifying the subject)
-c) +TWO: Include both adverb and adjective
 
 I would like the sentences to follow this EBNF grammar:
 
@@ -58,29 +52,13 @@ PP_iobj : P_iobj NP_animate_iobj
 ```
 
 The terminals being *words* that you should infer from the grammar and the following example sentences.
+
 Do not generate sentences that are too close to the exemple sentences. The goal is to generate new and original sentences. I don't want all sentences to have 'in the room' or 'on the desk'.
 
-Output only the sentences themselves, without any additional information. Example output for one sentence set:1a. The doctor examines the patient.
-1b. The doctor carefully examines the patient.
-1c. The skilled doctor examines the patient.
-1d. The skilled doctor carefully examines the patient.
-2a. The doctor in the room examines the patient.
-2b. The doctor in the room carefully examines the patient.
-2c. The skilled doctor in the room examines the patient.
-2d. The skilled doctor in the room carefully examines the patient.
-3a. The doctor who studied hard examines the patient.
-3b. The doctor who studied hard carefully examines the patient.
-3c. The skilled doctor who studied hard examines the patient.
-3d. The skilled doctor who studied hard carefully examines the patient.
-4a. The doctor who the parent called examines the patient.
-4b. The doctor who the parent called carefully examines the patient.
-4c. The skilled doctor who the parent called examines the patient.
-4d. The skilled doctor who the parent called carefully examines the patient.
-5a. The doctor who read the report that was on the desk examines the patient.
-5b. The doctor who read the report that was on the desk carefully examines the patient.
-5c. The skilled doctor who read the report that was on the desk examines the patient.
-5d. The skilled doctor who read the report that was on the desk carefully examines the patient.
-6a. The doctor who the mother who the school called trusts examines the patient.
-6b. The doctor who the mother who the school called trusts carefully examines the patient.
-6c. The skilled doctor who the mother who the school called trusts examines the patient.
-6d. The skilled doctor who the mother who the school called trusts carefully examines the patient.
+Output only the sentences themselves, without any additional information. Example output for one sentence set:
+1. The doctor examines the patient.
+2. The doctor in the room examines the patient.
+3. The doctor who studied hard examines the patient.
+4. The doctor who the parent called examines the patient.
+5. The doctor who read the report that was on the desk examines the patient.
+6. The doctor who the mother who the school called trusts examines the patient.
