@@ -3,6 +3,24 @@ import numpy as np
 from scipy.stats import zipf
 import sys
 
+
+def align_rules_with_tabs(input_text):
+    lines = input_text.splitlines()
+    updated_lines = []
+
+    for line in lines:
+        if "->" in line:
+            fst, snd = line.split("[")
+            new_line = fst + "\t" + "[" + snd
+            updated_lines.append(new_line)
+        elif line.startswith("["):
+            new_line = "  " + line
+            updated_lines.append(new_line)
+        else:
+            updated_lines.append(line)
+
+    return '\n'.join(updated_lines)
+
 ## Counter object for numbering the rules
 class _Counter(object):
   def __init__(self, start_value=1):
@@ -43,5 +61,10 @@ env.globals['counter'] = _Counter
 env.filters['zipf'] = generate_vocab_probabilities
 
 template = env.get_template(sys.argv[1])
-print(template.render())
+temp_str = template.render()
+
+# print(type(template.render()))
+aligned_string = align_rules_with_tabs(temp_str)
+print(aligned_string)
+# print(template.render())
 
