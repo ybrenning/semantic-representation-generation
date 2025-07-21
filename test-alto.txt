@@ -1,0 +1,10 @@
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+a cake was cooked by the scientist
+a cake was eaten by a boy
+a fly ran
+a hen gave the flower beside a chair to Liam
+
