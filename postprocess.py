@@ -22,6 +22,7 @@ def move_wh_words(row):
 
 
 def main():
+    save_output = False
     sent_file = "test-alto.txt"
     varfree_file = "out.txt"
 
@@ -65,14 +66,6 @@ def main():
         for target in ["varfree_lf", "cogs_lf"]:
             df_alto[target] = df_alto[target].str.replace("Who", "?")
             df_alto[target] = df_alto[target].str.replace("What", "?")
-
-        df_alto[["source", "cogs_lf", "types"]].to_csv(
-            "cogs_" + grammar_prefix + ".tsv",
-            sep='\t', index=False, header=False
-        )
-        df_alto[["source", "varfree_lf", "types"]].to_csv(
-            "varfree_" + grammar_prefix + ".tsv",
-            sep='\t', index=False, header=False)
     else:
         # capitalize the first word of each sentence
         df_alto.source = [
@@ -90,17 +83,19 @@ def main():
             axis=1
         )
 
+    if save_output:
         df_alto[["source", "cogs_lf", "types"]].to_csv(
-            "cogs_" + grammar_prefix + ".tsv", sep='\t',
-            index=False, header=False
+            "cogs_" + grammar_prefix + ".tsv",
+            sep='\t', index=False, header=False
         )
         df_alto[["source", "varfree_lf", "types"]].to_csv(
-            "varfree_" + grammar_prefix + ".tsv", sep='\t',
-            index=False, header=False
+            "varfree_" + grammar_prefix + ".tsv",
+            sep='\t', index=False, header=False
         )
-
-    print(df_alto[["source", "varfree_lf", "types"]])
-    print(df_alto[["source", "cogs_lf", "types"]])
+    else:
+        print(df_alto[["source", "varfree_lf", "types"]])
+        print("")
+        print(df_alto[["source", "cogs_lf", "types"]])
 
 
 if __name__ == "__main__":
