@@ -16,11 +16,13 @@ The result should be a corpus of English sentences paired with their semantic re
 
 ### English sentence grammar
 
-Add explanation of english grammar here (preprocess step, IRTG to EBNF conversion, resulting data...)
+The sentences are generated based on the `english` part of SLOG's synchronous context-free grammar (SCFG). We use SLOG's preprocess script in order to dynamically generate an IRTG (Interpreted Regular Tree Grammart) file based on an SCFG's rules and a lexicon (vocabulary) of terminals.
+
+We convert this preprocessed file into the more commonly used EBNF (Extended Backus–Naur form) format. This can then be used as part of a prompt on a GPT-based model or for constrained decoding using a library such as `outlines`.
 
 ### Semantic representation grammar
 
-In SLOG, this grammar is used synchronously with the English sentence grammar in order to produce a semantic reprensetation for each sentence.
+In SLOG, this grammar is used synchronously with the English sentence grammar in order to produce a semantic representation for each sentence.
 
 Since this approach makes use of LLMs to generate the English sentences, we have to annotate them retrospectively as opposed to in parallel. Luckily, the Alto library allows for parsing of an unannotated corpus based on a given grammar.
 
