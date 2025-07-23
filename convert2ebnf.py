@@ -1,6 +1,13 @@
+import sys
+
+
 def main():
 
-    with open("preprocessed-main.irtg", "r") as f:
+    in_file = sys.argv[1]
+    assert in_file.endswith(".irtg")
+    out_file = in_file.split(".")[0] + ".ebnf"
+
+    with open(in_file, "r") as f:
         rules_dict = {}
         lines = f.readlines()
 
@@ -32,7 +39,8 @@ def main():
         rhs = [" ".join(r) for r in rhs]
         output += " | ".join(rhs) + "\n\n"
 
-    print(output)
+    with open(out_file, "w") as f:
+        f.write(output)
 
 
 if __name__ == "__main__":
