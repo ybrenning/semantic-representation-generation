@@ -1,0 +1,4 @@
+A cake was cooked by the scientist .	cook ( theme = cake , agent = * scientist )	in_distribution
+A cake was eaten by a boy .	eat ( theme = cake , agent = boy )	in_distribution
+A fly ran .	run ( agent = fly )	in_distribution
+A hen gave the flower beside a chair to Liam .	give ( agent = hen , theme = * flower ( nmod . beside = chair ) , recipient = Liam )	in_distribution

@@ -1,0 +1,4 @@
+A cake was cooked by the scientist .	* scientist ( x _ 6 ) ; cake ( x _ 1 ) AND cook . theme ( x _ 3 , x _ 1 ) AND cook . agent ( x _ 3 , x _ 6 )	in_distribution
+A cake was eaten by a boy .	cake ( x _ 1 ) AND eat . theme ( x _ 3 , x _ 1 ) AND eat . agent ( x _ 3 , x _ 6 ) AND boy ( x _ 6 )	in_distribution
+A fly ran .	fly ( x _ 1 ) AND run . agent ( x _ 2 , x _ 1 )	in_distribution
+A hen gave the flower beside a chair to Liam .	* flower ( x _ 4 ) ; hen ( x _ 1 ) AND give . agent ( x _ 2 , x _ 1 ) AND give . theme ( x _ 2 , x _ 4 ) AND give . recipient ( x _ 2 , Liam ) AND flower . nmod . beside ( x _ 4 , x _ 7 ) AND chair ( x _ 7 )	in_distribution

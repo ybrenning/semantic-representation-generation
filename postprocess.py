@@ -22,11 +22,12 @@ def move_wh_words(row):
 
 
 def main():
-    save_output = False
-    sent_file = "test-alto.txt"
-    varfree_file = "out.txt"
+    save_output = True
 
     grammar_prefix = "in_distribution"
+
+    sent_file = f"data/english/{grammar_prefix}-english.txt"
+    varfree_file = f"data/varfree_lf/{grammar_prefix}-varfree.txt"
 
     with open(sent_file, "r", encoding="utf-8") as f1:
         col1 = [
@@ -85,11 +86,11 @@ def main():
 
     if save_output:
         df_alto[["source", "cogs_lf", "types"]].to_csv(
-            "cogs_" + grammar_prefix + ".tsv",
+            "data/cogs_lf/cogs_" + grammar_prefix + ".tsv",
             sep='\t', index=False, header=False
         )
         df_alto[["source", "varfree_lf", "types"]].to_csv(
-            "varfree_" + grammar_prefix + ".tsv",
+            "data/varfree_lf/varfree_" + grammar_prefix + ".tsv",
             sep='\t', index=False, header=False
         )
     else:
