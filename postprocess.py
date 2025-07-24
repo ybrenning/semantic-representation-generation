@@ -1,5 +1,5 @@
 import pandas as pd
-import convert_varfree_to_cogs
+import varfree2cogs
 
 
 # only for long distance movement
@@ -54,7 +54,7 @@ def main():
 
         # Convert varfree LF to COGS LF
         df_alto["cogs_lf"] = df_alto.apply(
-            lambda x: convert_varfree_to_cogs.varfree_to_cogs_lf(
+            lambda x: varfree2cogs.varfree_to_cogs_lf(
                 x.source, x.varfree_lf
             ),
             axis=1
