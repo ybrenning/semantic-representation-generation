@@ -26,7 +26,7 @@ def main():
                 lhs = lhs.replace("!", "") if lhs == "S!" else lhs
                 rhs = rhs.strip().split(",")
 
-            rhs = [r.strip() for r in rhs]
+            rhs = [r.strip().replace("!", "") for r in rhs]
 
             if lhs not in rules_dict:
                 rules_dict[lhs] = [rhs]
