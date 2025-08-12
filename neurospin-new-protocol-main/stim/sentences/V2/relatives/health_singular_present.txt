@@ -1,0 +1,29 @@
+1a. The nurse checks the wound.  
+1b. The nurse thoroughly checks the wound.  
+1c. The attentive nurse checks the wound.  
+1d. The attentive nurse thoroughly checks the wound.  
+
+2a. The nurse in the ward checks the wound.  
+2b. The nurse in the ward thoroughly checks the wound.  
+2c. The attentive nurse in the ward checks the wound.  
+2d. The attentive nurse in the ward thoroughly checks the wound.  
+
+3a. The nurse who trained extensively checks the wound.
+3b. The nurse who trained extensively thoroughly checks the wound.
+3c. The attentive nurse who trained extensively checks the wound.
+3d. The attentive nurse who trained extensively thoroughly checks the wound.
+
+4a. The nurse who the doctor advised checks the wound.
+4b. The nurse who the doctor advised thoroughly checks the wound.
+4c. The attentive nurse who the doctor advised checks the wound.
+4d. The attentive nurse who the doctor advised thoroughly checks the wound.
+
+5a. The nurse who read notes that described symptoms examines a patient.
+5b. The nurse who read notes that described symptoms carefully examines a patient.
+5c. An attentive nurse who read notes that described symptoms examines a patient.
+5d An attentive and thorough pharmacist reads notes that describes a condition.
+
+6a.The pharmacist determines whether prescriptions from pharmacies harms a patient’s mental health
+6b.The pharmacist quickly reads whether prescriptions from pharmacies harms a patient's mental well-being
+6c.An observant pharmacist determines if prescriptions from pharmacies harms one's mental health
+6d.An observant and diligent pharmacist determines whether prescription combines with one's health
