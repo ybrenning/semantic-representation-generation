@@ -8,9 +8,12 @@ SENTENCES_DIR = STIM_DIR / "sentences"
 DATA_DIR = ROOT_DIR / "data"
 
 # API Configuration
+import os
+from dotenv import load_dotenv
 
-OPENAI_API_KEY = "REDACTED"
-DEEPINFRA_API_KEY = "REDACTED"
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Model Configuration
 # DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"

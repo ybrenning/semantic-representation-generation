@@ -4,10 +4,7 @@ from src.organizer import RunOrganizer
 from src.organizer import AudioMixer
 import pandas as pd
 from pathlib import Path
-
-
-
-OPENAI_API_KEY = "REDACTED"
+from ..config import OPENAI_API_KEY
 
 
 def main():
