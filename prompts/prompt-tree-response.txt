@@ -1,0 +1,69 @@
+To derive sentences from the given rule tree, we need to expand the provided grammar production rules and insert suitable words as terminals for the non-terminal symbols (e.g., Det, N_common_animate_nsubj, etc.). In this case, we are focusing on generating sentences using the following structure:
+
+1. **S**: The sentence begins with **NP_animate_nsubj** and is followed by **VP_external**.
+2. **NP_animate_nsubj**: A determiner followed by a common animate noun subject.
+3. **VP_external**: A verb that is transitive and not omissible, followed by a direct object, which in this case is an animate direct object.
+
+Let's derive some specific sentences:
+
+1. **Sentence 1**:
+   - **NP_animate_nsubj**: "The teacher"
+     - *Det*: "The"
+     - *N_common_animate_nsubj*: "teacher"
+   - **VP_external**: "teaches the student"
+     - *V_trans_not_omissible*: "teaches"
+     - **NP_dobj**: **NP_animate_dobj**
+       - *Det*: "the"
+       - *N_common_animate_dobj*: "student"
+
+   **Full Sentence**: "The teacher teaches the student."
+
+2. **Sentence 2**:
+   - **NP_animate_nsubj**: "A doctor"
+     - *Det*: "A"
+     - *N_common_animate_nsubj*: "doctor"
+   - **VP_external**: "examines the patient"
+     - *V_trans_not_omissible*: "examines"
+     - **NP_dobj**: **NP_animate_dobj**
+       - *Det*: "the"
+       - *N_common_animate_dobj*: "patient"
+
+   **Full Sentence**: "A doctor examines the patient."
+
+3. **Sentence 3**:
+   - **NP_animate_nsubj**: "The cat"
+     - *Det*: "The"
+     - *N_common_animate_nsubj*: "cat"
+   - **VP_external**: "chases the mouse"
+     - *V_trans_not_omissible*: "chases"
+     - **NP_dobj**: **NP_animate_dobj**
+       - *Det*: “the”
+       - *N_common_animate_dobj*: “mouse”
+
+   **Full Sentence**: "The cat chases the mouse."
+
+4. **Sentence 4**:
+   - **NP_animate_nsubj**: "A parent"
+     - *Det*: "A"
+     - *N_common_animate_nsubj*: "parent"
+   - **VP_external**: "guides the child"
+     - *V_trans_not_omissible*: "guides"
+     - **NP_dobj**: **NP_animate_dobj**
+       - *Det*: “the”
+       - *N_common_animate_dobj*: “child”
+
+   **Full Sentence**: "A parent guides the child."
+
+5. **Sentence 5**:
+   - **NP_animate_nsubj**: "The manager"
+     - *Det*: "The"
+     - *N_common_animate_nsubj*: "manager"
+   - **VP_external**: "directs the team"
+     - *V_trans_not_omissible*: "directs"
+     - **NP_dobj**: **NP_animate_dobj**
+       - *Det*: “the”
+       - *N_common_animate_dobj*: “team”
+
+   **Full Sentence**: "The manager directs the team."
+
+These sentences adhere to the specific rule tree structure described and fill in the necessary lexical items based on common word usage in English.
