@@ -186,11 +186,11 @@ def test_pipeline(theme="basic", number="singular", tense="present", category="r
     """
     print(f"\nTesting pipeline with:\nTheme: {theme}\nNumber: {number}\nTense: {tense}\nCategory: {category}\n")
     print("-" * 50)
-    
+
     theme_description = themes[theme]
     number_description = numbers[number]
     tense_description = tenses[tense]
-    
+
     special_prompt = """
 
 You are an expert linguist. I would like you to look at the following grammar in EBNF format:
@@ -210,7 +210,7 @@ VP_RC_theme : NP_animate_nsubj V_unacc | NP_animate_nsubj V_trans_omissible | NP
 
 VP_dat_RC_theme : NP_animate_nsubj V_dat NP_animate_iobj
 
-NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj
+NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc
 
 VP_RC_unacc_theme : V_unacc
 
@@ -220,7 +220,7 @@ VP_RC_pass_theme : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp B
 
 VP_RC_agent : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_cp_taking C C_internal
 
-NP_animate_nsubj : N_prop_nsubj | Det N_common_animate_nsubj
+NP_animate_nsubj : N_prop_nsubj | Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc
 
 PP_iobj : P_iobj NP_animate_iobj | P_iobj NP_animate_iobj
 
@@ -228,7 +228,9 @@ NP_animate_iobj : Det N_common_animate_iobj | N_prop_iobj
 
 NP_animate_dobj_RC : Det N_common_animate_dobj
 
-NP_inanimate_dobj : Det N_common_inanimate_dobj
+NP_inanimate_dobj : Det N_common_inanimate_dobj | Det N_common_inanimate_dobj PP_loc
+
+NP_inanimate_dobj_noPP : Det N_common_inanimate_dobj
 
 C_internal : NP_animate_nsubj VP_external | VP_internal | NP_inanimate_nsubjpass VP_passive | NP_animate_nsubjpass VP_passive_dat
 
@@ -238,9 +240,11 @@ VP_internal : NP_unacc_subj V_unacc
 
 NP_dobj : NP_inanimate_dobj | NP_animate_dobj
 
-NP_unacc_subj : Det N_common_animate_dobj
+NP_unacc_subj : NP_inanimate_dobj_noPP | NP_animate_dobj_noPP
 
-NP_animate_dobj : Det N_common_animate_dobj | N_prop_dobj
+NP_animate_dobj_noPP : Det N_common_animate_dobj | N_prop_dobj
+
+NP_animate_dobj : Det N_common_animate_dobj | Det N_common_animate_dobj PP_loc | N_prop_dobj
 
 NP_animate_nsubjpass : Det N_common_animate_nsubjpass | N_prop_nsubjpass
 
@@ -250,16 +254,39 @@ VP_passive : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_a
 
 VP_passive_dat : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
 
+NP_on : Det N_on PP_loc | Det N_on
+
+NP_in : Det N_in PP_loc | Det N_in
+
+NP_beside : Det N_beside PP_loc | Det N_beside
+
+PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
+
+PP_iobj : P_iobj NP_animate_iobj
+
 ```
 
 The terminals being *words* that are up to you to infer based on the grammar.
 
+I would like you to derive a sentence using each of the following derivation trees:
 
-
-I would like you to derive five sentences using the following rule tree:
+1.
+```
 (S
   (NP_animate_nsubj (Det) (N_common_animate_nsubj))
   (VP_external (V_trans_not_omissible) (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj)))))
+```
+
+2.
+```
+(S
+  (NP_animate_nsubj (Det) (N_common_animate_nsubj) (PP_loc (P_in) (NP_in (Det) (N_in))))
+  (VP_external (V_trans_not_omissible) (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))
+)
+```
+I would like you to repeat this process in five sets. Within the same set, make sure to use the same NP and V.
+
+Output just the sentences without anything extra.
     """
     prompt = get_prompt(
         number=number_description,
