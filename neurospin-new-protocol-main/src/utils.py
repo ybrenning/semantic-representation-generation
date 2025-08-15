@@ -172,11 +172,12 @@ Make sure to make the sentences generated as close as possible to each other: a 
     prompt = special_prompt
     return prompt
 
+
 def test_pipeline(theme="basic", number="singular", tense="present", category="relatives", print_prompt=False):
     """
     Test the pipeline with a single combination of parameters.
     Prints the generated text directly to terminal.
-    
+
     Args:
         theme (str): Theme key from themes dictionary
         number (str): Number key from numbers dictionary
@@ -192,7 +193,6 @@ def test_pipeline(theme="basic", number="singular", tense="present", category="r
     tense_description = tenses[tense]
 
     special_prompt = """
-
 You are an expert linguist. I would like you to look at the following grammar in EBNF format:
 
 ```
@@ -284,7 +284,26 @@ I would like you to derive a sentence using each of the following derivation tre
   (VP_external (V_trans_not_omissible) (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))
 )
 ```
-I would like you to repeat this process in five sets. Within the same set, make sure to use the same NP and V.
+
+3.
+```
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_main
+      (Det) (N_common_animate_nsubj))
+    (Rel_pron)
+    (VP_RC_agent
+      (NP_animate_nsubj
+        (Det) (N_common_animate_nsubj))
+      (V_trans_omissible)))
+  (V_main)
+  (NP_animate_dobj
+    (Det) (N_common_animate_dobj)))
+```
+
+I would like you to repeat this process in five sets. Within the same set, make sure to:
+- use the same main subject, object and verb throughout
+- use different embedded subjects and verbs
 
 Output just the sentences without anything extra.
     """
