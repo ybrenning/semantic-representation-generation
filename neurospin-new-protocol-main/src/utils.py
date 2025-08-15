@@ -196,7 +196,7 @@ def test_pipeline(theme="basic", number="singular", tense="present", category="r
 You are an expert linguist. I would like you to look at the following grammar in EBNF format:
 
 ```
-S : NP_animate_nsubj_main V_main NP_animate_dobj_RC_modified | NP_animate_nsubj_main V_main NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_animate_iobj NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_inanimate_dobj_RC_modified PP_iobj | NP_animate_nsubj_main AUX V_dat_pp NP_inanimate_dobj_RC_modified | NP_animate_nsubj VP_cp | NP_animate_nsubj VP_external 
+S : NP_animate_nsubj_main V_main NP_animate_dobj_RC_modified | NP_animate_nsubj_main V_main NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_animate_iobj NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_inanimate_dobj_RC_modified PP_iobj | NP_animate_nsubj_main AUX V_dat_pp NP_inanimate_dobj_RC_modified | NP_animate_nsubj VP_cp | NP_animate_nsubj VP_external | NP_animate_nsubj_main_RC_modified VP_main_anim_subj | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_unacc | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_pass_dat | NP_inanimate_nsubj_main_RC_modified VP_main_inanim_subj | NP_animate_nsubj VP_cp
 
 VP_cp : V_cp_taking C S
 
@@ -205,6 +205,14 @@ V_main : V_unacc | V_trans_omissible | V_trans_not_omissible
 NP_animate_dobj_RC_modified : NP_animate_dobj_RC Rel_pron VP_RC_theme | NP_animate_dobj_RC Rel_pron VP_RC_agent | NP_animate_dobj_RC Rel_pron VP_RC_unacc_theme | NP_animate_dobj_RC Rel_pron VP_RC_pass_recipient
 
 NP_inanimate_dobj_RC_modified : NP_inanimate_dobj Rel_pron VP_RC_theme | NP_inanimate_dobj Rel_pron VP_dat_RC_theme | NP_inanimate_dobj Rel_pron NP_animate_nsubj V_dat PP_iobj | NP_inanimate_dobj Rel_pron VP_RC_unacc_theme | NP_inanimate_dobj Rel_pron VP_RC_pass_theme
+
+NP_animate_nsubj_main_RC_modified : NP_animate_nsubj_main Rel_pron VP_RC_agent | NP_animate_nsubj_main Rel_pron VP_RC_unacc_theme | NP_animate_nsubj_main Rel_pron VP_RC_pass_recipient | NP_animate_nsubj_main Rel_pron VP_RC_object_extracted_theme
+
+NP_inanimate_nsubj_main_RC_modified : NP_inanimate_nsubj_main Rel_pron VP_RC_inanimate_subj_extracted_theme | NP_inanimate_nsubj_main Rel_pron VP_RC_object_extracted_theme | NP_inanimate_nsubj_main Rel_pron VP_dat_RC_theme | NP_inanimate_nsubj_main Rel_pron NP_animate_nsubj V_dat PP_iobj
+
+VP_RC_inanimate_subj_extracted_theme : V_unacc | AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+VP_RC_object_extracted_theme : NP_animate_nsubj V_unacc | NP_animate_nsubj V_trans_omissible | NP_animate_nsubj V_trans_not_omissible
 
 VP_RC_theme : NP_animate_nsubj V_unacc | NP_animate_nsubj V_trans_omissible | NP_animate_nsubj V_trans_not_omissible
 
@@ -299,6 +307,25 @@ I would like you to derive a sentence using each of the following derivation tre
   (V_main)
   (NP_animate_dobj
     (Det) (N_common_animate_dobj)))
+```
+
+4.
+```
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_main (Det) (N_common_animate_nsubj))
+    (Rel_pron)
+    (VP_RC_agent
+      (V_trans_not_omissible)
+      (NP_dobj
+        (NP_inanimate_dobj_RC_modified
+          (NP_inanimate_dobj (Det) (N_common_inanimate_dobj))
+          (Rel_pron)
+          (VP_RC_pass_theme (AUX) (V_unacc_pp))))))
+  (VP_main_anim_subj
+    (VP_external
+      (V_trans_not_omissible)
+      (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))))
 ```
 
 I would like you to repeat this process in five sets. Within the same set, make sure to:
