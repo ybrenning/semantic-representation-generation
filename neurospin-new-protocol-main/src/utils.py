@@ -328,6 +328,34 @@ I would like you to derive a sentence using each of the following derivation tre
       (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))))
 ```
 
+5.
+```
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_main
+      (Det)
+      (N_common_animate_nsubj))
+    (Rel_pron)
+    (VP_RC_object_extracted_theme
+      (NP_animate_nsubj_main_RC_modified
+        (NP_animate_nsubj_main
+          (Det)
+          (N_common_animate_nsubj))
+        (Rel_pron)
+        (VP_RC_object_extracted_theme
+          (NP_inanimate_nsubj_main
+            (Det)
+            (N_common_inanimate_nsubj))
+          (V_trans_not_omissible)))
+      (V_trans_not_omissible)))
+  (VP_main_anim_subj
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)))))
+```
+
 I would like you to repeat this process in five sets. Within the same set, make sure to:
 - use the same main subject, object and verb throughout
 - use different embedded subjects and verbs
