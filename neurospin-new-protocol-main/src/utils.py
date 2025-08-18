@@ -297,6 +297,19 @@ I would like you to derive a sentence using each of the following derivation tre
 ```
 (S
   (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_main (Det) (N_common_animate_nsubj))
+    (Rel_pron)
+    (VP_RC_agent (V_unerg)))
+  (VP_external
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj (Det) (N_common_animate_dobj)))))
+```
+
+4.
+```
+(S
+  (NP_animate_nsubj_main_RC_modified
     (NP_animate_nsubj_main
       (Det) (N_common_animate_nsubj))
     (Rel_pron)
@@ -309,7 +322,7 @@ I would like you to derive a sentence using each of the following derivation tre
     (Det) (N_common_animate_dobj)))
 ```
 
-4.
+5.
 ```
 (S
   (NP_animate_nsubj_main_RC_modified
@@ -328,7 +341,7 @@ I would like you to derive a sentence using each of the following derivation tre
       (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))))
 ```
 
-5.
+6.
 ```
 (S
   (NP_animate_nsubj_main_RC_modified
@@ -369,7 +382,7 @@ Output just the sentences without anything extra.
         n=1,
         special_prompt=special_prompt
     )
-    
+
     if print_prompt:
         print("Generated prompt:")
         print("-" * 50)
