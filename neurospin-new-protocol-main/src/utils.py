@@ -18,7 +18,6 @@ from config.config import (
 )
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-# client = Together()
 
 
 def process_task(task):
@@ -106,11 +105,6 @@ Output only the sentences themselves, without any additional information. Please
             model=DEFAULT_MODEL,
         )
 
-        # response = llama_response(
-        #     prompt=prompt,
-        #     model=DEFAULT_MODEL,
-        # )
-
         print(response)
         # savepath.parent.mkdir(parents=True, exist_ok=True)
         # with open(savepath, "w") as f:
@@ -135,6 +129,7 @@ def gpt4_response(prompt, model, frequency_penalty=0.5, presence_penalty=0.0):
 
     return chat_completion.choices[0].message.content
 
+
 def llama_response(prompt, model, temperature=1.2): #, top_p=0.9, top_k=50, repetition_penalty=1.0)
     response = client.chat.completions.create(
         model=model,
@@ -147,8 +142,9 @@ def llama_response(prompt, model, temperature=1.2): #, top_p=0.9, top_k=50, repe
     return response.choices[0].message.content
 
 
-
-def get_prompt(number: str, tense: str, theme: str, n: int, special_prompt: str) -> str:
+def get_prompt(
+        number: str, tense: str, theme: str, n: int, special_prompt: str
+) -> str:
     prompt = f"""You are an expert linguist. You'll be asked to generate sets of sentences following the instructions below:
 
 1. Number: {number}.
@@ -173,7 +169,13 @@ Make sure to make the sentences generated as close as possible to each other: a 
     return prompt
 
 
-def test_pipeline(theme="basic", number="singular", tense="present", category="relatives", print_prompt=False):
+def test_pipeline(
+    theme="basic",
+    number="singular",
+    tense="present",
+    category="relatives",
+    print_prompt=False
+):
     """
     Test the pipeline with a single combination of parameters.
     Prints the generated text directly to terminal.
@@ -389,7 +391,7 @@ Output just the sentences without anything extra.
         print(prompt)
         print("-" * 50)
     print(prompt)
-    
+
     response = gpt4_response(
         prompt=prompt,
         model=DEFAULT_MODEL,
@@ -397,68 +399,55 @@ Output just the sentences without anything extra.
         presence_penalty=0.
     )
 
-    # response = llama_response(
-    #     prompt=prompt,
-    #     model=DEFAULT_MODEL,
-    # )
-    
     print("\nGenerated response:")
     print("-" * 50)
     print(response)
     print("-" * 50)
-    
-    # Optionally, test audio generation for the first sentence
-    # first_sentence = response.split('\n')[0].split('. ', 1)[1] if '. ' in response else response
-    # print("\nGenerating audio for first sentence:", first_sentence)
-    # audio_path = generate_speech(first_sentence, sentence_type=category)[0]
-    # print(f"Audio saved to: {audio_path}")
-        
-        # except Exception as e:
-        #     print(f"Error during test: {str(e)}")
 
 
-def generate_speech(sentences: Union[str, List[str]], 
-                   sentence_type: str = "relative",  # relative, cleft, or pronouns
-                   voice: str = "alloy", 
-                   model: str = "tts-1") -> List[Path]:
+def generate_speech(
+    sentences: Union[str, List[str]],
+    sentence_type: str = "relative",  # relative, cleft, or pronouns
+    voice: str = "alloy",
+    model: str = "tts-1") -> List[Path]:
     """
     Generate speech audio files for one or multiple sentences.
-    
+
     Args:
         sentences: Single sentence string or list of sentences
         sentence_type: Type of sentences (relative, cleft, or pronouns)
         voice: OpenAI TTS voice to use
         model: OpenAI TTS model to use
-    
+
     Returns:
         List of paths to generated audio files
     """
     client = OpenAI(api_key=OPENAI_API_KEY)
-    
+
     # Convert single string to list for uniform processing
     if isinstance(sentences, str):
         sentences = [sentences]
-    
+
     # Create subdirectory for sentence type if it doesn't exist
     output_dir = AUDIO_DIR / sentence_type
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     generated_files = []
-    
+
     for sentence in sentences:
         # Sanitize the sentence for filename
         safe_sentence = sanitize_filename(sentence)
         safe_sentence = safe_sentence.replace(" ", "_")
-        
+
         # Create full file path
         speech_file_path = output_dir / f"{safe_sentence}_{voice}.wav"
-        
+
         # Skip if file already exists
         if speech_file_path.exists():
             print(f"File already exists: {speech_file_path}")
             generated_files.append(speech_file_path)
             continue
-            
+
         try:
             # Generate speech
             response = client.audio.speech.create(
@@ -466,26 +455,27 @@ def generate_speech(sentences: Union[str, List[str]],
                 voice=voice,
                 input=sentence  # Use original sentence for audio generation
             )
-            
+
             # Save the audio file
             response.stream_to_file(str(speech_file_path))
             generated_files.append(speech_file_path)
             print(f"Generated: {speech_file_path}")
-            
+
         except Exception as e:
             print(f"Error generating audio for sentence: {sentence}")
             print(f"Error: {str(e)}")
             continue
-    
+
     return generated_files
+
 
 def sanitize_filename(filename: str) -> str:
     """
     Sanitize a string to be used as a filename.
-    
+
     Args:
         filename: String to sanitize
-    
+
     Returns:
         Sanitized string safe for use as filename
     """
@@ -500,6 +490,7 @@ import random
 import re
 from pathlib import Path
 
+
 def get_structure(number: int, variation: str, category: str) -> str:
     """Get structure type based on number and variation."""
     # Determine sentence type from file name
@@ -512,18 +503,18 @@ def get_structure(number: int, variation: str, category: str) -> str:
         6: 'nested_object',
     }
 
-    
     base_structure = structures.get(number, 'unknown')
     if base_structure == 'unknown':
         print(f"Unknown structure number: {number}")
-    
+
     # Convert variation to letter index (a=1, b=2, c=3, etc.)
     if not variation:
         variation_num = 'a'  # Default to 'a' if no variation
     else:
         variation_num = variation.lower()
-    
+
     return f"{base_structure}_{variation_num}"
+
 
 def generate_enhanced_csvs(sentences_dir: Path = SENTENCES_DIR / "V2"):
     """
@@ -536,12 +527,12 @@ def generate_enhanced_csvs(sentences_dir: Path = SENTENCES_DIR / "V2"):
     for category in categories:
         category_name = category.name
         all_sentences = []
-        
+
         # Read all txt files in the category directory
         txt_files = sorted(list(category.glob('*.txt')))
-        
+
         set_number = 1
-        
+
         for txt_file in txt_files:
             # Extract theme, numerosity, and tense from filename
             file_parts = txt_file.stem.split('_')
@@ -576,7 +567,7 @@ def generate_enhanced_csvs(sentences_dir: Path = SENTENCES_DIR / "V2"):
                         
                         structure_base = structure_types.get(number, f"unknown_type_{number}")
                         structure = f"{structure_base}_{variation}"
-                        
+
                         sentence_info = {
                             'set_number': set_number,
                             'sentence_number': sentence_number,
@@ -589,34 +580,42 @@ def generate_enhanced_csvs(sentences_dir: Path = SENTENCES_DIR / "V2"):
                         }
                         all_sentences.append(sentence_info)
                         sentence_number += 1
-            
+
             set_number += 1
 
         if not all_sentences:
             print(f"No sentences found in {category}")
             continue
 
-        # Create ordered DataFrame - sort by theme first, then set_number, then sentence_number
+        # Create ordered DataFrame - sort by theme first, 
+        # then set_number, then sentence_number
         df_ordered = pd.DataFrame(all_sentences)
-        df_ordered = df_ordered.sort_values(by=['theme', 'set_number', 'sentence_number']).reset_index(drop=True)
-        
+        df_ordered = df_ordered.sort_values(
+            by=['theme', 'set_number', 'sentence_number']
+        ).reset_index(drop=True)
+
         # Save ordered CSV
-        ordered_path = Path(category.parent / 'processed' / f"{category_name}_ordered.csv")
+        ordered_path = Path(
+            category.parent / 'processed' / f"{category_name}_ordered.csv"
+        )
         df_ordered.to_csv(ordered_path, index=False)
-        
-        # Create shuffled version by reading the ordered CSV and shuffling all rows
+
+        # Create shuffled version by reading
+        # the ordered CSV and shuffling all rows
         df_shuffled = pd.read_csv(ordered_path)
         df_shuffled = df_shuffled.sample(frac=1).reset_index(drop=True)
-        
+
         # Save shuffled CSV
-        shuffled_path = Path(category.parent / 'processed' / f"{category_name}_shuffled.csv")
+        shuffled_path = Path(
+            category.parent / 'processed' / f"{category_name}_shuffled.csv"
+        )
         df_shuffled.to_csv(shuffled_path, index=False)
 
         print(f"Generated CSV files for {category_name}:")
         print(f"- Ordered: {ordered_path}")
         print(f"- Shuffled: {shuffled_path}")
 
-        
+
 def estimate_reading_time(text, words_per_minute=250):
     """
     Estimate the reading time of a sentence.
@@ -633,11 +632,12 @@ def estimate_reading_time(text, words_per_minute=250):
     reading_time_seconds = reading_time_minutes * 60
     return reading_time_seconds
 
+
 if __name__ == "__main__":
     # Single sentence
     single_sentence = "The cat sat on the mat."
     generate_speech(single_sentence, sentence_type="relative")
-    
+
     # Multiple sentences
     sentences = [
         "The dog chased the ball.",
@@ -645,5 +645,3 @@ if __name__ == "__main__":
         "The fish swam in the pond."
     ]
     generate_speech(sentences, sentence_type="cleft")
-
-
