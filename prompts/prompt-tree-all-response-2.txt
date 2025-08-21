@@ -1,0 +1,44 @@
+### Set 1
+
+1. The man holds the dog.
+2. The man in the room holds the dog.
+3. The man who runs holds the dog.
+4. The man who the woman watches holds the dog.
+5. The man who paints the picture is seen holds the dog.
+6. The man who the person whom the cat scratches holds the dog.
+
+### Set 2
+
+1. The woman carries the cat.
+2. The woman in the house carries the cat.
+3. The woman who jumps carries the cat.
+4. The woman who the child hugs carries the cat.
+5. The woman who fixes the car is stalled carries the cat.
+6. The woman who the person whom the book interests carries the cat.
+
+### Set 3
+
+1. The teacher instructs the student.
+2. The teacher in the classroom instructs the student.
+3. The teacher who speaks instructs the student.
+4. The teacher who the child meets instructs the student.
+5. The teacher who reads the book is included instructs the student.
+6. The teacher who the person whom the paper attracts instructs the student.
+
+### Set 4
+
+1. The chef prepares the meal.
+2. The chef in the kitchen prepares the meal.
+3. The chef who cooks prepares the meal.
+4. The chef who the manager observes prepares the meal.
+5. The chef who writes the menu is approved prepares the meal.
+6. The chef who the person whom the list seems prepares the meal.
+
+### Set 5
+
+1. The doctor examines the patient.
+2. The doctor in the hospital examines the patient.
+3. The doctor who diagnoses examines the patient.
+4. The doctor who the nurse assists examines the patient.
+5. The doctor who prescribes the medication is dispensed examines the patient.
+6. The doctor who the person whom the report astounds examines the patient.
