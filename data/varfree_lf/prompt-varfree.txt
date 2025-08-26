@@ -1,0 +1,60 @@
+admire ( agent = * dog , theme = * cat )
+<null>
+<null>
+<null>
+<null>
+<null>
+respect ( agent = * teacher , theme = * student )
+<null>
+<null>
+<null>
+<null>
+<null>
+appreciate ( agent = * president , theme = * lawyer )
+<null>
+<null>
+<null>
+<null>
+<null>
+love ( agent = * researcher , theme = * scientist )
+<null>
+<null>
+<null>
+<null>
+<null>
+tolerate ( agent = * sailor , theme = * captain )
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>
+<null>

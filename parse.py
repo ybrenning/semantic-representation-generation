@@ -2,7 +2,8 @@ import subprocess
 
 grammar_prefix = "in_distribution"
 grammar_path = "grammars/preprocessed-main.irtg"
-in_path = "data/english/example.txt"
+in_path = "data/english/in_distribution-english.txt"
+in_path = "data/english/prompt-english.txt"
 
 with open(in_path, "r+") as f:
     lines = f.readlines()
@@ -25,6 +26,7 @@ with open(in_path, "r+") as f:
         f.write(content)
 
 out_path = f"data/varfree_lf/{grammar_prefix}-varfree.txt"
+out_path = f"data/varfree_lf/prompt-varfree.txt"
 
 command = (
     "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
