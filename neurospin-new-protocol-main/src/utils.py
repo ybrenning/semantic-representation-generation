@@ -198,6 +198,110 @@ def test_pipeline(
 You are an expert linguist. I would like you to look at the following grammar in EBNF format:
 
 ```
+Det  : the | a
+
+AUX  : was
+
+C  : that
+
+BY  : by
+
+INF  : to
+
+N_common_animate_dobj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_iobj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_nsubj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_nsubjpass  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_dobj_targeted  : hedgehog
+
+N_common_animate_dobj_targeted_primitive  : shark
+
+N_prop_dobj_targeted  : Lina
+
+N_prop_dobj_targeted_primitive  : Paula
+
+N_common_animate_nsubj_targeted  : hedgehog
+
+N_common_animate_nsubj_targeted_primitive  : shark
+
+N_prop_nsubj_targeted  : Lina
+
+N_prop_nsubj_targeted_primitive  : Paula
+
+N_common_inanimate_dobj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+N_common_inanimate_nsubjpass  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+N_common_inanimate_nsubj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+N_prop_dobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
+
+N_prop_iobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
+
+N_prop_nsubj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
+
+N_prop_nsubjpass  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
+
+N_on  : table | stage | bed | chair | stool | road | tree | box | surface | seat | speaker | computer | rock | boat | cabinet | TV | plate | desk | bowl | bench | shelf | cloth | piano | bible | leaflet | sheet | cupboard | truck | tray | notebook | blanket | deck | coffin | log | ladder | barrel | rug | canvas | tiger | towel | throne | booklet | sock | corpse | sofa | keyboard | book | pillow | pad | train | couch | bike | pedestal | platter | paper | rack | board | panel | tripod | branch | machine | floor | napkin | cookie | block | cot | device | yacht | dog | mattress | ball | stand | stack | windowsill | counter | cushion | hanger | trampoline | gravel | cake | carpet | plaque | boulder | leaf | mound | bun | dish | cat | podium | tabletop | beach | bag | glacier | brick | crack | vessel | futon | turntable | rag | chessboard
+
+N_in  : house | room | car | garden | box | cup | glass | bag | vehicle | hole | cabinet | bottle | shoe | storage | cot | vessel | pot | pit | tin | can | cupboard | envelope | nest | bush | coffin | drawer | container | basin | tent | soup | well | barrel | bucket | cage | sink | cylinder | parcel | cart | sack | trunk | wardrobe | basket | bin | fridge | mug | jar | corner | pool | blender | closet | pile | van | trailer | saucepan | truck | taxi | haystack | dumpster | puddle | bathtub | pod | tub | trap | bun | microwave | bookstore | package | cafe | train | castle | bunker | vase | backpack | tube | hammock | stadium | backyard | swamp | monastery | refrigerator | palace | cubicle | crib | condo | tower | crate | dungeon | teapot | tomb | casket | jeep | shoebox | wagon | bakery | fishbowl | kennel | china | spaceship | penthouse | pyramid
+
+N_beside  : table | stage | bed | chair | book | road | tree | machine | house | seat | speaker | computer | rock | car | box | cup | glass | bag | flower | boat | vehicle | key | painting | cabinet | TV | bottle | cat | desk | shoe | mirror | clock | bench | bike | lamp | lion | piano | crystal | toy | duck | sword | sculpture | rod | truck | basket | bear | nest | sphere | bush | surgeon | poster | throne | giant | trophy | hedge | log | tent | ladder | helicopter | barrel | yacht | statue | bucket | skull | beast | lemon | whale | cage | gardner | fox | sink | trainee | dragon | cylinder | monk | bat | headmaster | philosopher | foreigner | worm | chemist | corpse | wolf | torch | sailor | valve | hammer | doll | genius | baron | murderer | bicycle | keyboard | stool | pepper | warrior | pillar | monkey | cassette | broker | bin
+
+P_on  : on
+
+P_in  : in
+
+P_beside  : beside
+
+P_iobj  : to
+
+Rel_pron  : that
+
+WHO  : Who
+
+WHAT  : What
+
+AUX_did  : did
+
+V_trans_omissible  : ate | painted | drew | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | saw | noticed | studied | examined | observed | knew | investigated
+
+V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse | sketch | juggle | call | hear | pack | see | notice | study | examine | observe | know | investigate
+
+V_trans_omissible_pp  : eaten | painted | drawn | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | seen | noticed | studied | examined | observed | known | investigated
+
+V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+
+V_trans_not_omissible_inf  : like | help | find | love | poke | admire | adore | appreciate | miss | respect | throw | tolerate | value | worship | discover | hold | stab | touch | pierce | toss
+
+V_trans_not_omissible_pp  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | thrown | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+
+V_cp_taking  : liked | hoped | said | noticed | believed | confessed | declared | proved | thought | admired | appreciated | respected | supported | tolerated | valued | wished | dreamed | expected | imagined | meant
+
+V_cp_taking_inf  : like | hope | say | notice | believe | confess | declare | prove | think | admire | appreciate | respect | support | tolerate | value | wish | dream | expect | imagine | mean
+
+V_inf_taking  : wanted | preferred | needed | intended | tried | attempted | planned | expected | hoped | wished | craved | liked | hated | loved | enjoyed | dreamed | meant | longed | yearned | itched
+
+V_unacc  : rolled | froze | burned | shortened | floated | grew | slid | broke | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
+
+V_unacc_inf  : roll | freeze | burn | shorten | float | grow | slide | break | crumple | split | change | snap | disintegrate | collapse | decompose | double | improve | inflate | enlarge | redden
+
+V_unacc_pp  : rolled | frozen | burned | shortened | floated | grown | slid | broken | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
+
+V_unerg  : slept | smiled | laughed | sneezed | cried | talked | danced | jogged | walked | ran | napped | snoozed | screamed | stuttered | frowned | giggled | scoffed | snored | smirked | gasped
+
+V_inf  : walk | run | sleep | sneeze | nap | eat | read | cook | hunt | paint | talk | dance | giggle | jog | smirk | call | sketch | dust | clean | investigate
+
+V_dat  : gave | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
+
+V_dat_pp  : given | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
+
+V_dat_inf  : give | lend | sell | offer | feed | pass | send | rent | serve | award | bring | hand | forward | promise | mail | loan | post | return | slip | wire
+
 S : NP_animate_nsubj_main V_main NP_animate_dobj_RC_modified | NP_animate_nsubj_main V_main NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_animate_iobj NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_inanimate_dobj_RC_modified PP_iobj | NP_animate_nsubj_main AUX V_dat_pp NP_inanimate_dobj_RC_modified | NP_animate_nsubj VP_cp | NP_animate_nsubj VP_external | NP_animate_nsubj_main_RC_modified VP_main_anim_subj | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_unacc | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_pass_dat | NP_inanimate_nsubj_main_RC_modified VP_main_inanim_subj | NP_animate_nsubj VP_cp
 
 VP_cp : V_cp_taking C S
@@ -273,10 +377,7 @@ NP_beside : Det N_beside PP_loc | Det N_beside
 PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
 
 PP_iobj : P_iobj NP_animate_iobj
-
 ```
-
-The terminals being *words* that are up to you to infer based on the grammar.
 
 I would like you to derive a sentence using each of the following derivation trees:
 
@@ -301,7 +402,7 @@ I would like you to derive a sentence using each of the following derivation tre
   (NP_animate_nsubj_main_RC_modified
     (NP_animate_nsubj_main (Det) (N_common_animate_nsubj))
     (Rel_pron)
-    (VP_RC_agent (V_unerg)))
+    (VP_RC_agent (V_unacc)))
   (VP_external
     (V_trans_not_omissible)
     (NP_dobj
@@ -358,9 +459,9 @@ I would like you to derive a sentence using each of the following derivation tre
           (N_common_animate_nsubj))
         (Rel_pron)
         (VP_RC_object_extracted_theme
-          (NP_inanimate_nsubj_main
+          (NP_animate_nsubj_main
             (Det)
-            (N_common_inanimate_nsubj))
+            (N_common_animate_nsubj))
           (V_trans_not_omissible)))
       (V_trans_not_omissible)))
   (VP_main_anim_subj
@@ -373,9 +474,9 @@ I would like you to derive a sentence using each of the following derivation tre
 
 I would like you to repeat this process in five sets. Within the same set, make sure to:
 - use the same main subject, object and verb throughout
-- use different embedded subjects and verbs
+- make all embedded subjects AND verbs *DIFFERENT*
 
-Output just the sentences without anything extra.
+Output just the numbered sentences without any extra information.
     """
     prompt = get_prompt(
         number=number_description,
@@ -390,7 +491,6 @@ Output just the sentences without anything extra.
         print("-" * 50)
         print(prompt)
         print("-" * 50)
-    print(prompt)
 
     response = gpt4_response(
         prompt=prompt,
@@ -409,7 +509,8 @@ def generate_speech(
     sentences: Union[str, List[str]],
     sentence_type: str = "relative",  # relative, cleft, or pronouns
     voice: str = "alloy",
-    model: str = "tts-1") -> List[Path]:
+    model: str = "tts-1"
+) -> List[Path]:
     """
     Generate speech audio files for one or multiple sentences.
 
