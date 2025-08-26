@@ -5,7 +5,7 @@ with open(out_path, "r") as f:
     correct = 0
     total = 0
     for line in f.readlines():
-        if line != "<null>":
+        if line != "<null>\n":
             correct += 1
         total += 1
 
