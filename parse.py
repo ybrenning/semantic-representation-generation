@@ -1,7 +1,7 @@
 import subprocess
 
 grammar_prefix = "in_distribution"
-grammar_path = "grammars/preprocessed-main.irtg"
+grammar_path = "grammars/preprocessed-combined.irtg"
 in_path = "data/english/in_distribution-english.txt"
 in_path = "data/english/prompt-english.txt"
 

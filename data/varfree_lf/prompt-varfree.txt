@@ -1,30 +1,30 @@
 admire ( agent = * dog , theme = * cat )
 <null>
-<null>
-<null>
+admire ( agent = * dog ( nmod = run ( agent = * dog ) ) , theme = * cat )
+admire ( agent = * dog ( nmod = paint ( agent = * child , theme = * dog ) ) , theme = * cat )
 <null>
 <null>
 respect ( agent = * teacher , theme = * student )
 <null>
-<null>
-<null>
+respect ( agent = * teacher ( nmod = smile ( agent = * teacher ) ) , theme = * student )
+respect ( agent = * teacher ( nmod = dust ( agent = * boy , theme = * teacher ) ) , theme = * student )
 <null>
 <null>
 appreciate ( agent = * president , theme = * lawyer )
 <null>
-<null>
-<null>
+appreciate ( agent = * president ( nmod = giggle ( agent = * president ) ) , theme = * lawyer )
+appreciate ( agent = * president ( nmod = clean ( agent = * scientist , theme = * president ) ) , theme = * lawyer )
 <null>
 <null>
 love ( agent = * researcher , theme = * scientist )
 <null>
-<null>
-<null>
+love ( agent = * researcher ( nmod = dance ( agent = * researcher ) ) , theme = * scientist )
+love ( agent = * researcher ( nmod = notice ( agent = * professor , theme = * researcher ) ) , theme = * scientist )
 <null>
 <null>
 tolerate ( agent = * sailor , theme = * captain )
 <null>
-<null>
-<null>
+tolerate ( agent = * sailor ( nmod = stutter ( agent = * sailor ) ) , theme = * captain )
+tolerate ( agent = * sailor ( nmod = call ( agent = * prince , theme = * sailor ) ) , theme = * captain )
 <null>
 <null>
