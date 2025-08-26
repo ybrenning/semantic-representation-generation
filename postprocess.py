@@ -78,7 +78,7 @@ def main():
         df_alto["source"] = df_alto["source"] + " ."
 
         df_alto["cogs_lf"] = df_alto.apply(
-            lambda x: convert_varfree_to_cogs.varfree_to_cogs_lf(
+            lambda x: varfree2cogs.varfree_to_cogs_lf(
                 x.source, x.varfree_lf
             ),
             axis=1
