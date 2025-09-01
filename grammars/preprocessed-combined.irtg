@@ -5595,899 +5595,904 @@ NP_animate_nsubj -> r1799(N_prop_nsubj) 	[0.5]
   [semantics] ?1
 
 
-NP_animate_nsubjpass -> r1800(Det, N_common_animate_nsubjpass) 	[0.5]
+
+NP_animate_nsubj -> r1800(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
+  [english] *(*(?1, ?2), ?3)
+  [semantics] nmod(pre_det(?2, ?1), ?3)
+
+NP_animate_nsubjpass -> r1801(Det, N_common_animate_nsubjpass) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_nsubjpass -> r1801(N_prop_nsubjpass) 	[0.5]
+NP_animate_nsubjpass -> r1802(N_prop_nsubjpass) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
-NP_inanimate_dobj -> r1802(Det, N_common_inanimate_dobj) 	[0.5]
+NP_inanimate_dobj -> r1803(Det, N_common_inanimate_dobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_dobj -> r1803(Det, N_common_inanimate_dobj, PP_loc) 	[0.5]
+NP_inanimate_dobj -> r1804(Det, N_common_inanimate_dobj, PP_loc) 	[0.5]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_inanimate_dobj_noPP -> r1804(Det, N_common_inanimate_dobj) 	[1.0]
+NP_inanimate_dobj_noPP -> r1805(Det, N_common_inanimate_dobj) 	[1.0]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_nsubjpass -> r1805(Det, N_common_inanimate_nsubjpass) 	[1.0]
+NP_inanimate_nsubjpass -> r1806(Det, N_common_inanimate_nsubjpass) 	[1.0]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
-NP_on -> r1806(Det, N_on, PP_loc) 	[0.1]
+NP_on -> r1807(Det, N_on, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_on -> r1807(Det, N_on) 	[0.9]
+NP_on -> r1808(Det, N_on) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
-NP_in -> r1808(Det, N_in, PP_loc) 	[0.1]
+NP_in -> r1809(Det, N_in, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_in -> r1809(Det, N_in) 	[0.9]
+NP_in -> r1810(Det, N_in) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_beside -> r1810(Det, N_beside, PP_loc) 	[0.1]
+NP_beside -> r1811(Det, N_beside, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_beside -> r1811(Det, N_beside) 	[0.9]
+NP_beside -> r1812(Det, N_beside) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
 
-PP_loc -> r1812(P_on, NP_on) 	[0.334]
+PP_loc -> r1813(P_on, NP_on) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1813(P_in, NP_in) 	[0.333]
+PP_loc -> r1814(P_in, NP_in) 	[0.333]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1814(P_beside, NP_beside) 	[0.334]
+PP_loc -> r1815(P_beside, NP_beside) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_iobj -> r1815 (P_iobj,NP_animate_iobj)	[1]
+PP_iobj -> r1816 (P_iobj,NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
 
 
 
-S! -> S_obj_modif_main_theme_E1816(NP_animate_nsubj_main, V_main, NP_animate_dobj_RC_modified) 	[0.3]
+S! -> S_obj_modif_main_theme_E1817(NP_animate_nsubj_main, V_main, NP_animate_dobj_RC_modified) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(pre_agent(?2, ?1),?3)
 
-S! -> S_obj_modif_main_theme_E1817(NP_animate_nsubj_main, V_main, NP_inanimate_dobj_RC_modified) 	[0.3]
+S! -> S_obj_modif_main_theme_E1818(NP_animate_nsubj_main, V_main, NP_inanimate_dobj_RC_modified) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(pre_agent(?2, ?1),?3)
 
-S! -> S_obj_modif_main_dat_theme_E1818(NP_animate_nsubj_main, V_dat, NP_animate_iobj, NP_inanimate_dobj_RC_modified) 	[0.1]
+S! -> S_obj_modif_main_dat_theme_E1819(NP_animate_nsubj_main, V_dat, NP_animate_iobj, NP_inanimate_dobj_RC_modified) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] theme(recipient(agent(?2, ?1),?3),?4)
 
-S! -> S_obj_modif_main_dat_theme_E1819(NP_animate_nsubj_main, V_dat, NP_inanimate_dobj_RC_modified, PP_iobj) 	[0.1]
+S! -> S_obj_modif_main_dat_theme_E1820(NP_animate_nsubj_main, V_dat, NP_inanimate_dobj_RC_modified, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] recipient(theme(agent(?2, ?1),?3),?4)
 
-S! -> S_obj_modif_main_passive_dat_theme_E1820(NP_animate_nsubj_main, AUX, V_dat_pp, NP_inanimate_dobj_RC_modified) 	[0.1]
+S! -> S_obj_modif_main_passive_dat_theme_E1821(NP_animate_nsubj_main, AUX, V_dat_pp, NP_inanimate_dobj_RC_modified) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] theme(recipient(?3, ?1),?4)
 
 
-S! -> r1821(NP_animate_nsubj, VP_cp) 	[0.1]
+S! -> r1822(NP_animate_nsubj, VP_cp) 	[0.1]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_cp -> I_cp_embedded_RC_F1822(V_cp_taking, C, S!) 	[1]
+VP_cp -> I_cp_embedded_RC_F1823(V_cp_taking, C, S!) 	[1]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-V_main -> r1823(V_unacc) 	[0.33]
+V_main -> r1824(V_unacc) 	[0.33]
   [english] ?1
   [semantics] ?1
 
-V_main -> r1824(V_trans_omissible) 	[0.33]
+V_main -> r1825(V_trans_omissible) 	[0.33]
   [english] ?1
   [semantics] ?1
 
-V_main -> r1825(V_trans_not_omissible) 	[0.34]
+V_main -> r1826(V_trans_not_omissible) 	[0.34]
   [english] ?1
   [semantics] ?1
 
 
-NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1826(NP_animate_dobj_RC, Rel_pron, VP_RC_theme) 	[0.5]
+NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1827(NP_animate_dobj_RC, Rel_pron, VP_RC_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1827(NP_inanimate_dobj, Rel_pron, VP_RC_theme) 	[0.3]
+NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1828(NP_inanimate_dobj, Rel_pron, VP_RC_theme) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1828(NP_inanimate_dobj, Rel_pron, VP_dat_RC_theme) 	[0.1]
+NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1829(NP_inanimate_dobj, Rel_pron, VP_dat_RC_theme) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-VP_RC_theme -> r1829(NP_animate_nsubj, V_unacc) 	[0.33]
+VP_RC_theme -> r1830(NP_animate_nsubj, V_unacc) 	[0.33]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r1830(NP_animate_nsubj, V_trans_omissible) 	[0.33]
+VP_RC_theme -> r1831(NP_animate_nsubj, V_trans_omissible) 	[0.33]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r1831(NP_animate_nsubj, V_trans_not_omissible) 	[0.34]
+VP_RC_theme -> r1832(NP_animate_nsubj, V_trans_not_omissible) 	[0.34]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1832(NP_inanimate_dobj, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
+NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1833(NP_inanimate_dobj, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] 'nmod<that>'(?1, recipient(theme(agent(?4, ?3),?2),?5))
 
 
-VP_dat_RC_theme -> r1833(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
+VP_dat_RC_theme -> r1834(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(agent(?2, ?1),?3)
 
-NP_animate_nsubj_main -> r1834(N_prop_nsubj) 	[0.5]
+NP_animate_nsubj_main -> r1835(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_nsubj_main -> r1835(Det, N_common_animate_nsubj) 	[0.5]
+NP_animate_nsubj_main -> r1836(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
-NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E1836(NP_animate_dobj_RC, Rel_pron, VP_RC_agent) 	[0.35]
+NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E1837(NP_animate_dobj_RC, Rel_pron, VP_RC_agent) 	[0.35]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1837(NP_animate_dobj_RC, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1838(NP_animate_dobj_RC, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E1838(NP_animate_dobj_RC, Rel_pron, VP_RC_pass_recipient) 	[0.1]
+NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E1839(NP_animate_dobj_RC, Rel_pron, VP_RC_pass_recipient) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1839(NP_inanimate_dobj, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1840(NP_inanimate_dobj, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
 
-NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E1840(NP_inanimate_dobj, Rel_pron, VP_RC_pass_theme) 	[0.45]
+NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E1841(NP_inanimate_dobj, Rel_pron, VP_RC_pass_theme) 	[0.45]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
 
-VP_RC_unacc_theme -> r1841(V_unacc) 	[1]
+VP_RC_unacc_theme -> r1842(V_unacc) 	[1]
   [english] ?1
   [semantics] ?1
 
-VP_RC_pass_recipient -> r1842(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_RC_pass_recipient -> r1843(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_RC_pass_recipient -> r1843(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
+VP_RC_pass_recipient -> r1844(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
 
-VP_RC_pass_theme -> r1844(AUX,V_trans_not_omissible_pp) 	[0.125]
+VP_RC_pass_theme -> r1845(AUX,V_trans_not_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1845(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1846(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1846(AUX, V_trans_omissible_pp) 	[0.125]
+VP_RC_pass_theme -> r1847(AUX, V_trans_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1847(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1848(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1848(AUX, V_unacc_pp) 	[0.125]
+VP_RC_pass_theme -> r1849(AUX, V_unacc_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1849(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1850(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1850(AUX, V_dat_pp, PP_iobj) 	[0.125]
+VP_RC_pass_theme -> r1851(AUX, V_dat_pp, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_RC_pass_theme -> r1851(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1852(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
-VP_RC_agent -> r1852(V_unerg) 	[0.10525]
+VP_RC_agent -> r1853(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1853(V_unacc, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1854(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1854(V_trans_omissible) 	[0.10525]
+VP_RC_agent -> r1855(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1855(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1856(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1856(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1857(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> I_RC_control_V_F1857(V_inf_taking, INF, V_inf)	[0.10525]
+VP_RC_agent -> I_RC_control_V_F1858(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_RC_agent -> r1858(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_RC_agent -> r1859(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_RC_agent -> r1859(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_RC_agent -> r1860(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-VP_RC_agent -> I_RC_cp_V_F1860(V_cp_taking, C, C_internal) 	[0.158]
+VP_RC_agent -> I_RC_cp_V_F1861(V_cp_taking, C, C_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-NP_animate_nsubj -> r1861(N_prop_nsubj) 	[0.5]
+NP_animate_nsubj -> r1862(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_nsubj -> r1862(Det, N_common_animate_nsubj) 	[0.5]
+NP_animate_nsubj -> r1863(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-PP_iobj -> r1863 (P_iobj, NP_animate_iobj)	[1]
+PP_iobj -> r1864 (P_iobj, NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-NP_animate_iobj -> r1864(Det, N_common_animate_iobj) 	[0.5]
+NP_animate_iobj -> r1865(Det, N_common_animate_iobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_iobj -> r1865(N_prop_iobj) 	[0.5]
+NP_animate_iobj -> r1866(N_prop_iobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_dobj_RC -> r1866(Det, N_common_animate_dobj) 	[1]
+NP_animate_dobj_RC -> r1867(Det, N_common_animate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_dobj -> r1867(Det, N_common_inanimate_dobj) 	[1]
+NP_inanimate_dobj -> r1868(Det, N_common_inanimate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-C_internal -> r1868(NP_animate_nsubj, VP_external) 	[0.49]
+C_internal -> r1869(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-C_internal -> r1869(VP_internal) 	[0.06]
+C_internal -> r1870(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-C_internal -> r1870(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+C_internal -> r1871(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-C_internal -> r1871(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+C_internal -> r1872(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
 
-VP_external -> r1872(V_unerg) 	[0.125]
+VP_external -> r1873(V_unerg) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1873(V_unacc, NP_dobj) 	[0.125]
+VP_external -> r1874(V_unacc, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1874(V_trans_omissible) 	[0.125]
+VP_external -> r1875(V_trans_omissible) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1875(V_trans_omissible, NP_dobj) 	[0.125]
+VP_external -> r1876(V_trans_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1876(V_trans_not_omissible, NP_dobj) 	[0.125]
+VP_external -> r1877(V_trans_not_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1877(V_inf_taking, INF, V_inf)	[0.125]
+VP_external -> r1878(V_inf_taking, INF, V_inf)	[0.125]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_external -> r1878(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
+VP_external -> r1879(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_external -> r1879(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
+VP_external -> r1880(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
-VP_internal -> r1880(NP_unacc_subj, V_unacc) 	[1]
+VP_internal -> r1881(NP_unacc_subj, V_unacc) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
 
 
 
-NP_dobj -> r1881(NP_inanimate_dobj) 	[0.5]
+NP_dobj -> r1882(NP_inanimate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_dobj -> r1882(NP_animate_dobj) 	[0.5]
+NP_dobj -> r1883(NP_animate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_unacc_subj  -> r1883(Det, N_common_animate_dobj) 	[1]
+NP_unacc_subj  -> r1884(Det, N_common_animate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
-NP_animate_dobj -> r1884(Det, N_common_animate_dobj) 	[0.5]
+NP_animate_dobj -> r1885(Det, N_common_animate_dobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_dobj -> r1885(N_prop_dobj) 	[0.5]
+NP_animate_dobj -> r1886(N_prop_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
-NP_animate_nsubjpass -> r1886(Det, N_common_animate_nsubjpass) 	[0.5]
+NP_animate_nsubjpass -> r1887(Det, N_common_animate_nsubjpass) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_nsubjpass -> r1887(N_prop_nsubjpass) 	[0.5]
+NP_animate_nsubjpass -> r1888(N_prop_nsubjpass) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_nsubjpass -> r1888(Det, N_common_inanimate_nsubjpass) 	[1.0]
+NP_inanimate_nsubjpass -> r1889(Det, N_common_inanimate_nsubjpass) 	[1.0]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-PP_iobj -> r1889 (P_iobj,NP_animate_iobj)	[1]
+PP_iobj -> r1890 (P_iobj,NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-VP_passive -> r1890(AUX,V_trans_not_omissible_pp) 	[0.125]
+VP_passive -> r1891(AUX,V_trans_not_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1891(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1892(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1892(AUX, V_trans_omissible_pp) 	[0.125]
+VP_passive -> r1893(AUX, V_trans_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1893(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1894(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1894(AUX,V_unacc_pp) 	[0.125]
+VP_passive -> r1895(AUX,V_unacc_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1895(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1896(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1896(AUX, V_dat_pp, PP_iobj) 	[0.125]
+VP_passive -> r1897(AUX, V_dat_pp, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_passive -> r1897(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1898(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
-VP_passive_dat -> r1898(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_passive_dat -> r1899(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_passive_dat -> r1899(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
+VP_passive_dat -> r1900(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
 
 
-S! -> S_subj_modif_main_agent_E1900(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) 	[0.4]
+S! -> S_subj_modif_main_agent_E1901(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) 	[0.4]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S! -> S_subj_modif_main_unacc_theme_E1901(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_unacc) 	[0.05]
+S! -> S_subj_modif_main_unacc_theme_E1902(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_unacc) 	[0.05]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S! -> S_subj_modif_main_pass_recipient_E1902(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_pass_dat) 	[0.05]
+S! -> S_subj_modif_main_pass_recipient_E1903(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_pass_dat) 	[0.05]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
-S! -> S_subj_modif_E1903(NP_inanimate_nsubj_main_RC_modified, VP_main_inanim_subj) 	[0.45]
+S! -> S_subj_modif_E1904(NP_inanimate_nsubj_main_RC_modified, VP_main_inanim_subj) 	[0.45]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S! -> r1904(NP_animate_nsubj, VP_cp) 	[0.05]
+S! -> r1905(NP_animate_nsubj, VP_cp) 	[0.05]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_cp -> I_embedded_cp_V_F1905(V_cp_taking, C, S!) 	[1]
+VP_cp -> I_embedded_cp_V_F1906(V_cp_taking, C, S!) 	[1]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
 
-NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E1906(NP_animate_nsubj_main, Rel_pron, VP_RC_agent) 	[0.35]
+NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E1907(NP_animate_nsubj_main, Rel_pron, VP_RC_agent) 	[0.35]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E1907(NP_animate_nsubj_main, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E1908(NP_animate_nsubj_main, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E1908(NP_animate_nsubj_main, Rel_pron, VP_RC_pass_recipient) 	[0.1]
+NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E1909(NP_animate_nsubj_main, Rel_pron, VP_RC_pass_recipient) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> r1909(NP_inanimate_nsubj_main, Rel_pron, VP_RC_inanimate_subj_extracted_theme) 	[0.5]
+NP_inanimate_nsubj_main_RC_modified -> r1910(NP_inanimate_nsubj_main, Rel_pron, VP_RC_inanimate_subj_extracted_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
 
 
-VP_RC_pass_recipient -> r1910(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_RC_pass_recipient -> r1911(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_RC_pass_recipient -> r1911(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
+VP_RC_pass_recipient -> r1912(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
-VP_RC_unacc_theme -> r1912(V_unacc) 	[1]
+VP_RC_unacc_theme -> r1913(V_unacc) 	[1]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1913(V_unerg) 	[0.10525]
+VP_RC_agent -> r1914(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1914(V_unacc, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1915(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1915(V_trans_omissible) 	[0.10525]
+VP_RC_agent -> r1916(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1916(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1917(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1917(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1918(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> I_RC_control_V_F1918(V_inf_taking, INF, V_inf)	[0.10525]
+VP_RC_agent -> I_RC_control_V_F1919(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_RC_agent -> r1919(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_RC_agent -> r1920(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_RC_agent -> r1920(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_RC_agent -> r1921(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
 
-VP_RC_agent -> I_RC_cp_V_F1921(V_cp_taking, C, C_internal) 	[0.158]
+VP_RC_agent -> I_RC_cp_V_F1922(V_cp_taking, C, C_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_unacc_theme_subj_extracted_E1922(V_unacc) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_unacc_theme_subj_extracted_E1923(V_unacc) 	[0.111]
   [english] ?1
   [semantics] ?1
 
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1923(AUX, V_trans_not_omissible_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1924(AUX, V_trans_not_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1924(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1925(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1925(AUX, V_trans_omissible_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1926(AUX, V_trans_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1926(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1927(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1927(AUX,V_unacc_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1928(AUX,V_unacc_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1928(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1929(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1929(AUX, V_dat_pp, PP_iobj) 	[0.112]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1930(AUX, V_dat_pp, PP_iobj) 	[0.112]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1930(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1931(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
 
-NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1931(NP_animate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) 	[0.5]
+NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1932(NP_animate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1932(NP_inanimate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) 	[0.3]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1933(NP_inanimate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1933(NP_inanimate_nsubj_main, Rel_pron, VP_dat_RC_theme) 	[0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1934(NP_inanimate_nsubj_main, Rel_pron, VP_dat_RC_theme) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1934(NP_inanimate_nsubj_main, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1935(NP_inanimate_nsubj_main, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] 'nmod<that>'(?1, recipient(theme(agent(?4, ?3),?2),?5))
 
 
-NP_animate_nsubj_main -> r1935(Det, N_common_animate_nsubj) 	[1]
+NP_animate_nsubj_main -> r1936(Det, N_common_animate_nsubj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_nsubj_main -> r1936(Det, N_common_inanimate_nsubjpass) 	[1]
+NP_inanimate_nsubj_main -> r1937(Det, N_common_inanimate_nsubjpass) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1937(NP_animate_nsubj, V_unacc) 	[0.33]
+VP_RC_object_extracted_theme -> r1938(NP_animate_nsubj, V_unacc) 	[0.33]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1938(NP_animate_nsubj, V_trans_omissible) 	[0.33]
+VP_RC_object_extracted_theme -> r1939(NP_animate_nsubj, V_trans_omissible) 	[0.33]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1939(NP_animate_nsubj, V_trans_not_omissible) 	[0.34]
+VP_RC_object_extracted_theme -> r1940(NP_animate_nsubj, V_trans_not_omissible) 	[0.34]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
 
-VP_dat_RC_theme -> r1940(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
+VP_dat_RC_theme -> r1941(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(agent(?2, ?1),?3)
 
 
 
-VP_main_inanim_subj -> S_main_unacc_theme_E1941(V_unacc) 	[0.111]
+VP_main_inanim_subj -> S_main_unacc_theme_E1942(V_unacc) 	[0.111]
   [english] ?1
   [semantics] ?1
 
-VP_main_inanim_subj -> S_main_pass_theme_E1942(AUX, V_trans_not_omissible_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1943(AUX, V_trans_not_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1943(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1944(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1944(AUX, V_trans_omissible_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1945(AUX, V_trans_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1945(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1946(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1946(AUX,V_unacc_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1947(AUX,V_unacc_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1947(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1948(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1948(AUX, V_dat_pp, PP_iobj) 	[0.112]
+VP_main_inanim_subj -> S_main_pass_theme_E1949(AUX, V_dat_pp, PP_iobj) 	[0.112]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1949(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1950(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
-VP_main_anim_subj_pass_dat -> r1950(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_main_anim_subj_pass_dat -> r1951(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_main_anim_subj_pass_dat -> r1951(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
+VP_main_anim_subj_pass_dat -> r1952(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
-VP_main_anim_subj_unacc -> r1952(V_unacc) 	[1]
+VP_main_anim_subj_unacc -> r1953(V_unacc) 	[1]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1953(V_unerg) 	[0.10525]
+VP_main_anim_subj -> r1954(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1954(V_unacc, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1955(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> r1955(V_trans_omissible) 	[0.10525]
+VP_main_anim_subj -> r1956(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1956(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1957(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> r1957(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1958(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> I_main_control_V_F1958(V_inf_taking, INF, V_inf)	[0.10525]
+VP_main_anim_subj -> I_main_control_V_F1959(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_main_anim_subj -> r1959(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_main_anim_subj -> r1960(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_main_anim_subj -> r1960(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_main_anim_subj -> r1961(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-VP_main_anim_subj -> I_main_cp_V_F1961(V_cp_taking, C, S_internal) 	[0.158]
+VP_main_anim_subj -> I_main_cp_V_F1962(V_cp_taking, C, S_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
 
-S_internal -> r1962(NP_animate_nsubj, VP_external) 	[0.49]
+S_internal -> r1963(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S_internal -> r1963(VP_internal) 	[0.06]
+S_internal -> r1964(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-S_internal -> r1964(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+S_internal -> r1965(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S_internal -> r1965(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+S_internal -> r1966(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
-VP_external -> r1966(V_cp_taking, C, S_internal) 	[0.158]
+VP_external -> r1967(V_cp_taking, C, S_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-VP_external -> r1967(V_unerg) 	[0.10525]
+VP_external -> r1968(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1968(V_unacc, NP_dobj) 	[0.10525]
+VP_external -> r1969(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1969(V_trans_omissible) 	[0.10525]
+VP_external -> r1970(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1970(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_external -> r1971(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1971(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_external -> r1972(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1972(V_inf_taking, INF, V_inf)	[0.10525]
+VP_external -> r1973(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_external -> r1973(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_external -> r1974(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_external -> r1974(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_external -> r1975(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-C_internal -> r1975(NP_animate_nsubj, C_VP_external) 	[0.49]
+C_internal -> r1976(NP_animate_nsubj, C_VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-C_internal -> r1976(VP_internal) 	[0.06]
+C_internal -> r1977(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-C_internal -> r1977(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+C_internal -> r1978(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-C_internal -> r1978(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+C_internal -> r1979(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
 
-C_VP_external -> r1979(V_unerg) 	[0.125]
+C_VP_external -> r1980(V_unerg) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-C_VP_external -> r1980(V_unacc, NP_dobj) 	[0.125]
+C_VP_external -> r1981(V_unacc, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1981(V_trans_omissible) 	[0.125]
+C_VP_external -> r1982(V_trans_omissible) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-C_VP_external -> r1982(V_trans_omissible, NP_dobj) 	[0.125]
+C_VP_external -> r1983(V_trans_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1983(V_trans_not_omissible, NP_dobj) 	[0.125]
+C_VP_external -> r1984(V_trans_not_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1984(V_inf_taking, INF, V_inf)	[0.125]
+C_VP_external -> r1985(V_inf_taking, INF, V_inf)	[0.125]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-C_VP_external -> r1985(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
+C_VP_external -> r1986(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-C_VP_external -> r1986(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
+C_VP_external -> r1987(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-VP_internal -> r1987(NP_unacc_subj, V_unacc) 	[1]
+VP_internal -> r1988(NP_unacc_subj, V_unacc) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
 
 
 
-NP_dobj -> r1988(NP_inanimate_dobj) 	[0.5]
+NP_dobj -> r1989(NP_inanimate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_dobj -> r1989(NP_animate_dobj) 	[0.5]
+NP_dobj -> r1990(NP_animate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_unacc_subj  -> r1990(Det, N_common_animate_dobj) 	[1]
+NP_unacc_subj  -> r1991(Det, N_common_animate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_dobj -> r1991(Det, N_common_animate_dobj) 	[0.5]
+NP_animate_dobj -> r1992(Det, N_common_animate_dobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_dobj -> r1992(N_prop_dobj) 	[0.5]
+NP_animate_dobj -> r1993(N_prop_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_iobj -> r1993(Det, N_common_animate_iobj) 	[0.5]
+NP_animate_iobj -> r1994(Det, N_common_animate_iobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_iobj -> r1994(N_prop_iobj) 	[0.5]
-  [english] ?1
-  [semantics] ?1
-
-
-NP_animate_nsubj -> r1995(Det, N_common_animate_nsubj) 	[0.5]
-  [english] *(?1, ?2)
-  [semantics] pre_det(?2, ?1)
-
-NP_animate_nsubj -> r1996(N_prop_nsubj) 	[0.5]
+NP_animate_iobj -> r1995(N_prop_iobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
-NP_animate_nsubjpass -> r1997(Det, N_common_animate_nsubjpass) 	[0.5]
+NP_animate_nsubj -> r1996(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_nsubjpass -> r1998(N_prop_nsubjpass) 	[0.5]
+NP_animate_nsubj -> r1997(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_dobj -> r1999(Det, N_common_inanimate_dobj) 	[1]
+
+NP_animate_nsubjpass -> r1998(Det, N_common_animate_nsubjpass) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_nsubjpass -> r2000(Det, N_common_inanimate_nsubjpass) 	[1.0]
+NP_animate_nsubjpass -> r1999(N_prop_nsubjpass) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+NP_inanimate_dobj -> r2000(Det, N_common_inanimate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-PP_iobj -> r2001 (P_iobj,NP_animate_iobj)	[1]
+NP_inanimate_nsubjpass -> r2001(Det, N_common_inanimate_nsubjpass) 	[1.0]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
+
+PP_iobj -> r2002 (P_iobj,NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-VP_passive -> r2002(AUX,V_trans_not_omissible_pp) 	[0.125]
+VP_passive -> r2003(AUX,V_trans_not_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r2003(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r2004(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r2004(AUX, V_trans_omissible_pp) 	[0.125]
+VP_passive -> r2005(AUX, V_trans_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r2005(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r2006(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r2006(AUX,V_unacc_pp) 	[0.125]
+VP_passive -> r2007(AUX,V_unacc_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r2007(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r2008(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r2008(AUX, V_dat_pp, PP_iobj) 	[0.125]
+VP_passive -> r2009(AUX, V_dat_pp, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_passive -> r2009(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r2010(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
-VP_passive_dat -> r2010(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_passive_dat -> r2011(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_passive_dat -> r2011(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
+VP_passive_dat -> r2012(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 

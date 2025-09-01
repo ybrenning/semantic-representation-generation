@@ -163,6 +163,11 @@ NP_animate_nsubj -> r{{ cnt.next() }}(N_prop_nsubj) [0.5]
 [english] ?1
 [semantics] ?1
 
+{## Added by Yannick (probabilities are irrelevant) ##}
+
+NP_animate_nsubj -> r{{ cnt.next() }}(Det, N_common_animate_nsubj, PP_loc) [0.0]
+[english] *(*(?1, ?2), ?3)
+[semantics] nmod(pre_det(?2, ?1), ?3)
 
 NP_animate_nsubjpass -> r{{ cnt.next() }}(Det, N_common_animate_nsubjpass) [0.5]
 [english] *(?1, ?2)

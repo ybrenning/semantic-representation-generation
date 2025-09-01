@@ -1,17 +1,17 @@
 admire ( agent = * dog , theme = * cat )
-<null>
+admire ( agent = * dog ( nmod . in = * car ) , theme = * cat )
 admire ( agent = * dog ( nmod = run ( agent = * dog ) ) , theme = * cat )
 admire ( agent = * dog ( nmod = paint ( agent = * child , theme = * dog ) ) , theme = * cat )
 <null>
 <null>
 respect ( agent = * teacher , theme = * student )
-<null>
+respect ( agent = * teacher ( nmod . in = * room ) , theme = * student )
 respect ( agent = * teacher ( nmod = smile ( agent = * teacher ) ) , theme = * student )
 respect ( agent = * teacher ( nmod = dust ( agent = * boy , theme = * teacher ) ) , theme = * student )
 <null>
 <null>
 appreciate ( agent = * president , theme = * lawyer )
-<null>
+appreciate ( agent = * president ( nmod . on = * stage ) , theme = * lawyer )
 appreciate ( agent = * president ( nmod = giggle ( agent = * president ) ) , theme = * lawyer )
 appreciate ( agent = * president ( nmod = clean ( agent = * scientist , theme = * president ) ) , theme = * lawyer )
 <null>
