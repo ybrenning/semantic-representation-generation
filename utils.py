@@ -1,7 +1,10 @@
-def read_grammar(grammar_path):
+def read_grammar(grammar_path, lex_only=False):
     grammar = {}
     with open(grammar_path, "r") as f:
         for line in f:
+            if lex_only and line.startswith("S :"):
+                break
+
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
@@ -14,7 +17,13 @@ def read_grammar(grammar_path):
             alternatives = [r.strip().split() for r in rhs.split("|")]
 
             grammar[lhs] = alternatives
-    return grammar
+
+    if lex_only:
+        flattened = [word for sublist in grammar.values() for inner in sublist for word in inner]
+        lexicon = set(flattened)
+        return lexicon
+    else:
+        return grammar
 
 
 def normalize(value):
@@ -31,6 +40,8 @@ def normalize(value):
 def compare_grammars(g1_path, g2_path):
 
     g1 = read_grammar(g1_path)
+    print(g1)
+    assert 0
     g2 = read_grammar(g2_path)
 
     if g1.keys() != g2.keys():
@@ -64,8 +75,9 @@ def evaluate(varfree_path):
     print(f"{correct}/{total} ({acc}%) sentences have a valid parse")
 
 
-varfree_path = "data/varfree_lf/prompt-varfree.txt"
-# evaluate(varfree_path)
-g1 = "grammars/preprocessed-combined.ebnf"
-g2 = "grammars/custom-grammar.ebnf"
-print(compare_grammars(g1, g2))
+if __name__ == "__main__":
+    varfree_path = "data/varfree_lf/prompt-varfree.txt"
+    # evaluate(varfree_path)
+    g1 = "grammars/preprocessed-RC_modifying_subject_NP_gen-grammar.ebnf"
+    g2 = "grammars/custom-grammar.ebnf"
+    print(compare_grammars(g1, g2))
