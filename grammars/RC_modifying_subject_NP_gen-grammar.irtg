@@ -45,21 +45,39 @@ VP_cp -> I_embedded_cp_V_F{{ cnt.next() }}(V_cp_taking, C, S!) [1]
 [semantics] ccomp(?1, ?3)
 
 {# subject extracted RCs #}
-NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_main, Rel_pron, VP_RC_agent) [0.35]
+NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_rec, Rel_pron, VP_RC_agent) [0.35]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_main, Rel_pron, VP_RC_unacc_theme) [0.05]
+NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_rec, Rel_pron, VP_RC_unacc_theme) [0.05]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_main, Rel_pron, VP_RC_pass_recipient) [0.1]
+NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_rec, Rel_pron, VP_RC_pass_recipient) [0.1]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> r{{ cnt.next() }}(NP_inanimate_nsubj_main, Rel_pron, VP_RC_inanimate_subj_extracted_theme) [0.5]
+NP_inanimate_nsubj_main_RC_modified -> r{{ cnt.next() }}(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_inanimate_subj_extracted_theme) [0.5]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
+
+{## Added by Yannick: allow for recursion in RCs ##}
+
+NP_animate_nsubj_rec -> r{{ cnt.next() }}(NP_animate_nsubj_main) [0.5]
+[english] ?1
+[semantics] ?1
+
+NP_animate_nsubj_rec -> r{{ cnt.next() }}(NP_animate_nsubj_main_RC_modified) [0.5]
+[english] ?1
+[semantics] ?1
+
+NP_inanimate_nsubj_rec -> r{{ cnt.next() }}(NP_inanimate_nsubj_main) [0.5]
+[english] ?1
+[semantics] ?1
+
+NP_inanimate_nsubj_rec -> r{{ cnt.next() }}(NP_inanimate_nsubj_main_RC_modified) [0.5]
+[english] ?1
+[semantics] ?1
 
 
 VP_RC_pass_recipient -> r{{ cnt.next() }}(AUX, V_dat_pp, NP_inanimate_dobj) [0.5]
@@ -158,19 +176,19 @@ VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E{{ cnt.n
 
 
 {# object extracted RCs #}
-NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) [0.5]
+NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) [0.5]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_main, Rel_pron, VP_RC_object_extracted_theme) [0.3]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) [0.3]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_main, Rel_pron, VP_dat_RC_theme) [0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_rec, Rel_pron, VP_dat_RC_theme) [0.1]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_main, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) [0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_nsubj_rec, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) [0.1]
 [english] *(*(*(?1, ?2),?3),*(?4,?5))
 [semantics] 'nmod<that>'(?1, recipient(theme(agent(?4, ?3),?2),?5))
 {# replace the following rule with the previous: handle the extracted theme ordering issue (dat verbs)
