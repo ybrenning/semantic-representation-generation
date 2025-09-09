@@ -1,8 +1,8 @@
 import subprocess
 
 grammar_prefix = "in_distribution"
-grammar_path_irtg = "grammars/preprocessed-RC_modifying_subject_NP_gen-grammar.irtg"
-grammar_path_ebnf = "grammars/preprocessed-RC_modifying_subject_NP_gen-grammar.ebnf"
+grammar_path_irtg = "grammars/preprocessed-combined.irtg"
+grammar_path_ebnf = "grammars/preprocessed-combined.ebnf"
 in_path = "data/english/in_distribution-english.txt"
 in_path = "data/english/prompt-english.txt"
 
