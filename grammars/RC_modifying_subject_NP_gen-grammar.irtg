@@ -206,17 +206,21 @@ NP_inanimate_nsubj_main -> r{{ cnt.next() }}(Det, N_common_inanimate_nsubjpass) 
 [english] *(?1, ?2)
 [semantics] pre_det(?2, ?1)
 
-VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_unacc) [0.33]
+VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_unacc) [0.33]
 [english] *(?1, ?2)
 [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_trans_omissible) [0.33]
+VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_trans_omissible) [0.33]
 [english] *(?1, ?2)
 [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_trans_not_omissible) [0.34]
+VP_RC_object_extracted_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_trans_not_omissible) [0.34]
 [english] *(?1, ?2)
 [semantics] agent(?2, ?1)
+
+VP_RC_object_extracted_theme -> I_RC_cp_V_F{{ cnt.next() }}(V_cp_taking, C, S_internal) [0.0]
+[english] *(?1, *(?2, ?3))
+[semantics] ccomp(?1, ?3)
 
 
 VP_dat_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_dat, NP_animate_iobj) [1]

@@ -60,27 +60,27 @@ V_main -> r{{ cnt.next() }}(V_trans_not_omissible) [0.34]
 [semantics] ?1
 
 {# object extracted RCs #}
-NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_animate_dobj_RC, Rel_pron, VP_RC_theme) [0.5]
+NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_animate_dobj_rec, Rel_pron, VP_RC_theme) [0.5]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj, Rel_pron, VP_RC_theme) [0.3]
+NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj_rec, Rel_pron, VP_RC_theme) [0.3]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj, Rel_pron, VP_dat_RC_theme) [0.1]
+NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj_rec, Rel_pron, VP_dat_RC_theme) [0.1]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_unacc) [0.33]
+VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_unacc) [0.33]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_trans_omissible) [0.33]
+VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_trans_omissible) [0.33]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj, V_trans_not_omissible) [0.34]
+VP_RC_theme -> r{{ cnt.next() }}(NP_animate_nsubj_rec, V_trans_not_omissible) [0.34]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
 
@@ -108,24 +108,24 @@ NP_animate_nsubj_main -> r{{ cnt.next() }}(Det, N_common_animate_nsubj) [0.5]
 
 
 {# subject extracted RCs #}
-NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_RC, Rel_pron, VP_RC_agent) [0.35]
+NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_rec, Rel_pron, VP_RC_agent) [0.35]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_RC, Rel_pron, VP_RC_unacc_theme) [0.05]
+NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_rec, Rel_pron, VP_RC_unacc_theme) [0.05]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_RC, Rel_pron, VP_RC_pass_recipient) [0.1]
+NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E{{ cnt.next() }}(NP_animate_dobj_rec, Rel_pron, VP_RC_pass_recipient) [0.1]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj, Rel_pron, VP_RC_unacc_theme) [0.05]
+NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj_rec, Rel_pron, VP_RC_unacc_theme) [0.05]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
 {# including V_dat passive forms #}
-NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj, Rel_pron, VP_RC_pass_theme) [0.45]
+NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E{{ cnt.next() }}(NP_inanimate_dobj_rec, Rel_pron, VP_RC_pass_theme) [0.45]
 [english] *(*(?1, ?2),?3)
 [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
 
@@ -175,11 +175,17 @@ VP_RC_pass_theme -> r{{ cnt.next() }}(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsub
 [semantics] agent(recipient(?2,?3),?5)
 
 
+{## Also add recursion to VPs ##}
+
 VP_RC_agent -> r{{ cnt.next() }}(V_unerg) [0.10525]
 [english] ?1
 [semantics] ?1
 
-VP_RC_agent -> r{{ cnt.next() }}(V_unacc, NP_dobj) [0.10525]
+VP_RC_agent -> r{{ cnt.next() }}(V_unacc, NP_inanimate_dobj_rec) [0.10525]
+[english] *(?1, ?2)
+[semantics] theme(?1, ?2)
+
+VP_RC_agent -> r{{ cnt.next() }}(V_unacc, NP_animate_dobj_rec) [0.10525]
 [english] *(?1, ?2)
 [semantics] theme(?1, ?2)
 
@@ -187,11 +193,19 @@ VP_RC_agent -> r{{ cnt.next() }}(V_trans_omissible) [0.10525]
 [english] ?1
 [semantics] ?1
 
-VP_RC_agent -> r{{ cnt.next() }}(V_trans_omissible, NP_dobj) [0.10525]
+VP_RC_agent -> r{{ cnt.next() }}(V_trans_omissible, NP_inanimate_dobj_rec) [0.10525]
 [english] *(?1, ?2)
 [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r{{ cnt.next() }}(V_trans_not_omissible, NP_dobj) [0.10525]
+VP_RC_agent -> r{{ cnt.next() }}(V_trans_omissible, NP_animate_dobj_rec) [0.10525]
+[english] *(?1, ?2)
+[semantics] theme(?1, ?2)
+
+VP_RC_agent -> r{{ cnt.next() }}(V_trans_not_omissible, NP_inanimate_dobj_rec) [0.10525]
+[english] *(?1, ?2)
+[semantics] theme(?1, ?2)
+
+VP_RC_agent -> r{{ cnt.next() }}(V_trans_not_omissible, NP_animate_dobj_rec) [0.10525]
 [english] *(?1, ?2)
 [semantics] theme(?1, ?2)
 
@@ -203,7 +217,15 @@ VP_RC_agent -> r{{ cnt.next() }}(V_dat, NP_inanimate_dobj, PP_iobj) [0.10525]
 [english] *(*(?1, ?2), ?3)
 [semantics] recipient(theme(?1, ?2), ?3)
 
+VP_RC_agent -> r{{ cnt.next() }}(V_dat, NP_inanimate_dobj_rec, PP_iobj) [0.10525]
+[english] *(*(?1, ?2), ?3)
+[semantics] recipient(theme(?1, ?2), ?3)
+
 VP_RC_agent -> r{{ cnt.next() }}(V_dat, NP_animate_iobj, NP_inanimate_dobj) [0.10525]
+[english] *(*(?1, ?2), ?3)
+[semantics] theme(recipient(?1, ?2), ?3)
+
+VP_RC_agent -> r{{ cnt.next() }}(V_dat, NP_animate_iobj, NP_inanimate_dobj_rec) [0.10525]
 [english] *(*(?1, ?2), ?3)
 [semantics] theme(recipient(?1, ?2), ?3)
 
@@ -246,6 +268,24 @@ NP_animate_dobj_RC -> r{{ cnt.next() }}(Det, N_common_animate_dobj) [1]
 NP_inanimate_dobj -> r{{ cnt.next() }}(Det, N_common_inanimate_dobj) [1]
 [english] *(?1, ?2)
 [semantics] pre_det(?2, ?1)
+
+{## Added by Yannick: allow for RC recursion ##}
+
+NP_inanimate_dobj_rec -> r{{ cnt.next() }}(NP_inanimate_dobj) [0.0]
+[english] ?1
+[semantics] ?1
+
+NP_inanimate_dobj_rec -> r{{ cnt.next() }}(NP_inanimate_dobj_RC_modified) [0.0]
+[english] ?1
+[semantics] ?1
+
+NP_animate_dobj_rec -> r{{ cnt.next() }}(NP_animate_dobj_RC) [0.0]
+[english] ?1
+[semantics] ?1
+
+NP_animate_dobj_rec -> r{{ cnt.next() }}(NP_animate_dobj_RC_modified) [0.0]
+[english] ?1
+[semantics] ?1
 
 C_internal -> r{{ cnt.next() }}(NP_animate_nsubj, VP_external) [0.49]
 [english] *(?1, ?2)
