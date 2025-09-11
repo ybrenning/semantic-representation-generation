@@ -1,4 +1,7 @@
-in_file = "prompts/prompt-tree-vocab-response.txt"
+in_file = "prompts/prompt-tree-vocab-10-response.txt"
+
+rel_prons = ["which", "who", "whom"]
+
 with open(in_file, "r") as f:
     content = """
 // IRTG unannotated corpus file, v1.0
@@ -12,9 +15,13 @@ with open(in_file, "r") as f:
         if line[0].isdigit():
             sent = line[3:]
             sent = sent[0].lower() + sent[1:-2]
+            sent = " ".join([
+                w if w not in rel_prons else "that"
+                for w in sent.split(" ")
+            ])
             content += sent + "\n"
 
-out_file = "data/english/prompt-english.txt"
+out_file = "data/english/prompt-english-10.txt"
 with open(out_file, "w") as f:
     f.write(content)
 
