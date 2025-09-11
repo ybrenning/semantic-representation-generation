@@ -11,6 +11,7 @@ with open(in_file, "r") as f:
 
 """
 
+    i = 0
     for line in f.readlines():
         if line[0].isdigit():
             sent = line[3:]
@@ -19,10 +20,17 @@ with open(in_file, "r") as f:
                 w if w not in rel_prons else "that"
                 for w in sent.split(" ")
             ])
+
+            if i == 0:
+                batch_det = sent.split(" ")[0]
+            elif i == 5:
+                i = 0
+            else:
+                i += 1
+
+            sent = batch_det + " " + " ".join(sent.split(" ")[1:])
             content += sent + "\n"
 
 out_file = "data/english/prompt-english-10.txt"
 with open(out_file, "w") as f:
     f.write(content)
-
-
