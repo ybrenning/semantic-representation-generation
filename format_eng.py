@@ -25,8 +25,7 @@ with open(in_file, "r") as f:
                 batch_det = sent.split(" ")[0]
             elif i == 5:
                 i = 0
-            else:
-                i += 1
+            i += 1
 
             sent = batch_det + " " + " ".join(sent.split(" ")[1:])
             content += sent + "\n"
