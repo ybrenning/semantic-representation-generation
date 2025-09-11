@@ -195,7 +195,7 @@ def test_pipeline(
     tense_description = tenses[tense]
 
     special_prompt = """
-You are an expert linguist. I would like you to look at the following grammar in EBNF format:
+You are an expert linguist. I would like you to look at the following grammar in Lark format:
 
 ```
 Det  : the | a
@@ -302,71 +302,35 @@ V_dat_pp  : given | lent | sold | offered | fed | passed | sent | rented | serve
 
 V_dat_inf  : give | lend | sell | offer | feed | pass | send | rent | serve | award | bring | hand | forward | promise | mail | loan | post | return | slip | wire
 
-S : NP_animate_nsubj_main V_main NP_animate_dobj_RC_modified | NP_animate_nsubj_main V_main NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_animate_iobj NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_inanimate_dobj_RC_modified PP_iobj | NP_animate_nsubj_main AUX V_dat_pp NP_inanimate_dobj_RC_modified | NP_animate_nsubj VP_cp | NP_animate_nsubj VP_external | NP_animate_nsubj_main_RC_modified VP_main_anim_subj | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_unacc | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_pass_dat | NP_inanimate_nsubj_main_RC_modified VP_main_inanim_subj | NP_animate_nsubj VP_cp
+S : NP_animate_nsubj VP_external | VP_internal | NP_inanimate_nsubjpass VP_passive | NP_animate_nsubjpass VP_passive_dat | NP_animate_nsubj_main V_main NP_animate_dobj_RC_modified | NP_animate_nsubj_main V_main NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_animate_iobj NP_inanimate_dobj_RC_modified | NP_animate_nsubj_main V_dat NP_inanimate_dobj_RC_modified PP_iobj | NP_animate_nsubj_main AUX V_dat_pp NP_inanimate_dobj_RC_modified | NP_animate_nsubj VP_cp | NP_animate_nsubj_main_RC_modified VP_main_anim_subj | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_unacc | NP_animate_nsubj_main_RC_modified VP_main_anim_subj_pass_dat | NP_inanimate_nsubj_main_RC_modified VP_main_inanim_subj
 
-VP_cp : V_cp_taking C S
-
-V_main : V_unacc | V_trans_omissible | V_trans_not_omissible
-
-NP_animate_dobj_RC_modified : NP_animate_dobj_RC Rel_pron VP_RC_theme | NP_animate_dobj_RC Rel_pron VP_RC_agent | NP_animate_dobj_RC Rel_pron VP_RC_unacc_theme | NP_animate_dobj_RC Rel_pron VP_RC_pass_recipient
-
-NP_inanimate_dobj_RC_modified : NP_inanimate_dobj Rel_pron VP_RC_theme | NP_inanimate_dobj Rel_pron VP_dat_RC_theme | NP_inanimate_dobj Rel_pron NP_animate_nsubj V_dat PP_iobj | NP_inanimate_dobj Rel_pron VP_RC_unacc_theme | NP_inanimate_dobj Rel_pron VP_RC_pass_theme
-
-NP_animate_nsubj_main_RC_modified : NP_animate_nsubj_main Rel_pron VP_RC_agent | NP_animate_nsubj_main Rel_pron VP_RC_unacc_theme | NP_animate_nsubj_main Rel_pron VP_RC_pass_recipient | NP_animate_nsubj_main Rel_pron VP_RC_object_extracted_theme
-
-NP_inanimate_nsubj_main_RC_modified : NP_inanimate_nsubj_main Rel_pron VP_RC_inanimate_subj_extracted_theme | NP_inanimate_nsubj_main Rel_pron VP_RC_object_extracted_theme | NP_inanimate_nsubj_main Rel_pron VP_dat_RC_theme | NP_inanimate_nsubj_main Rel_pron NP_animate_nsubj V_dat PP_iobj
-
-VP_RC_inanimate_subj_extracted_theme : V_unacc | AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
-
-VP_RC_object_extracted_theme : NP_animate_nsubj V_unacc | NP_animate_nsubj V_trans_omissible | NP_animate_nsubj V_trans_not_omissible
-
-VP_RC_theme : NP_animate_nsubj V_unacc | NP_animate_nsubj V_trans_omissible | NP_animate_nsubj V_trans_not_omissible
-
-VP_dat_RC_theme : NP_animate_nsubj V_dat NP_animate_iobj
-
-NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc
-
-VP_RC_unacc_theme : V_unacc
-
-VP_RC_pass_recipient : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
-
-VP_RC_pass_theme : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
-
-VP_RC_agent : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_cp_taking C C_internal
-
-NP_animate_nsubj : N_prop_nsubj | Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc
-
-PP_iobj : P_iobj NP_animate_iobj | P_iobj NP_animate_iobj
-
-NP_animate_iobj : Det N_common_animate_iobj | N_prop_iobj
-
-NP_animate_dobj_RC : Det N_common_animate_dobj
-
-NP_inanimate_dobj : Det N_common_inanimate_dobj | Det N_common_inanimate_dobj PP_loc
-
-NP_inanimate_dobj_noPP : Det N_common_inanimate_dobj
-
-C_internal : NP_animate_nsubj VP_external | VP_internal | NP_inanimate_nsubjpass VP_passive | NP_animate_nsubjpass VP_passive_dat
-
-VP_external : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj
+VP_external : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_cp_taking C S | V_trans_not_omissible NP_dobj | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_cp_taking C S_internal
 
 VP_internal : NP_unacc_subj V_unacc
 
+VP_passive : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+VP_passive_dat : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
+
 NP_dobj : NP_inanimate_dobj | NP_animate_dobj
 
-NP_unacc_subj : NP_inanimate_dobj_noPP | NP_animate_dobj_noPP
+NP_unacc_subj : NP_inanimate_dobj_noPP | NP_animate_dobj_noPP | Det N_common_animate_dobj
 
 NP_animate_dobj_noPP : Det N_common_animate_dobj | N_prop_dobj
 
 NP_animate_dobj : Det N_common_animate_dobj | Det N_common_animate_dobj PP_loc | N_prop_dobj
 
+NP_animate_iobj : Det N_common_animate_iobj | N_prop_iobj
+
+NP_animate_nsubj : Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj PP_loc
+
 NP_animate_nsubjpass : Det N_common_animate_nsubjpass | N_prop_nsubjpass
 
+NP_inanimate_dobj : Det N_common_inanimate_dobj | Det N_common_inanimate_dobj PP_loc
+
+NP_inanimate_dobj_noPP : Det N_common_inanimate_dobj
+
 NP_inanimate_nsubjpass : Det N_common_inanimate_nsubjpass
-
-VP_passive : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
-
-VP_passive_dat : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
 
 NP_on : Det N_on PP_loc | Det N_on
 
@@ -376,7 +340,63 @@ NP_beside : Det N_beside PP_loc | Det N_beside
 
 PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
 
-PP_iobj : P_iobj NP_animate_iobj
+PP_iobj : P_iobj NP_animate_iobj | P_iobj NP_animate_iobj
+
+VP_cp : V_cp_taking C S | V_cp_taking C S
+
+V_main : V_unacc | V_trans_omissible | V_trans_not_omissible
+
+NP_animate_dobj_RC_modified : NP_animate_dobj_rec Rel_pron VP_RC_theme | NP_animate_dobj_rec Rel_pron VP_RC_agent | NP_animate_dobj_rec Rel_pron VP_RC_unacc_theme | NP_animate_dobj_rec Rel_pron VP_RC_pass_recipient
+
+NP_inanimate_dobj_RC_modified : NP_inanimate_dobj_rec Rel_pron VP_RC_theme | NP_inanimate_dobj_rec Rel_pron VP_dat_RC_theme | NP_inanimate_dobj Rel_pron NP_animate_nsubj V_dat PP_iobj | NP_inanimate_dobj_rec Rel_pron VP_RC_unacc_theme | NP_inanimate_dobj_rec Rel_pron VP_RC_pass_theme
+
+VP_RC_theme : NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissible | NP_animate_nsubj_rec V_trans_not_omissible
+
+VP_dat_RC_theme : NP_animate_nsubj V_dat NP_animate_iobj
+
+NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj
+
+VP_RC_unacc_theme : V_unacc
+
+VP_RC_pass_recipient : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
+
+VP_RC_pass_theme : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+VP_RC_agent : V_unerg | V_unacc NP_inanimate_dobj_rec | V_unacc NP_animate_dobj_rec | V_trans_omissible | V_trans_omissible NP_inanimate_dobj_rec | V_trans_omissible NP_animate_dobj_rec | V_trans_not_omissible NP_inanimate_dobj_rec | V_trans_not_omissible NP_animate_dobj_rec | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_inanimate_dobj_rec PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_dat NP_animate_iobj NP_inanimate_dobj_rec | V_cp_taking C C_internal | V_unacc NP_dobj | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj
+
+NP_animate_dobj_RC : Det N_common_animate_dobj
+
+NP_inanimate_dobj_rec : NP_inanimate_dobj | NP_inanimate_dobj_RC_modified
+
+NP_animate_dobj_rec : NP_animate_dobj_RC | NP_animate_dobj_RC_modified
+
+C_internal : NP_animate_nsubj VP_external | VP_internal | NP_inanimate_nsubjpass VP_passive | NP_animate_nsubjpass VP_passive_dat | NP_animate_nsubj C_VP_external
+
+NP_animate_nsubj_main_RC_modified : NP_animate_nsubj_rec Rel_pron VP_RC_agent | NP_animate_nsubj_rec Rel_pron VP_RC_unacc_theme | NP_animate_nsubj_rec Rel_pron VP_RC_pass_recipient | NP_animate_nsubj_rec Rel_pron VP_RC_object_extracted_theme
+
+NP_inanimate_nsubj_main_RC_modified : NP_inanimate_nsubj_rec Rel_pron VP_RC_inanimate_subj_extracted_theme | NP_inanimate_nsubj_rec Rel_pron VP_RC_object_extracted_theme | NP_inanimate_nsubj_rec Rel_pron VP_dat_RC_theme | NP_inanimate_nsubj_rec Rel_pron NP_animate_nsubj V_dat PP_iobj
+
+NP_animate_nsubj_rec : NP_animate_nsubj_main | NP_animate_nsubj_main_RC_modified
+
+NP_inanimate_nsubj_rec : NP_inanimate_nsubj_main | NP_inanimate_nsubj_main_RC_modified
+
+VP_RC_inanimate_subj_extracted_theme : V_unacc | AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+NP_inanimate_nsubj_main : Det N_common_inanimate_nsubjpass
+
+VP_RC_object_extracted_theme : NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissible | NP_animate_nsubj_rec V_trans_not_omissible | V_cp_taking C S_internal
+
+VP_main_inanim_subj : V_unacc | AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+VP_main_anim_subj_pass_dat : AUX V_dat_pp NP_inanimate_dobj | AUX V_dat_pp NP_inanimate_dobj BY NP_animate_nsubj
+
+VP_main_anim_subj_unacc : V_unacc
+
+VP_main_anim_subj : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj | V_cp_taking C S_internal
+
+S_internal : NP_animate_nsubj VP_external | VP_internal | NP_inanimate_nsubjpass VP_passive | NP_animate_nsubjpass VP_passive_dat
+
+C_VP_external : V_unerg | V_unacc NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_inf_taking INF V_inf | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj
 ```
 
 I would like you to derive a sentence using each of the following derivation trees:
@@ -413,35 +433,51 @@ I would like you to derive a sentence using each of the following derivation tre
 ```
 (S
   (NP_animate_nsubj_main_RC_modified
-    (NP_animate_nsubj_main
-      (Det) (N_common_animate_nsubj))
-    (Rel_pron)
-    (VP_RC_agent
-      (NP_animate_nsubj
-        (Det) (N_common_animate_nsubj))
-      (V_trans_omissible)))
-  (V_main)
-  (NP_animate_dobj
-    (Det) (N_common_animate_dobj)))
+    (NP_animate_nsubj_rec
+      (NP_animate_nsubj_main
+        (Det)
+        (N_common_animate_nsubj))
+      (Rel_pron)
+      (VP_RC_object_extracted_theme
+        (NP_animate_nsubj_rec
+          (NP_animate_nsubj_main
+            (Det)
+            (N_common_animate_nsubj)))
+        (V_trans_not_omissible)))
+  (VP_external
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)))))
 ```
 
 5.
 ```
 (S
   (NP_animate_nsubj_main_RC_modified
-    (NP_animate_nsubj_main (Det) (N_common_animate_nsubj))
-    (Rel_pron)
-    (VP_RC_agent
-      (V_trans_not_omissible)
-      (NP_dobj
+    (NP_animate_nsubj_rec
+      (NP_animate_nsubj_main
+        (Det)
+        (N_common_animate_nsubj))
+      (Rel_pron)
+      (VP_RC_agent
+        (V_trans_not_omissible)
         (NP_inanimate_dobj_RC_modified
-          (NP_inanimate_dobj (Det) (N_common_inanimate_dobj))
-          (Rel_pron)
-          (VP_RC_pass_theme (AUX) (V_unacc_pp))))))
-  (VP_main_anim_subj
-    (VP_external
-      (V_trans_not_omissible)
-      (NP_dobj (NP_animate_dobj (Det) (N_common_animate_dobj))))))
+          (NP_inanimate_dobj_rec
+            (NP_inanimate_dobj
+              (Det)
+              (N_common_inanimate_dobj))
+            (Rel_pron)
+            (VP_RC_pass_theme
+              (AUX)
+              (V_trans_omissible_pp)))))))
+  (VP_external
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)))))
 ```
 
 6.
@@ -472,12 +508,13 @@ I would like you to derive a sentence using each of the following derivation tre
         (N_common_animate_dobj)))))
 ```
 
-I would like you to repeat this process in five sets. Within the same set, make sure to:
-- use the same main subject, object and verb throughout
-- make all embedded subjects AND verbs *DIFFERENT*
+I would like you to repeat this process in ten sets. Within the same set, make sure to:
+- use the same *main* subject, object and verb throughout all six sentences
+- make *all* the embedded subjects and verbs *different*
 
 Output just the numbered sentences without any extra information.
     """
+
     prompt = get_prompt(
         number=number_description,
         tense=tense_description,
