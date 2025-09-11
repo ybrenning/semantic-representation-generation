@@ -1,0 +1,60 @@
+admire ( agent = * cat , theme = * dog )
+admire ( agent = * cat ( nmod . in = * garden ) , theme = * dog )
+admire ( agent = * cat ( nmod = roll ( theme = * cat ) ) , theme = * dog )
+admire ( agent = * cat ( nmod = like ( agent = * bunny , theme = * cat ) ) , theme = * dog )
+admire ( agent = * cat ( nmod = like ( agent = * cat , theme = * cake ( nmod = eat ( theme = * cake ) ) ) ) , theme = * dog )
+admire ( agent = * cat ( nmod = like ( agent = * bird ( nmod = miss ( agent = * chicken , theme = * bird ) ) , theme = * cat ) ) , theme = * dog )
+respect ( agent = * monkey , theme = * bear )
+respect ( agent = * monkey ( nmod . in = * car ) , theme = * bear )
+respect ( agent = * monkey ( nmod = freeze ( theme = * monkey ) ) , theme = * bear )
+respect ( agent = * monkey ( nmod = love ( agent = * duck , theme = * monkey ) ) , theme = * bear )
+respect ( agent = * monkey ( nmod = like ( agent = * monkey , theme = * muffin ( nmod = cook ( theme = * muffin ) ) ) ) , theme = * bear )
+<null>
+adore ( agent = * lion , theme = * giraffe )
+adore ( agent = * lion ( nmod . in = * box ) , theme = * giraffe )
+adore ( agent = * lion ( nmod = grow ( theme = * lion ) ) , theme = * giraffe )
+<null>
+adore ( agent = * lion ( nmod = like ( agent = * lion , theme = * jigsaw ( nmod = paint ( theme = * jigsaw ) ) ) ) , theme = * giraffe )
+adore ( agent = * lion ( nmod = find ( agent = * puppy ( nmod = miss ( agent = * fish , theme = * puppy ) ) , theme = * lion ) ) , theme = * giraffe )
+admire ( agent = * wolf , theme = * bunny )
+admire ( agent = * wolf ( nmod . beside = * road ) , theme = * bunny )
+admire ( agent = * wolf ( nmod = break ( theme = * wolf ) ) , theme = * bunny )
+<null>
+admire ( agent = * wolf ( nmod = like ( agent = * wolf , theme = * pumpkin ( nmod = sketch ( theme = * pumpkin ) ) ) ) , theme = * bunny )
+<null>
+appreciate ( agent = * teacher , theme = * student )
+appreciate ( agent = * teacher ( nmod . on = * stage ) , theme = * student )
+appreciate ( agent = * teacher ( nmod = split ( theme = * teacher ) ) , theme = * student )
+appreciate ( agent = * teacher ( nmod = adore ( agent = * duck , theme = * teacher ) ) , theme = * student )
+appreciate ( agent = * teacher ( nmod = like ( agent = * teacher , theme = * toy ( nmod = dust ( theme = * toy ) ) ) ) , theme = * student )
+appreciate ( agent = * teacher ( nmod = adore ( agent = * professor ( nmod = value ( agent = * deer , theme = * professor ) ) , theme = * teacher ) ) , theme = * student )
+love ( agent = * sailor , theme = * captain )
+<null>
+love ( agent = * sailor ( nmod = double ( theme = * sailor ) ) , theme = * captain )
+love ( agent = * sailor ( nmod = throw ( agent = * hero , theme = * sailor ) ) , theme = * captain )
+love ( agent = * sailor ( nmod = like ( agent = * sailor , theme = * rose ( nmod = hear ( theme = * rose ) ) ) ) , theme = * captain )
+<null>
+adore ( agent = * president , theme = * queen )
+adore ( agent = * president ( nmod . in = house ) , theme = * queen )
+adore ( agent = * president ( nmod = improve ( theme = * president ) ) , theme = * queen )
+adore ( agent = * president ( nmod = poke ( agent = mouse , theme = * president ) ) , theme = * queen )
+adore ( agent = * president ( nmod = like ( agent = * president , theme = cake ( nmod = paint ( theme = cake ) ) ) ) , theme = * queen )
+adore ( agent = * president ( nmod = poke ( agent = fish ( nmod = respect ( agent = wolf , theme = fish ) ) , theme = * president ) ) , theme = * queen )
+help ( agent = * writer , theme = * producer )
+help ( agent = * writer ( nmod . on = bench ) , theme = * producer )
+help ( agent = * writer ( nmod = roll ( theme = * writer ) ) , theme = * producer )
+<null>
+help ( agent = * writer ( nmod = like ( agent = * writer , theme = basket ( nmod = investigate ( theme = basket ) ) ) ) , theme = * producer )
+help ( agent = * writer ( nmod = see ( agent = scientist ( nmod = respect ( agent = sheep , theme = scientist ) ) , theme = * writer ) ) , theme = * producer )
+miss ( agent = * tourist , theme = resident )
+miss ( agent = tourist ( nmod . on = beach ) , theme = resident )
+miss ( agent = tourist ( nmod = slide ( theme = tourist ) ) , theme = resident )
+miss ( agent = tourist ( nmod = find ( agent = moose , theme = tourist ) ) , theme = resident )
+<null>
+<null>
+adore ( agent = human , theme = donkey )
+<null>
+adore ( agent = human ( nmod = enlarge ( theme = human ) ) , theme = donkey )
+<null>
+adore ( agent = human ( nmod = like ( agent = human , theme = pillow ( nmod = sketch ( theme = pillow ) ) ) ) , theme = donkey )
+<null>
