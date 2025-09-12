@@ -22,6 +22,16 @@ cat(x_1) AND want.agent(x_2,x_1) AND want.xcomp(x_2, x_4) AND sleep.agent(x_4,x_
 
 The result is a corpus of English sentences, each one paired with their semantic representation. This workflow should be applicable both for training and test sets -- for generalization (test), the difference lies in the grammar/prompt used for the sentence generation.
 
+## Run pipeline
+
+The main part of the workflow can be run from a single script by providing a `prompt_path` to a text file and `grammar_path` to an IRTG file. Based on this, the script prompts `gpt-4o`, saves the raw text response, cleans and formats the sentences to correspond with the SLOG English representation, runs the parser on the sentences to produce the semantic representations, and finally computes an accuracy score based on how many of the produced sentences adhere to the grammar specifications.
+
+This script can be run as follows:
+
+```bash
+$ python3 main.py prompts/prompt-tree-vocab-10.txt grammars/preprocessed-combined.irtg 
+```
+
 ## Grammars
 
 ### English sentence grammar
@@ -41,5 +51,3 @@ For example:
 ```bash
 $ java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar de.up.ling.irtg.script.ParsingEvaluator -g grammars/preprocessed-main.irtg -I english -O semantics=cogs --no-derivations test-alto.txt
 ```
-
-> So far, the annotation has not yet been fully integrated with the English sentence generation steps. The above example runs on a few example sentences from the training data.
