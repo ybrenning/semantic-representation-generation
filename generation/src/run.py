@@ -2,8 +2,8 @@
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 import itertools
-from .utils import process_task
-from config.config import themes, numbers, tenses, prompts
+from generation.src.utils import process_task
+from generation.config.config import themes, numbers, tenses, prompts
 
 def main():
     tasks = list(itertools.product(prompts.keys(), themes.keys(), numbers.keys(), tenses.keys()))
