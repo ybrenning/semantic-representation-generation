@@ -1,13 +1,28 @@
-grammar_prefix = "in_distribution"
-out_path = f"data/varfree_lf/{grammar_prefix}-varfree.txt"
+def get_parse_accuracy(varfree_path):
+    with open(varfree_path, "r") as f:
+        lines = f.readlines()
 
-with open(out_path, "r") as f:
-    correct = 0
-    total = 0
-    for line in f.readlines():
-        if line != "<null>\n":
-            correct += 1
-        total += 1
+    batch_size = 6
 
-acc = round(correct/total * 100, 2)
-print(f"{correct}/{total} ({acc}%) sentences have a valid parse")
+    total_lines = 0
+    correct_lines = 0
+
+    total_batches = 0
+    correct_batches = 0
+
+    for i in range(0, len(lines), batch_size):
+        batch = lines[i:i+batch_size]
+        if len(batch) < batch_size:
+            continue
+
+        for line in batch:
+            total_lines += 1
+            if line.strip() != "<null>":
+                correct_lines += 1
+
+        total_batches += 1
+        if all(line.strip() != "<null>" for line in batch):
+            correct_batches += 1
+
+    print(f"Line accuracy: {correct_lines}/{total_lines} = {correct_lines / total_lines:.2%}")
+    print(f"Batch accuracy: {correct_batches}/{total_batches} = {correct_batches / total_batches:.2%}")
