@@ -1,0 +1,36 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the dog discovered a cat
+the dog beside the table discovered a cat
+the dog that floated discovered a cat
+the dog that a monkey dusted discovered a cat
+the dog that painted a cake that was hunted discovered a cat
+the dog that the bird that a monkey knew hugged discovered a cat
+the teacher adored a student
+the teacher in the room adored a student
+the teacher that rolled adored a student
+the teacher that a lawyer cleaned adored a student
+the teacher that sketched a toy that was packed adored a student
+the teacher that the baby that a director observed respected adored a student
+the president found a lawyer
+the president on the stage found a lawyer
+the president that snapped found a lawyer
+the president that a champion hunted found a lawyer
+the president that called a block that was seen found a lawyer
+the president that the judge that a guest knew poked found a lawyer
+the professor helped a student
+the professor in the building helped a student
+the professor that improved helped a student
+the professor that a patient examined helped a student
+the professor that dusted a chair that was noticed helped a student
+the professor that the driver that the advisor noticed threw helped a student
+the sailor loved a captain
+the sailor beside the boat loved a captain
+the sailor that decomposed loved a captain
+the sailor that a mother cooked loved a captain
+the sailor that dusted a box that was examined loved a captain
+the sailor that the creature that the actor found stabbed loved a captain
