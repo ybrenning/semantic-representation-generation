@@ -1,4 +1,4 @@
-You are an expert linguist. I would like you to look at the following grammar in EBNF format:
+You are an expert linguist. I would like you to look at the following Lark grammar:
 
 ```
 Det  : the | a
@@ -315,15 +315,15 @@ I would like you to derive a sentence using each of the following derivation tre
       (VP_RC_agent
         (V_trans_omissible)
         (NP_inanimate_dobj_rec
-          (NP_inanimate_dobj
-            (Det)
-            (N_common_inanimate_dobj)
-          )
-          (Rel_pron)
-          (VP_RC_inanimate_subj_extracted_theme
-            (AUX)
-            (V_unacc_pp)
-            (PP_loc)
+          (NP_inanimate_dobj_RC_modified
+            (NP_inanimate_dobj_rec
+              (NP_inanimate_dobj
+                (Det)
+                (N_common_inanimate_dobj)
+              )
+            )
+            (Rel_pron)
+            (VP_RC_pass_theme)
           )
         )
       )
