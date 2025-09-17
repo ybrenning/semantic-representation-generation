@@ -1,3 +1,6 @@
+import sys
+
+
 def get_parse_accuracy(varfree_path):
     with open(varfree_path, "r") as f:
         lines = f.readlines()
@@ -26,3 +29,13 @@ def get_parse_accuracy(varfree_path):
 
     print(f"Line accuracy: {correct_lines}/{total_lines} = {correct_lines / total_lines:.2%}")
     print(f"Batch accuracy: {correct_batches}/{total_batches} = {correct_batches / total_batches:.2%}")
+
+
+def main():
+    varfree_path = sys.argv[1]
+    assert varfree_path.endswith(".txt")
+    get_parse_accuracy(varfree_path)
+
+
+if __name__ == "__main__":
+    main()

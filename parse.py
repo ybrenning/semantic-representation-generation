@@ -1,4 +1,5 @@
 import subprocess
+import sys
 from utils import read_grammar
 
 
@@ -8,12 +9,12 @@ rel_prons = ["which", "who", "whom"]
 def format_sents(response_path):
     with open(response_path, "r") as f:
         content = """
-    // IRTG unannotated corpus file, v1.0
-    //
-    // interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
 
 
-    """
+"""
 
         i = 0
         for line in f.readlines():
@@ -70,3 +71,15 @@ def parse_sents(sent_path, grammar_path):
 
     print("Saved representations in variable-free format to", varfree_path)
     return varfree_path
+
+
+def main():
+    sent_path = sys.argv[1]
+    grammar_path = sys.argv[2]
+    assert sent_path.endswith(".txt")
+    assert grammar_path.endswith(".irtg")
+    parse_sents(sent_path, grammar_path)
+
+
+if __name__ == "__main__":
+    main()
