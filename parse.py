@@ -20,11 +20,12 @@ def format_sents(response_path):
         for line in f.readlines():
             if line[0].isdigit():
                 sent = line[3:]
-                sent = sent[0].lower() + sent[1:-2]
+                sent = sent[0].lower() + sent[1:]
                 sent = " ".join([
                     w if w not in rel_prons else "that"
                     for w in sent.split(" ")
                 ])
+                sent = sent.replace(" an ", " the ")
 
                 if i == 0:
                     batch_det = sent.split(" ")[0]
@@ -34,6 +35,8 @@ def format_sents(response_path):
 
                 sent = batch_det + " " + " ".join(sent.split(" ")[1:])
                 sent = sent.replace(",", "")
+                sent = sent.strip()
+                sent = sent.rstrip(".")
                 content += sent + "\n"
 
     out_file = "data/english/" + response_path.split("/")[-1]
@@ -53,7 +56,8 @@ def parse_sents(sent_path, grammar_path):
         for line in f.readlines():
             if not line.startswith("//"):
                 for word in line.split(" "):
-                    if word != "\n" and word.strip() not in lex:
+                    word = word.strip()
+                    if word and word not in lex:
                         print(f"Word {word.strip()} not in lexicon")
 
     varfree_path = "data/varfree_lf/" + sent_path.split("/")[-1]
