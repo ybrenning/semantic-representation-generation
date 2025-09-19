@@ -14,6 +14,7 @@ def get_parse_accuracy(varfree_path, grammar_path):
     correct_lines = 0
 
     total_batches = 0
+    not_null_batches = 0
     correct_batches = 0
 
     # Show vocab-specific information
@@ -36,10 +37,15 @@ def get_parse_accuracy(varfree_path, grammar_path):
 
         total_batches += 1
         if all(line.strip() != "<null>" for line in batch):
+            not_null_batches += 1
+
+        main_verb = batch[0].split("(")[0]
+        if all(line.strip().startswith(main_verb) for line in batch):
             correct_batches += 1
 
-    print(f"Line accuracy: {correct_lines}/{total_lines} = {correct_lines / total_lines:.2%}")
-    print(f"Batch accuracy: {correct_batches}/{total_batches} = {correct_batches / total_batches:.2%}")
+    print(f"Line parse accuracy: {correct_lines}/{total_lines} = {correct_lines / total_lines:.2%}")
+    print(f"Batch parse accuracy: {not_null_batches}/{total_batches} = {not_null_batches / total_batches:.2%}")
+    print(f"Batch form accuracy: {correct_batches}/{total_batches} = {correct_batches / total_batches:.2%}")
 
 
 def main():
