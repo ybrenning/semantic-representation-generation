@@ -1,4 +1,6 @@
-Note that the naming convention for the tree-based prompts (which are a work in progress) contain the numbers of the sentence variations from the following list:
+# Prompts
+
+The overall idea for all prompts is to constrain `gpt-4o` to a context-free grammar while generating sentences following the following six structures:
 
 1) Baseline (SV): Simple Subject-Verb structure
 2) Control (S Prep V): Subject with Prepositional_Clause and Verb
@@ -15,5 +17,3 @@ For example:
 4. The doctor who the parent called examines the patient.
 5. The doctor who read the report that was on the desk examines the patient.
 6. The doctor who the mother who the school called trusts examines the patient.
-
-> In short, if the prompt's file name contains `124`, that means the prompt aims to generate sentences of types (1), (2), (4) from the list above
