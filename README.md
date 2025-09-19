@@ -26,10 +26,33 @@ The result is a corpus of English sentences, each one paired with their semantic
 
 The main part of the workflow can be run from a single script by providing a `prompt_path` to a text file and `grammar_path` to an IRTG file. Based on this, the script prompts `gpt-4o`, saves the raw text response, cleans and formats the sentences to correspond with the SLOG English representation, runs the parser on the sentences to produce the semantic representations, and finally computes an accuracy score based on how many of the produced sentences adhere to the grammar specifications.
 
-This script can be run as follows:
+### Install dependencies 
+
+Install the required dependencies from a virtual environment:
 
 ```bash
-$ python3 main.py prompts/prompt-tree-vocab-10.txt grammars/preprocessed-combined.irtg 
+$ python -m venv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+Run the script with command line arguments:
+
+```bash
+$ python3 main.py prompts/prompt-newest.txt grammars/preprocessed-combined.irtg 
+```
+
+Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately:
+
+```bash
+$ python3 evaluate.py prompts/prompt-newest.txt grammars/preprocessed-combined.irtg 
+
+-----------
+Total OOV percentage: 4 / 67 = 5.97%
+OOV sentences: 4 / 30 = 13.33%
+-----------
+Line accuracy: 26/30 = 86.67%
+Batch accuracy: 2/5 = 40.00%
 ```
 
 ## Grammars
