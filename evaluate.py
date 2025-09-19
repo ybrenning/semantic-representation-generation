@@ -21,7 +21,7 @@ def get_parse_accuracy(varfree_path, grammar_path):
         sent_path,
         grammar_path,
         show_stats=True,
-        show_oov=False
+        show_oov=True
     )
 
     for i in range(0, len(lines), batch_size):

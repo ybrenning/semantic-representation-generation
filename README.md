@@ -36,16 +36,16 @@ $ . venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Run the script with command line arguments:
+Run the script with the preprocessesd CFG as a command line argument:
 
 ```bash
-$ python3 main.py prompts/prompt-newest.txt grammars/preprocessed-combined.irtg 
+$ python3 main.py grammars/preprocessed-combined.irtg 
 ```
 
 Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately:
 
 ```bash
-$ python3 evaluate.py prompts/prompt-newest.txt grammars/preprocessed-combined.irtg 
+$ python3 evaluate.py data/varfree_lf/prompt-newest.txt grammars/preprocessed-combined.irtg 
 
 -----------
 Total OOV percentage: 4 / 67 = 5.97%
