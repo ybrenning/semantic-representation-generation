@@ -29,15 +29,16 @@ def format_sents(response_path):
 
                 if i == 0:
                     batch_det = sent.split(" ")[0]
-                elif i == 5:
-                    i = 0
-                i += 1
 
                 sent = batch_det + " " + " ".join(sent.split(" ")[1:])
                 sent = sent.replace(",", "")
                 sent = sent.strip()
                 sent = sent.rstrip(".")
                 content += sent + "\n"
+
+                i += 1
+                if i == 6:
+                    i = 0
 
     out_file = "data/english/" + response_path.split("/")[-1]
     with open(out_file, "w") as f:
