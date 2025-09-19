@@ -1,7 +1,10 @@
 import sys
+from parse import lexical_parse
 
 
-def get_parse_accuracy(varfree_path):
+def get_parse_accuracy(varfree_path, grammar_path):
+    sent_path = "data/english/" + varfree_path.split("/")[-1]
+
     with open(varfree_path, "r") as f:
         lines = f.readlines()
 
@@ -12,6 +15,14 @@ def get_parse_accuracy(varfree_path):
 
     total_batches = 0
     correct_batches = 0
+
+    # Show vocab-specific information
+    lexical_parse(
+        sent_path,
+        grammar_path,
+        show_stats=True,
+        show_oov=False
+    )
 
     for i in range(0, len(lines), batch_size):
         batch = lines[i:i+batch_size]
@@ -33,8 +44,9 @@ def get_parse_accuracy(varfree_path):
 
 def main():
     varfree_path = sys.argv[1]
+    grammar_path = sys.argv[2]
     assert varfree_path.endswith(".txt")
-    get_parse_accuracy(varfree_path)
+    get_parse_accuracy(varfree_path, grammar_path)
 
 
 if __name__ == "__main__":
