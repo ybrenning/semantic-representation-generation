@@ -1,4 +1,44 @@
-def prompt_from_grammar(grammar_path):
+import random
+
+
+subsample_terminals = [
+    "N_common_animate_dobj ",
+    "N_common_animate_iobj ",
+    "N_common_animate_nsubj ",
+    "N_common_animate_nsubjpass ",
+
+    "N_common_inanimate_dobj ",
+    "N_common_inanimate_nsubjpass ",
+    "N_common_inanimate_nsubj ",
+    "N_prop_dobj ",
+    "N_prop_iobj ",
+    "N_prop_nsubj ",
+    "N_prop_nsubjpass ",
+    "N_on ",
+    "N_in ",
+    "N_beside ",
+
+    "V_trans_omissible ",
+    "V_trans_omissible_inf ",
+    "V_trans_omissible_pp ",
+    "V_trans_not_omissible ",
+    "V_trans_not_omissible_inf ",
+    "V_trans_not_omissible_pp ",
+    "V_cp_taking ",
+    "V_cp_taking_inf ",
+    "V_inf_taking ",
+    "V_unacc ",
+    "V_unacc_inf ",
+    "V_unacc_pp ",
+    "V_unerg ",
+    "V_inf ",
+    "V_dat ",
+    "V_dat_pp ",
+    "V_dat_inf ",
+]
+
+
+def prompt_from_grammar(grammar_path, n_sets=3, k=10):
     if grammar_path.endswith(".irtg"):
         grammar_path = grammar_path.replace(".irtg", ".ebnf")
 
@@ -14,7 +54,20 @@ def prompt_from_grammar(grammar_path):
             elif rules_section:
                 rules.append(line)
             else:
-                lexicon.append(line)
+                if line.startswith(tuple(subsample_terminals)):
+                    words = line.split(":")
+                    assert len(words) == 2
+                    words = [w.strip() for w in words[-1].split("|")]
+                    print(words)
+                    subsample = random.sample(words, k)
+
+                    line_subsampled = (
+                        line.split(":")[0] + ": " + " | ".join(subsample) + "\n"
+                    )
+
+                    lexicon.append(line_subsampled)
+                else:
+                    lexicon.append(line)
 
     rules = "".join(rules)
     lexicon = "".join(lexicon)
@@ -215,7 +268,7 @@ Importantly, you'll need to restrict the words to the following lexicon:
 {lexicon}
 ```
 
-I would like you to repeat this process in 5 sets of 6 sentences.
+I would like you to repeat this process in {n_sets} sets of 6 sentences.
 
 Constraints:
 
@@ -224,7 +277,7 @@ Constraints:
 - All subjects and verbs in the sentence must be different from one another
 - Make sure to choose varied / different terminals / words from one set to another
 
-So your task is to generate 5 sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
 
 Output just the numbered sentences without any extra information.
     """
