@@ -46,19 +46,67 @@ def format_sents(response_path):
     return out_file
 
 
+def lexical_parse(sent_path, grammar_path, show_stats=False, show_oov=False):
+    if grammar_path.endswith(".irtg"):
+        grammar_path = grammar_path.replace(".irtg", ".ebnf")
+
+    lex = read_grammar(grammar_path, lex_only=True)
+    words = set()
+    sent_count = 0
+    oov_count = 0
+    oov_sents = 0
+    with open(sent_path, "r") as f:
+        for line in f.readlines():
+            line = line.strip()
+            if not line or line.startswith("//"):
+                continue
+
+            sent_count += 1
+            oov_current_sent = 0
+            for word in line.split(" "):
+                word = word.strip()
+                if not word:
+                    continue
+
+                if show_oov and word not in lex:
+                    print(f"Word \"{word}\" not in lexicon")
+                elif word not in words and word not in lex:
+                    oov_current_sent += 1
+                words.add(word)
+
+            oov_count += oov_current_sent
+            oov_sents += 1 if oov_current_sent != 0 else oov_current_sent
+
+    oov_pct_total = oov_count / len(words)
+    oov_pct_sent = oov_sents / sent_count
+
+    if show_stats:
+        print("-----------")
+        print(
+            f"Total OOV percentage: "
+            f"{oov_count} / {len(words)} = "
+            f"{oov_pct_total:.2%}"
+        )
+        print(
+            f"OOV sentences: "
+            f"{oov_sents} / {sent_count} = "
+            f"{oov_pct_sent:.2%}"
+        )
+        print("-----------")
+
+    return oov_pct_total, oov_pct_sent
+
+
 def parse_sents(sent_path, grammar_path):
     if grammar_path.endswith(".irtg"):
         grammar_path_irtg = grammar_path
         grammar_path_ebnf = grammar_path.replace(".irtg", ".ebnf")
 
-    lex = read_grammar(grammar_path_ebnf, lex_only=True)
-    with open(sent_path, "r") as f:
-        for line in f.readlines():
-            if not line.startswith("//"):
-                for word in line.split(" "):
-                    word = word.strip()
-                    if word and word not in lex:
-                        print(f"Word {word.strip()} not in lexicon")
+    lexical_parse(
+        sent_path,
+        grammar_path_ebnf,
+        show_oov=True
+    )
 
     varfree_path = "data/varfree_lf/" + sent_path.split("/")[-1]
     command = (
