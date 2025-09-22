@@ -1,0 +1,1 @@
+{"n_prompts": 10, "n_batches": 3, "n_sents": 180, "oov": {"oov_total": 0.0, "oov_sent": 0.0}, "accuracies": {"line_acc": 0.9556, "batch_acc": 0.7333, "batch_form_acc": 0.7333, "sent_accs": [1.0, 0.9667, 1.0, 1.0, 0.8667, 0.9]}}
