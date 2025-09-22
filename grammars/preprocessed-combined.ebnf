@@ -62,12 +62,6 @@ P_iobj  : to
 
 Rel_pron  : that
 
-WHO  : Who
-
-WHAT  : What
-
-AUX_did  : did
-
 V_trans_omissible  : ate | painted | drew | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | saw | noticed | studied | examined | observed | knew | investigated
 
 V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse | sketch | juggle | call | hear | pack | see | notice | study | examine | observe | know | investigate

@@ -271,18 +271,7 @@ Rel_pron -> r{{ cnt.next() }} [1]
 [english] that
 [semantics] that
 
-WHO -> r{{ cnt.next() }} [1]
-[english] Who
-[semantics] Who
-
-WHAT -> r{{ cnt.next() }} [1]
-[english] What
-[semantics] What
-
-AUX_did -> r{{ cnt.next() }} [1]
-[english] did
-[semantics] did
-
+{# WHO, WHAT, AUX_did by Yannick #}
 
 {# Levin, '1.2.1 Unspecified Object Alternation'
    And some intuition-based selection.  #}

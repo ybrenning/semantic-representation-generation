@@ -4334,205 +4334,194 @@ Rel_pron -> r1419 	[1]
   [english] that
   [semantics] that
 
-WHO -> r1420 	[1]
-  [english] Who
-  [semantics] Who
-
-WHAT -> r1421 	[1]
-  [english] What
-  [semantics] What
-
-AUX_did -> r1422 	[1]
-  [english] did
-  [semantics] did
 
 
 
 
 
-V_trans_omissible -> r1423 	[0.33402836011058906]
+V_trans_omissible -> r1420 	[0.33402836011058906]
   [english] ate
   [semantics] eat
-V_trans_omissible -> r1424 	[0.13404078858765317]
+V_trans_omissible -> r1421 	[0.13404078858765317]
   [english] painted
   [semantics] paint
-V_trans_omissible -> r1425 	[0.08118983449041972]
+V_trans_omissible -> r1422 	[0.08118983449041972]
   [english] drew
   [semantics] draw
-V_trans_omissible -> r1426 	[0.05825966977427891]
+V_trans_omissible -> r1423 	[0.05825966977427891]
   [english] cleaned
   [semantics] clean
-V_trans_omissible -> r1427 	[0.045854068200707636]
+V_trans_omissible -> r1424 	[0.045854068200707636]
   [english] cooked
   [semantics] cook
-V_trans_omissible -> r1428 	[0.03823290310401458]
+V_trans_omissible -> r1425 	[0.03823290310401458]
   [english] dusted
   [semantics] dust
-V_trans_omissible -> r1429 	[0.03314541629748973]
+V_trans_omissible -> r1426 	[0.03314541629748973]
   [english] hunted
   [semantics] hunt
-V_trans_omissible -> r1430 	[0.029543995470747868]
+V_trans_omissible -> r1427 	[0.029543995470747868]
   [english] nursed
   [semantics] nurse
-V_trans_omissible -> r1431 	[0.026880623601982966]
+V_trans_omissible -> r1428 	[0.026880623601982966]
   [english] sketched
   [semantics] sketch
-V_trans_omissible -> r1432 	[0.024843151515100505]
+V_trans_omissible -> r1429 	[0.024843151515100505]
   [english] juggled
   [semantics] juggle
-V_trans_omissible -> r1433 	[0.023241837743417502]
+V_trans_omissible -> r1430 	[0.023241837743417502]
   [english] called
   [semantics] call
-V_trans_omissible -> r1434 	[0.021955269966808383]
+V_trans_omissible -> r1431 	[0.021955269966808383]
   [english] heard
   [semantics] hear
-V_trans_omissible -> r1435 	[0.02090245596302799]
+V_trans_omissible -> r1432 	[0.02090245596302799]
   [english] packed
   [semantics] pack
-V_trans_omissible -> r1436 	[0.020027472958170183]
+V_trans_omissible -> r1433 	[0.020027472958170183]
   [english] saw
   [semantics] see
-V_trans_omissible -> r1437 	[0.01929057149807447]
+V_trans_omissible -> r1434 	[0.01929057149807447]
   [english] noticed
   [semantics] notice
-V_trans_omissible -> r1438 	[0.018662789655653128]
+V_trans_omissible -> r1435 	[0.018662789655653128]
   [english] studied
   [semantics] study
-V_trans_omissible -> r1439 	[0.018122569172347593]
+V_trans_omissible -> r1436 	[0.018122569172347593]
   [english] examined
   [semantics] examine
-V_trans_omissible -> r1440 	[0.01765356043958695]
+V_trans_omissible -> r1437 	[0.01765356043958695]
   [english] observed
   [semantics] observe
-V_trans_omissible -> r1441 	[0.01724315855931527]
+V_trans_omissible -> r1438 	[0.01724315855931527]
   [english] knew
   [semantics] know
-V_trans_omissible -> r1442 	[0.016881502890614384]
+V_trans_omissible -> r1439 	[0.016881502890614384]
   [english] investigated
   [semantics] investigate
 
 
-V_trans_omissible_inf -> r1443 	[0.33402836011058906]
+V_trans_omissible_inf -> r1440 	[0.33402836011058906]
   [english] eat
   [semantics] eat
-V_trans_omissible_inf -> r1444 	[0.13404078858765317]
+V_trans_omissible_inf -> r1441 	[0.13404078858765317]
   [english] paint
   [semantics] paint
-V_trans_omissible_inf -> r1445 	[0.08118983449041972]
+V_trans_omissible_inf -> r1442 	[0.08118983449041972]
   [english] draw
   [semantics] draw
-V_trans_omissible_inf -> r1446 	[0.05825966977427891]
+V_trans_omissible_inf -> r1443 	[0.05825966977427891]
   [english] clean
   [semantics] clean
-V_trans_omissible_inf -> r1447 	[0.045854068200707636]
+V_trans_omissible_inf -> r1444 	[0.045854068200707636]
   [english] cook
   [semantics] cook
-V_trans_omissible_inf -> r1448 	[0.03823290310401458]
+V_trans_omissible_inf -> r1445 	[0.03823290310401458]
   [english] dust
   [semantics] dust
-V_trans_omissible_inf -> r1449 	[0.03314541629748973]
+V_trans_omissible_inf -> r1446 	[0.03314541629748973]
   [english] hunt
   [semantics] hunt
-V_trans_omissible_inf -> r1450 	[0.029543995470747868]
+V_trans_omissible_inf -> r1447 	[0.029543995470747868]
   [english] nurse
   [semantics] nurse
-V_trans_omissible_inf -> r1451 	[0.026880623601982966]
+V_trans_omissible_inf -> r1448 	[0.026880623601982966]
   [english] sketch
   [semantics] sketch
-V_trans_omissible_inf -> r1452 	[0.024843151515100505]
+V_trans_omissible_inf -> r1449 	[0.024843151515100505]
   [english] juggle
   [semantics] juggle
-V_trans_omissible_inf -> r1453 	[0.023241837743417502]
+V_trans_omissible_inf -> r1450 	[0.023241837743417502]
   [english] call
   [semantics] call
-V_trans_omissible_inf -> r1454 	[0.021955269966808383]
+V_trans_omissible_inf -> r1451 	[0.021955269966808383]
   [english] hear
   [semantics] hear
-V_trans_omissible_inf -> r1455 	[0.02090245596302799]
+V_trans_omissible_inf -> r1452 	[0.02090245596302799]
   [english] pack
   [semantics] pack
-V_trans_omissible_inf -> r1456 	[0.020027472958170183]
+V_trans_omissible_inf -> r1453 	[0.020027472958170183]
   [english] see
   [semantics] see
-V_trans_omissible_inf -> r1457 	[0.01929057149807447]
+V_trans_omissible_inf -> r1454 	[0.01929057149807447]
   [english] notice
   [semantics] notice
-V_trans_omissible_inf -> r1458 	[0.018662789655653128]
+V_trans_omissible_inf -> r1455 	[0.018662789655653128]
   [english] study
   [semantics] study
-V_trans_omissible_inf -> r1459 	[0.018122569172347593]
+V_trans_omissible_inf -> r1456 	[0.018122569172347593]
   [english] examine
   [semantics] examine
-V_trans_omissible_inf -> r1460 	[0.01765356043958695]
+V_trans_omissible_inf -> r1457 	[0.01765356043958695]
   [english] observe
   [semantics] observe
-V_trans_omissible_inf -> r1461 	[0.01724315855931527]
+V_trans_omissible_inf -> r1458 	[0.01724315855931527]
   [english] know
   [semantics] know
-V_trans_omissible_inf -> r1462 	[0.016881502890614384]
+V_trans_omissible_inf -> r1459 	[0.016881502890614384]
   [english] investigate
   [semantics] investigate
 
 
 
-V_trans_omissible_pp -> r1463 	[0.33402836011058906]
+V_trans_omissible_pp -> r1460 	[0.33402836011058906]
   [english] eaten
   [semantics] eat
-V_trans_omissible_pp -> r1464 	[0.13404078858765317]
+V_trans_omissible_pp -> r1461 	[0.13404078858765317]
   [english] painted
   [semantics] paint
-V_trans_omissible_pp -> r1465 	[0.08118983449041972]
+V_trans_omissible_pp -> r1462 	[0.08118983449041972]
   [english] drawn
   [semantics] draw
-V_trans_omissible_pp -> r1466 	[0.05825966977427891]
+V_trans_omissible_pp -> r1463 	[0.05825966977427891]
   [english] cleaned
   [semantics] clean
-V_trans_omissible_pp -> r1467 	[0.045854068200707636]
+V_trans_omissible_pp -> r1464 	[0.045854068200707636]
   [english] cooked
   [semantics] cook
-V_trans_omissible_pp -> r1468 	[0.03823290310401458]
+V_trans_omissible_pp -> r1465 	[0.03823290310401458]
   [english] dusted
   [semantics] dust
-V_trans_omissible_pp -> r1469 	[0.03314541629748973]
+V_trans_omissible_pp -> r1466 	[0.03314541629748973]
   [english] hunted
   [semantics] hunt
-V_trans_omissible_pp -> r1470 	[0.029543995470747868]
+V_trans_omissible_pp -> r1467 	[0.029543995470747868]
   [english] nursed
   [semantics] nurse
-V_trans_omissible_pp -> r1471 	[0.026880623601982966]
+V_trans_omissible_pp -> r1468 	[0.026880623601982966]
   [english] sketched
   [semantics] sketch
-V_trans_omissible_pp -> r1472 	[0.024843151515100505]
+V_trans_omissible_pp -> r1469 	[0.024843151515100505]
   [english] juggled
   [semantics] juggle
-V_trans_omissible_pp -> r1473 	[0.023241837743417502]
+V_trans_omissible_pp -> r1470 	[0.023241837743417502]
   [english] called
   [semantics] call
-V_trans_omissible_pp -> r1474 	[0.021955269966808383]
+V_trans_omissible_pp -> r1471 	[0.021955269966808383]
   [english] heard
   [semantics] hear
-V_trans_omissible_pp -> r1475 	[0.02090245596302799]
+V_trans_omissible_pp -> r1472 	[0.02090245596302799]
   [english] packed
   [semantics] pack
-V_trans_omissible_pp -> r1476 	[0.020027472958170183]
+V_trans_omissible_pp -> r1473 	[0.020027472958170183]
   [english] seen
   [semantics] see
-V_trans_omissible_pp -> r1477 	[0.01929057149807447]
+V_trans_omissible_pp -> r1474 	[0.01929057149807447]
   [english] noticed
   [semantics] notice
-V_trans_omissible_pp -> r1478 	[0.018662789655653128]
+V_trans_omissible_pp -> r1475 	[0.018662789655653128]
   [english] studied
   [semantics] study
-V_trans_omissible_pp -> r1479 	[0.018122569172347593]
+V_trans_omissible_pp -> r1476 	[0.018122569172347593]
   [english] examined
   [semantics] examine
-V_trans_omissible_pp -> r1480 	[0.01765356043958695]
+V_trans_omissible_pp -> r1477 	[0.01765356043958695]
   [english] observed
   [semantics] observe
-V_trans_omissible_pp -> r1481 	[0.01724315855931527]
+V_trans_omissible_pp -> r1478 	[0.01724315855931527]
   [english] known
   [semantics] know
-V_trans_omissible_pp -> r1482 	[0.016881502890614384]
+V_trans_omissible_pp -> r1479 	[0.016881502890614384]
   [english] investigated
   [semantics] investigate
 
@@ -4542,315 +4531,315 @@ V_trans_omissible_pp -> r1482 	[0.016881502890614384]
 
 
 
-V_trans_not_omissible -> r1483 	[0.33402836011058906]
+V_trans_not_omissible -> r1480 	[0.33402836011058906]
   [english] liked
   [semantics] like
-V_trans_not_omissible -> r1484 	[0.13404078858765317]
+V_trans_not_omissible -> r1481 	[0.13404078858765317]
   [english] helped
   [semantics] help
-V_trans_not_omissible -> r1485 	[0.08118983449041972]
+V_trans_not_omissible -> r1482 	[0.08118983449041972]
   [english] found
   [semantics] find
-V_trans_not_omissible -> r1486 	[0.05825966977427891]
+V_trans_not_omissible -> r1483 	[0.05825966977427891]
   [english] loved
   [semantics] love
-V_trans_not_omissible -> r1487 	[0.045854068200707636]
+V_trans_not_omissible -> r1484 	[0.045854068200707636]
   [english] poked
   [semantics] poke
-V_trans_not_omissible -> r1488 	[0.03823290310401458]
+V_trans_not_omissible -> r1485 	[0.03823290310401458]
   [english] admired
   [semantics] admire
-V_trans_not_omissible -> r1489 	[0.03314541629748973]
+V_trans_not_omissible -> r1486 	[0.03314541629748973]
   [english] adored
   [semantics] adore
-V_trans_not_omissible -> r1490 	[0.029543995470747868]
+V_trans_not_omissible -> r1487 	[0.029543995470747868]
   [english] appreciated
   [semantics] appreciate
-V_trans_not_omissible -> r1491 	[0.026880623601982966]
+V_trans_not_omissible -> r1488 	[0.026880623601982966]
   [english] missed
   [semantics] miss
-V_trans_not_omissible -> r1492 	[0.024843151515100505]
+V_trans_not_omissible -> r1489 	[0.024843151515100505]
   [english] respected
   [semantics] respect
-V_trans_not_omissible -> r1493 	[0.023241837743417502]
+V_trans_not_omissible -> r1490 	[0.023241837743417502]
   [english] threw
   [semantics] throw
-V_trans_not_omissible -> r1494 	[0.021955269966808383]
+V_trans_not_omissible -> r1491 	[0.021955269966808383]
   [english] tolerated
   [semantics] tolerate
-V_trans_not_omissible -> r1495 	[0.02090245596302799]
+V_trans_not_omissible -> r1492 	[0.02090245596302799]
   [english] valued
   [semantics] value
-V_trans_not_omissible -> r1496 	[0.020027472958170183]
+V_trans_not_omissible -> r1493 	[0.020027472958170183]
   [english] worshipped
   [semantics] worship
-V_trans_not_omissible -> r1497 	[0.01929057149807447]
+V_trans_not_omissible -> r1494 	[0.01929057149807447]
   [english] discovered
   [semantics] discover
-V_trans_not_omissible -> r1498 	[0.018662789655653128]
+V_trans_not_omissible -> r1495 	[0.018662789655653128]
   [english] held
   [semantics] hold
-V_trans_not_omissible -> r1499 	[0.018122569172347593]
+V_trans_not_omissible -> r1496 	[0.018122569172347593]
   [english] stabbed
   [semantics] stab
-V_trans_not_omissible -> r1500 	[0.01765356043958695]
+V_trans_not_omissible -> r1497 	[0.01765356043958695]
   [english] touched
   [semantics] touch
-V_trans_not_omissible -> r1501 	[0.01724315855931527]
+V_trans_not_omissible -> r1498 	[0.01724315855931527]
   [english] pierced
   [semantics] pierce
-V_trans_not_omissible -> r1502 	[0.016881502890614384]
+V_trans_not_omissible -> r1499 	[0.016881502890614384]
   [english] tossed
   [semantics] toss
 
 
-V_trans_not_omissible_inf -> r1503 	[0.33402836011058906]
+V_trans_not_omissible_inf -> r1500 	[0.33402836011058906]
   [english] like
   [semantics] like
-V_trans_not_omissible_inf -> r1504 	[0.13404078858765317]
+V_trans_not_omissible_inf -> r1501 	[0.13404078858765317]
   [english] help
   [semantics] help
-V_trans_not_omissible_inf -> r1505 	[0.08118983449041972]
+V_trans_not_omissible_inf -> r1502 	[0.08118983449041972]
   [english] find
   [semantics] find
-V_trans_not_omissible_inf -> r1506 	[0.05825966977427891]
+V_trans_not_omissible_inf -> r1503 	[0.05825966977427891]
   [english] love
   [semantics] love
-V_trans_not_omissible_inf -> r1507 	[0.045854068200707636]
+V_trans_not_omissible_inf -> r1504 	[0.045854068200707636]
   [english] poke
   [semantics] poke
-V_trans_not_omissible_inf -> r1508 	[0.03823290310401458]
+V_trans_not_omissible_inf -> r1505 	[0.03823290310401458]
   [english] admire
   [semantics] admire
-V_trans_not_omissible_inf -> r1509 	[0.03314541629748973]
+V_trans_not_omissible_inf -> r1506 	[0.03314541629748973]
   [english] adore
   [semantics] adore
-V_trans_not_omissible_inf -> r1510 	[0.029543995470747868]
+V_trans_not_omissible_inf -> r1507 	[0.029543995470747868]
   [english] appreciate
   [semantics] appreciate
-V_trans_not_omissible_inf -> r1511 	[0.026880623601982966]
+V_trans_not_omissible_inf -> r1508 	[0.026880623601982966]
   [english] miss
   [semantics] miss
-V_trans_not_omissible_inf -> r1512 	[0.024843151515100505]
+V_trans_not_omissible_inf -> r1509 	[0.024843151515100505]
   [english] respect
   [semantics] respect
-V_trans_not_omissible_inf -> r1513 	[0.023241837743417502]
+V_trans_not_omissible_inf -> r1510 	[0.023241837743417502]
   [english] throw
   [semantics] throw
-V_trans_not_omissible_inf -> r1514 	[0.021955269966808383]
+V_trans_not_omissible_inf -> r1511 	[0.021955269966808383]
   [english] tolerate
   [semantics] tolerate
-V_trans_not_omissible_inf -> r1515 	[0.02090245596302799]
+V_trans_not_omissible_inf -> r1512 	[0.02090245596302799]
   [english] value
   [semantics] value
-V_trans_not_omissible_inf -> r1516 	[0.020027472958170183]
+V_trans_not_omissible_inf -> r1513 	[0.020027472958170183]
   [english] worship
   [semantics] worship
-V_trans_not_omissible_inf -> r1517 	[0.01929057149807447]
+V_trans_not_omissible_inf -> r1514 	[0.01929057149807447]
   [english] discover
   [semantics] discover
-V_trans_not_omissible_inf -> r1518 	[0.018662789655653128]
+V_trans_not_omissible_inf -> r1515 	[0.018662789655653128]
   [english] hold
   [semantics] hold
-V_trans_not_omissible_inf -> r1519 	[0.018122569172347593]
+V_trans_not_omissible_inf -> r1516 	[0.018122569172347593]
   [english] stab
   [semantics] stab
-V_trans_not_omissible_inf -> r1520 	[0.01765356043958695]
+V_trans_not_omissible_inf -> r1517 	[0.01765356043958695]
   [english] touch
   [semantics] touch
-V_trans_not_omissible_inf -> r1521 	[0.01724315855931527]
+V_trans_not_omissible_inf -> r1518 	[0.01724315855931527]
   [english] pierce
   [semantics] pierce
-V_trans_not_omissible_inf -> r1522 	[0.016881502890614384]
+V_trans_not_omissible_inf -> r1519 	[0.016881502890614384]
   [english] toss
   [semantics] toss
 
 
 
-V_trans_not_omissible_pp -> r1523 	[0.33402836011058906]
+V_trans_not_omissible_pp -> r1520 	[0.33402836011058906]
   [english] liked
   [semantics] like
-V_trans_not_omissible_pp -> r1524 	[0.13404078858765317]
+V_trans_not_omissible_pp -> r1521 	[0.13404078858765317]
   [english] helped
   [semantics] help
-V_trans_not_omissible_pp -> r1525 	[0.08118983449041972]
+V_trans_not_omissible_pp -> r1522 	[0.08118983449041972]
   [english] found
   [semantics] find
-V_trans_not_omissible_pp -> r1526 	[0.05825966977427891]
+V_trans_not_omissible_pp -> r1523 	[0.05825966977427891]
   [english] loved
   [semantics] love
-V_trans_not_omissible_pp -> r1527 	[0.045854068200707636]
+V_trans_not_omissible_pp -> r1524 	[0.045854068200707636]
   [english] poked
   [semantics] poke
-V_trans_not_omissible_pp -> r1528 	[0.03823290310401458]
+V_trans_not_omissible_pp -> r1525 	[0.03823290310401458]
   [english] admired
   [semantics] admire
-V_trans_not_omissible_pp -> r1529 	[0.03314541629748973]
+V_trans_not_omissible_pp -> r1526 	[0.03314541629748973]
   [english] adored
   [semantics] adore
-V_trans_not_omissible_pp -> r1530 	[0.029543995470747868]
+V_trans_not_omissible_pp -> r1527 	[0.029543995470747868]
   [english] appreciated
   [semantics] appreciate
-V_trans_not_omissible_pp -> r1531 	[0.026880623601982966]
+V_trans_not_omissible_pp -> r1528 	[0.026880623601982966]
   [english] missed
   [semantics] miss
-V_trans_not_omissible_pp -> r1532 	[0.024843151515100505]
+V_trans_not_omissible_pp -> r1529 	[0.024843151515100505]
   [english] respected
   [semantics] respect
-V_trans_not_omissible_pp -> r1533 	[0.023241837743417502]
+V_trans_not_omissible_pp -> r1530 	[0.023241837743417502]
   [english] thrown
   [semantics] throw
-V_trans_not_omissible_pp -> r1534 	[0.021955269966808383]
+V_trans_not_omissible_pp -> r1531 	[0.021955269966808383]
   [english] tolerated
   [semantics] tolerate
-V_trans_not_omissible_pp -> r1535 	[0.02090245596302799]
+V_trans_not_omissible_pp -> r1532 	[0.02090245596302799]
   [english] valued
   [semantics] value
-V_trans_not_omissible_pp -> r1536 	[0.020027472958170183]
+V_trans_not_omissible_pp -> r1533 	[0.020027472958170183]
   [english] worshipped
   [semantics] worship
-V_trans_not_omissible_pp -> r1537 	[0.01929057149807447]
+V_trans_not_omissible_pp -> r1534 	[0.01929057149807447]
   [english] discovered
   [semantics] discover
-V_trans_not_omissible_pp -> r1538 	[0.018662789655653128]
+V_trans_not_omissible_pp -> r1535 	[0.018662789655653128]
   [english] held
   [semantics] hold
-V_trans_not_omissible_pp -> r1539 	[0.018122569172347593]
+V_trans_not_omissible_pp -> r1536 	[0.018122569172347593]
   [english] stabbed
   [semantics] stab
-V_trans_not_omissible_pp -> r1540 	[0.01765356043958695]
+V_trans_not_omissible_pp -> r1537 	[0.01765356043958695]
   [english] touched
   [semantics] touch
-V_trans_not_omissible_pp -> r1541 	[0.01724315855931527]
+V_trans_not_omissible_pp -> r1538 	[0.01724315855931527]
   [english] pierced
   [semantics] pierce
-V_trans_not_omissible_pp -> r1542 	[0.016881502890614384]
+V_trans_not_omissible_pp -> r1539 	[0.016881502890614384]
   [english] tossed
   [semantics] toss
 
 
 
 
-V_cp_taking -> r1543 	[0.33402836011058906]
+V_cp_taking -> r1540 	[0.33402836011058906]
   [english] liked
   [semantics] like
-V_cp_taking -> r1544 	[0.13404078858765317]
+V_cp_taking -> r1541 	[0.13404078858765317]
   [english] hoped
   [semantics] hope
-V_cp_taking -> r1545 	[0.08118983449041972]
+V_cp_taking -> r1542 	[0.08118983449041972]
   [english] said
   [semantics] say
-V_cp_taking -> r1546 	[0.05825966977427891]
+V_cp_taking -> r1543 	[0.05825966977427891]
   [english] noticed
   [semantics] notice
-V_cp_taking -> r1547 	[0.045854068200707636]
+V_cp_taking -> r1544 	[0.045854068200707636]
   [english] believed
   [semantics] believe
-V_cp_taking -> r1548 	[0.03823290310401458]
+V_cp_taking -> r1545 	[0.03823290310401458]
   [english] confessed
   [semantics] confess
-V_cp_taking -> r1549 	[0.03314541629748973]
+V_cp_taking -> r1546 	[0.03314541629748973]
   [english] declared
   [semantics] declare
-V_cp_taking -> r1550 	[0.029543995470747868]
+V_cp_taking -> r1547 	[0.029543995470747868]
   [english] proved
   [semantics] prove
-V_cp_taking -> r1551 	[0.026880623601982966]
+V_cp_taking -> r1548 	[0.026880623601982966]
   [english] thought
   [semantics] think
-V_cp_taking -> r1552 	[0.024843151515100505]
+V_cp_taking -> r1549 	[0.024843151515100505]
   [english] admired
   [semantics] admire
-V_cp_taking -> r1553 	[0.023241837743417502]
+V_cp_taking -> r1550 	[0.023241837743417502]
   [english] appreciated
   [semantics] appreciate
-V_cp_taking -> r1554 	[0.021955269966808383]
+V_cp_taking -> r1551 	[0.021955269966808383]
   [english] respected
   [semantics] respect
-V_cp_taking -> r1555 	[0.02090245596302799]
+V_cp_taking -> r1552 	[0.02090245596302799]
   [english] supported
   [semantics] support
-V_cp_taking -> r1556 	[0.020027472958170183]
+V_cp_taking -> r1553 	[0.020027472958170183]
   [english] tolerated
   [semantics] tolerate
-V_cp_taking -> r1557 	[0.01929057149807447]
+V_cp_taking -> r1554 	[0.01929057149807447]
   [english] valued
   [semantics] value
-V_cp_taking -> r1558 	[0.018662789655653128]
+V_cp_taking -> r1555 	[0.018662789655653128]
   [english] wished
   [semantics] wish
-V_cp_taking -> r1559 	[0.018122569172347593]
+V_cp_taking -> r1556 	[0.018122569172347593]
   [english] dreamed
   [semantics] dream
-V_cp_taking -> r1560 	[0.01765356043958695]
+V_cp_taking -> r1557 	[0.01765356043958695]
   [english] expected
   [semantics] expect
-V_cp_taking -> r1561 	[0.01724315855931527]
+V_cp_taking -> r1558 	[0.01724315855931527]
   [english] imagined
   [semantics] imagine
-V_cp_taking -> r1562 	[0.016881502890614384]
+V_cp_taking -> r1559 	[0.016881502890614384]
   [english] meant
   [semantics] mean
 
 
-V_cp_taking_inf -> r1563 	[0.33402836011058906]
+V_cp_taking_inf -> r1560 	[0.33402836011058906]
   [english] like
   [semantics] like
-V_cp_taking_inf -> r1564 	[0.13404078858765317]
+V_cp_taking_inf -> r1561 	[0.13404078858765317]
   [english] hope
   [semantics] hope
-V_cp_taking_inf -> r1565 	[0.08118983449041972]
+V_cp_taking_inf -> r1562 	[0.08118983449041972]
   [english] say
   [semantics] say
-V_cp_taking_inf -> r1566 	[0.05825966977427891]
+V_cp_taking_inf -> r1563 	[0.05825966977427891]
   [english] notice
   [semantics] notice
-V_cp_taking_inf -> r1567 	[0.045854068200707636]
+V_cp_taking_inf -> r1564 	[0.045854068200707636]
   [english] believe
   [semantics] believe
-V_cp_taking_inf -> r1568 	[0.03823290310401458]
+V_cp_taking_inf -> r1565 	[0.03823290310401458]
   [english] confess
   [semantics] confess
-V_cp_taking_inf -> r1569 	[0.03314541629748973]
+V_cp_taking_inf -> r1566 	[0.03314541629748973]
   [english] declare
   [semantics] declare
-V_cp_taking_inf -> r1570 	[0.029543995470747868]
+V_cp_taking_inf -> r1567 	[0.029543995470747868]
   [english] prove
   [semantics] prove
-V_cp_taking_inf -> r1571 	[0.026880623601982966]
+V_cp_taking_inf -> r1568 	[0.026880623601982966]
   [english] think
   [semantics] think
-V_cp_taking_inf -> r1572 	[0.024843151515100505]
+V_cp_taking_inf -> r1569 	[0.024843151515100505]
   [english] admire
   [semantics] admire
-V_cp_taking_inf -> r1573 	[0.023241837743417502]
+V_cp_taking_inf -> r1570 	[0.023241837743417502]
   [english] appreciate
   [semantics] appreciate
-V_cp_taking_inf -> r1574 	[0.021955269966808383]
+V_cp_taking_inf -> r1571 	[0.021955269966808383]
   [english] respect
   [semantics] respect
-V_cp_taking_inf -> r1575 	[0.02090245596302799]
+V_cp_taking_inf -> r1572 	[0.02090245596302799]
   [english] support
   [semantics] support
-V_cp_taking_inf -> r1576 	[0.020027472958170183]
+V_cp_taking_inf -> r1573 	[0.020027472958170183]
   [english] tolerate
   [semantics] tolerate
-V_cp_taking_inf -> r1577 	[0.01929057149807447]
+V_cp_taking_inf -> r1574 	[0.01929057149807447]
   [english] value
   [semantics] value
-V_cp_taking_inf -> r1578 	[0.018662789655653128]
+V_cp_taking_inf -> r1575 	[0.018662789655653128]
   [english] wish
   [semantics] wish
-V_cp_taking_inf -> r1579 	[0.018122569172347593]
+V_cp_taking_inf -> r1576 	[0.018122569172347593]
   [english] dream
   [semantics] dream
-V_cp_taking_inf -> r1580 	[0.01765356043958695]
+V_cp_taking_inf -> r1577 	[0.01765356043958695]
   [english] expect
   [semantics] expect
-V_cp_taking_inf -> r1581 	[0.01724315855931527]
+V_cp_taking_inf -> r1578 	[0.01724315855931527]
   [english] imagine
   [semantics] imagine
-V_cp_taking_inf -> r1582 	[0.016881502890614384]
+V_cp_taking_inf -> r1579 	[0.016881502890614384]
   [english] mean
   [semantics] mean
 
@@ -4858,64 +4847,64 @@ V_cp_taking_inf -> r1582 	[0.016881502890614384]
 
 
 
-V_inf_taking -> r1583 	[0.33402836011058906]
+V_inf_taking -> r1580 	[0.33402836011058906]
   [english] wanted
   [semantics] "want[agent=xcomp!agent]"
-V_inf_taking -> r1584 	[0.13404078858765317]
+V_inf_taking -> r1581 	[0.13404078858765317]
   [english] preferred
   [semantics] "prefer[agent=xcomp!agent]"
-V_inf_taking -> r1585 	[0.08118983449041972]
+V_inf_taking -> r1582 	[0.08118983449041972]
   [english] needed
   [semantics] "need[agent=xcomp!agent]"
-V_inf_taking -> r1586 	[0.05825966977427891]
+V_inf_taking -> r1583 	[0.05825966977427891]
   [english] intended
   [semantics] "intend[agent=xcomp!agent]"
-V_inf_taking -> r1587 	[0.045854068200707636]
+V_inf_taking -> r1584 	[0.045854068200707636]
   [english] tried
   [semantics] "try[agent=xcomp!agent]"
-V_inf_taking -> r1588 	[0.03823290310401458]
+V_inf_taking -> r1585 	[0.03823290310401458]
   [english] attempted
   [semantics] "attempt[agent=xcomp!agent]"
-V_inf_taking -> r1589 	[0.03314541629748973]
+V_inf_taking -> r1586 	[0.03314541629748973]
   [english] planned
   [semantics] "plan[agent=xcomp!agent]"
-V_inf_taking -> r1590 	[0.029543995470747868]
+V_inf_taking -> r1587 	[0.029543995470747868]
   [english] expected
   [semantics] "expect[agent=xcomp!agent]"
-V_inf_taking -> r1591 	[0.026880623601982966]
+V_inf_taking -> r1588 	[0.026880623601982966]
   [english] hoped
   [semantics] "hope[agent=xcomp!agent]"
-V_inf_taking -> r1592 	[0.024843151515100505]
+V_inf_taking -> r1589 	[0.024843151515100505]
   [english] wished
   [semantics] "wish[agent=xcomp!agent]"
-V_inf_taking -> r1593 	[0.023241837743417502]
+V_inf_taking -> r1590 	[0.023241837743417502]
   [english] craved
   [semantics] "crave[agent=xcomp!agent]"
-V_inf_taking -> r1594 	[0.021955269966808383]
+V_inf_taking -> r1591 	[0.021955269966808383]
   [english] liked
   [semantics] "like[agent=xcomp!agent]"
-V_inf_taking -> r1595 	[0.02090245596302799]
+V_inf_taking -> r1592 	[0.02090245596302799]
   [english] hated
   [semantics] "hate[agent=xcomp!agent]"
-V_inf_taking -> r1596 	[0.020027472958170183]
+V_inf_taking -> r1593 	[0.020027472958170183]
   [english] loved
   [semantics] "love[agent=xcomp!agent]"
-V_inf_taking -> r1597 	[0.01929057149807447]
+V_inf_taking -> r1594 	[0.01929057149807447]
   [english] enjoyed
   [semantics] "enjoy[agent=xcomp!agent]"
-V_inf_taking -> r1598 	[0.018662789655653128]
+V_inf_taking -> r1595 	[0.018662789655653128]
   [english] dreamed
   [semantics] "dream[agent=xcomp!agent]"
-V_inf_taking -> r1599 	[0.018122569172347593]
+V_inf_taking -> r1596 	[0.018122569172347593]
   [english] meant
   [semantics] "mean[agent=xcomp!agent]"
-V_inf_taking -> r1600 	[0.01765356043958695]
+V_inf_taking -> r1597 	[0.01765356043958695]
   [english] longed
   [semantics] "long[agent=xcomp!agent]"
-V_inf_taking -> r1601 	[0.01724315855931527]
+V_inf_taking -> r1598 	[0.01724315855931527]
   [english] yearned
   [semantics] "yearn[agent=xcomp!agent]"
-V_inf_taking -> r1602 	[0.016881502890614384]
+V_inf_taking -> r1599 	[0.016881502890614384]
   [english] itched
   [semantics] "itch[agent=xcomp!agent]"
 
@@ -4923,253 +4912,253 @@ V_inf_taking -> r1602 	[0.016881502890614384]
 
 
 
-V_unacc -> r1603 	[0.33402836011058906]
+V_unacc -> r1600 	[0.33402836011058906]
   [english] rolled
   [semantics] roll
-V_unacc -> r1604 	[0.13404078858765317]
+V_unacc -> r1601 	[0.13404078858765317]
   [english] froze
   [semantics] freeze
-V_unacc -> r1605 	[0.08118983449041972]
+V_unacc -> r1602 	[0.08118983449041972]
   [english] burned
   [semantics] burn
-V_unacc -> r1606 	[0.05825966977427891]
+V_unacc -> r1603 	[0.05825966977427891]
   [english] shortened
   [semantics] shorten
-V_unacc -> r1607 	[0.045854068200707636]
+V_unacc -> r1604 	[0.045854068200707636]
   [english] floated
   [semantics] float
-V_unacc -> r1608 	[0.03823290310401458]
+V_unacc -> r1605 	[0.03823290310401458]
   [english] grew
   [semantics] grow
-V_unacc -> r1609 	[0.03314541629748973]
+V_unacc -> r1606 	[0.03314541629748973]
   [english] slid
   [semantics] slide
-V_unacc -> r1610 	[0.029543995470747868]
+V_unacc -> r1607 	[0.029543995470747868]
   [english] broke
   [semantics] break
-V_unacc -> r1611 	[0.026880623601982966]
+V_unacc -> r1608 	[0.026880623601982966]
   [english] crumpled
   [semantics] crumple
-V_unacc -> r1612 	[0.024843151515100505]
+V_unacc -> r1609 	[0.024843151515100505]
   [english] split
   [semantics] split
-V_unacc -> r1613 	[0.023241837743417502]
+V_unacc -> r1610 	[0.023241837743417502]
   [english] changed
   [semantics] change
-V_unacc -> r1614 	[0.021955269966808383]
+V_unacc -> r1611 	[0.021955269966808383]
   [english] snapped
   [semantics] snap
-V_unacc -> r1615 	[0.02090245596302799]
+V_unacc -> r1612 	[0.02090245596302799]
   [english] disintegrated
   [semantics] disintegrate
-V_unacc -> r1616 	[0.020027472958170183]
+V_unacc -> r1613 	[0.020027472958170183]
   [english] collapsed
   [semantics] collapse
-V_unacc -> r1617 	[0.01929057149807447]
+V_unacc -> r1614 	[0.01929057149807447]
   [english] decomposed
   [semantics] decompose
-V_unacc -> r1618 	[0.018662789655653128]
+V_unacc -> r1615 	[0.018662789655653128]
   [english] doubled
   [semantics] double
-V_unacc -> r1619 	[0.018122569172347593]
+V_unacc -> r1616 	[0.018122569172347593]
   [english] improved
   [semantics] improve
-V_unacc -> r1620 	[0.01765356043958695]
+V_unacc -> r1617 	[0.01765356043958695]
   [english] inflated
   [semantics] inflate
-V_unacc -> r1621 	[0.01724315855931527]
+V_unacc -> r1618 	[0.01724315855931527]
   [english] enlarged
   [semantics] enlarge
-V_unacc -> r1622 	[0.016881502890614384]
+V_unacc -> r1619 	[0.016881502890614384]
   [english] reddened
   [semantics] redden
 
 
-V_unacc_inf -> r1623 	[0.33402836011058906]
+V_unacc_inf -> r1620 	[0.33402836011058906]
   [english] roll
   [semantics] roll
-V_unacc_inf -> r1624 	[0.13404078858765317]
+V_unacc_inf -> r1621 	[0.13404078858765317]
   [english] freeze
   [semantics] freeze
-V_unacc_inf -> r1625 	[0.08118983449041972]
+V_unacc_inf -> r1622 	[0.08118983449041972]
   [english] burn
   [semantics] burn
-V_unacc_inf -> r1626 	[0.05825966977427891]
+V_unacc_inf -> r1623 	[0.05825966977427891]
   [english] shorten
   [semantics] shorten
-V_unacc_inf -> r1627 	[0.045854068200707636]
+V_unacc_inf -> r1624 	[0.045854068200707636]
   [english] float
   [semantics] float
-V_unacc_inf -> r1628 	[0.03823290310401458]
+V_unacc_inf -> r1625 	[0.03823290310401458]
   [english] grow
   [semantics] grow
-V_unacc_inf -> r1629 	[0.03314541629748973]
+V_unacc_inf -> r1626 	[0.03314541629748973]
   [english] slide
   [semantics] slide
-V_unacc_inf -> r1630 	[0.029543995470747868]
+V_unacc_inf -> r1627 	[0.029543995470747868]
   [english] break
   [semantics] break
-V_unacc_inf -> r1631 	[0.026880623601982966]
+V_unacc_inf -> r1628 	[0.026880623601982966]
   [english] crumple
   [semantics] crumple
-V_unacc_inf -> r1632 	[0.024843151515100505]
+V_unacc_inf -> r1629 	[0.024843151515100505]
   [english] split
   [semantics] split
-V_unacc_inf -> r1633 	[0.023241837743417502]
+V_unacc_inf -> r1630 	[0.023241837743417502]
   [english] change
   [semantics] change
-V_unacc_inf -> r1634 	[0.021955269966808383]
+V_unacc_inf -> r1631 	[0.021955269966808383]
   [english] snap
   [semantics] snap
-V_unacc_inf -> r1635 	[0.02090245596302799]
+V_unacc_inf -> r1632 	[0.02090245596302799]
   [english] disintegrate
   [semantics] disintegrate
-V_unacc_inf -> r1636 	[0.020027472958170183]
+V_unacc_inf -> r1633 	[0.020027472958170183]
   [english] collapse
   [semantics] collapse
-V_unacc_inf -> r1637 	[0.01929057149807447]
+V_unacc_inf -> r1634 	[0.01929057149807447]
   [english] decompose
   [semantics] decompose
-V_unacc_inf -> r1638 	[0.018662789655653128]
+V_unacc_inf -> r1635 	[0.018662789655653128]
   [english] double
   [semantics] double
-V_unacc_inf -> r1639 	[0.018122569172347593]
+V_unacc_inf -> r1636 	[0.018122569172347593]
   [english] improve
   [semantics] improve
-V_unacc_inf -> r1640 	[0.01765356043958695]
+V_unacc_inf -> r1637 	[0.01765356043958695]
   [english] inflate
   [semantics] inflate
-V_unacc_inf -> r1641 	[0.01724315855931527]
+V_unacc_inf -> r1638 	[0.01724315855931527]
   [english] enlarge
   [semantics] enlarge
-V_unacc_inf -> r1642 	[0.016881502890614384]
+V_unacc_inf -> r1639 	[0.016881502890614384]
   [english] redden
   [semantics] redden
 
 
 
-V_unacc_pp -> r1643 	[0.33402836011058906]
+V_unacc_pp -> r1640 	[0.33402836011058906]
   [english] rolled
   [semantics] roll
-V_unacc_pp -> r1644 	[0.13404078858765317]
+V_unacc_pp -> r1641 	[0.13404078858765317]
   [english] frozen
   [semantics] freeze
-V_unacc_pp -> r1645 	[0.08118983449041972]
+V_unacc_pp -> r1642 	[0.08118983449041972]
   [english] burned
   [semantics] burn
-V_unacc_pp -> r1646 	[0.05825966977427891]
+V_unacc_pp -> r1643 	[0.05825966977427891]
   [english] shortened
   [semantics] shorten
-V_unacc_pp -> r1647 	[0.045854068200707636]
+V_unacc_pp -> r1644 	[0.045854068200707636]
   [english] floated
   [semantics] float
-V_unacc_pp -> r1648 	[0.03823290310401458]
+V_unacc_pp -> r1645 	[0.03823290310401458]
   [english] grown
   [semantics] grow
-V_unacc_pp -> r1649 	[0.03314541629748973]
+V_unacc_pp -> r1646 	[0.03314541629748973]
   [english] slid
   [semantics] slide
-V_unacc_pp -> r1650 	[0.029543995470747868]
+V_unacc_pp -> r1647 	[0.029543995470747868]
   [english] broken
   [semantics] break
-V_unacc_pp -> r1651 	[0.026880623601982966]
+V_unacc_pp -> r1648 	[0.026880623601982966]
   [english] crumpled
   [semantics] crumple
-V_unacc_pp -> r1652 	[0.024843151515100505]
+V_unacc_pp -> r1649 	[0.024843151515100505]
   [english] split
   [semantics] split
-V_unacc_pp -> r1653 	[0.023241837743417502]
+V_unacc_pp -> r1650 	[0.023241837743417502]
   [english] changed
   [semantics] change
-V_unacc_pp -> r1654 	[0.021955269966808383]
+V_unacc_pp -> r1651 	[0.021955269966808383]
   [english] snapped
   [semantics] snap
-V_unacc_pp -> r1655 	[0.02090245596302799]
+V_unacc_pp -> r1652 	[0.02090245596302799]
   [english] disintegrated
   [semantics] disintegrate
-V_unacc_pp -> r1656 	[0.020027472958170183]
+V_unacc_pp -> r1653 	[0.020027472958170183]
   [english] collapsed
   [semantics] collapse
-V_unacc_pp -> r1657 	[0.01929057149807447]
+V_unacc_pp -> r1654 	[0.01929057149807447]
   [english] decomposed
   [semantics] decompose
-V_unacc_pp -> r1658 	[0.018662789655653128]
+V_unacc_pp -> r1655 	[0.018662789655653128]
   [english] doubled
   [semantics] double
-V_unacc_pp -> r1659 	[0.018122569172347593]
+V_unacc_pp -> r1656 	[0.018122569172347593]
   [english] improved
   [semantics] improve
-V_unacc_pp -> r1660 	[0.01765356043958695]
+V_unacc_pp -> r1657 	[0.01765356043958695]
   [english] inflated
   [semantics] inflate
-V_unacc_pp -> r1661 	[0.01724315855931527]
+V_unacc_pp -> r1658 	[0.01724315855931527]
   [english] enlarged
   [semantics] enlarge
-V_unacc_pp -> r1662 	[0.016881502890614384]
+V_unacc_pp -> r1659 	[0.016881502890614384]
   [english] reddened
   [semantics] redden
 
 
 
 
-V_unerg -> r1663 	[0.33402836011058906]
+V_unerg -> r1660 	[0.33402836011058906]
   [english] slept
   [semantics] sleep
-V_unerg -> r1664 	[0.13404078858765317]
+V_unerg -> r1661 	[0.13404078858765317]
   [english] smiled
   [semantics] smile
-V_unerg -> r1665 	[0.08118983449041972]
+V_unerg -> r1662 	[0.08118983449041972]
   [english] laughed
   [semantics] laugh
-V_unerg -> r1666 	[0.05825966977427891]
+V_unerg -> r1663 	[0.05825966977427891]
   [english] sneezed
   [semantics] sneeze
-V_unerg -> r1667 	[0.045854068200707636]
+V_unerg -> r1664 	[0.045854068200707636]
   [english] cried
   [semantics] cry
-V_unerg -> r1668 	[0.03823290310401458]
+V_unerg -> r1665 	[0.03823290310401458]
   [english] talked
   [semantics] talk
-V_unerg -> r1669 	[0.03314541629748973]
+V_unerg -> r1666 	[0.03314541629748973]
   [english] danced
   [semantics] dance
-V_unerg -> r1670 	[0.029543995470747868]
+V_unerg -> r1667 	[0.029543995470747868]
   [english] jogged
   [semantics] jog
-V_unerg -> r1671 	[0.026880623601982966]
+V_unerg -> r1668 	[0.026880623601982966]
   [english] walked
   [semantics] walk
-V_unerg -> r1672 	[0.024843151515100505]
+V_unerg -> r1669 	[0.024843151515100505]
   [english] ran
   [semantics] run
-V_unerg -> r1673 	[0.023241837743417502]
+V_unerg -> r1670 	[0.023241837743417502]
   [english] napped
   [semantics] nap
-V_unerg -> r1674 	[0.021955269966808383]
+V_unerg -> r1671 	[0.021955269966808383]
   [english] snoozed
   [semantics] snooze
-V_unerg -> r1675 	[0.02090245596302799]
+V_unerg -> r1672 	[0.02090245596302799]
   [english] screamed
   [semantics] scream
-V_unerg -> r1676 	[0.020027472958170183]
+V_unerg -> r1673 	[0.020027472958170183]
   [english] stuttered
   [semantics] stutter
-V_unerg -> r1677 	[0.01929057149807447]
+V_unerg -> r1674 	[0.01929057149807447]
   [english] frowned
   [semantics] frown
-V_unerg -> r1678 	[0.018662789655653128]
+V_unerg -> r1675 	[0.018662789655653128]
   [english] giggled
   [semantics] giggle
-V_unerg -> r1679 	[0.018122569172347593]
+V_unerg -> r1676 	[0.018122569172347593]
   [english] scoffed
   [semantics] scoff
-V_unerg -> r1680 	[0.01765356043958695]
+V_unerg -> r1677 	[0.01765356043958695]
   [english] snored
   [semantics] snore
-V_unerg -> r1681 	[0.01724315855931527]
+V_unerg -> r1678 	[0.01724315855931527]
   [english] smirked
   [semantics] smirk
-V_unerg -> r1682 	[0.016881502890614384]
+V_unerg -> r1679 	[0.016881502890614384]
   [english] gasped
   [semantics] gasp
 
@@ -5178,253 +5167,253 @@ V_unerg -> r1682 	[0.016881502890614384]
 
 
 
-V_inf -> r1683 	[0.33402836011058906]
+V_inf -> r1680 	[0.33402836011058906]
   [english] walk
   [semantics] walk
-V_inf -> r1684 	[0.13404078858765317]
+V_inf -> r1681 	[0.13404078858765317]
   [english] run
   [semantics] run
-V_inf -> r1685 	[0.08118983449041972]
+V_inf -> r1682 	[0.08118983449041972]
   [english] sleep
   [semantics] sleep
-V_inf -> r1686 	[0.05825966977427891]
+V_inf -> r1683 	[0.05825966977427891]
   [english] sneeze
   [semantics] sneeze
-V_inf -> r1687 	[0.045854068200707636]
+V_inf -> r1684 	[0.045854068200707636]
   [english] nap
   [semantics] nap
-V_inf -> r1688 	[0.03823290310401458]
+V_inf -> r1685 	[0.03823290310401458]
   [english] eat
   [semantics] eat
-V_inf -> r1689 	[0.03314541629748973]
+V_inf -> r1686 	[0.03314541629748973]
   [english] read
   [semantics] read
-V_inf -> r1690 	[0.029543995470747868]
+V_inf -> r1687 	[0.029543995470747868]
   [english] cook
   [semantics] cook
-V_inf -> r1691 	[0.026880623601982966]
+V_inf -> r1688 	[0.026880623601982966]
   [english] hunt
   [semantics] hunt
-V_inf -> r1692 	[0.024843151515100505]
+V_inf -> r1689 	[0.024843151515100505]
   [english] paint
   [semantics] paint
-V_inf -> r1693 	[0.023241837743417502]
+V_inf -> r1690 	[0.023241837743417502]
   [english] talk
   [semantics] talk
-V_inf -> r1694 	[0.021955269966808383]
+V_inf -> r1691 	[0.021955269966808383]
   [english] dance
   [semantics] dance
-V_inf -> r1695 	[0.02090245596302799]
+V_inf -> r1692 	[0.02090245596302799]
   [english] giggle
   [semantics] giggle
-V_inf -> r1696 	[0.020027472958170183]
+V_inf -> r1693 	[0.020027472958170183]
   [english] jog
   [semantics] jog
-V_inf -> r1697 	[0.01929057149807447]
+V_inf -> r1694 	[0.01929057149807447]
   [english] smirk
   [semantics] smirk
-V_inf -> r1698 	[0.018662789655653128]
+V_inf -> r1695 	[0.018662789655653128]
   [english] call
   [semantics] call
-V_inf -> r1699 	[0.018122569172347593]
+V_inf -> r1696 	[0.018122569172347593]
   [english] sketch
   [semantics] sketch
-V_inf -> r1700 	[0.01765356043958695]
+V_inf -> r1697 	[0.01765356043958695]
   [english] dust
   [semantics] dust
-V_inf -> r1701 	[0.01724315855931527]
+V_inf -> r1698 	[0.01724315855931527]
   [english] clean
   [semantics] clean
-V_inf -> r1702 	[0.016881502890614384]
+V_inf -> r1699 	[0.016881502890614384]
   [english] investigate
   [semantics] investigate
 
 
 
-V_dat -> r1703 	[0.33402836011058906]
+V_dat -> r1700 	[0.33402836011058906]
   [english] gave
   [semantics] give
-V_dat -> r1704 	[0.13404078858765317]
+V_dat -> r1701 	[0.13404078858765317]
   [english] lent
   [semantics] lend
-V_dat -> r1705 	[0.08118983449041972]
+V_dat -> r1702 	[0.08118983449041972]
   [english] sold
   [semantics] sell
-V_dat -> r1706 	[0.05825966977427891]
+V_dat -> r1703 	[0.05825966977427891]
   [english] offered
   [semantics] offer
-V_dat -> r1707 	[0.045854068200707636]
+V_dat -> r1704 	[0.045854068200707636]
   [english] fed
   [semantics] feed
-V_dat -> r1708 	[0.03823290310401458]
+V_dat -> r1705 	[0.03823290310401458]
   [english] passed
   [semantics] pass
-V_dat -> r1709 	[0.03314541629748973]
+V_dat -> r1706 	[0.03314541629748973]
   [english] sent
   [semantics] send
-V_dat -> r1710 	[0.029543995470747868]
+V_dat -> r1707 	[0.029543995470747868]
   [english] rented
   [semantics] rent
-V_dat -> r1711 	[0.026880623601982966]
+V_dat -> r1708 	[0.026880623601982966]
   [english] served
   [semantics] serve
-V_dat -> r1712 	[0.024843151515100505]
+V_dat -> r1709 	[0.024843151515100505]
   [english] awarded
   [semantics] award
-V_dat -> r1713 	[0.023241837743417502]
+V_dat -> r1710 	[0.023241837743417502]
   [english] brought
   [semantics] bring
-V_dat -> r1714 	[0.021955269966808383]
+V_dat -> r1711 	[0.021955269966808383]
   [english] handed
   [semantics] hand
-V_dat -> r1715 	[0.02090245596302799]
+V_dat -> r1712 	[0.02090245596302799]
   [english] forwarded
   [semantics] forward
-V_dat -> r1716 	[0.020027472958170183]
+V_dat -> r1713 	[0.020027472958170183]
   [english] promised
   [semantics] promise
-V_dat -> r1717 	[0.01929057149807447]
+V_dat -> r1714 	[0.01929057149807447]
   [english] mailed
   [semantics] mail
-V_dat -> r1718 	[0.018662789655653128]
+V_dat -> r1715 	[0.018662789655653128]
   [english] loaned
   [semantics] loan
-V_dat -> r1719 	[0.018122569172347593]
+V_dat -> r1716 	[0.018122569172347593]
   [english] posted
   [semantics] post
-V_dat -> r1720 	[0.01765356043958695]
+V_dat -> r1717 	[0.01765356043958695]
   [english] returned
   [semantics] return
-V_dat -> r1721 	[0.01724315855931527]
+V_dat -> r1718 	[0.01724315855931527]
   [english] slipped
   [semantics] slip
-V_dat -> r1722 	[0.016881502890614384]
+V_dat -> r1719 	[0.016881502890614384]
   [english] wired
   [semantics] wire
 
 
 
 
-V_dat_pp -> r1723 	[0.33402836011058906]
+V_dat_pp -> r1720 	[0.33402836011058906]
   [english] given
   [semantics] give
-V_dat_pp -> r1724 	[0.13404078858765317]
+V_dat_pp -> r1721 	[0.13404078858765317]
   [english] lent
   [semantics] lend
-V_dat_pp -> r1725 	[0.08118983449041972]
+V_dat_pp -> r1722 	[0.08118983449041972]
   [english] sold
   [semantics] sell
-V_dat_pp -> r1726 	[0.05825966977427891]
+V_dat_pp -> r1723 	[0.05825966977427891]
   [english] offered
   [semantics] offer
-V_dat_pp -> r1727 	[0.045854068200707636]
+V_dat_pp -> r1724 	[0.045854068200707636]
   [english] fed
   [semantics] feed
-V_dat_pp -> r1728 	[0.03823290310401458]
+V_dat_pp -> r1725 	[0.03823290310401458]
   [english] passed
   [semantics] pass
-V_dat_pp -> r1729 	[0.03314541629748973]
+V_dat_pp -> r1726 	[0.03314541629748973]
   [english] sent
   [semantics] send
-V_dat_pp -> r1730 	[0.029543995470747868]
+V_dat_pp -> r1727 	[0.029543995470747868]
   [english] rented
   [semantics] rent
-V_dat_pp -> r1731 	[0.026880623601982966]
+V_dat_pp -> r1728 	[0.026880623601982966]
   [english] served
   [semantics] serve
-V_dat_pp -> r1732 	[0.024843151515100505]
+V_dat_pp -> r1729 	[0.024843151515100505]
   [english] awarded
   [semantics] award
-V_dat_pp -> r1733 	[0.023241837743417502]
+V_dat_pp -> r1730 	[0.023241837743417502]
   [english] brought
   [semantics] bring
-V_dat_pp -> r1734 	[0.021955269966808383]
+V_dat_pp -> r1731 	[0.021955269966808383]
   [english] handed
   [semantics] hand
-V_dat_pp -> r1735 	[0.02090245596302799]
+V_dat_pp -> r1732 	[0.02090245596302799]
   [english] forwarded
   [semantics] forward
-V_dat_pp -> r1736 	[0.020027472958170183]
+V_dat_pp -> r1733 	[0.020027472958170183]
   [english] promised
   [semantics] promise
-V_dat_pp -> r1737 	[0.01929057149807447]
+V_dat_pp -> r1734 	[0.01929057149807447]
   [english] mailed
   [semantics] mail
-V_dat_pp -> r1738 	[0.018662789655653128]
+V_dat_pp -> r1735 	[0.018662789655653128]
   [english] loaned
   [semantics] loan
-V_dat_pp -> r1739 	[0.018122569172347593]
+V_dat_pp -> r1736 	[0.018122569172347593]
   [english] posted
   [semantics] post
-V_dat_pp -> r1740 	[0.01765356043958695]
+V_dat_pp -> r1737 	[0.01765356043958695]
   [english] returned
   [semantics] return
-V_dat_pp -> r1741 	[0.01724315855931527]
+V_dat_pp -> r1738 	[0.01724315855931527]
   [english] slipped
   [semantics] slip
-V_dat_pp -> r1742 	[0.016881502890614384]
+V_dat_pp -> r1739 	[0.016881502890614384]
   [english] wired
   [semantics] wire
 
 
-V_dat_inf -> r1743 	[0.33402836011058906]
+V_dat_inf -> r1740 	[0.33402836011058906]
   [english] give
   [semantics] give
-V_dat_inf -> r1744 	[0.13404078858765317]
+V_dat_inf -> r1741 	[0.13404078858765317]
   [english] lend
   [semantics] lend
-V_dat_inf -> r1745 	[0.08118983449041972]
+V_dat_inf -> r1742 	[0.08118983449041972]
   [english] sell
   [semantics] sell
-V_dat_inf -> r1746 	[0.05825966977427891]
+V_dat_inf -> r1743 	[0.05825966977427891]
   [english] offer
   [semantics] offer
-V_dat_inf -> r1747 	[0.045854068200707636]
+V_dat_inf -> r1744 	[0.045854068200707636]
   [english] feed
   [semantics] feed
-V_dat_inf -> r1748 	[0.03823290310401458]
+V_dat_inf -> r1745 	[0.03823290310401458]
   [english] pass
   [semantics] pass
-V_dat_inf -> r1749 	[0.03314541629748973]
+V_dat_inf -> r1746 	[0.03314541629748973]
   [english] send
   [semantics] send
-V_dat_inf -> r1750 	[0.029543995470747868]
+V_dat_inf -> r1747 	[0.029543995470747868]
   [english] rent
   [semantics] rent
-V_dat_inf -> r1751 	[0.026880623601982966]
+V_dat_inf -> r1748 	[0.026880623601982966]
   [english] serve
   [semantics] serve
-V_dat_inf -> r1752 	[0.024843151515100505]
+V_dat_inf -> r1749 	[0.024843151515100505]
   [english] award
   [semantics] award
-V_dat_inf -> r1753 	[0.023241837743417502]
+V_dat_inf -> r1750 	[0.023241837743417502]
   [english] bring
   [semantics] bring
-V_dat_inf -> r1754 	[0.021955269966808383]
+V_dat_inf -> r1751 	[0.021955269966808383]
   [english] hand
   [semantics] hand
-V_dat_inf -> r1755 	[0.02090245596302799]
+V_dat_inf -> r1752 	[0.02090245596302799]
   [english] forward
   [semantics] forward
-V_dat_inf -> r1756 	[0.020027472958170183]
+V_dat_inf -> r1753 	[0.020027472958170183]
   [english] promise
   [semantics] promise
-V_dat_inf -> r1757 	[0.01929057149807447]
+V_dat_inf -> r1754 	[0.01929057149807447]
   [english] mail
   [semantics] mail
-V_dat_inf -> r1758 	[0.018662789655653128]
+V_dat_inf -> r1755 	[0.018662789655653128]
   [english] loan
   [semantics] loan
-V_dat_inf -> r1759 	[0.018122569172347593]
+V_dat_inf -> r1756 	[0.018122569172347593]
   [english] post
   [semantics] post
-V_dat_inf -> r1760 	[0.01765356043958695]
+V_dat_inf -> r1757 	[0.01765356043958695]
   [english] return
   [semantics] return
-V_dat_inf -> r1761 	[0.01724315855931527]
+V_dat_inf -> r1758 	[0.01724315855931527]
   [english] slip
   [semantics] slip
-V_dat_inf -> r1762 	[0.016881502890614384]
+V_dat_inf -> r1759 	[0.016881502890614384]
   [english] wire
   [semantics] wire
 
@@ -5434,101 +5423,101 @@ V_dat_inf -> r1762 	[0.016881502890614384]
 
 
 
-S! -> r1763(NP_animate_nsubj, VP_external) 	[0.49]
+S! -> r1760(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S! -> r1764(VP_internal) 	[0.06]
+S! -> r1761(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-S! -> r1765(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+S! -> r1762(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S! -> r1766(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+S! -> r1763(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
-VP_external -> r1767(V_unerg) 	[0.10525]
+VP_external -> r1764(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1768(V_unacc, NP_dobj) 	[0.10525]
+VP_external -> r1765(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1769(V_trans_omissible) 	[0.10525]
+VP_external -> r1766(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_external -> r1770(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_external -> r1767(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1771(V_trans_not_omissible, NP_dobj) 	[0.10525] 
+VP_external -> r1768(V_trans_not_omissible, NP_dobj) 	[0.10525] 
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1772(V_inf_taking, INF, V_inf)	[0.10525]
+VP_external -> r1769(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_external -> r1773(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525] 
+VP_external -> r1770(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525] 
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_external -> r1774(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525] 
+VP_external -> r1771(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525] 
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
-VP_external -> S_embedded_cp_E1775(V_cp_taking, C, S!) 	[0.158]
+VP_external -> S_embedded_cp_E1772(V_cp_taking, C, S!) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-VP_internal -> r1776(NP_unacc_subj, V_unacc) 	[1]
+VP_internal -> r1773(NP_unacc_subj, V_unacc) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
 
 
-VP_passive -> r1777(AUX,V_trans_not_omissible_pp) 	[0.125]
+VP_passive -> r1774(AUX,V_trans_not_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1778(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1775(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1779(AUX, V_trans_omissible_pp) 	[0.125]
+VP_passive -> r1776(AUX, V_trans_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1780(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1777(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1781(AUX,V_unacc_pp) 	[0.125]
+VP_passive -> r1778(AUX,V_unacc_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_passive -> r1782(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1779(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_passive -> r1783(AUX, V_dat_pp, PP_iobj) 	[0.125]
+VP_passive -> r1780(AUX, V_dat_pp, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_passive -> r1784(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
+VP_passive -> r1781(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
-VP_passive_dat -> r1785(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_passive_dat -> r1782(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_passive_dat -> r1786(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
+VP_passive_dat -> r1783(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
@@ -5536,400 +5525,400 @@ VP_passive_dat -> r1786(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	
 
 
 
-NP_dobj -> r1787(NP_inanimate_dobj) 	[0.5]
+NP_dobj -> r1784(NP_inanimate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_dobj -> r1788(NP_animate_dobj) 	[0.5]
+NP_dobj -> r1785(NP_animate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_unacc_subj -> r1789(NP_inanimate_dobj_noPP) 	[0.5]
+NP_unacc_subj -> r1786(NP_inanimate_dobj_noPP) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_unacc_subj -> r1790(NP_animate_dobj_noPP) 	[0.5]
+NP_unacc_subj -> r1787(NP_animate_dobj_noPP) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
 
-NP_animate_dobj_noPP -> r1791(Det, N_common_animate_dobj) 	[0.5]
+NP_animate_dobj_noPP -> r1788(Det, N_common_animate_dobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_dobj_noPP -> r1792(N_prop_dobj) 	[0.5]
+NP_animate_dobj_noPP -> r1789(N_prop_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
 
-NP_animate_dobj -> r1793(Det, N_common_animate_dobj) 	[0.25]
+NP_animate_dobj -> r1790(Det, N_common_animate_dobj) 	[0.25]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_dobj -> r1794(Det, N_common_animate_dobj, PP_loc) 	[0.25]
+NP_animate_dobj -> r1791(Det, N_common_animate_dobj, PP_loc) 	[0.25]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_animate_dobj -> r1795(N_prop_dobj) 	[0.5]
+NP_animate_dobj -> r1792(N_prop_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_iobj -> r1796(Det, N_common_animate_iobj) 	[0.5]
+NP_animate_iobj -> r1793(Det, N_common_animate_iobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_iobj -> r1797(N_prop_iobj) 	[0.5]
-  [english] ?1
-  [semantics] ?1
-
-
-
-
-
-NP_animate_nsubj -> r1798(Det, N_common_animate_nsubj) 	[0.5]
-  [english] *(?1, ?2)
-  [semantics] pre_det(?2, ?1)
-
-NP_animate_nsubj -> r1799(N_prop_nsubj) 	[0.5]
+NP_animate_iobj -> r1794(N_prop_iobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
 
-NP_animate_nsubj -> r1800(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
-  [english] *(*(?1, ?2), ?3)
-  [semantics] nmod(pre_det(?2, ?1), ?3)
 
 
-NP_animate_nsubjpass -> r1801(Det, N_common_animate_nsubjpass) 	[0.5]
+NP_animate_nsubj -> r1795(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_nsubjpass -> r1802(N_prop_nsubjpass) 	[0.5]
+NP_animate_nsubj -> r1796(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
-NP_inanimate_dobj -> r1803(Det, N_common_inanimate_dobj) 	[0.5]
-  [english] *(?1, ?2)
-  [semantics] pre_det(?2, ?1)
 
-NP_inanimate_dobj -> r1804(Det, N_common_inanimate_dobj, PP_loc) 	[0.5]
+NP_animate_nsubj -> r1797(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_inanimate_dobj_noPP -> r1805(Det, N_common_inanimate_dobj) 	[1.0]
+
+NP_animate_nsubjpass -> r1798(Det, N_common_animate_nsubjpass) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_inanimate_nsubjpass -> r1806(Det, N_common_inanimate_nsubjpass) 	[1.0]
+NP_animate_nsubjpass -> r1799(N_prop_nsubjpass) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+
+NP_inanimate_dobj -> r1800(Det, N_common_inanimate_dobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-
-NP_on -> r1807(Det, N_on, PP_loc) 	[0.1]
+NP_inanimate_dobj -> r1801(Det, N_common_inanimate_dobj, PP_loc) 	[0.5]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_on -> r1808(Det, N_on) 	[0.9]
+NP_inanimate_dobj_noPP -> r1802(Det, N_common_inanimate_dobj) 	[1.0]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
+
+NP_inanimate_nsubjpass -> r1803(Det, N_common_inanimate_nsubjpass) 	[1.0]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
-NP_in -> r1809(Det, N_in, PP_loc) 	[0.1]
+NP_on -> r1804(Det, N_on, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_in -> r1810(Det, N_in) 	[0.9]
+NP_on -> r1805(Det, N_on) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_beside -> r1811(Det, N_beside, PP_loc) 	[0.1]
+
+NP_in -> r1806(Det, N_in, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_beside -> r1812(Det, N_beside) 	[0.9]
+NP_in -> r1807(Det, N_in) 	[0.9]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
+
+NP_beside -> r1808(Det, N_beside, PP_loc) 	[0.1]
+  [english] *(*(?1, ?2), ?3)
+  [semantics] nmod(pre_det(?2, ?1), ?3)
+
+NP_beside -> r1809(Det, N_beside) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
 
-PP_loc -> r1813(P_on, NP_on) 	[0.334]
+PP_loc -> r1810(P_on, NP_on) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1814(P_in, NP_in) 	[0.333]
+PP_loc -> r1811(P_in, NP_in) 	[0.333]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1815(P_beside, NP_beside) 	[0.334]
+PP_loc -> r1812(P_beside, NP_beside) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_iobj -> r1816 (P_iobj,NP_animate_iobj)	[1]
+PP_iobj -> r1813 (P_iobj,NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
 
 
-S! -> S_obj_modif_main_theme_E1817(NP_animate_nsubj_main, V_main, NP_animate_dobj_RC_modified) 	[0.3]
+S! -> S_obj_modif_main_theme_E1814(NP_animate_nsubj_main, V_main, NP_animate_dobj_RC_modified) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(pre_agent(?2, ?1),?3)
 
-S! -> S_obj_modif_main_theme_E1818(NP_animate_nsubj_main, V_main, NP_inanimate_dobj_RC_modified) 	[0.3]
+S! -> S_obj_modif_main_theme_E1815(NP_animate_nsubj_main, V_main, NP_inanimate_dobj_RC_modified) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(pre_agent(?2, ?1),?3)
 
-S! -> S_obj_modif_main_dat_theme_E1819(NP_animate_nsubj_main, V_dat, NP_animate_iobj, NP_inanimate_dobj_RC_modified) 	[0.1]
+S! -> S_obj_modif_main_dat_theme_E1816(NP_animate_nsubj_main, V_dat, NP_animate_iobj, NP_inanimate_dobj_RC_modified) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] theme(recipient(agent(?2, ?1),?3),?4)
 
-S! -> S_obj_modif_main_dat_theme_E1820(NP_animate_nsubj_main, V_dat, NP_inanimate_dobj_RC_modified, PP_iobj) 	[0.1]
+S! -> S_obj_modif_main_dat_theme_E1817(NP_animate_nsubj_main, V_dat, NP_inanimate_dobj_RC_modified, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] recipient(theme(agent(?2, ?1),?3),?4)
 
-S! -> S_obj_modif_main_passive_dat_theme_E1821(NP_animate_nsubj_main, AUX, V_dat_pp, NP_inanimate_dobj_RC_modified) 	[0.1]
+S! -> S_obj_modif_main_passive_dat_theme_E1818(NP_animate_nsubj_main, AUX, V_dat_pp, NP_inanimate_dobj_RC_modified) 	[0.1]
   [english] *(*(*(?1, ?2), ?3), ?4)
   [semantics] theme(recipient(?3, ?1),?4)
 
 
-S! -> r1822(NP_animate_nsubj, VP_cp) 	[0.1]
+S! -> r1819(NP_animate_nsubj, VP_cp) 	[0.1]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_cp -> I_cp_embedded_RC_F1823(V_cp_taking, C, S!) 	[1]
+VP_cp -> I_cp_embedded_RC_F1820(V_cp_taking, C, S!) 	[1]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
-V_main -> r1824(V_unacc) 	[0.33]
+V_main -> r1821(V_unacc) 	[0.33]
   [english] ?1
   [semantics] ?1
 
-V_main -> r1825(V_trans_omissible) 	[0.33]
+V_main -> r1822(V_trans_omissible) 	[0.33]
   [english] ?1
   [semantics] ?1
 
-V_main -> r1826(V_trans_not_omissible) 	[0.34]
+V_main -> r1823(V_trans_not_omissible) 	[0.34]
   [english] ?1
   [semantics] ?1
 
 
-NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1827(NP_animate_dobj_rec, Rel_pron, VP_RC_theme) 	[0.5]
+NP_animate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1824(NP_animate_dobj_rec, Rel_pron, VP_RC_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1828(NP_inanimate_dobj_rec, Rel_pron, VP_RC_theme) 	[0.3]
+NP_inanimate_dobj_RC_modified -> S_RC_theme_dobj_extracted_E1825(NP_inanimate_dobj_rec, Rel_pron, VP_RC_theme) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1829(NP_inanimate_dobj_rec, Rel_pron, VP_dat_RC_theme) 	[0.1]
+NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1826(NP_inanimate_dobj_rec, Rel_pron, VP_dat_RC_theme) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-VP_RC_theme -> r1830(NP_animate_nsubj_rec, V_unacc) 	[0.33]
+VP_RC_theme -> r1827(NP_animate_nsubj_rec, V_unacc) 	[0.33]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r1831(NP_animate_nsubj_rec, V_trans_omissible) 	[0.33]
+VP_RC_theme -> r1828(NP_animate_nsubj_rec, V_trans_omissible) 	[0.33]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-VP_RC_theme -> r1832(NP_animate_nsubj_rec, V_trans_not_omissible) 	[0.34]
+VP_RC_theme -> r1829(NP_animate_nsubj_rec, V_trans_not_omissible) 	[0.34]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1833(NP_inanimate_dobj, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
+NP_inanimate_dobj_RC_modified -> S_RC_dat_theme_dobj_extracted_E1830(NP_inanimate_dobj, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] 'nmod<that>'(?1, recipient(theme(agent(?4, ?3),?2),?5))
 
 
-VP_dat_RC_theme -> r1834(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
+VP_dat_RC_theme -> r1831(NP_animate_nsubj, V_dat, NP_animate_iobj) 	[1]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(agent(?2, ?1),?3)
 
-NP_animate_nsubj_main -> r1835(N_prop_nsubj) 	[0.5]
+NP_animate_nsubj_main -> r1832(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_nsubj_main -> r1836(Det, N_common_animate_nsubj) 	[0.5]
+NP_animate_nsubj_main -> r1833(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
-NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E1837(NP_animate_dobj_rec, Rel_pron, VP_RC_agent) 	[0.35]
+NP_animate_dobj_RC_modified -> S_RC_agent_subj_extracted_E1834(NP_animate_dobj_rec, Rel_pron, VP_RC_agent) 	[0.35]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1838(NP_animate_dobj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_animate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1835(NP_animate_dobj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E1839(NP_animate_dobj_rec, Rel_pron, VP_RC_pass_recipient) 	[0.1]
+NP_animate_dobj_RC_modified -> S_RC_pass_recipient_subj_extracted_E1836(NP_animate_dobj_rec, Rel_pron, VP_RC_pass_recipient) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1840(NP_inanimate_dobj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_inanimate_dobj_RC_modified -> S_RC_unacc_theme_subj_extracted_E1837(NP_inanimate_dobj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
 
-NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E1841(NP_inanimate_dobj_rec, Rel_pron, VP_RC_pass_theme) 	[0.45]
+NP_inanimate_dobj_RC_modified -> S_RC_pass_theme_subj_extracted_E1838(NP_inanimate_dobj_rec, Rel_pron, VP_RC_pass_theme) 	[0.45]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
 
-VP_RC_unacc_theme -> r1842(V_unacc) 	[1]
+VP_RC_unacc_theme -> r1839(V_unacc) 	[1]
   [english] ?1
   [semantics] ?1
 
-VP_RC_pass_recipient -> r1843(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_RC_pass_recipient -> r1840(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_RC_pass_recipient -> r1844(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
+VP_RC_pass_recipient -> r1841(AUX, V_dat_pp, NP_inanimate_dobj, BY, NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
 
-VP_RC_pass_theme -> r1845(AUX,V_trans_not_omissible_pp) 	[0.125]
+VP_RC_pass_theme -> r1842(AUX,V_trans_not_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1846(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1843(AUX,V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1847(AUX, V_trans_omissible_pp) 	[0.125]
+VP_RC_pass_theme -> r1844(AUX, V_trans_omissible_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1848(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1845(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1849(AUX, V_unacc_pp) 	[0.125]
+VP_RC_pass_theme -> r1846(AUX, V_unacc_pp) 	[0.125]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_pass_theme -> r1850(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1847(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_pass_theme -> r1851(AUX, V_dat_pp, PP_iobj) 	[0.125]
+VP_RC_pass_theme -> r1848(AUX, V_dat_pp, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_RC_pass_theme -> r1852(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
+VP_RC_pass_theme -> r1849(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
 
 
-VP_RC_agent -> r1853(V_unerg) 	[0.10525]
+VP_RC_agent -> r1850(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1854(V_unacc, NP_inanimate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1851(V_unacc, NP_inanimate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1855(V_unacc, NP_animate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1852(V_unacc, NP_animate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1856(V_trans_omissible) 	[0.10525]
+VP_RC_agent -> r1853(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_RC_agent -> r1857(V_trans_omissible, NP_inanimate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1854(V_trans_omissible, NP_inanimate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1858(V_trans_omissible, NP_animate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1855(V_trans_omissible, NP_animate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1859(V_trans_not_omissible, NP_inanimate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1856(V_trans_not_omissible, NP_inanimate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1860(V_trans_not_omissible, NP_animate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1857(V_trans_not_omissible, NP_animate_dobj_rec) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> I_RC_control_V_F1861(V_inf_taking, INF, V_inf)	[0.10525]
+VP_RC_agent -> I_RC_control_V_F1858(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_RC_agent -> r1862(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_RC_agent -> r1859(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_RC_agent -> r1863(V_dat, NP_inanimate_dobj_rec, PP_iobj) 	[0.10525]
+VP_RC_agent -> r1860(V_dat, NP_inanimate_dobj_rec, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_RC_agent -> r1864(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_RC_agent -> r1861(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
-VP_RC_agent -> r1865(V_dat, NP_animate_iobj, NP_inanimate_dobj_rec) 	[0.10525]
+VP_RC_agent -> r1862(V_dat, NP_animate_iobj, NP_inanimate_dobj_rec) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-VP_RC_agent -> I_RC_cp_V_F1866(V_cp_taking, C, C_internal) 	[0.158]
+VP_RC_agent -> I_RC_cp_V_F1863(V_cp_taking, C, C_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
 
 
-PP_iobj -> r1867 (P_iobj, NP_animate_iobj)	[1]
+PP_iobj -> r1864 (P_iobj, NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
 
 
-NP_animate_dobj_RC -> r1868(Det, N_common_animate_dobj) 	[1]
+NP_animate_dobj_RC -> r1865(Det, N_common_animate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
 
-NP_inanimate_dobj_rec -> r1869(NP_inanimate_dobj) 	[0.0]
+NP_inanimate_dobj_rec -> r1866(NP_inanimate_dobj) 	[0.0]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_dobj_rec -> r1870(NP_inanimate_dobj_RC_modified) 	[0.0]
+NP_inanimate_dobj_rec -> r1867(NP_inanimate_dobj_RC_modified) 	[0.0]
   [english] ?1
   [semantics] ?1
 
-NP_animate_dobj_rec -> r1871(NP_animate_dobj_RC) 	[0.0]
+NP_animate_dobj_rec -> r1868(NP_animate_dobj_RC) 	[0.0]
   [english] ?1
   [semantics] ?1
 
-NP_animate_dobj_rec -> r1872(NP_animate_dobj_RC_modified) 	[0.0]
+NP_animate_dobj_rec -> r1869(NP_animate_dobj_RC_modified) 	[0.0]
   [english] ?1
   [semantics] ?1
 
-C_internal -> r1873(NP_animate_nsubj, VP_external) 	[0.49]
+C_internal -> r1870(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-C_internal -> r1874(VP_internal) 	[0.06]
+C_internal -> r1871(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-C_internal -> r1875(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+C_internal -> r1872(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-C_internal -> r1876(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+C_internal -> r1873(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
@@ -5938,16 +5927,16 @@ C_internal -> r1876(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
 
 
 
-VP_external -> r1877(V_trans_not_omissible, NP_dobj) 	[0.125]
+VP_external -> r1874(V_trans_not_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
 
-VP_external -> r1878(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
+VP_external -> r1875(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_external -> r1879(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
+VP_external -> r1876(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
@@ -5957,7 +5946,7 @@ VP_external -> r1879(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
 
 
 
-NP_unacc_subj  -> r1880(Det, N_common_animate_dobj) 	[1]
+NP_unacc_subj  -> r1877(Det, N_common_animate_dobj) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
@@ -5980,59 +5969,59 @@ NP_unacc_subj  -> r1880(Det, N_common_animate_dobj) 	[1]
 
 
 
-S! -> S_subj_modif_main_agent_E1881(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) 	[0.4]
+S! -> S_subj_modif_main_agent_E1878(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) 	[0.4]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S! -> S_subj_modif_main_unacc_theme_E1882(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_unacc) 	[0.05]
+S! -> S_subj_modif_main_unacc_theme_E1879(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_unacc) 	[0.05]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S! -> S_subj_modif_main_pass_recipient_E1883(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_pass_dat) 	[0.05]
+S! -> S_subj_modif_main_pass_recipient_E1880(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj_pass_dat) 	[0.05]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
-S! -> S_subj_modif_E1884(NP_inanimate_nsubj_main_RC_modified, VP_main_inanim_subj) 	[0.45]
+S! -> S_subj_modif_E1881(NP_inanimate_nsubj_main_RC_modified, VP_main_inanim_subj) 	[0.45]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
 
-VP_cp -> I_embedded_cp_V_F1885(V_cp_taking, C, S!) 	[1]
+VP_cp -> I_embedded_cp_V_F1882(V_cp_taking, C, S!) 	[1]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
 
-NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E1886(NP_animate_nsubj_rec, Rel_pron, VP_RC_agent) 	[0.35]
+NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E1883(NP_animate_nsubj_rec, Rel_pron, VP_RC_agent) 	[0.35]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E1887(NP_animate_nsubj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
+NP_animate_nsubj_main_RC_modified -> S_RC_unacc_theme_subj_extracted_E1884(NP_animate_nsubj_rec, Rel_pron, VP_RC_unacc_theme) 	[0.05]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E1888(NP_animate_nsubj_rec, Rel_pron, VP_RC_pass_recipient) 	[0.1]
+NP_animate_nsubj_main_RC_modified -> S_RC_pass_recipient_subj_extracted_E1885(NP_animate_nsubj_rec, Rel_pron, VP_RC_pass_recipient) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_recipient(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> r1889(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_inanimate_subj_extracted_theme) 	[0.5]
+NP_inanimate_nsubj_main_RC_modified -> r1886(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_inanimate_subj_extracted_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, pre_theme(?3,?2))
 
 
 
-NP_animate_nsubj_rec -> r1890(NP_animate_nsubj_main) 	[0.5]
+NP_animate_nsubj_rec -> r1887(NP_animate_nsubj_main) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_nsubj_rec -> r1891(NP_animate_nsubj_main_RC_modified) 	[0.5]
+NP_animate_nsubj_rec -> r1888(NP_animate_nsubj_main_RC_modified) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_nsubj_rec -> r1892(NP_inanimate_nsubj_main) 	[0.5]
+NP_inanimate_nsubj_rec -> r1889(NP_inanimate_nsubj_main) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_nsubj_rec -> r1893(NP_inanimate_nsubj_main_RC_modified) 	[0.5]
+NP_inanimate_nsubj_rec -> r1890(NP_inanimate_nsubj_main_RC_modified) 	[0.5]
   [english] ?1
   [semantics] ?1
 
@@ -6041,16 +6030,16 @@ NP_inanimate_nsubj_rec -> r1893(NP_inanimate_nsubj_main_RC_modified) 	[0.5]
 
 
 
-VP_RC_agent -> r1894(V_unacc, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1891(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
 
-VP_RC_agent -> r1895(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1892(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_RC_agent -> r1896(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_RC_agent -> r1893(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
@@ -6060,80 +6049,80 @@ VP_RC_agent -> r1896(V_trans_not_omissible, NP_dobj) 	[0.10525]
 
 
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_unacc_theme_subj_extracted_E1897(V_unacc) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_unacc_theme_subj_extracted_E1894(V_unacc) 	[0.111]
   [english] ?1
   [semantics] ?1
 
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1898(AUX, V_trans_not_omissible_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1895(AUX, V_trans_not_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1899(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1896(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1900(AUX, V_trans_omissible_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1897(AUX, V_trans_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1901(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1898(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1902(AUX,V_unacc_pp) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1899(AUX,V_unacc_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1903(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1900(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1904(AUX, V_dat_pp, PP_iobj) 	[0.112]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1901(AUX, V_dat_pp, PP_iobj) 	[0.112]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1905(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
+VP_RC_inanimate_subj_extracted_theme -> S_RC_pass_theme_subj_extracted_E1902(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
 
-NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1906(NP_animate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) 	[0.5]
+NP_animate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1903(NP_animate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1907(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) 	[0.3]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_theme_dobj_extracted_E1904(NP_inanimate_nsubj_rec, Rel_pron, VP_RC_object_extracted_theme) 	[0.3]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1908(NP_inanimate_nsubj_rec, Rel_pron, VP_dat_RC_theme) 	[0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1905(NP_inanimate_nsubj_rec, Rel_pron, VP_dat_RC_theme) 	[0.1]
   [english] *(*(?1, ?2),?3)
   [semantics] 'nmod<that>'(?1, theme(?3,?2))
 
-NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1909(NP_inanimate_nsubj_rec, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
+NP_inanimate_nsubj_main_RC_modified -> S_RC_dat_theme_dobj_extracted_E1906(NP_inanimate_nsubj_rec, Rel_pron, NP_animate_nsubj, V_dat, PP_iobj) 	[0.1]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] 'nmod<that>'(?1, recipient(theme(agent(?4, ?3),?2),?5))
 
 
 
-NP_inanimate_nsubj_main -> r1910(Det, N_common_inanimate_nsubjpass) 	[1]
+NP_inanimate_nsubj_main -> r1907(Det, N_common_inanimate_nsubjpass) 	[1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1911(NP_animate_nsubj_rec, V_unacc) 	[0.33]
+VP_RC_object_extracted_theme -> r1908(NP_animate_nsubj_rec, V_unacc) 	[0.33]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1912(NP_animate_nsubj_rec, V_trans_omissible) 	[0.33]
+VP_RC_object_extracted_theme -> r1909(NP_animate_nsubj_rec, V_trans_omissible) 	[0.33]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> r1913(NP_animate_nsubj_rec, V_trans_not_omissible) 	[0.34]
+VP_RC_object_extracted_theme -> r1910(NP_animate_nsubj_rec, V_trans_not_omissible) 	[0.34]
   [english] *(?1, ?2)
   [semantics] agent(?2, ?1)
 
-VP_RC_object_extracted_theme -> I_RC_cp_V_F1914(V_cp_taking, C, S_internal) 	[0.0]
+VP_RC_object_extracted_theme -> I_RC_cp_V_F1911(V_cp_taking, C, S_internal) 	[0.0]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
@@ -6141,110 +6130,110 @@ VP_RC_object_extracted_theme -> I_RC_cp_V_F1914(V_cp_taking, C, S_internal) 	[0.
 
 
 
-VP_main_inanim_subj -> S_main_unacc_theme_E1915(V_unacc) 	[0.111]
+VP_main_inanim_subj -> S_main_unacc_theme_E1912(V_unacc) 	[0.111]
   [english] ?1
   [semantics] ?1
 
-VP_main_inanim_subj -> S_main_pass_theme_E1916(AUX, V_trans_not_omissible_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1913(AUX, V_trans_not_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1917(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1914(AUX, V_trans_not_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1918(AUX, V_trans_omissible_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1915(AUX, V_trans_omissible_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1919(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1916(AUX, V_trans_omissible_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1920(AUX,V_unacc_pp) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1917(AUX,V_unacc_pp) 	[0.111]
   [english] *(?1, ?2)
   [semantics] ?2
 
-VP_main_inanim_subj -> S_main_pass_theme_E1921(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1918(AUX, V_unacc_pp, BY,NP_animate_nsubj) 	[0.111]
   [english] *(*(?1, ?2),*(?3,?4))
   [semantics] agent(?2,?4)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1922(AUX, V_dat_pp, PP_iobj) 	[0.112]
+VP_main_inanim_subj -> S_main_pass_theme_E1919(AUX, V_dat_pp, PP_iobj) 	[0.112]
   [english] *(*(?1, ?2),?3)
   [semantics] recipient(?2,?3)
 
-VP_main_inanim_subj -> S_main_pass_theme_E1923(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
+VP_main_inanim_subj -> S_main_pass_theme_E1920(AUX, V_dat_pp, PP_iobj, BY, NP_animate_nsubj) 	[0.111]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(recipient(?2,?3),?5)
 
 
-VP_main_anim_subj_pass_dat -> r1924(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
+VP_main_anim_subj_pass_dat -> r1921(AUX, V_dat_pp, NP_inanimate_dobj) 	[0.5]
   [english] *(*(?1, ?2),?3)
   [semantics] theme(?2,?3)
 
-VP_main_anim_subj_pass_dat -> r1925(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
+VP_main_anim_subj_pass_dat -> r1922(AUX, V_dat_pp, NP_inanimate_dobj, BY,NP_animate_nsubj) 	[0.5]
   [english] *(*(*(?1, ?2),?3),*(?4,?5))
   [semantics] agent(theme(?2,?3),?5)
 
-VP_main_anim_subj_unacc -> r1926(V_unacc) 	[1]
+VP_main_anim_subj_unacc -> r1923(V_unacc) 	[1]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1927(V_unerg) 	[0.10525]
+VP_main_anim_subj -> r1924(V_unerg) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1928(V_unacc, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1925(V_unacc, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> r1929(V_trans_omissible) 	[0.10525]
+VP_main_anim_subj -> r1926(V_trans_omissible) 	[0.10525]
   [english] ?1
   [semantics] ?1
 
-VP_main_anim_subj -> r1930(V_trans_omissible, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1927(V_trans_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> r1931(V_trans_not_omissible, NP_dobj) 	[0.10525]
+VP_main_anim_subj -> r1928(V_trans_not_omissible, NP_dobj) 	[0.10525]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_main_anim_subj -> I_main_control_V_F1932(V_inf_taking, INF, V_inf)	[0.10525]
+VP_main_anim_subj -> I_main_control_V_F1929(V_inf_taking, INF, V_inf)	[0.10525]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-VP_main_anim_subj -> r1933(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
+VP_main_anim_subj -> r1930(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_main_anim_subj -> r1934(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
+VP_main_anim_subj -> r1931(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.10525]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
-VP_main_anim_subj -> I_main_cp_V_F1935(V_cp_taking, C, S_internal) 	[0.158]
+VP_main_anim_subj -> I_main_cp_V_F1932(V_cp_taking, C, S_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
 
-S_internal -> r1936(NP_animate_nsubj, VP_external) 	[0.49]
+S_internal -> r1933(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S_internal -> r1937(VP_internal) 	[0.06]
+S_internal -> r1934(VP_internal) 	[0.06]
   [english] ?1
   [semantics] ?1
 
-S_internal -> r1938(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
+S_internal -> r1935(NP_inanimate_nsubjpass, VP_passive) 	[0.375]
   [english] *(?1, ?2)
   [semantics] pre_theme(?2, ?1)
 
-S_internal -> r1939(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
+S_internal -> r1936(NP_animate_nsubjpass, VP_passive_dat) 	[0.075]
   [english] *(?1, ?2)
   [semantics] pre_recipient(?2, ?1)
 
-VP_external -> r1940(V_cp_taking, C, S_internal) 	[0.158]
+VP_external -> r1937(V_cp_taking, C, S_internal) 	[0.158]
   [english] *(?1, *(?2, ?3))
   [semantics] ccomp(?1, ?3)
 
@@ -6257,7 +6246,7 @@ VP_external -> r1940(V_cp_taking, C, S_internal) 	[0.158]
 
 
 
-C_internal -> r1941(NP_animate_nsubj, C_VP_external) 	[0.49]
+C_internal -> r1938(NP_animate_nsubj, C_VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
@@ -6265,35 +6254,35 @@ C_internal -> r1941(NP_animate_nsubj, C_VP_external) 	[0.49]
 
 
 
-C_VP_external -> r1942(V_unerg) 	[0.125]
+C_VP_external -> r1939(V_unerg) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-C_VP_external -> r1943(V_unacc, NP_dobj) 	[0.125]
+C_VP_external -> r1940(V_unacc, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1944(V_trans_omissible) 	[0.125]
+C_VP_external -> r1941(V_trans_omissible) 	[0.125]
   [english] ?1
   [semantics] ?1
 
-C_VP_external -> r1945(V_trans_omissible, NP_dobj) 	[0.125]
+C_VP_external -> r1942(V_trans_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1946(V_trans_not_omissible, NP_dobj) 	[0.125]
+C_VP_external -> r1943(V_trans_not_omissible, NP_dobj) 	[0.125]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-C_VP_external -> r1947(V_inf_taking, INF, V_inf)	[0.125]
+C_VP_external -> r1944(V_inf_taking, INF, V_inf)	[0.125]
   [english] *(?1, *(?2, ?3))
   [semantics] xcomp(?1, ?3)
 
-C_VP_external -> r1948(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
+C_VP_external -> r1945(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-C_VP_external -> r1949(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
+C_VP_external -> r1946(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.125]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
