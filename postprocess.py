@@ -2,6 +2,45 @@ import pandas as pd
 import varfree2cogs
 
 
+def handle_null_sents(sent_path):
+    """
+    Handle sentences that have <null> parses.
+
+    Note:
+        Default for now is probably just to discard them
+    """
+    raise NotImplementedError
+
+
+def handle_incorrect_sents(sent_path):
+    """
+    Handle sentences that have a valid parse, but do not
+    follow the desired constraints in some way.
+
+    This may include:
+        - inconsistent verb/subj/obj within batch
+        - incorrect application of grammar rules
+
+    The former can be implemented by a simple check of the semantic
+    representations for each batch, the latter must be checked by
+    creating a separate, minimal grammar for each sentence type (1..6)
+
+    Either discard them or select some random replacement word from the vocab
+    """
+    raise NotImplementedError
+
+
+def handle_repetition_sents(sent_path):
+    """
+    Handle sentences that have some repetition of verb, subject or object.
+
+    Example of such a model output:
+
+    `the king that the king that the king respected adored adored the queen`
+    """
+    raise NotImplementedError
+
+
 # only for long distance movement
 def move_wh_words(row):
     tokens_list = row.split()
