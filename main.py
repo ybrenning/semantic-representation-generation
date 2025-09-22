@@ -10,10 +10,10 @@ from utils import get_safe_filename
 def generation_loop(grammar_path, n_prompts):
     responses = ""
     for _ in range(n_prompts):
-        prompt = prompt_from_grammar(grammar_path, n_sets=1, k=10)
+        prompt = prompt_from_grammar(grammar_path, n_sets=3, k=20)
         print(prompt)
 
-        response = test_pipeline(prompt)
+        response = test_pipeline(prompt, temperature=0.4, top_p=0.9)
         responses += response + "\n"
 
     response_path = "prompts/prompt-newest"
@@ -41,6 +41,7 @@ def main():
     assert isinstance(n_prompts, int), "Provide no. of times to prompt"
 
     response_path = generation_loop(grammar_path, n_prompts)
+
     sents_path = format_sents(response_path)
     varfree_path = parse_sents(sents_path, grammar_path)
     get_parse_accuracy(varfree_path, grammar_path)
