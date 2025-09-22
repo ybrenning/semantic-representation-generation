@@ -1,8 +1,7 @@
-import os
 import sys
 from generation.src.utils import test_pipeline
 from parse import format_sents, parse_sents
-from evaluate import get_parse_accuracy
+from evaluate import evaluate_parse
 from prompts.prompt import prompt_from_grammar
 from utils import get_safe_filename
 
@@ -10,7 +9,8 @@ from utils import get_safe_filename
 def generation_loop(grammar_path, n_prompts):
     responses = ""
     for _ in range(n_prompts):
-        prompt = prompt_from_grammar(grammar_path, n_sets=3, k=20)
+        # Maybe also save the generated prompts?
+        prompt = prompt_from_grammar(grammar_path, n_sets=3, k=30)
         print(prompt)
 
         response = test_pipeline(prompt, temperature=0.4, top_p=0.9)
@@ -40,11 +40,20 @@ def main():
     assert grammar_path.endswith(".irtg"), "Provide IRTG grammar"
     assert isinstance(n_prompts, int), "Provide no. of times to prompt"
 
+    # Generation step
     response_path = generation_loop(grammar_path, n_prompts)
 
+    # Format and parse steps
     sents_path = format_sents(response_path)
     varfree_path = parse_sents(sents_path, grammar_path)
-    get_parse_accuracy(varfree_path, grammar_path)
+
+    # Evaluation step
+    evaluate_parse(
+        varfree_path,
+        grammar_path,
+        show_stats=True,
+        show_oov=True
+    )
 
 
 if __name__ == "__main__":

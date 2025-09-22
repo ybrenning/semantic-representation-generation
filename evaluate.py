@@ -55,7 +55,9 @@ def get_parse_accuracies(lines, show_stats=True):
 
         accuracies["line_acc"] = round(correct_lines / total_lines, 4)
         accuracies["batch_acc"] = round(not_null_batches / total_batches, 4)
-        accuracies["batch_form_acc"] = round(correct_batches / total_batches, 4)
+        accuracies["batch_form_acc"] = round(
+            correct_batches / total_batches, 4
+        )
         accuracies["sent_accs"] = []
 
         print("-----------")
@@ -88,7 +90,7 @@ def infer_n_prompts(varfree_path):
 
 
 def evaluate_parse(
-        varfree_path, grammar_path, show_stats=True, show_oov=True
+    varfree_path, grammar_path, show_stats=True, show_oov=True
 ):
     results = {}
 
