@@ -1,0 +1,186 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the cat adored the bird
+the cat on the shelf adored the bird
+the cat that collapsed adored the bird
+the cat that the student painted adored the bird
+the cat that sketched the book that was drawn adored the bird
+the cat that the student that the servant examined adored adored the bird
+the monkey respected the frog
+the monkey in the room respected the frog
+the monkey that grew respected the frog
+the monkey that the passenger cleaned respected the frog
+the monkey that cleaned the chair that was painted respected the frog
+the monkey that the passenger that the guest cooked respected respected the frog
+the giraffe missed the hen
+the giraffe beside the vehicle missed the hen
+the giraffe that improved missed the hen
+the giraffe that the resident dusted missed the hen
+the giraffe that dusted the spoon that was cooked missed the hen
+the giraffe that the resident that the lawyer hunted missed missed the hen
+the turtle appreciated the mouse
+the turtle on the bike appreciated the mouse
+the turtle that grew appreciated the mouse
+the turtle that the champion knew appreciated the mouse
+the turtle that painted the guitar appreciated the mouse
+the turtle that the champion that the president tossed knew appreciated the mouse
+the wolf loved the doctor
+the wolf beside the desk loved the doctor
+the wolf that floated loved the doctor
+the wolf that the buyer held loved the doctor
+the wolf that cooked the shoe loved the doctor
+the wolf that the buyer that the citizen pierced held loved the doctor
+the president tolerated the lamb
+the president in the microwave tolerated the lamb
+the president that doubled tolerated the lamb
+the president that the squirrel admired tolerated the lamb
+the president that sketched the ball tolerated the lamb
+the president that the squirrel that the hen stabbed admired tolerated the lamb
+the doctor adored the patient
+the doctor on the floor adored the patient
+the doctor that floated adored the patient
+the doctor that the visitor admired adored the patient
+the doctor that nursed the cracker that was cleaned adored the patient
+the doctor that the visitor that the boy helped adored adored the patient
+a student respected a scientist
+a student in the closet respected a scientist
+a student that rolled respected a scientist
+a student that a judge worshipped respected a scientist
+a student that cooked the muffin that was eaten respected a scientist
+a student that a judge that a boy loved respected respected a scientist
+the mother valued the friend
+the mother beside the clock valued the friend
+the mother that snapped valued the friend
+the mother that a spokesman tolerated valued the friend
+the mother that painted the ring that was observed valued the friend
+the mother that a spokesman that a girl discovered valued valued the friend
+the queen adored a servant
+the queen beside the cabinet adored a servant
+the queen that doubled adored a servant
+the queen that the goose painted adored a servant
+the queen that painted the leaf adored a servant
+the queen that the goose that the baby respected adored a servant
+a governor respected a doctor
+a governor on the table respected a doctor
+a governor that improved respected a doctor
+a governor that the citizen cooked respected a doctor
+a governor that cooked the ball respected a doctor
+a governor that the citizen that the lawyer noticed respected a doctor
+the tourist liked a frog
+the tourist in the basket liked a frog
+the tourist that collapsed liked a frog
+the tourist that the sheep juggled liked a frog
+the tourist that juggled the pillow liked a frog
+the tourist that the sheep that the donkey examined liked a frog
+the consumer respected the cat
+the consumer on the speaker respected the cat
+the consumer that doubled respected the cat
+the consumer that the tourist tolerated respected the cat
+the consumer that knew the purse that was painted respected the cat
+the consumer that the tourist that the butterfly found respected respected the cat
+a sailor adored a frog
+a sailor beside the vehicle adored a frog
+a sailor that crumpled adored a frog
+a sailor that a patient cooked adored a frog
+a sailor that painted a key that was cleaned adored a frog
+a sailor that a patient that a tiger respected adored adored a frog
+the politician appreciated the duck
+the politician in the cubicle appreciated the duck
+the politician that collapsed appreciated the duck
+the politician that a queen sketched appreciated the duck
+the politician that dusted a seed that was examined appreciated the duck
+the politician that a queen that a tenant noticed appreciated appreciated the duck
+the girl touched a soldier
+the girl beside the book touched a soldier
+the girl that improved touched a soldier
+the girl that the patient loved touched a soldier
+the girl that painted the cracker that was mailed touched a soldier
+the girl that the patient that the governor adored loved touched a soldier
+a moose admired the frog
+a moose on the blanket admired the frog
+a moose that danced admired the frog
+a moose that the bunny found admired the frog
+a moose that sketched the ball that was forwarded admired the frog
+a moose that the bunny that the duke tolerated found admired the frog
+the penguin pierced a guard
+the penguin in the container pierced a guard
+the penguin that crumpled pierced a guard
+the penguin that the tiger missed pierced a guard
+the penguin that cooked the pizza that was given pierced a guard
+the penguin that the tiger that the professor respected missed pierced a guard
+the sailor adored the goose
+the sailor beside the sheet adored the goose
+the sailor that improved adored the goose
+the sailor that the pony cleaned adored the goose
+the sailor that observed the strawberry that was painted adored the goose
+the sailor that the pony that the moose helped adored adored the goose
+the writer respected the buyer
+the writer on the podium respected the buyer
+the writer that froze respected the buyer
+the writer that the guest examined respected the buyer
+the writer that noticed the newspaper that was sketched respected the buyer
+the writer that the guest that the driver admired respected respected the buyer
+the tourist loved the lamb
+the tourist in the closet loved the lamb
+the tourist that crumpled loved the lamb
+the tourist that the guard hunted loved the lamb
+the tourist that heard the soap that was drawn loved the lamb
+the tourist that the guard that the zebra tolerated loved loved the lamb
+the bear liked the sailor
+the bear beside the bike liked the sailor
+the bear that decomposed liked the sailor
+the bear that the cow observed liked the sailor
+the bear that noticed the pillow that was painted liked the sailor
+the bear that the cow that the pig respected liked liked the sailor
+the frog adored the butterfly
+the frog on the counter adored the butterfly
+the frog that doubled adored the butterfly
+the frog that the wolf juggled adored the butterfly
+the frog that painted the jacket that was dusted adored the butterfly
+the frog that the wolf that the turkey found adored adored the butterfly
+the pig worshipped the judge
+the pig in the backyard worshipped the judge
+the pig that burned worshipped the judge
+the pig that the deer cooked worshipped the judge
+the pig that cleaned the dish that was sketched worshipped the judge
+the pig that the deer that the prince poked worshipped worshipped the judge
+the king adored a poet
+the king on the tabletop adored a poet
+the king that improved adored a poet
+the king that the horse painted adored a poet
+the king that painted the towel that was nursed adored a poet
+the king that the horse that the crocodile found adored adored a poet
+the mother pierced a penguin
+the mother in the backyard pierced a penguin
+the mother that decomposed pierced a penguin
+the mother that the visitor juggled pierced a penguin
+the mother that juggled the pen that was cleaned pierced a penguin
+the mother that the visitor that the director missed worshipped pierced a penguin
+the sailor worshipped a cat
+the sailor beside the stool worshipped a cat
+the sailor that crumpled worshipped a cat
+the sailor that the patient dusted worshipped a cat
+the sailor that dusted the jacket that was painted worshipped a cat
+the sailor that the patient that the princess helped respected worshipped a cat
+the guard threw a lamb
+the guard on the deck threw a lamb
+the guard that doubled threw a lamb
+the guard that the professor admired threw a lamb
+the guard that called the muffin that was cooked threw a lamb
+the guard that the butterfly that the turtle threw admired threw a lamb
+the duke found a professor
+the duke in the bag found a professor
+the duke that crumpled found a professor
+the duke that the moose tolerated found a professor
+the duke that painted the towel that was heard found a professor
+the duke that the turtle that the pony missed found found a professor
+the coach respected a student
+the coach beside the rock respected a student
+the coach that improved respected a student
+the coach that the deer pierced respected a student
+the coach that dusted the bottle that was drawn respected a student
+the coach that the frog that the governor poked adored respected a student
