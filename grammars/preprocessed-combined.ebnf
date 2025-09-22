@@ -118,7 +118,7 @@ NP_beside : Det N_beside PP_loc | Det N_beside
 
 PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
 
-PP_iobj : P_iobj NP_animate_iobj | P_iobj NP_animate_iobj
+PP_iobj : P_iobj NP_animate_iobj
 
 VP_cp : V_cp_taking C S | V_cp_taking C S
 

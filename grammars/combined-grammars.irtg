@@ -241,6 +241,7 @@ PP_loc -> r{{ cnt.next() }}(P_beside, NP_beside) [0.334]
 PP_iobj -> r{{ cnt.next() }} (P_iobj,NP_animate_iobj)[1]
 [english] *(?1, ?2)
 [semantics] pre_case(?2, ?1)
+
 {## Subsets of main grammar that only generate
 RC modification in object position
 object extracted:
@@ -286,7 +287,7 @@ S! -> r{{ cnt.next() }}(NP_animate_nsubj, VP_cp) [0.1]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
 
-VP_cp -> I_cp_embedded_RC_F{{ cnt.next() }}(V_cp_taking, C, S!) [1]
+VP_cp -> I_embedded_cp_V_F{{ cnt.next() }}(V_cp_taking, C, S!) [1]
 [english] *(?1, *(?2, ?3))
 [semantics] ccomp(?1, ?3)
 
@@ -486,9 +487,6 @@ VP_RC_agent -> I_RC_cp_V_F{{ cnt.next() }}(V_cp_taking, C, C_internal) [0.158]
 
 
 
-PP_iobj -> r{{ cnt.next() }} (P_iobj, NP_animate_iobj)[1]
-[english] *(?1, ?2)
-[semantics] pre_case(?2, ?1)
 
 
 
@@ -562,6 +560,7 @@ VP_external -> r{{ cnt.next() }}(V_dat, NP_animate_iobj, NP_inanimate_dobj) [0.1
 NP_unacc_subj  -> r{{ cnt.next() }}(Det, N_common_animate_dobj) [1]
 [english] *(?1, ?2)
 [semantics] pre_det(?2, ?1)
+
 
 
 
@@ -937,6 +936,7 @@ C_VP_external -> r{{ cnt.next() }}(V_dat, NP_animate_iobj, NP_inanimate_dobj) [0
 
 
 {## Noun phrases ##}
+
 
 
 
