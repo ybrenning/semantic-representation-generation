@@ -71,6 +71,29 @@ def prompt_from_grammar(grammar_path, n_sets=3, k=10):
 
     rules = "".join(rules)
     lexicon = "".join(lexicon)
+    if n_sets > 1:
+        constraints = f"""
+I would like you to repeat this process in {n_sets} sets of 6 sentences.
+
+Constraints:
+
+- Use always the same main subject, main verb and following object throughout the set (6 sentences)
+- Always use unique embedded subjects and verbs
+- All subjects and verbs in the sentence must be different from one another
+- Make sure to choose varied / different terminals / words from one set to another
+
+So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+        """
+    else:
+        constraints = f"""
+Constraints:
+
+- Use always the same main subject, main verb and following object throughout the 6 sentences
+- Always use unique embedded subjects and verbs
+- All subjects and verbs in the sentence must be different from one another
+
+So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+        """
 
     prompt = f"""
 You are an expert linguist. You need to generate 6 sentences based on the following derivations from a context-free grammar:
@@ -268,16 +291,7 @@ Importantly, you'll need to restrict the words to the following lexicon:
 {lexicon}
 ```
 
-I would like you to repeat this process in {n_sets} sets of 6 sentences.
-
-Constraints:
-
-- Use always the same main subject, main verb and following object throughout the set (6 sentences)
-- Always use unique embedded subjects and verbs
-- All subjects and verbs in the sentence must be different from one another
-- Make sure to choose varied / different terminals / words from one set to another
-
-So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+{constraints}
 
 Output just the numbered sentences without any extra information.
     """

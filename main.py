@@ -43,7 +43,7 @@ def main():
     assert grammar_path.endswith(".irtg"), "Provide IRTG grammar"
     assert isinstance(n_prompts, int), "Provide no. of times to prompt"
 
-    prompt = prompt_from_grammar(grammar_path)
+    prompt = prompt_from_grammar(grammar_path, n_sets=1, k=10)
     print(prompt)
 
     response_path = generate_from_prompt(prompt, n_prompts)
