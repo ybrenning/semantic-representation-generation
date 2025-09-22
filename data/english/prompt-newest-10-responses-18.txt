@@ -1,0 +1,186 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the bear appreciated the student
+the bear beside the yacht appreciated the student
+the bear that jogged appreciated the student
+the bear that the moose painted appreciated the student
+the bear that painted the doll that was sketched appreciated the student
+the bear that the moose that the tourist cooked appreciated appreciated the student
+the captain found the giraffe
+the captain on the bench found the giraffe
+the captain that laughed found the giraffe
+the captain that the tourist dusted found the giraffe
+the captain that dusted the pen that was cleaned found the giraffe
+the captain that the manager that the guest cooked respected found the giraffe
+the butterfly loved the politician
+the butterfly in the trailer loved the politician
+the butterfly that danced loved the politician
+the butterfly that the bird sketched loved the politician
+the butterfly that sketched the jigsaw that was examined loved the politician
+the butterfly that the prince that the resident painted admired loved the politician
+the guest loved the teacher
+the guest on the podium loved the teacher
+the guest that smiled loved the teacher
+the guest that the friend knew loved the teacher
+the guest that loved the book loved the teacher
+the guest that the friend that the lawyer painted knew loved the teacher
+the child appreciated the driver
+the child in the room appreciated the driver
+the child that danced appreciated the driver
+the child that the bear saw appreciated the driver
+the child that appreciated the cake appreciated the driver
+the child that the bear that the turkey painted saw appreciated the driver
+the lawyer found the passenger
+the lawyer beside the road found the passenger
+the lawyer that laughed found the passenger
+the lawyer that the monster observed found the passenger
+the lawyer that found the wine found the passenger
+the lawyer that the monster that the wolf painted observed found the passenger
+the king adored the queen
+the king on the throne adored the queen
+the king that smirked adored the queen
+the king that the queen respected adored the queen
+the king that respected the crown that was adored by the queen adored the queen
+the king that the king that the king respected adored adored the queen
+a professor discovered a scientist
+a professor in the lab discovered a scientist
+a professor that laughed discovered a scientist
+a professor that a scientist admired discovered a scientist
+a professor that admired the pen that was discovered by a scientist discovered a scientist
+a professor that a professor that a professor admired discovered discovered a scientist
+the soldier helped the prisoner
+the soldier beside the tent helped the prisoner
+the soldier that danced helped the prisoner
+the soldier that the prisoner liked helped the prisoner
+the soldier that liked the guitar that was helped by the prisoner helped the prisoner
+the soldier that the soldier that the soldier liked helped helped the prisoner
+the sailor admired a tourist
+the sailor beside the tent admired a tourist
+the sailor that laughed admired a tourist
+the sailor that the horse noticed admired a tourist
+the sailor that handed the balloon that was painted admired a tourist
+the sailor that the sailor that the judge helped noticed admired a tourist
+a judge respected a teacher
+a judge on the podium respected a teacher
+a judge that smirked respected a teacher
+a judge that the bird saw respected a teacher
+a judge that mailed the toy that was cleaned respected a teacher
+a judge that the poet that the guest found saw respected a teacher
+the cow loved a wolf
+the cow in the backyard loved a wolf
+the cow that jogged loved a wolf
+the cow that the bunny painted loved a wolf
+the cow that rented the doll that was examined loved a wolf
+the cow that the driver that the donkey touched painted loved a wolf
+the tourist appreciated the poet
+the tourist beside the rack appreciated the poet
+the tourist that danced appreciated the poet
+the tourist that the manager knew appreciated the poet
+the tourist that painted a flag appreciated the poet
+the tourist that the friend that the bunny missed knew appreciated the poet
+a penguin loved a scientist
+a penguin on the board loved a scientist
+a penguin that smiled loved a scientist
+a penguin that a king noticed loved a scientist
+a penguin that cleaned a muffin loved a scientist
+a penguin that the friend that the deer saw painted loved a scientist
+the bear respected the lawyer
+the bear in the tent respected the lawyer
+the bear that laughed respected the lawyer
+the bear that a cat heard respected the lawyer
+the bear that cooked a pizza respected the lawyer
+the bear that the father that the butterfly observed dusted respected the lawyer
+the journalist admired the king
+the journalist beside the bike admired the king
+the journalist that danced admired the king
+the journalist that the governor painted admired the king
+the journalist that painted a guitar that was cleaned admired the king
+the journalist that the governor that the duke painted admired admired the king
+the governor tossed the puppy
+the governor on the mound tossed the puppy
+the governor that giggled tossed the puppy
+the governor that the buyer cooked tossed the puppy
+the governor that cooked a sandwich that was eaten tossed the puppy
+the governor that the buyer that the horse cooked tossed tossed the puppy
+the duke helped the visitor
+the duke in the house helped the visitor
+the duke that laughed helped the visitor
+the duke that the dealer hunted helped the visitor
+the duke that hunted a bat that was sketched helped the visitor
+the duke that the dealer that the patient hunted helped helped the visitor
+the doctor respected a teacher
+the doctor in the tent respected a teacher
+the doctor that jogged respected a teacher
+the doctor that the queen called respected a teacher
+the doctor that liked the book that was painted respected a teacher
+the doctor that the guard that the child liked called respected a teacher
+a scientist adored a captain
+a scientist on the boat adored a captain
+a scientist that danced adored a captain
+a scientist that the guest noticed adored a captain
+a scientist that held the pen that was cleaned adored a captain
+a scientist that the tiger that the mother held noticed adored a captain
+the manager appreciated a soldier
+the manager beside the tree appreciated a soldier
+the manager that laughed appreciated a soldier
+the manager that the tenant observed appreciated a soldier
+the manager that found the guitar that was drawn appreciated a soldier
+the manager that the friend that the turtle found observed appreciated a soldier
+the student admired the journalist
+the student on the road admired the journalist
+the student that smiled admired the journalist
+the student that the child respected admired the journalist
+the student that respected the towel that was painted admired the journalist
+the student that the child that the priest helped respected admired the journalist
+a priest discovered a lawyer
+a priest in the palace discovered a lawyer
+a priest that ran discovered a lawyer
+a priest that the doctor noticed discovered a lawyer
+a priest that noticed the guitar that was sketched discovered a lawyer
+a priest that the doctor that the resident touched noticed discovered a lawyer
+the giraffe adored the governor
+the giraffe beside the philosopher adored the governor
+the giraffe that danced adored the governor
+the giraffe that the penguin found adored the governor
+the giraffe that found the mirror that was cleaned adored the governor
+the giraffe that the penguin that the child saw found adored the governor
+the farmer loved the princess
+the farmer beside the piano loved the princess
+the farmer that jogged loved the princess
+the farmer that the deer dusted loved the princess
+the farmer that respected the donut loved the princess
+the farmer that the horse that the girl painted found loved the princess
+the professor admired the poet
+the professor on the desk admired the poet
+the professor that laughed admired the poet
+the professor that the duck observed admired the poet
+the professor that poked the chair admired the poet
+the professor that the wolf that the tenant cleaned saw admired the poet
+the researcher helped the driver
+the researcher in the truck helped the driver
+the researcher that danced helped the driver
+the researcher that the pony sketched helped the driver
+the researcher that adored the jigsaw helped the driver
+the researcher that the lion that the tourist examined knew helped the driver
+the judge helped a writer
+the judge on the road helped a writer
+the judge that danced helped a writer
+the judge that the lawyer respected helped a writer
+the judge that sketched a chair that was cleaned helped a writer
+the judge that the lawyer that the captain liked respected helped a writer
+a sailor discovered the butterfly
+a sailor in the house discovered the butterfly
+a sailor that laughed discovered the butterfly
+a sailor that the priest admired discovered the butterfly
+a sailor that painted a guitar that was drawn discovered the butterfly
+a sailor that the priest that the captain worshipped admired discovered the butterfly
+the captain adored a frog
+the captain beside the log adored a frog
+the captain that giggled adored a frog
+the captain that the bear tolerated adored a frog
+the captain that cooked a pancake that was eaten adored a frog
+the captain that the bear that the king valued tolerated adored a frog
