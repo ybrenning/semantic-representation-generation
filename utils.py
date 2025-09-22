@@ -1,3 +1,6 @@
+import os 
+
+
 def read_grammar(grammar_path, lex_only=False):
     grammar = {}
     with open(grammar_path, "r") as f:
@@ -62,22 +65,11 @@ def compare_grammars(g1_path, g2_path):
     return all(set(g1[k]) == set(g2[k]) for k in g1)
 
 
-def evaluate(varfree_path):
-    with open(varfree_path, "r") as f:
-        correct = 0
-        total = 0
-        for line in f.readlines():
-            if line != "<null>\n":
-                correct += 1
-            total += 1
-
-    acc = round(correct/total * 100, 2)
-    print(f"{correct}/{total} ({acc}%) sentences have a valid parse")
-
-
-if __name__ == "__main__":
-    varfree_path = "data/varfree_lf/prompt-varfree.txt"
-    # evaluate(varfree_path)
-    g1 = "grammars/preprocessed-RC_modifying_subject_NP_gen-grammar.ebnf"
-    g2 = "grammars/custom-grammar.ebnf"
-    print(compare_grammars(g1, g2))
+def get_safe_filename(filename):
+    base, ext = os.path.splitext(filename)
+    counter = 1
+    new_filename = filename
+    while os.path.exists(new_filename):
+        new_filename = f"{base}-{counter}{ext}"
+        counter += 1
+    return new_filename
