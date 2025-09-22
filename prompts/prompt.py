@@ -59,7 +59,8 @@ def prompt_from_grammar(grammar_path, n_sets=3, k=None):
                     assert len(words) == 2
 
                     words = [w.strip() for w in words[-1].split("|")]
-                    subsample = random.sample(words, k)
+                    k_curr = max(0, min(k, len(words)))
+                    subsample = random.sample(words, k_curr)
 
                     line_subsampled = (
                         line.split(":")[0]
@@ -80,6 +81,7 @@ I would like you to repeat this process in {n_sets} sets of 6 sentences.
 Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
+- Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different* from one another
 - All subjects and verbs in the sentence must be different from one another
 - Make sure to choose varied terminals from one set to another
@@ -91,6 +93,7 @@ So your task is to generate {n_sets} sets of 6 sentences, from a restricted voca
 Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the 6 sentences
+- Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different* from one another
 - All subjects and verbs in the sentence must be different from one another
 
@@ -150,7 +153,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
     )
     (Rel_pron)
     (VP_RC_agent
-      (V_unacc)
+      (V_unerg)
     )
   )
   (VP_external
@@ -209,7 +212,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
       )
       (Rel_pron)
       (VP_RC_agent
-        (V_trans_omissible)
+        (V_trans_not_omissible)
         (NP_inanimate_dobj_rec
           (NP_inanimate_dobj_RC_modified
             (NP_inanimate_dobj_rec
@@ -281,13 +284,13 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
 )
 ```
 
-In order to derive the sentences, you'll need to follow explicitly the following grammar rules:
+In order to derive the sentences, you'll need to explicitly follow this grammar's rules:
 
 ```
 {rules}
 ```
 
-Importantly, you'll need to restrict the words to the following lexicon:
+Importantly, you'll need to restrict the words to the following lexicon of terminals:
 
 ```
 {lexicon}
