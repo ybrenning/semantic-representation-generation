@@ -58,7 +58,6 @@ def prompt_from_grammar(grammar_path, n_sets=3, k=10):
                     words = line.split(":")
                     assert len(words) == 2
                     words = [w.strip() for w in words[-1].split("|")]
-                    print(words)
                     subsample = random.sample(words, k)
 
                     line_subsampled = (
@@ -77,10 +76,10 @@ I would like you to repeat this process in {n_sets} sets of 6 sentences.
 
 Constraints:
 
-- Use always the same main subject, main verb and following object throughout the set (6 sentences)
+- Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
 - Always use unique embedded subjects and verbs
 - All subjects and verbs in the sentence must be different from one another
-- Make sure to choose varied / different terminals / words from one set to another
+- Make sure to choose varied terminals from one set to another
 
 So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
@@ -88,7 +87,7 @@ So your task is to generate {n_sets} sets of 6 sentences, from a restricted voca
         constraints = f"""
 Constraints:
 
-- Use always the same main subject, main verb and following object throughout the 6 sentences
+- Always use the *same* main subject, main verb and following object throughout the 6 sentences
 - Always use unique embedded subjects and verbs
 - All subjects and verbs in the sentence must be different from one another
 
