@@ -24,7 +24,7 @@ The result is a corpus of English sentences, each one paired with their semantic
 
 ## Run pipeline
 
-The main part of the workflow can be run from a single script by providing a `prompt_path` to a text file and `grammar_path` to an IRTG file. Based on this, the script prompts `gpt-4o`, saves the raw text response, cleans and formats the sentences to correspond with the SLOG English representation, runs the parser on the sentences to produce the semantic representations, and finally computes an accuracy score based on how many of the produced sentences adhere to the grammar specifications.
+The main part of the workflow can be run from a single script by providing a `grammar_path` to an IRTG file and `n_prompts`, the number of times to repeat the generation request. Based on this, the script creates a prompt from the grammar, passes it to `gpt-4o`, saves the raw text response, cleans and formats the sentences to correspond with the SLOG English representation, runs the parser on the sentences to produce the semantic representations, and finally computes various evaluation scores.
 
 ### Install dependencies 
 
@@ -36,23 +36,33 @@ $ . venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Run the script with the preprocessesd CFG as a command line argument:
+Run the script with the preprocessed CFG and the number of times to prompt as a command line argument:
 
 ```bash
-$ python3 main.py grammars/preprocessed-combined.irtg 
-```
+$ python3 main.py grammars/preprocessed-combined.irtg 10
+``` 
 
 Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately:
 
 ```bash
-$ python3 evaluate.py data/varfree_lf/prompt-newest.txt grammars/preprocessed-combined.irtg 
+$ python3 evaluate.py data/varfree_lf/prompt-newest-10-responses-18.txt grammars/preprocessed-combined.irtg 
 
 -----------
-Total OOV percentage: 4 / 67 = 5.97%
-OOV sentences: 4 / 30 = 13.33%
+Total OOV percentage: 1 / 156 = 0.64%
+OOV sentences: 1 / 180 = 0.56%
 -----------
-Line accuracy: 26/30 = 86.67%
-Batch accuracy: 2/5 = 40.00%
+Line parse accuracy: 175/180 = 97.22%
+Batch parse accuracy: 25/30 = 83.33%
+Batch form accuracy: 25/30 = 83.33%
+-----------
+Accuracy per sentence type:
+  Sentence 1: 30/30= 100.00%
+  Sentence 2: 28/30= 93.33%
+  Sentence 3: 30/30= 100.00%
+  Sentence 4: 30/30= 100.00%
+  Sentence 5: 27/30= 90.00%
+  Sentence 6: 30/30= 100.00%
+-----------
 ```
 
 ## Grammars
