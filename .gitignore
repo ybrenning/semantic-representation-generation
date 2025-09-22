@@ -8,3 +8,7 @@
 **/.ipynb_checkpoints/
 
 *.~lock.*
+
+**/prompts/*-response*
+**/data/varfree_lf/
+**/data/english/
