@@ -38,7 +38,7 @@ subsample_terminals = [
 ]
 
 
-def prompt_from_grammar(grammar_path, n_sets=3, k=10):
+def prompt_from_grammar(grammar_path, n_sets=3, k=None):
     if grammar_path.endswith(".irtg"):
         grammar_path = grammar_path.replace(".irtg", ".ebnf")
 
@@ -54,14 +54,17 @@ def prompt_from_grammar(grammar_path, n_sets=3, k=10):
             elif rules_section:
                 rules.append(line)
             else:
-                if line.startswith(tuple(subsample_terminals)):
+                if k and line.startswith(tuple(subsample_terminals)):
                     words = line.split(":")
                     assert len(words) == 2
+
                     words = [w.strip() for w in words[-1].split("|")]
                     subsample = random.sample(words, k)
 
                     line_subsampled = (
-                        line.split(":")[0] + ": " + " | ".join(subsample) + "\n"
+                        line.split(":")[0]
+                        + ": "
+                        + " | ".join(subsample) + "\n"
                     )
 
                     lexicon.append(line_subsampled)
@@ -77,7 +80,7 @@ I would like you to repeat this process in {n_sets} sets of 6 sentences.
 Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
-- Always use unique embedded subjects and verbs
+- Make sure embedded subjects and verbs within the same sentence are *different* from one another
 - All subjects and verbs in the sentence must be different from one another
 - Make sure to choose varied terminals from one set to another
 
@@ -88,7 +91,7 @@ So your task is to generate {n_sets} sets of 6 sentences, from a restricted voca
 Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the 6 sentences
-- Always use unique embedded subjects and verbs
+- Make sure embedded subjects and verbs within the same sentence are *different* from one another
 - All subjects and verbs in the sentence must be different from one another
 
 So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
