@@ -53,7 +53,7 @@ def get_parse_accuracy(varfree_path, grammar_path):
     print(f"Batch form accuracy: {correct_batches}/{total_batches} = {correct_batches / total_batches:.2%}")
 
     print("-----------")
-    print("\nAccuracy per sentence type:")
+    print("Accuracy per sentence type:")
     for j in range(batch_size):
         acc = line_position_correct[j] / line_position_total[j] if line_position_total[j] > 0 else 0
         print(f"  Sentence {j+1}: {line_position_correct[j]}/{line_position_total[j]} = {acc:.2%}")

@@ -71,6 +71,7 @@ def lexical_parse(sent_path, grammar_path, show_stats=False, show_oov=False):
 
                 if show_oov and word not in lex:
                     print(f"Word \"{word}\" not in lexicon")
+                    oov_current_sent += 1
                 elif word not in words and word not in lex:
                     oov_current_sent += 1
                 words.add(word)
