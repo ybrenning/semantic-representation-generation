@@ -173,6 +173,7 @@ Make sure to make the sentences generated as close as possible to each other: a 
 def test_pipeline(
     prompt,
     response_path,
+    n_prompts,
     theme="basic",
     number="singular",
     tense="present",
@@ -196,16 +197,19 @@ def test_pipeline(
         print(prompt)
         print("-" * 50)
 
-    response = gpt4_response(
-        prompt=prompt,
-        model=DEFAULT_MODEL,
-        frequency_penalty=0.1,
-        presence_penalty=0.
-    )
+    responses = ""
+    for _ in range(n_prompts):
+        response = gpt4_response(
+            prompt=prompt,
+            model=DEFAULT_MODEL,
+            frequency_penalty=0.1,
+            presence_penalty=0.
+        )
+        responses += response + "\n"
 
     with open(response_path, "w") as f:
-        f.write(response)
-        print("Saved response to", response_path)
+        f.write(responses)
+        print("Saved response(s) to", response_path)
 
     print("\nGenerated response:")
     print("-" * 50)

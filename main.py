@@ -16,17 +16,22 @@ def get_safe_filename(filename):
     return new_filename
 
 
-def generate_from_prompt(prompt):
+def generate_from_prompt(prompt, n_prompts):
     response_path = "prompts/prompt-newest"
+
+    suffix = (
+        f"-{n_prompts}-responses.txt" if n_prompts > 1 else "-response.txt"
+    )
     response_path = (
-        response_path.split(".")[0] + "-response.txt"
+        response_path.split(".")[0] + suffix
     )
 
     response_path = get_safe_filename(response_path)
 
     test_pipeline(
         prompt,
-        response_path
+        response_path,
+        n_prompts
     )
 
     return response_path
@@ -34,12 +39,15 @@ def generate_from_prompt(prompt):
 
 def main():
     grammar_path = sys.argv[1]
-    assert grammar_path.endswith(".irtg")
+    n_prompts = int(sys.argv[2])
+    assert grammar_path.endswith(".irtg"), "Provide IRTG grammar"
+    assert isinstance(n_prompts, int), "Provide no. of times to prompt"
 
     prompt = prompt_from_grammar(grammar_path)
     print(prompt)
 
-    response_path = generate_from_prompt(prompt)
+    response_path = generate_from_prompt(prompt, n_prompts)
+
     sents_path = format_sents(response_path)
     varfree_path = parse_sents(sents_path, grammar_path)
     get_parse_accuracy(varfree_path, grammar_path)
