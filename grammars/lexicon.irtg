@@ -106,42 +106,7 @@ animate_nouns = [
 [semantics] {{ word }}
 {% endfor %}{% endfor %}
 
-{# only generate target common noun as objects #}
-N_common_animate_dobj_targeted -> r{{ cnt.next() }} [1]
-[english] hedgehog
-[semantics] hedgehog
-
-N_common_animate_dobj_targeted_primitive -> r{{ cnt.next() }} [1]
-[english] shark
-[semantics] shark
-
-{# only generate target proper noun as objects #}
-N_prop_dobj_targeted -> r{{ cnt.next() }} [1]
-[english] Lina
-[semantics] Lina
-
-N_prop_dobj_targeted_primitive -> r{{ cnt.next() }} [1]
-[english] Paula
-[semantics] Paula
-
-{# only generate target common noun as subjects #}
-N_common_animate_nsubj_targeted -> r{{ cnt.next() }} [1]
-[english] hedgehog
-[semantics] hedgehog
-
-N_common_animate_nsubj_targeted_primitive -> r{{ cnt.next() }} [1]
-[english] shark
-[semantics] shark
-
-{# only generate target proper noun as subjects #}
-N_prop_nsubj_targeted -> r{{ cnt.next() }} [1]
-[english] Lina
-[semantics] Lina
-
-N_prop_nsubj_targeted_primitive -> r{{ cnt.next() }} [1]
-[english] Paula
-[semantics] Paula
-
+{# Targeted, targeted_primitives etc. removed by Yannick #}
 
 {% set
 inanimate_nouns = [
@@ -271,7 +236,7 @@ Rel_pron -> r{{ cnt.next() }} [1]
 [english] that
 [semantics] that
 
-{# WHO, WHAT, AUX_did by Yannick #}
+{# WHO, WHAT, AUX_did removed by Yannick #}
 
 {# Levin, '1.2.1 Unspecified Object Alternation'
    And some intuition-based selection.  #}

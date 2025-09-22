@@ -16,22 +16,6 @@ N_common_animate_nsubj  : girl | boy | cat | dog | baby | child | teacher | frog
 
 N_common_animate_nsubjpass  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
 
-N_common_animate_dobj_targeted  : hedgehog
-
-N_common_animate_dobj_targeted_primitive  : shark
-
-N_prop_dobj_targeted  : Lina
-
-N_prop_dobj_targeted_primitive  : Paula
-
-N_common_animate_nsubj_targeted  : hedgehog
-
-N_common_animate_nsubj_targeted_primitive  : shark
-
-N_prop_nsubj_targeted  : Lina
-
-N_prop_nsubj_targeted_primitive  : Paula
-
 N_common_inanimate_dobj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
 
 N_common_inanimate_nsubjpass  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
