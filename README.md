@@ -1,16 +1,18 @@
 # Semantic Representation Generation
 
+This project concerns itself with creating a dataset generation approach based on a probabilistic synchronous context-free grammar (SCFG). The grammar used follows rules from the SLOG dataset [(Li et al., 2023)](https://arxiv.org/abs/2310.15040), a structural generalization benchmark for semantic parsing. The goal is to adapt the rule-based approach in such a manner that it is capable of not only generating syntactically but also semantically meaningful sentences.
+
 ## Workflow
 
 ![workflow](img/workflow.png)
 
-The base grammars, adapted from [Li et al. (2023)](https://arxiv.org/abs/2310.15040), are currently in an IRTG format, which needs to be converted to EBNF for the format specifications of the Lark library. The IRTG files must first be preprocessed by the script `cogs-preprocess.py`, as parts of the files use Jinja to dynamically generate rule numbers, terminals, and probabilities.
+The base grammars, from Li et al. (2023) are currently in the IRTG (Interpreted Regular Tree Grammar) format, which we separate into an English grammar for the generation step and a Semantics grammar for the annotation and evaluation steps.
 
-This part of the workflow can be found in `grammars` directory of this repository, which makes use of SLOG's original [preprocessing source code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/grammars). This also applies to the [postprocessing code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/varfree2cogs_converter) used in later parts of the workflow.
+This part of the workflow can be found in `grammars` directory of this repository, which also makes use of SLOG's original [preprocessing source code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/grammars). This also applies to the [postprocessing code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/varfree2cogs_converter) used in later parts of the workflow.
 
-The resulting preprocessed file is then converted to the EBNF format, which can then be used to prompt a GPT model (more information can be found in the `prompts` directory), or be used with a constrained decoding library in order to generate English sentences.
+The resulting English grammar can then simply be used as part of a GPT model prompt (more information can be found in the `prompts` directory), or with a constrained decoding library in order to generate English sentences.
 
-These English sentences must then be annotated in order to obtain a semantic representation for each one. To this end, we use the Alto parser employed by SLOG in order to create semantic representations for each sentences. These are created in the so-called *variable-free logical form* (LF), and are converted to the unambiguous COGS LF using the postprocessing script adapted from Li et al.
+These English sentences must then be annotated in order to obtain a semantic representation for each one. To this end, we use the Alto parser employed by SLOG in order to create semantic representations for each sentence. These are generated in the so-called *variable-free logical form* (LF), and are converted to the unambiguous COGS LF using the postprocessing script adapted from Li et al.
 
 Here is an example of the semantic representation in both LFs for the sentence "A cat wanted to sleep.":
 
@@ -20,7 +22,9 @@ want(agent=cat, xcomp=sleep(agent=cat))  # Variable-free LF
 cat(x_1) AND want.agent(x_2,x_1) AND want.xcomp(x_2, x_4) AND sleep.agent(x_4,x_1)  # COGS LF
 ```
 
-The result is a corpus of English sentences, each one paired with their semantic representation. This workflow should be applicable both for training and test sets -- for generalization (test), the difference lies in the grammar/prompt used for the sentence generation.
+If a sentence does not have a valid derivation following the grammar, the parser returns `<null>`. This can be used as part of an evaluation step where we determine how many of the generated sentences actually follow the provided grammar.
+
+The result is a corpus of English sentences, each one paired with their semantic representation. This workflow should be applicable both for training and test sets -- for generalization (test), the main difference lies in the grammar/prompt used for the sentence generation.
 
 ## Run pipeline
 
@@ -69,7 +73,7 @@ Accuracy per sentence type:
 
 ### English sentence grammar
 
-The sentences are generated based on the `english` part of SLOG's synchronous context-free grammar (SCFG). We use SLOG's preprocess script in order to dynamically generate an IRTG (Interpreted Regular Tree Grammart) file based on an SCFG's rules and a lexicon (vocabulary) of terminals.
+The sentences are generated based on the `english` part of SLOG's SCFG. We use SLOG's preprocess script in order to dynamically generate an IRTG file based on an SCFG's rules and a lexicon (vocabulary) of terminals.
 
 We convert this preprocessed file into the more commonly used EBNF (Extended Backus–Naur form) format. This can then be used as part of a prompt on a GPT-based model or for constrained decoding using a library such as `outlines`.
 
