@@ -94,7 +94,7 @@ def evaluate_parse(
 ):
     results = {}
 
-    sent_path = "data/english/" + varfree_path.split("/")[-1]
+    sent_path = "output/english/" + varfree_path.split("/")[-1]
     results_path = (
         "results/" + varfree_path.split("/")[-1].replace(".txt", ".json")
     )

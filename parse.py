@@ -40,11 +40,12 @@ def format_sents(response_path):
                 if i == 6:
                     i = 0
 
-    out_file = "data/english/" + response_path.split("/")[-1]
-    with open(out_file, "w") as f:
+    sent_path = "output/english/" + response_path.split("/")[-1]
+    with open(sent_path, "w") as f:
         f.write(content)
+        print("Saved sentences to", sent_path)
 
-    return out_file
+    return sent_path
 
 
 def lexical_parse(sent_path, grammar_path, show_stats=False, show_oov=False):
@@ -110,7 +111,7 @@ def parse_sents(sent_path, grammar_path):
         show_oov=True
     )
 
-    varfree_path = "data/varfree_lf/" + sent_path.split("/")[-1]
+    varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
     command = (
         "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
         "de.up.ling.irtg.script.ParsingEvaluator "
