@@ -1,8 +1,10 @@
 import sys
+
 from generation.src.utils import test_pipeline
 from parse import format_sents, parse_sents
 from evaluate import evaluate_parse
 from prompts.prompt import prompt_from_grammar
+from preprocess import handle_null_sents
 from utils import get_safe_filename
 
 
@@ -44,8 +46,15 @@ def main():
     response_path = generation_loop(grammar_path, n_prompts)
 
     # Format and parse steps
-    sents_path = format_sents(response_path)
-    varfree_path = parse_sents(sents_path, grammar_path)
+    sent_path = format_sents(response_path)
+    varfree_path = parse_sents(sent_path, grammar_path)
+
+    # Filtering step
+    en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
+    print(len(vf_lines))
+    assert 0
+
+    # Postprocessing step
 
     # Evaluation step
     evaluate_parse(

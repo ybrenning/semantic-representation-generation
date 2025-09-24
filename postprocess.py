@@ -1,15 +1,35 @@
+import sys
 import pandas as pd
 import varfree2cogs
 
 
-def handle_null_sents(sent_path):
+def handle_null_sents(sent_path, varfree_path):
     """
     Handle sentences that have <null> parses.
 
     Note:
         Default for now is probably just to discard them
     """
-    raise NotImplementedError
+    with open(sent_path, "r") as f:
+        en_lines = []
+        for line in f.readlines():
+            if line.strip() and not line.startswith("//"):
+                en_lines.append(line)
+
+    with open(varfree_path, "r") as f:
+        vf_lines = f.readlines()
+
+    assert len(en_lines) == len(vf_lines), "File length mismatch"
+    assert len(en_lines) % 6 == 0, "File must contain 6-sentence batches"
+
+    zipped = zip(en_lines, vf_lines)
+    for i, pair in enumerate(zipped):
+        _, vf = pair
+        if vf == "<null>":
+            en_lines.pop(i)
+            vf_lines.pop(i)
+
+    return en_lines, vf_lines
 
 
 def handle_incorrect_sents(sent_path):
@@ -60,7 +80,7 @@ def move_wh_words(row):
     return row
 
 
-def main():
+def postprocess_varfree():
     save_output = True
 
     grammar_prefix = "in_distribution"
@@ -136,6 +156,13 @@ def main():
         print(df_alto[["source", "varfree_lf", "types"]])
         print("")
         print(df_alto[["source", "cogs_lf", "types"]])
+
+
+def main():
+    sent_path = sys.argv[1]
+    varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
+
+    en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
 
 
 if __name__ == "__main__":
