@@ -83,7 +83,6 @@ Constraints:
 - Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
 - Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different* from one another
-- All subjects and verbs in the sentence must be different from one another
 - Make sure to choose varied terminals from one set to another
 
 So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
@@ -95,7 +94,6 @@ Constraints:
 - Always use the *same* main subject, main verb and following object throughout the 6 sentences
 - Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different* from one another
-- All subjects and verbs in the sentence must be different from one another
 
 So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """

@@ -26,6 +26,26 @@ If a sentence does not have a valid derivation following the grammar, the parser
 
 The result is a corpus of English sentences, each one paired with their semantic representation. This workflow should be applicable both for training and test sets -- for generalization (test), the main difference lies in the grammar/prompt used for the sentence generation.
 
+## Prompting
+
+The overall idea for all prompts is to constrain `gpt-4o` to a context-free grammar while generating sentences following the following six structures:
+
+1) Baseline (SV): Simple Subject-Verb structure
+2) Control (S Prep V): Subject with Prepositional_Clause and Verb
+3) Standard-Subject (S RelSubj V): Subject with Subject Relative Clause and Verb
+4) Standard-Object (S RelObj V): Subject with Object Relative Clause and Verb
+5) Nested-Subject (S [RelSubj[Rel]] V): Subject with two embedded Relative Clauses, the first one being a Subject Relative Clause, and Verb
+6) Nested-Object (S [RelObj[Rel]] V): Subject with two embedded Relative Clauses, the first one being an Object Relative Clause, and Verb
+
+For example:
+
+1. The doctor examines the patient.
+2. The doctor in the room examines the patient.
+3. The doctor who studied hard examines the patient.
+4. The doctor who the parent called examines the patient.
+5. The doctor who read the report that was on the desk examines the patient.
+6. The doctor who the mother who the school called trusts examines the patient.
+
 ## Run pipeline
 
 The main part of the workflow can be run from a single script by providing a `grammar_path` to an IRTG file and `n_prompts`, the number of times to repeat the generation request. Based on this, the script creates a prompt from the grammar, passes it to `gpt-4o`, saves the raw text response, cleans and formats the sentences to correspond with the SLOG English representation, runs the parser on the sentences to produce the semantic representations, and finally computes various evaluation scores.
