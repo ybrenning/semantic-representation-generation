@@ -49,7 +49,7 @@ $ python3 main.py grammars/preprocessed-combined.irtg 10
 Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately:
 
 ```bash
-$ python3 evaluate.py data/varfree_lf/prompt-newest-10-responses-18.txt grammars/preprocessed-combined.irtg 
+$ python3 evaluate.py output/varfree_lf/prompt-newest-10-responses-18.txt grammars/preprocessed-combined.irtg 
 
 -----------
 Total OOV percentage: 1 / 156 = 0.64%
