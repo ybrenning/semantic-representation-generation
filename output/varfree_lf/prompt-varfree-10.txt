@@ -47,14 +47,14 @@ help ( agent = * writer ( nmod = roll ( theme = * writer ) ) , theme = * produce
 help ( agent = * writer ( nmod = like ( agent = * writer , theme = basket ( nmod = investigate ( theme = basket ) ) ) ) , theme = * producer )
 help ( agent = * writer ( nmod = see ( agent = scientist ( nmod = respect ( agent = sheep , theme = scientist ) ) , theme = * writer ) ) , theme = * producer )
 miss ( agent = * tourist , theme = resident )
-miss ( agent = tourist ( nmod . on = beach ) , theme = resident )
-miss ( agent = tourist ( nmod = slide ( theme = tourist ) ) , theme = resident )
-miss ( agent = tourist ( nmod = find ( agent = moose , theme = tourist ) ) , theme = resident )
+miss ( agent = * tourist ( nmod . on = beach ) , theme = resident )
+miss ( agent = * tourist ( nmod = slide ( theme = * tourist ) ) , theme = resident )
+miss ( agent = * tourist ( nmod = find ( agent = moose , theme = * tourist ) ) , theme = resident )
 <null>
 <null>
-adore ( agent = human , theme = donkey )
+adore ( agent = * human , theme = donkey )
 <null>
-adore ( agent = human ( nmod = enlarge ( theme = human ) ) , theme = donkey )
+adore ( agent = * human ( nmod = enlarge ( theme = * human ) ) , theme = donkey )
 <null>
-adore ( agent = human ( nmod = like ( agent = human , theme = pillow ( nmod = sketch ( theme = pillow ) ) ) ) , theme = donkey )
+adore ( agent = * human ( nmod = like ( agent = * human , theme = pillow ( nmod = sketch ( theme = pillow ) ) ) ) , theme = donkey )
 <null>

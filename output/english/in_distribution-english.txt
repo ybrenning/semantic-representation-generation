@@ -3,6 +3,7 @@
 // interpretation english: de.up.ling.irtg.algebra.StringAlgebra
 
 
+the man holds the dog
 a cake was cooked by the scientist
 a cake was eaten by a boy
 a fly ran

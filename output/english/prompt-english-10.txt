@@ -53,14 +53,14 @@ the writer that a kitten liked helped the producer
 the writer that liked a basket that was investigated helped the producer
 the writer that a scientist that a sheep respected saw helped the producer
 the tourist missed a resident
-a tourist on a beach missed a resident
-a tourist that slid missed a resident
-a tourist that a moose found missed a resident
-a tourist that liked a trumpet that was nursed missed a resident
-a tourist that a father that a bear listened to annoyed missed a resident
-a human adored a donkey
-a human on stage adored a donkey
-a human that enlarged adored a donkey
-a human that an elephant poked adored a donkey
-a human that liked a pillow that was sketched adored a donkey
-a human that an artist that a chick frightened annoyed adored a donkey
+the tourist on a beach missed a resident
+the tourist that slid missed a resident
+the tourist that a moose found missed a resident
+the tourist that liked a trumpet that was nursed missed a resident
+the tourist that a father that a bear listened to annoyed missed a resident
+the human adored a donkey
+the human on stage adored a donkey
+the human that enlarged adored a donkey
+the human that an elephant poked adored a donkey
+the human that liked a pillow that was sketched adored a donkey
+the human that an artist that a chick frightened annoyed adored a donkey
