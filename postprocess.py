@@ -25,9 +25,12 @@ def handle_null_sents(sent_path, varfree_path):
     zipped = zip(en_lines, vf_lines)
     for i, pair in enumerate(zipped):
         _, vf = pair
-        if vf == "<null>":
-            en_lines.pop(i)
-            vf_lines.pop(i)
+        if vf.strip() == "<null>":
+            rel_i = i % 6
+            batch_start = i - rel_i
+            batch_end = i + (6 - rel_i)
+            del en_lines[batch_start:batch_end]
+            del vf_lines[batch_start:batch_end]
 
     return en_lines, vf_lines
 
@@ -50,7 +53,7 @@ def handle_incorrect_sents(sent_path):
     raise NotImplementedError
 
 
-def handle_repetition_sents(sent_path):
+def handle_repetition_sents(en_lines, vf_lines):
     """
     Handle sentences that have some repetition of verb, subject or object.
 
@@ -58,7 +61,26 @@ def handle_repetition_sents(sent_path):
 
     `the king that the king that the king respected adored adored the queen`
     """
-    raise NotImplementedError
+    for i, pair in enumerate(zip(en_lines, vf_lines)):
+        _, vf = pair
+        vf_list = vf.split("(")
+
+        # TODO: Make this extraction more "safe"
+        v_main = vf_list[0].strip()
+        v_emb = [
+            w.split("=")[-1].strip()
+            for w in vf_list
+            if w.strip().startswith("nmod = ")
+        ]
+
+        if len(set(v_emb)) != len(v_emb) or any(v_main == v for v in v_emb):
+            rel_i = i % 6
+            batch_start = i - rel_i
+            batch_end = i + (6 - rel_i)
+            del en_lines[batch_start:batch_end]
+            del vf_lines[batch_start:batch_end]
+
+    return en_lines, vf_lines
 
 
 # only for long distance movement
@@ -163,6 +185,9 @@ def main():
     varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
 
     en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
+    print(len(en_lines))
+    en_lines, vf_lines = handle_repetition_sents(en_lines, vf_lines)
+    print(len(en_lines))
 
 
 if __name__ == "__main__":
