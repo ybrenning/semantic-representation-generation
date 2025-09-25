@@ -50,7 +50,7 @@ def test_pipeline(
     number="singular",
     tense="present",
     category="relatives",
-    print_prompt=False
+    verbose=False
 ):
     """
     Test the pipeline with a single combination of parameters.
@@ -63,8 +63,8 @@ def test_pipeline(
         category (str): Category key from prompts dictionary
         print_prompt (bool) : True to print the prompt
     """
-    if print_prompt:
-        print("Generated prompt:")
+    if verbose:
+        print("Prompt:")
         print("-" * 50)
         print(prompt)
         print("-" * 50)
@@ -78,10 +78,11 @@ def test_pipeline(
         presence_penalty=0.
     )
 
-    print("\nGenerated response:")
-    print("-" * 50)
-    print(response)
-    print("-" * 50)
+    if verbose:
+        print("\nGenerated response:")
+        print("-" * 50)
+        print(response)
+        print("-" * 50)
 
     return response
 

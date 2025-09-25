@@ -93,7 +93,7 @@ def lexical_parse(sent_path, grammar_path, show_stats=False, show_oov=False):
     return oov_pct_total, oov_pct_sent
 
 
-def parse_sents(sent_path, grammar_path):
+def parse_sents(sent_path, grammar_path, verbose=False):
     if grammar_path.endswith(".irtg"):
         grammar_path_irtg = grammar_path
         grammar_path_ebnf = grammar_path.replace(".irtg", ".ebnf")
@@ -101,7 +101,7 @@ def parse_sents(sent_path, grammar_path):
     lexical_parse(
         sent_path,
         grammar_path_ebnf,
-        show_oov=True
+        show_oov=verbose
     )
 
     varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
@@ -115,9 +115,15 @@ def parse_sents(sent_path, grammar_path):
         f"{sent_path}"
     )
 
-    subprocess.run(command, shell=True)
+    result = subprocess.run(
+        command, shell=True, capture_output=True, text=True
+    )
+
+    if verbose:
+        print(result.stdout)
 
     print("Saved representations in variable-free format to", varfree_path)
+
     return varfree_path
 
 
