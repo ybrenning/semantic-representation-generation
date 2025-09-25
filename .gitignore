@@ -9,7 +9,7 @@
 
 *.~lock.*
 
-**/prompts/*-response*
+**/generation/responses/
 **/data/varfree_lf/
 **/data/english/
 **/output/varfree_lf/
