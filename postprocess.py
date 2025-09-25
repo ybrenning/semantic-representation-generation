@@ -11,6 +11,8 @@ INF = ["to"]
 REL_PRON = ["that"]
 PP_LOC = ["on", "in", "beside"]
 
+set_size = 6
+
 
 def handle_null_sents(sent_path, varfree_path):
     """
@@ -31,17 +33,15 @@ def handle_null_sents(sent_path, varfree_path):
     assert len(en_lines) == len(vf_lines), "File length mismatch"
     assert len(en_lines) % 6 == 0, "File must contain 6-sentence batches"
 
-    zipped = zip(en_lines, vf_lines)
-    for i, pair in enumerate(zipped):
-        _, vf = pair
-        if vf.strip() == "<null>":
-            rel_i = i % 6
-            batch_start = i - rel_i
-            batch_end = i + (6 - rel_i)
-            del en_lines[batch_start:batch_end]
-            del vf_lines[batch_start:batch_end]
+    en_lines_reduced, vf_lines_reduced = [], []
+    for i in range(0, len(en_lines), set_size):
+        en_set = en_lines[i:i+set_size]
+        vf_set = vf_lines[i:i+set_size]
+        if "<null>" not in [vf.strip() for vf in vf_set]:
+            en_lines_reduced.extend(en_set)
+            vf_lines_reduced.extend(vf_set)
 
-    return en_lines, vf_lines
+    return en_lines_reduced, vf_lines_reduced
 
 
 def handle_incorrect_sents(en_lines, vf_lines):
@@ -59,7 +59,8 @@ def handle_incorrect_sents(en_lines, vf_lines):
 
     Either discard them or select some random replacement word from the vocab
     """
-    return en_lines, vf_lines
+    n_incorrect = 0
+    return en_lines, vf_lines, n_incorrect
 
 
 def handle_repetition_sents(en_lines, vf_lines):
@@ -74,18 +75,29 @@ def handle_repetition_sents(en_lines, vf_lines):
     assert len(en_lines) % 6 == 0, "File must contain 6-sentence batches"
     ignore_list = DET + AUX + BY + INF + REL_PRON + PP_LOC
 
-    for i, pair in enumerate(zip(en_lines, vf_lines)):
-        en, vf = pair
-        words = list(set(en.strip().split(" ")))
-        for w in words:
-            if w not in ignore_list and en.count(w) > 1:
-                rel_i = i % 6
-                batch_start = i - rel_i
-                batch_end = i + (6 - rel_i)
-                del en_lines[batch_start:batch_end]
-                del vf_lines[batch_start:batch_end]
+    n_repetitions = 0
+    en_lines_reduced, vf_lines_reduced = [], []
+    for i in range(0, len(en_lines), set_size):
+        en_set = en_lines[i:i+set_size]
+        vf_set = vf_lines[i:i+set_size]
 
-    return en_lines, vf_lines
+        reps = False
+        for en, vf in zip(en_set, vf_set):
+            words = list(set(en.strip().split(" ")))
+            reps_list = [
+                w for w in words
+                if w not in ignore_list and en.count(w) > 1
+            ]
+
+            if reps_list:
+                n_repetitions += 1
+                reps = True
+
+        if not reps:
+            en_lines_reduced.extend(en_set)
+            vf_lines_reduced.extend(vf_set)
+
+    return en_lines_reduced, vf_lines_reduced, n_repetitions
 
 
 # only for long distance movement
@@ -187,12 +199,18 @@ def postprocess_varfree():
 
 def main():
     sent_path = sys.argv[1]
-    varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
+    base_path = sent_path.split("/")[0] + "/"
+    varfree_path = base_path + "varfree_lf/" + sent_path.split("/")[-1]
 
     en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
-    en_lines, vf_lines = handle_incorrect_sents(en_lines, vf_lines)
-    en_lines, vf_lines = handle_repetition_sents(en_lines, vf_lines)
+    en_lines, vf_lines, n_incorrect = handle_incorrect_sents(
+        en_lines, vf_lines
+    )
+    en_lines, vf_lines, n_repetitions = handle_repetition_sents(
+        en_lines, vf_lines
+    )
 
+    assert 0
     sent_path_out = "data/english/" + sent_path.split("/")[-1]
     varfree_path_out = "data/varfree_lf/" + sent_path.split("/")[-1]
 

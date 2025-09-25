@@ -103,11 +103,6 @@ def main():
         sent_path = format_sents(response_path)
         varfree_path = parse_sents(sent_path, grammar_path)
 
-        # Filtering step
-        en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
-        en_lines, vf_lines = handle_incorrect_sents(en_lines, vf_lines)
-        en_lines, vf_lines = handle_repetition_sents(en_lines, vf_lines)
-
         # Evaluation step
         evaluate_parse(
             varfree_path,
@@ -116,23 +111,36 @@ def main():
             show_oov=verbose
         )
 
+        # Filtering step
+        en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
+        en_lines, vf_lines, n_incorrect = handle_incorrect_sents(
+            en_lines, vf_lines
+        )
+        en_lines, vf_lines, n_repetitions = handle_repetition_sents(
+            en_lines, vf_lines
+        )
+
         if not english and not semantics:
-            english = en_lines
-            semantics = vf_lines
+            english = en_lines.copy()
+            semantics = vf_lines.copy()
         else:
             remainder = n_sents - len(semantics)
             assert remainder > 0
             english.extend(en_lines[:remainder])
             semantics.extend(vf_lines[:remainder])
 
+        print("Generated", len(semantics), "/", n_sents)
+
     sent_path_out = "data/english/" + sent_path.split("/")[-1]
     varfree_path_out = "data/varfree_lf/" + sent_path.split("/")[-1]
 
     with open(sent_path_out, "w") as f:
-        f.write(en_header + "".join(en_lines))
+        f.write(en_header + "".join(english))
+        print("Saved sentences to", sent_path_out)
 
     with open(varfree_path_out, "w") as f:
-        f.write("".join(vf_lines))
+        f.write("".join(semantics))
+        print("Saved representations to", varfree_path_out)
 
     # Postprocessing step
     ...
