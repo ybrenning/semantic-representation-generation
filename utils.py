@@ -1,4 +1,13 @@
-import os 
+import os
+
+
+en_header = """
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+"""
 
 
 def read_grammar(grammar_path, lex_only=False):

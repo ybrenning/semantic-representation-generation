@@ -1,6 +1,6 @@
 import subprocess
 import sys
-from utils import read_grammar
+from utils import read_grammar, en_header
 
 
 rel_prons = ["which", "who", "whom"]
@@ -8,14 +8,7 @@ rel_prons = ["which", "who", "whom"]
 
 def format_sents(response_path):
     with open(response_path, "r") as f:
-        content = """
-// IRTG unannotated corpus file, v1.0
-//
-// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
-
-
-"""
-
+        content = en_header
         i = 0
         for line in f.readlines():
             if line[0].isdigit():
