@@ -2,6 +2,15 @@ import sys
 import pandas as pd
 import varfree2cogs
 
+from utils import en_header
+
+DET = ["the", "a"]
+AUX = ["was"]
+BY = ["by"]
+INF = ["to"]
+REL_PRON = ["that"]
+PP_LOC = ["on", "in", "beside"]
+
 
 def handle_null_sents(sent_path, varfree_path):
     """
@@ -35,7 +44,7 @@ def handle_null_sents(sent_path, varfree_path):
     return en_lines, vf_lines
 
 
-def handle_incorrect_sents(sent_path):
+def handle_incorrect_sents(en_lines, vf_lines):
     """
     Handle sentences that have a valid parse, but do not
     follow the desired constraints in some way.
@@ -50,7 +59,7 @@ def handle_incorrect_sents(sent_path):
 
     Either discard them or select some random replacement word from the vocab
     """
-    raise NotImplementedError
+    return en_lines, vf_lines
 
 
 def handle_repetition_sents(en_lines, vf_lines):
@@ -61,24 +70,20 @@ def handle_repetition_sents(en_lines, vf_lines):
 
     `the king that the king that the king respected adored adored the queen`
     """
+    assert len(en_lines) == len(vf_lines), "File length mismatch"
+    assert len(en_lines) % 6 == 0, "File must contain 6-sentence batches"
+    ignore_list = DET + AUX + BY + INF + REL_PRON + PP_LOC
+
     for i, pair in enumerate(zip(en_lines, vf_lines)):
-        _, vf = pair
-        vf_list = vf.split("(")
-
-        # TODO: Make this extraction more "safe"
-        v_main = vf_list[0].strip()
-        v_emb = [
-            w.split("=")[-1].strip()
-            for w in vf_list
-            if w.strip().startswith("nmod = ")
-        ]
-
-        if len(set(v_emb)) != len(v_emb) or any(v_main == v for v in v_emb):
-            rel_i = i % 6
-            batch_start = i - rel_i
-            batch_end = i + (6 - rel_i)
-            del en_lines[batch_start:batch_end]
-            del vf_lines[batch_start:batch_end]
+        en, vf = pair
+        words = list(set(en.strip().split(" ")))
+        for w in words:
+            if w not in ignore_list and en.count(w) > 1:
+                rel_i = i % 6
+                batch_start = i - rel_i
+                batch_end = i + (6 - rel_i)
+                del en_lines[batch_start:batch_end]
+                del vf_lines[batch_start:batch_end]
 
     return en_lines, vf_lines
 
@@ -185,9 +190,17 @@ def main():
     varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
 
     en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
-    print(len(en_lines))
+    en_lines, vf_lines = handle_incorrect_sents(en_lines, vf_lines)
     en_lines, vf_lines = handle_repetition_sents(en_lines, vf_lines)
-    print(len(en_lines))
+
+    sent_path_out = "data/english/" + sent_path.split("/")[-1]
+    varfree_path_out = "data/varfree_lf/" + sent_path.split("/")[-1]
+
+    with open(sent_path_out, "w") as f:
+        f.write(en_header + "".join(en_lines))
+
+    with open(varfree_path_out, "w") as f:
+        f.write("".join(vf_lines))
 
 
 if __name__ == "__main__":
