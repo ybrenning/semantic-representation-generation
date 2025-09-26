@@ -92,11 +92,11 @@ def infer_n_prompts(varfree_path):
 def evaluate_parse(
     varfree_path, grammar_path, show_stats=True, show_oov=True
 ):
-    results = {}
+    metrics = {}
 
     sent_path = "output/english/" + varfree_path.split("/")[-1]
-    results_path = (
-        "output/results/" +
+    metrics_path = (
+        "output/metrics/" +
         varfree_path.split("/")[-1].replace(".txt", ".json")
     )
 
@@ -109,9 +109,9 @@ def evaluate_parse(
     sents_per_prompt = len(lines) / n_prompts
     batches_per_prompt = int(sents_per_prompt / 6)
 
-    results["n_prompts"] = n_prompts
-    results["n_batches"] = batches_per_prompt
-    results["n_sents"] = len(lines)
+    metrics["n_prompts"] = n_prompts
+    metrics["n_batches"] = batches_per_prompt
+    metrics["n_sents"] = len(lines)
 
     # Show vocab-specific information
     oov_pct_total, oov_pct_sent = lexical_parse(
@@ -121,15 +121,16 @@ def evaluate_parse(
         show_oov=show_oov
     )
 
-    results["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
+    metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
-    results["accuracies"] = get_parse_accuracies(lines)
-    with open(results_path, "w") as f:
-        json.dump(results, f)
-        print("Saved scores to", results_path)
+    metrics["accuracies"] = get_parse_accuracies(lines)
+    with open(metrics_path, "w") as f:
+        json.dump(metrics, f)
+        print("Saved scores to", metrics_path)
 
 
 def main():
+    # TODO: make argparse
     varfree_path = sys.argv[1]
     grammar_path = sys.argv[2]
     assert varfree_path.endswith(".txt")
