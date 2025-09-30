@@ -104,7 +104,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
 1.
 ```
 (S
-  (NP_animate_nsubj_main
+  (NP_animate_nsubj
     (Det)
     (N_common_animate_nsubj)
   )
@@ -123,10 +123,11 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
 2.
 ```
 (S
-  (NP_animate_nsubj_main
+  (NP_animate_nsubj
     (Det)
     (N_common_animate_nsubj)
-  (PP_loc)
+    (PP_loc)
+  )
   (VP_external
     (V_trans_not_omissible)
     (NP_dobj
@@ -154,7 +155,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
       (V_unerg)
     )
   )
-  (VP_external
+  (VP_main_anim_subj
     (V_trans_not_omissible)
     (NP_dobj
       (NP_animate_dobj
