@@ -1,3 +1,22 @@
+
+
+interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+interpretation semantics: de.saar.coli.algebra.OrderedFeatureTreeAlgebra
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Det -> r1 	[0.5]
   [english] the
   [semantics] the
@@ -2176,9 +2195,196 @@ V_trans_omissible -> r1431 	[0.016881502890614384]
   [semantics] investigate
 
 
+V_trans_omissible_inf -> r1432 	[0.33402836011058906]
+  [english] eat
+  [semantics] eat
+V_trans_omissible_inf -> r1433 	[0.13404078858765317]
+  [english] paint
+  [semantics] paint
+V_trans_omissible_inf -> r1434 	[0.08118983449041972]
+  [english] draw
+  [semantics] draw
+V_trans_omissible_inf -> r1435 	[0.05825966977427891]
+  [english] clean
+  [semantics] clean
+V_trans_omissible_inf -> r1436 	[0.045854068200707636]
+  [english] cook
+  [semantics] cook
+V_trans_omissible_inf -> r1437 	[0.03823290310401458]
+  [english] dust
+  [semantics] dust
+V_trans_omissible_inf -> r1438 	[0.03314541629748973]
+  [english] hunt
+  [semantics] hunt
+V_trans_omissible_inf -> r1439 	[0.029543995470747868]
+  [english] nurse
+  [semantics] nurse
+V_trans_omissible_inf -> r1440 	[0.026880623601982966]
+  [english] sketch
+  [semantics] sketch
+V_trans_omissible_inf -> r1441 	[0.024843151515100505]
+  [english] juggle
+  [semantics] juggle
+V_trans_omissible_inf -> r1442 	[0.023241837743417502]
+  [english] call
+  [semantics] call
+V_trans_omissible_inf -> r1443 	[0.021955269966808383]
+  [english] hear
+  [semantics] hear
+V_trans_omissible_inf -> r1444 	[0.02090245596302799]
+  [english] pack
+  [semantics] pack
+V_trans_omissible_inf -> r1445 	[0.020027472958170183]
+  [english] see
+  [semantics] see
+V_trans_omissible_inf -> r1446 	[0.01929057149807447]
+  [english] notice
+  [semantics] notice
+V_trans_omissible_inf -> r1447 	[0.018662789655653128]
+  [english] study
+  [semantics] study
+V_trans_omissible_inf -> r1448 	[0.018122569172347593]
+  [english] examine
+  [semantics] examine
+V_trans_omissible_inf -> r1449 	[0.01765356043958695]
+  [english] observe
+  [semantics] observe
+V_trans_omissible_inf -> r1450 	[0.01724315855931527]
+  [english] know
+  [semantics] know
+V_trans_omissible_inf -> r1451 	[0.016881502890614384]
+  [english] investigate
+  [semantics] investigate
 
 
 
+V_trans_omissible_pp -> r1452 	[0.33402836011058906]
+  [english] eaten
+  [semantics] eat
+V_trans_omissible_pp -> r1453 	[0.13404078858765317]
+  [english] painted
+  [semantics] paint
+V_trans_omissible_pp -> r1454 	[0.08118983449041972]
+  [english] drawn
+  [semantics] draw
+V_trans_omissible_pp -> r1455 	[0.05825966977427891]
+  [english] cleaned
+  [semantics] clean
+V_trans_omissible_pp -> r1456 	[0.045854068200707636]
+  [english] cooked
+  [semantics] cook
+V_trans_omissible_pp -> r1457 	[0.03823290310401458]
+  [english] dusted
+  [semantics] dust
+V_trans_omissible_pp -> r1458 	[0.03314541629748973]
+  [english] hunted
+  [semantics] hunt
+V_trans_omissible_pp -> r1459 	[0.029543995470747868]
+  [english] nursed
+  [semantics] nurse
+V_trans_omissible_pp -> r1460 	[0.026880623601982966]
+  [english] sketched
+  [semantics] sketch
+V_trans_omissible_pp -> r1461 	[0.024843151515100505]
+  [english] juggled
+  [semantics] juggle
+V_trans_omissible_pp -> r1462 	[0.023241837743417502]
+  [english] called
+  [semantics] call
+V_trans_omissible_pp -> r1463 	[0.021955269966808383]
+  [english] heard
+  [semantics] hear
+V_trans_omissible_pp -> r1464 	[0.02090245596302799]
+  [english] packed
+  [semantics] pack
+V_trans_omissible_pp -> r1465 	[0.020027472958170183]
+  [english] seen
+  [semantics] see
+V_trans_omissible_pp -> r1466 	[0.01929057149807447]
+  [english] noticed
+  [semantics] notice
+V_trans_omissible_pp -> r1467 	[0.018662789655653128]
+  [english] studied
+  [semantics] study
+V_trans_omissible_pp -> r1468 	[0.018122569172347593]
+  [english] examined
+  [semantics] examine
+V_trans_omissible_pp -> r1469 	[0.01765356043958695]
+  [english] observed
+  [semantics] observe
+V_trans_omissible_pp -> r1470 	[0.01724315855931527]
+  [english] known
+  [semantics] know
+V_trans_omissible_pp -> r1471 	[0.016881502890614384]
+  [english] investigated
+  [semantics] investigate
+
+
+
+
+
+
+
+V_trans_not_omissible -> r1472 	[0.33402836011058906]
+  [english] liked
+  [semantics] like
+V_trans_not_omissible -> r1473 	[0.13404078858765317]
+  [english] helped
+  [semantics] help
+V_trans_not_omissible -> r1474 	[0.08118983449041972]
+  [english] found
+  [semantics] find
+V_trans_not_omissible -> r1475 	[0.05825966977427891]
+  [english] loved
+  [semantics] love
+V_trans_not_omissible -> r1476 	[0.045854068200707636]
+  [english] poked
+  [semantics] poke
+V_trans_not_omissible -> r1477 	[0.03823290310401458]
+  [english] admired
+  [semantics] admire
+V_trans_not_omissible -> r1478 	[0.03314541629748973]
+  [english] adored
+  [semantics] adore
+V_trans_not_omissible -> r1479 	[0.029543995470747868]
+  [english] appreciated
+  [semantics] appreciate
+V_trans_not_omissible -> r1480 	[0.026880623601982966]
+  [english] missed
+  [semantics] miss
+V_trans_not_omissible -> r1481 	[0.024843151515100505]
+  [english] respected
+  [semantics] respect
+V_trans_not_omissible -> r1482 	[0.023241837743417502]
+  [english] threw
+  [semantics] throw
+V_trans_not_omissible -> r1483 	[0.021955269966808383]
+  [english] tolerated
+  [semantics] tolerate
+V_trans_not_omissible -> r1484 	[0.02090245596302799]
+  [english] valued
+  [semantics] value
+V_trans_not_omissible -> r1485 	[0.020027472958170183]
+  [english] worshipped
+  [semantics] worship
+V_trans_not_omissible -> r1486 	[0.01929057149807447]
+  [english] discovered
+  [semantics] discover
+V_trans_not_omissible -> r1487 	[0.018662789655653128]
+  [english] held
+  [semantics] hold
+V_trans_not_omissible -> r1488 	[0.018122569172347593]
+  [english] stabbed
+  [semantics] stab
+V_trans_not_omissible -> r1489 	[0.01765356043958695]
+  [english] touched
+  [semantics] touch
+V_trans_not_omissible -> r1490 	[0.01724315855931527]
+  [english] pierced
+  [semantics] pierce
+V_trans_not_omissible -> r1491 	[0.016881502890614384]
+  [english] tossed
+  [semantics] toss
 
 
 S! -> r1752(NP_animate_nsubj, VP_external) 	[0.49]
