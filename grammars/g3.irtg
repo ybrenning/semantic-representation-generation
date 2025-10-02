@@ -1,0 +1,2503 @@
+
+
+interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+interpretation semantics: de.saar.coli.algebra.OrderedFeatureTreeAlgebra
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Det -> r1 	[0.5]
+  [english] the
+  [semantics] the
+
+Det -> r2 	[0.5]
+  [english] a
+  [semantics] a
+
+N_common_animate_dobj -> r7 	[0.3232777469287676]
+  [english] girl
+  [semantics] girl
+N_common_animate_iobj -> r8 	[0.3232777469287676]
+  [english] girl
+  [semantics] girl
+N_common_animate_nsubj -> r9 	[0.3232777469287676]
+  [english] girl
+  [semantics] girl
+N_common_animate_nsubjpass -> r10 	[0.3232777469287676]
+  [english] girl
+  [semantics] girl
+N_common_animate_dobj -> r11 	[0.12329017540583168]
+  [english] boy
+  [semantics] boy
+N_common_animate_iobj -> r12 	[0.12329017540583168]
+  [english] boy
+  [semantics] boy
+N_common_animate_nsubj -> r13 	[0.12329017540583168]
+  [english] boy
+  [semantics] boy
+N_common_animate_nsubjpass -> r14 	[0.12329017540583168]
+  [english] boy
+  [semantics] boy
+N_common_animate_dobj -> r15 	[0.07043922130859823]
+  [english] cat
+  [semantics] cat
+N_common_animate_iobj -> r16 	[0.07043922130859823]
+  [english] cat
+  [semantics] cat
+N_common_animate_nsubj -> r17 	[0.07043922130859823]
+  [english] cat
+  [semantics] cat
+N_common_animate_nsubjpass -> r18 	[0.07043922130859823]
+  [english] cat
+  [semantics] cat
+N_common_animate_dobj -> r19 	[0.04750905659245742]
+  [english] dog
+  [semantics] dog
+N_common_animate_iobj -> r20 	[0.04750905659245742]
+  [english] dog
+  [semantics] dog
+N_common_animate_nsubj -> r21 	[0.04750905659245742]
+  [english] dog
+  [semantics] dog
+N_common_animate_nsubjpass -> r22 	[0.04750905659245742]
+  [english] dog
+  [semantics] dog
+N_common_animate_dobj -> r23 	[0.03510345501888614]
+  [english] baby
+  [semantics] baby
+N_common_animate_iobj -> r24 	[0.03510345501888614]
+  [english] baby
+  [semantics] baby
+N_common_animate_nsubj -> r25 	[0.03510345501888614]
+  [english] baby
+  [semantics] baby
+N_common_animate_nsubjpass -> r26 	[0.03510345501888614]
+  [english] baby
+  [semantics] baby
+N_common_animate_dobj -> r27 	[0.027482289922193086]
+  [english] child
+  [semantics] child
+N_common_animate_iobj -> r28 	[0.027482289922193086]
+  [english] child
+  [semantics] child
+N_common_animate_nsubj -> r29 	[0.027482289922193086]
+  [english] child
+  [semantics] child
+N_common_animate_nsubjpass -> r30 	[0.027482289922193086]
+  [english] child
+  [semantics] child
+N_common_animate_dobj -> r31 	[0.022394803115668237]
+  [english] teacher
+  [semantics] teacher
+N_common_animate_iobj -> r32 	[0.022394803115668237]
+  [english] teacher
+  [semantics] teacher
+N_common_animate_nsubj -> r33 	[0.022394803115668237]
+  [english] teacher
+  [semantics] teacher
+N_common_animate_nsubjpass -> r34 	[0.022394803115668237]
+  [english] teacher
+  [semantics] teacher
+N_common_animate_dobj -> r35 	[0.018793382288926373]
+  [english] frog
+  [semantics] frog
+N_common_animate_iobj -> r36 	[0.018793382288926373]
+  [english] frog
+  [semantics] frog
+N_common_animate_nsubj -> r37 	[0.018793382288926373]
+  [english] frog
+  [semantics] frog
+N_common_animate_nsubjpass -> r38 	[0.018793382288926373]
+  [english] frog
+  [semantics] frog
+N_common_animate_dobj -> r39 	[0.016130010420161472]
+  [english] chicken
+  [semantics] chicken
+N_common_animate_iobj -> r40 	[0.016130010420161472]
+  [english] chicken
+  [semantics] chicken
+N_common_animate_nsubj -> r41 	[0.016130010420161472]
+  [english] chicken
+  [semantics] chicken
+N_common_animate_nsubjpass -> r42 	[0.016130010420161472]
+  [english] chicken
+  [semantics] chicken
+N_common_animate_dobj -> r43 	[0.01409253833327901]
+  [english] mouse
+  [semantics] mouse
+N_common_animate_iobj -> r44 	[0.01409253833327901]
+  [english] mouse
+  [semantics] mouse
+N_common_animate_nsubj -> r45 	[0.01409253833327901]
+  [english] mouse
+  [semantics] mouse
+N_common_animate_nsubjpass -> r46 	[0.01409253833327901]
+  [english] mouse
+  [semantics] mouse
+N_common_animate_dobj -> r47 	[0.01249122456159601]
+  [english] lion
+  [semantics] lion
+N_common_animate_iobj -> r48 	[0.01249122456159601]
+  [english] lion
+  [semantics] lion
+N_common_animate_nsubj -> r49 	[0.01249122456159601]
+  [english] lion
+  [semantics] lion
+N_common_animate_nsubjpass -> r50 	[0.01249122456159601]
+  [english] lion
+  [semantics] lion
+N_common_animate_dobj -> r51 	[0.011204656784986888]
+  [english] monkey
+  [semantics] monkey
+N_common_animate_iobj -> r52 	[0.011204656784986888]
+  [english] monkey
+  [semantics] monkey
+N_common_animate_nsubj -> r53 	[0.011204656784986888]
+  [english] monkey
+  [semantics] monkey
+N_common_animate_nsubjpass -> r54 	[0.011204656784986888]
+  [english] monkey
+  [semantics] monkey
+N_common_animate_dobj -> r55 	[0.0101518427812065]
+  [english] bear
+  [semantics] bear
+N_common_animate_iobj -> r56 	[0.0101518427812065]
+  [english] bear
+  [semantics] bear
+N_common_animate_nsubj -> r57 	[0.0101518427812065]
+  [english] bear
+  [semantics] bear
+N_common_animate_nsubjpass -> r58 	[0.0101518427812065]
+  [english] bear
+  [semantics] bear
+N_common_animate_dobj -> r59 	[0.00927685977634869]
+  [english] giraffe
+  [semantics] giraffe
+N_common_animate_iobj -> r60 	[0.00927685977634869]
+  [english] giraffe
+  [semantics] giraffe
+N_common_animate_nsubj -> r61 	[0.00927685977634869]
+  [english] giraffe
+  [semantics] giraffe
+N_common_animate_nsubjpass -> r62 	[0.00927685977634869]
+  [english] giraffe
+  [semantics] giraffe
+N_common_animate_dobj -> r63 	[0.008539958316252975]
+  [english] horse
+  [semantics] horse
+N_common_animate_iobj -> r64 	[0.008539958316252975]
+  [english] horse
+  [semantics] horse
+N_common_animate_nsubj -> r65 	[0.008539958316252975]
+  [english] horse
+  [semantics] horse
+N_common_animate_nsubjpass -> r66 	[0.008539958316252975]
+  [english] horse
+  [semantics] horse
+N_common_animate_dobj -> r67 	[0.007912176473831635]
+  [english] bird
+  [semantics] bird
+N_common_animate_iobj -> r68 	[0.007912176473831635]
+  [english] bird
+  [semantics] bird
+N_common_animate_nsubj -> r69 	[0.007912176473831635]
+  [english] bird
+  [semantics] bird
+N_common_animate_nsubjpass -> r70 	[0.007912176473831635]
+  [english] bird
+  [semantics] bird
+N_common_animate_dobj -> r71 	[0.007371955990526101]
+  [english] duck
+  [semantics] duck
+N_common_animate_iobj -> r72 	[0.007371955990526101]
+  [english] duck
+  [semantics] duck
+N_common_animate_nsubj -> r73 	[0.007371955990526101]
+  [english] duck
+  [semantics] duck
+N_common_animate_nsubjpass -> r74 	[0.007371955990526101]
+  [english] duck
+  [semantics] duck
+N_common_animate_dobj -> r75 	[0.006902947257765458]
+  [english] bunny
+  [semantics] bunny
+N_common_animate_iobj -> r76 	[0.006902947257765458]
+  [english] bunny
+  [semantics] bunny
+N_common_animate_nsubj -> r77 	[0.006902947257765458]
+  [english] bunny
+  [semantics] bunny
+N_common_animate_nsubjpass -> r78 	[0.006902947257765458]
+  [english] bunny
+  [semantics] bunny
+N_common_animate_dobj -> r79 	[0.006492545377493775]
+  [english] butterfly
+  [semantics] butterfly
+N_common_animate_iobj -> r80 	[0.006492545377493775]
+  [english] butterfly
+  [semantics] butterfly
+N_common_animate_nsubj -> r81 	[0.006492545377493775]
+  [english] butterfly
+  [semantics] butterfly
+N_common_animate_nsubjpass -> r82 	[0.006492545377493775]
+  [english] butterfly
+  [semantics] butterfly
+N_common_animate_dobj -> r83 	[0.006130889708792891]
+  [english] penguin
+  [semantics] penguin
+N_common_animate_iobj -> r84 	[0.006130889708792891]
+  [english] penguin
+  [semantics] penguin
+N_common_animate_nsubj -> r85 	[0.006130889708792891]
+  [english] penguin
+  [semantics] penguin
+N_common_animate_nsubjpass -> r86 	[0.006130889708792891]
+  [english] penguin
+  [semantics] penguin
+N_common_animate_dobj -> r87 	[0.005810165241298672]
+  [english] student
+  [semantics] student
+N_common_animate_iobj -> r88 	[0.005810165241298672]
+  [english] student
+  [semantics] student
+N_common_animate_nsubj -> r89 	[0.005810165241298672]
+  [english] student
+  [semantics] student
+N_common_animate_nsubjpass -> r90 	[0.005810165241298672]
+  [english] student
+  [semantics] student
+N_common_animate_dobj -> r91 	[0.005524105255812598]
+  [english] professor
+  [semantics] professor
+N_common_animate_iobj -> r92 	[0.005524105255812598]
+  [english] professor
+  [semantics] professor
+N_common_animate_nsubj -> r93 	[0.005524105255812598]
+  [english] professor
+  [semantics] professor
+N_common_animate_nsubjpass -> r94 	[0.005524105255812598]
+  [english] professor
+  [semantics] professor
+N_common_animate_dobj -> r95 	[0.005267631108556986]
+  [english] monster
+  [semantics] monster
+N_common_animate_iobj -> r96 	[0.005267631108556986]
+  [english] monster
+  [semantics] monster
+N_common_animate_nsubj -> r97 	[0.005267631108556986]
+  [english] monster
+  [semantics] monster
+N_common_animate_nsubjpass -> r98 	[0.005267631108556986]
+  [english] monster
+  [semantics] monster
+N_common_animate_dobj -> r99 	[0.005036587232576374]
+  [english] hero
+  [semantics] hero
+N_common_animate_iobj -> r100 	[0.005036587232576374]
+  [english] hero
+  [semantics] hero
+N_common_animate_nsubj -> r101 	[0.005036587232576374]
+  [english] hero
+  [semantics] hero
+N_common_animate_nsubjpass -> r102 	[0.005036587232576374]
+  [english] hero
+  [semantics] hero
+N_common_animate_dobj -> r103 	[0.004827543410259287]
+  [english] sailor
+  [semantics] sailor
+N_common_animate_iobj -> r104 	[0.004827543410259287]
+  [english] sailor
+  [semantics] sailor
+N_common_animate_nsubj -> r105 	[0.004827543410259287]
+  [english] sailor
+  [semantics] sailor
+N_common_animate_nsubjpass -> r106 	[0.004827543410259287]
+  [english] sailor
+  [semantics] sailor
+N_common_animate_dobj -> r107 	[0.004637645325830355]
+  [english] lawyer
+  [semantics] lawyer
+N_common_animate_iobj -> r108 	[0.004637645325830355]
+  [english] lawyer
+  [semantics] lawyer
+N_common_animate_nsubj -> r109 	[0.004637645325830355]
+  [english] lawyer
+  [semantics] lawyer
+N_common_animate_nsubjpass -> r110 	[0.004637645325830355]
+  [english] lawyer
+  [semantics] lawyer
+N_common_animate_dobj -> r111 	[0.0044645002686127455]
+  [english] customer
+  [semantics] customer
+N_common_animate_iobj -> r112 	[0.0044645002686127455]
+  [english] customer
+  [semantics] customer
+N_common_animate_nsubj -> r113 	[0.0044645002686127455]
+  [english] customer
+  [semantics] customer
+N_common_animate_nsubjpass -> r114 	[0.0044645002686127455]
+  [english] customer
+  [semantics] customer
+N_common_animate_dobj -> r115 	[0.004306088766860848]
+  [english] scientist
+  [semantics] scientist
+N_common_animate_iobj -> r116 	[0.004306088766860848]
+  [english] scientist
+  [semantics] scientist
+N_common_animate_nsubj -> r117 	[0.004306088766860848]
+  [english] scientist
+  [semantics] scientist
+N_common_animate_nsubjpass -> r118 	[0.004306088766860848]
+  [english] scientist
+  [semantics] scientist
+N_common_animate_dobj -> r119 	[0.004160695583202333]
+  [english] princess
+  [semantics] princess
+N_common_animate_iobj -> r120 	[0.004160695583202333]
+  [english] princess
+  [semantics] princess
+N_common_animate_nsubj -> r121 	[0.004160695583202333]
+  [english] princess
+  [semantics] princess
+N_common_animate_nsubjpass -> r122 	[0.004160695583202333]
+  [english] princess
+  [semantics] princess
+N_common_animate_dobj -> r123 	[0.004026855329122654]
+  [english] president
+  [semantics] president
+N_common_animate_iobj -> r124 	[0.004026855329122654]
+  [english] president
+  [semantics] president
+N_common_animate_nsubj -> r125 	[0.004026855329122654]
+  [english] president
+  [semantics] president
+N_common_animate_nsubjpass -> r126 	[0.004026855329122654]
+  [english] president
+  [semantics] president
+N_common_animate_dobj -> r127 	[0.0039033092322919875]
+  [english] cow
+  [semantics] cow
+N_common_animate_iobj -> r128 	[0.0039033092322919875]
+  [english] cow
+  [semantics] cow
+N_common_animate_nsubj -> r129 	[0.0039033092322919875]
+  [english] cow
+  [semantics] cow
+N_common_animate_nsubjpass -> r130 	[0.0039033092322919875]
+  [english] cow
+  [semantics] cow
+N_common_animate_dobj -> r131 	[0.0037889704944445426]
+  [english] crocodile
+  [semantics] crocodile
+N_common_animate_iobj -> r132 	[0.0037889704944445426]
+  [english] crocodile
+  [semantics] crocodile
+N_common_animate_nsubj -> r133 	[0.0037889704944445426]
+  [english] crocodile
+  [semantics] crocodile
+N_common_animate_nsubjpass -> r134 	[0.0037889704944445426]
+  [english] crocodile
+  [semantics] crocodile
+N_common_animate_dobj -> r135 	[0.0036828963255982608]
+  [english] goose
+  [semantics] goose
+N_common_animate_iobj -> r136 	[0.0036828963255982608]
+  [english] goose
+  [semantics] goose
+N_common_animate_nsubj -> r137 	[0.0036828963255982608]
+  [english] goose
+  [semantics] goose
+N_common_animate_nsubjpass -> r138 	[0.0036828963255982608]
+  [english] goose
+  [semantics] goose
+N_common_animate_dobj -> r139 	[0.003584265210415929]
+  [english] hen
+  [semantics] hen
+N_common_animate_iobj -> r140 	[0.003584265210415929]
+  [english] hen
+  [semantics] hen
+N_common_animate_nsubj -> r141 	[0.003584265210415929]
+  [english] hen
+  [semantics] hen
+N_common_animate_nsubjpass -> r142 	[0.003584265210415929]
+  [english] hen
+  [semantics] hen
+N_common_animate_dobj -> r143 	[0.00349235830704766]
+  [english] deer
+  [semantics] deer
+N_common_animate_iobj -> r144 	[0.00349235830704766]
+  [english] deer
+  [semantics] deer
+N_common_animate_nsubj -> r145 	[0.00349235830704766]
+  [english] deer
+  [semantics] deer
+N_common_animate_nsubjpass -> r146 	[0.00349235830704766]
+  [english] deer
+  [semantics] deer
+N_common_animate_dobj -> r147 	[0.0034065441338950904]
+  [english] donkey
+  [semantics] donkey
+N_common_animate_iobj -> r148 	[0.0034065441338950904]
+  [english] donkey
+  [semantics] donkey
+N_common_animate_nsubj -> r149 	[0.0034065441338950904]
+  [english] donkey
+  [semantics] donkey
+N_common_animate_nsubjpass -> r150 	[0.0034065441338950904]
+  [english] donkey
+  [semantics] donkey
+N_common_animate_dobj -> r151 	[0.00332626589039579]
+  [english] bee
+  [semantics] bee
+N_common_animate_iobj -> r152 	[0.00332626589039579]
+  [english] bee
+  [semantics] bee
+N_common_animate_nsubj -> r153 	[0.00332626589039579]
+  [english] bee
+  [semantics] bee
+N_common_animate_nsubjpass -> r154 	[0.00332626589039579]
+  [english] bee
+  [semantics] bee
+N_common_animate_dobj -> r155 	[0.0032510309016813886]
+  [english] fly
+  [semantics] fly
+N_common_animate_iobj -> r156 	[0.0032510309016813886]
+  [english] fly
+  [semantics] fly
+N_common_animate_nsubj -> r157 	[0.0032510309016813886]
+  [english] fly
+  [semantics] fly
+N_common_animate_nsubjpass -> r158 	[0.0032510309016813886]
+  [english] fly
+  [semantics] fly
+N_common_animate_dobj -> r159 	[0.0031804017862549824]
+  [english] kitty
+  [semantics] kitty
+N_common_animate_iobj -> r160 	[0.0031804017862549824]
+  [english] kitty
+  [semantics] kitty
+N_common_animate_nsubj -> r161 	[0.0031804017862549824]
+  [english] kitty
+  [semantics] kitty
+N_common_animate_nsubjpass -> r162 	[0.0031804017862549824]
+  [english] kitty
+  [semantics] kitty
+N_common_animate_dobj -> r163 	[0.0031139890295758072]
+  [english] tiger
+  [semantics] tiger
+N_common_animate_iobj -> r164 	[0.0031139890295758072]
+  [english] tiger
+  [semantics] tiger
+N_common_animate_nsubj -> r165 	[0.0031139890295758072]
+  [english] tiger
+  [semantics] tiger
+N_common_animate_nsubjpass -> r166 	[0.0031139890295758072]
+  [english] tiger
+  [semantics] tiger
+N_common_animate_dobj -> r167 	[0.003051444711079731]
+  [english] wolf
+  [semantics] wolf
+N_common_animate_iobj -> r168 	[0.003051444711079731]
+  [english] wolf
+  [semantics] wolf
+N_common_animate_nsubj -> r169 	[0.003051444711079731]
+  [english] wolf
+  [semantics] wolf
+N_common_animate_nsubjpass -> r170 	[0.003051444711079731]
+  [english] wolf
+  [semantics] wolf
+N_common_animate_dobj -> r171 	[0.002992457182409254]
+  [english] zebra
+  [semantics] zebra
+N_common_animate_iobj -> r172 	[0.002992457182409254]
+  [english] zebra
+  [semantics] zebra
+N_common_animate_nsubj -> r173 	[0.002992457182409254]
+  [english] zebra
+  [semantics] zebra
+N_common_animate_nsubjpass -> r174 	[0.002992457182409254]
+  [english] zebra
+  [semantics] zebra
+N_common_animate_dobj -> r175 	[0.002936746533941153]
+  [english] mother
+  [semantics] mother
+N_common_animate_iobj -> r176 	[0.002936746533941153]
+  [english] mother
+  [semantics] mother
+N_common_animate_nsubj -> r177 	[0.002936746533941153]
+  [english] mother
+  [semantics] mother
+N_common_animate_nsubjpass -> r178 	[0.002936746533941153]
+  [english] mother
+  [semantics] mother
+N_common_animate_dobj -> r179 	[0.0028840607176550126]
+  [english] father
+  [semantics] father
+N_common_animate_iobj -> r180 	[0.0028840607176550126]
+  [english] father
+  [semantics] father
+N_common_animate_nsubj -> r181 	[0.0028840607176550126]
+  [english] father
+  [semantics] father
+N_common_animate_nsubjpass -> r182 	[0.0028840607176550126]
+  [english] father
+  [semantics] father
+N_common_animate_dobj -> r183 	[0.002834172218904694]
+  [english] patient
+  [semantics] patient
+N_common_animate_iobj -> r184 	[0.002834172218904694]
+  [english] patient
+  [semantics] patient
+N_common_animate_nsubj -> r185 	[0.002834172218904694]
+  [english] patient
+  [semantics] patient
+N_common_animate_nsubjpass -> r186 	[0.002834172218904694]
+  [english] patient
+  [semantics] patient
+N_common_animate_dobj -> r187 	[0.0027868751891857732]
+  [english] manager
+  [semantics] manager
+N_common_animate_iobj -> r188 	[0.0027868751891857732]
+  [english] manager
+  [semantics] manager
+N_common_animate_nsubj -> r189 	[0.0027868751891857732]
+  [english] manager
+  [semantics] manager
+N_common_animate_nsubjpass -> r190 	[0.0027868751891857732]
+  [english] manager
+  [semantics] manager
+N_common_animate_dobj -> r191 	[0.0027419829676340332]
+  [english] director
+  [semantics] director
+N_common_animate_iobj -> r192 	[0.0027419829676340332]
+  [english] director
+  [semantics] director
+N_common_animate_nsubj -> r193 	[0.0027419829676340332]
+  [english] director
+  [semantics] director
+N_common_animate_nsubjpass -> r194 	[0.0027419829676340332]
+  [english] director
+  [semantics] director
+N_common_animate_dobj -> r195 	[0.0026993259315821264]
+  [english] king
+  [semantics] king
+N_common_animate_iobj -> r196 	[0.0026993259315821264]
+  [english] king
+  [semantics] king
+N_common_animate_nsubj -> r197 	[0.0026993259315821264]
+  [english] king
+  [semantics] king
+N_common_animate_nsubjpass -> r198 	[0.0026993259315821264]
+  [english] king
+  [semantics] king
+N_common_animate_dobj -> r199 	[0.0026587496266880987]
+  [english] queen
+  [semantics] queen
+N_common_animate_iobj -> r200 	[0.0026587496266880987]
+  [english] queen
+  [semantics] queen
+N_common_animate_nsubj -> r201 	[0.0026587496266880987]
+  [english] queen
+  [semantics] queen
+N_common_animate_nsubjpass -> r202 	[0.0026587496266880987]
+  [english] queen
+  [semantics] queen
+N_common_animate_dobj -> r203 	[0.00262011313542896]
+  [english] kid
+  [semantics] kid
+N_common_animate_iobj -> r204 	[0.00262011313542896]
+  [english] kid
+  [semantics] kid
+N_common_animate_nsubj -> r205 	[0.00262011313542896]
+  [english] kid
+  [semantics] kid
+N_common_animate_nsubjpass -> r206 	[0.00262011313542896]
+  [english] kid
+  [semantics] kid
+N_common_animate_dobj -> r207 	[0.002583287649512057]
+  [english] fish
+  [semantics] fish
+N_common_animate_iobj -> r208 	[0.002583287649512057]
+  [english] fish
+  [semantics] fish
+N_common_animate_nsubj -> r209 	[0.002583287649512057]
+  [english] fish
+  [semantics] fish
+N_common_animate_nsubjpass -> r210 	[0.002583287649512057]
+  [english] fish
+  [semantics] fish
+N_common_animate_dobj -> r211 	[0.0025481552172995792]
+  [english] moose
+  [semantics] moose
+N_common_animate_iobj -> r212 	[0.0025481552172995792]
+  [english] moose
+  [semantics] moose
+N_common_animate_nsubj -> r213 	[0.0025481552172995792]
+  [english] moose
+  [semantics] moose
+N_common_animate_nsubjpass -> r214 	[0.0025481552172995792]
+  [english] moose
+  [semantics] moose
+N_common_animate_dobj -> r215 	[0.0025146076419048425]
+  [english] pig
+  [semantics] pig
+N_common_animate_iobj -> r216 	[0.0025146076419048425]
+  [english] pig
+  [semantics] pig
+N_common_animate_nsubj -> r217 	[0.0025146076419048425]
+  [english] pig
+  [semantics] pig
+N_common_animate_nsubjpass -> r218 	[0.0025146076419048425]
+  [english] pig
+  [semantics] pig
+N_common_animate_dobj -> r219 	[0.002482545509391049]
+  [english] pony
+  [semantics] pony
+N_common_animate_iobj -> r220 	[0.002482545509391049]
+  [english] pony
+  [semantics] pony
+N_common_animate_nsubj -> r221 	[0.002482545509391049]
+  [english] pony
+  [semantics] pony
+N_common_animate_nsubjpass -> r222 	[0.002482545509391049]
+  [english] pony
+  [semantics] pony
+N_common_animate_dobj -> r223 	[0.002451877329632957]
+  [english] puppy
+  [semantics] puppy
+N_common_animate_iobj -> r224 	[0.002451877329632957]
+  [english] puppy
+  [semantics] puppy
+N_common_animate_nsubj -> r225 	[0.002451877329632957]
+  [english] puppy
+  [semantics] puppy
+N_common_animate_nsubjpass -> r226 	[0.002451877329632957]
+  [english] puppy
+  [semantics] puppy
+N_common_animate_dobj -> r227 	[0.0024225187750082635]
+  [english] sheep
+  [semantics] sheep
+N_common_animate_iobj -> r228 	[0.0024225187750082635]
+  [english] sheep
+  [semantics] sheep
+N_common_animate_nsubj -> r229 	[0.0024225187750082635]
+  [english] sheep
+  [semantics] sheep
+N_common_animate_nsubjpass -> r230 	[0.0024225187750082635]
+  [english] sheep
+  [semantics] sheep
+N_common_animate_dobj -> r231 	[0.0023943920042635543]
+  [english] squirrel
+  [semantics] squirrel
+N_common_animate_iobj -> r232 	[0.0023943920042635543]
+  [english] squirrel
+  [semantics] squirrel
+N_common_animate_nsubj -> r233 	[0.0023943920042635543]
+  [english] squirrel
+  [semantics] squirrel
+N_common_animate_nsubjpass -> r234 	[0.0023943920042635543]
+  [english] squirrel
+  [semantics] squirrel
+N_common_animate_dobj -> r235 	[0.002367425060726038]
+  [english] lamb
+  [semantics] lamb
+N_common_animate_iobj -> r236 	[0.002367425060726038]
+  [english] lamb
+  [semantics] lamb
+N_common_animate_nsubj -> r237 	[0.002367425060726038]
+  [english] lamb
+  [semantics] lamb
+N_common_animate_nsubjpass -> r238 	[0.002367425060726038]
+  [english] lamb
+  [semantics] lamb
+N_common_animate_dobj -> r239 	[0.002341551335568623]
+  [english] turkey
+  [semantics] turkey
+N_common_animate_iobj -> r240 	[0.002341551335568623]
+  [english] turkey
+  [semantics] turkey
+N_common_animate_nsubj -> r241 	[0.002341551335568623]
+  [english] turkey
+  [semantics] turkey
+N_common_animate_nsubjpass -> r242 	[0.002341551335568623]
+  [english] turkey
+  [semantics] turkey
+N_common_animate_dobj -> r243 	[0.0023167090881324056]
+  [english] turtle
+  [semantics] turtle
+N_common_animate_iobj -> r244 	[0.0023167090881324056]
+  [english] turtle
+  [semantics] turtle
+N_common_animate_nsubj -> r245 	[0.0023167090881324056]
+  [english] turtle
+  [semantics] turtle
+N_common_animate_nsubjpass -> r246 	[0.0023167090881324056]
+  [english] turtle
+  [semantics] turtle
+N_common_animate_dobj -> r247 	[0.0022928410164080315]
+  [english] doctor
+  [semantics] doctor
+N_common_animate_iobj -> r248 	[0.0022928410164080315]
+  [english] doctor
+  [semantics] doctor
+N_common_animate_nsubj -> r249 	[0.0022928410164080315]
+  [english] doctor
+  [semantics] doctor
+N_common_animate_nsubjpass -> r250 	[0.0022928410164080315]
+  [english] doctor
+  [semantics] doctor
+N_common_animate_dobj -> r251 	[0.002269893871708921]
+  [english] pupil
+  [semantics] pupil
+N_common_animate_iobj -> r252 	[0.002269893871708921]
+  [english] pupil
+  [semantics] pupil
+N_common_animate_nsubj -> r253 	[0.002269893871708921]
+  [english] pupil
+  [semantics] pupil
+N_common_animate_nsubjpass -> r254 	[0.002269893871708921]
+  [english] pupil
+  [semantics] pupil
+N_common_animate_dobj -> r255 	[0.0022478181123623915]
+  [english] prince
+  [semantics] prince
+N_common_animate_iobj -> r256 	[0.0022478181123623915]
+  [english] prince
+  [semantics] prince
+N_common_animate_nsubj -> r257 	[0.0022478181123623915]
+  [english] prince
+  [semantics] prince
+N_common_animate_nsubjpass -> r258 	[0.0022478181123623915]
+  [english] prince
+  [semantics] prince
+N_common_animate_dobj -> r259 	[0.0022265675919216055]
+  [english] driver
+  [semantics] driver
+N_common_animate_iobj -> r260 	[0.0022265675919216055]
+  [english] driver
+  [semantics] driver
+N_common_animate_nsubj -> r261 	[0.0022265675919216055]
+  [english] driver
+  [semantics] driver
+N_common_animate_nsubjpass -> r262 	[0.0022265675919216055]
+  [english] driver
+  [semantics] driver
+N_common_animate_dobj -> r263 	[0.002206099277980612]
+  [english] consumer
+  [semantics] consumer
+N_common_animate_iobj -> r264 	[0.002206099277980612]
+  [english] consumer
+  [semantics] consumer
+N_common_animate_nsubj -> r265 	[0.002206099277980612]
+  [english] consumer
+  [semantics] consumer
+N_common_animate_nsubjpass -> r266 	[0.002206099277980612]
+  [english] consumer
+  [semantics] consumer
+N_common_animate_dobj -> r267 	[0.0021863729981718228]
+  [english] writer
+  [semantics] writer
+N_common_animate_iobj -> r268 	[0.0021863729981718228]
+  [english] writer
+  [semantics] writer
+N_common_animate_nsubj -> r269 	[0.0021863729981718228]
+  [english] writer
+  [semantics] writer
+N_common_animate_nsubjpass -> r270 	[0.0021863729981718228]
+  [english] writer
+  [semantics] writer
+N_common_animate_dobj -> r271 	[0.002167351210352821]
+  [english] farmer
+  [semantics] farmer
+N_common_animate_iobj -> r272 	[0.002167351210352821]
+  [english] farmer
+  [semantics] farmer
+N_common_animate_nsubj -> r273 	[0.002167351210352821]
+  [english] farmer
+  [semantics] farmer
+N_common_animate_nsubjpass -> r274 	[0.002167351210352821]
+  [english] farmer
+  [semantics] farmer
+N_common_animate_dobj -> r275 	[0.002148998794358009]
+  [english] friend
+  [semantics] friend
+N_common_animate_iobj -> r276 	[0.002148998794358009]
+  [english] friend
+  [semantics] friend
+N_common_animate_nsubj -> r277 	[0.002148998794358009]
+  [english] friend
+  [semantics] friend
+N_common_animate_nsubjpass -> r278 	[0.002148998794358009]
+  [english] friend
+  [semantics] friend
+N_common_animate_dobj -> r279 	[0.002131282863009186]
+  [english] judge
+  [semantics] judge
+N_common_animate_iobj -> r280 	[0.002131282863009186]
+  [english] judge
+  [semantics] judge
+N_common_animate_nsubj -> r281 	[0.002131282863009186]
+  [english] judge
+  [semantics] judge
+N_common_animate_nsubjpass -> r282 	[0.002131282863009186]
+  [english] judge
+  [semantics] judge
+N_common_animate_dobj -> r283 	[0.00211417259035502]
+  [english] visitor
+  [semantics] visitor
+N_common_animate_iobj -> r284 	[0.00211417259035502]
+  [english] visitor
+  [semantics] visitor
+N_common_animate_nsubj -> r285 	[0.00211417259035502]
+  [english] visitor
+  [semantics] visitor
+N_common_animate_nsubjpass -> r286 	[0.00211417259035502]
+  [english] visitor
+  [semantics] visitor
+N_common_animate_dobj -> r287 	[0.002097639055348888]
+  [english] guest
+  [semantics] guest
+N_common_animate_iobj -> r288 	[0.002097639055348888]
+  [english] guest
+  [semantics] guest
+N_common_animate_nsubj -> r289 	[0.002097639055348888]
+  [english] guest
+  [semantics] guest
+N_common_animate_nsubjpass -> r290 	[0.002097639055348888]
+  [english] guest
+  [semantics] guest
+N_common_animate_dobj -> r291 	[0.002081655099382835]
+  [english] servant
+  [semantics] servant
+N_common_animate_iobj -> r292 	[0.002081655099382835]
+  [english] servant
+  [semantics] servant
+N_common_animate_nsubj -> r293 	[0.002081655099382835]
+  [english] servant
+  [semantics] servant
+N_common_animate_nsubjpass -> r294 	[0.002081655099382835]
+  [english] servant
+  [semantics] servant
+N_common_animate_dobj -> r295 	[0.002066195196276984]
+  [english] chief
+  [semantics] chief
+N_common_animate_iobj -> r296 	[0.002066195196276984]
+  [english] chief
+  [semantics] chief
+N_common_animate_nsubj -> r297 	[0.002066195196276984]
+  [english] chief
+  [semantics] chief
+N_common_animate_nsubjpass -> r298 	[0.002066195196276984]
+  [english] chief
+  [semantics] chief
+N_common_animate_dobj -> r299 	[0.0020512353334822733]
+  [english] citizen
+  [semantics] citizen
+N_common_animate_iobj -> r300 	[0.0020512353334822733]
+  [english] citizen
+  [semantics] citizen
+N_common_animate_nsubj -> r301 	[0.0020512353334822733]
+  [english] citizen
+  [semantics] citizen
+N_common_animate_nsubjpass -> r302 	[0.0020512353334822733]
+  [english] citizen
+  [semantics] citizen
+N_common_animate_dobj -> r303 	[0.002036752903393135]
+  [english] champion
+  [semantics] champion
+N_common_animate_iobj -> r304 	[0.002036752903393135]
+  [english] champion
+  [semantics] champion
+N_common_animate_nsubj -> r305 	[0.002036752903393135]
+  [english] champion
+  [semantics] champion
+N_common_animate_nsubjpass -> r306 	[0.002036752903393135]
+  [english] champion
+  [semantics] champion
+N_common_animate_dobj -> r307 	[0.002022726603788363]
+  [english] prisoner
+  [semantics] prisoner
+N_common_animate_iobj -> r308 	[0.002022726603788363]
+  [english] prisoner
+  [semantics] prisoner
+N_common_animate_nsubj -> r309 	[0.002022726603788363]
+  [english] prisoner
+  [semantics] prisoner
+N_common_animate_nsubjpass -> r310 	[0.002022726603788363]
+  [english] prisoner
+  [semantics] prisoner
+N_common_animate_dobj -> r311 	[0.002009136346525235]
+  [english] captain
+  [semantics] captain
+N_common_animate_iobj -> r312 	[0.002009136346525235]
+  [english] captain
+  [semantics] captain
+N_common_animate_nsubj -> r313 	[0.002009136346525235]
+  [english] captain
+  [semantics] captain
+N_common_animate_nsubjpass -> r314 	[0.002009136346525235]
+  [english] captain
+  [semantics] captain
+N_common_animate_dobj -> r315 	[0.0019959631737059185]
+  [english] soldier
+  [semantics] soldier
+N_common_animate_iobj -> r316 	[0.0019959631737059185]
+  [english] soldier
+  [semantics] soldier
+N_common_animate_nsubj -> r317 	[0.0019959631737059185]
+  [english] soldier
+  [semantics] soldier
+N_common_animate_nsubjpass -> r318 	[0.0019959631737059185]
+  [english] soldier
+  [semantics] soldier
+N_common_animate_dobj -> r319 	[0.0019831891806180346]
+  [english] passenger
+  [semantics] passenger
+N_common_animate_iobj -> r320 	[0.0019831891806180346]
+  [english] passenger
+  [semantics] passenger
+N_common_animate_nsubj -> r321 	[0.0019831891806180346]
+  [english] passenger
+  [semantics] passenger
+N_common_animate_nsubjpass -> r322 	[0.0019831891806180346]
+  [english] passenger
+  [semantics] passenger
+N_common_animate_dobj -> r323 	[0.001970797444824356]
+  [english] tenant
+  [semantics] tenant
+N_common_animate_iobj -> r324 	[0.001970797444824356]
+  [english] tenant
+  [semantics] tenant
+N_common_animate_nsubj -> r325 	[0.001970797444824356]
+  [english] tenant
+  [semantics] tenant
+N_common_animate_nsubjpass -> r326 	[0.001970797444824356]
+  [english] tenant
+  [semantics] tenant
+N_common_animate_dobj -> r327 	[0.001958771960841278]
+  [english] politician
+  [semantics] politician
+N_common_animate_iobj -> r328 	[0.001958771960841278]
+  [english] politician
+  [semantics] politician
+N_common_animate_nsubj -> r329 	[0.001958771960841278]
+  [english] politician
+  [semantics] politician
+N_common_animate_nsubjpass -> r330 	[0.001958771960841278]
+  [english] politician
+  [semantics] politician
+N_common_animate_dobj -> r331 	[0.0019470975799029545]
+  [english] resident
+  [semantics] resident
+N_common_animate_iobj -> r332 	[0.0019470975799029545]
+  [english] resident
+  [semantics] resident
+N_common_animate_nsubj -> r333 	[0.0019470975799029545]
+  [english] resident
+  [semantics] resident
+N_common_animate_nsubjpass -> r334 	[0.0019470975799029545]
+  [english] resident
+  [semantics] resident
+N_common_animate_dobj -> r335 	[0.0019357599543587938]
+  [english] buyer
+  [semantics] buyer
+N_common_animate_iobj -> r336 	[0.0019357599543587938]
+  [english] buyer
+  [semantics] buyer
+N_common_animate_nsubj -> r337 	[0.0019357599543587938]
+  [english] buyer
+  [semantics] buyer
+N_common_animate_nsubjpass -> r338 	[0.0019357599543587938]
+  [english] buyer
+  [semantics] buyer
+N_common_animate_dobj -> r339 	[0.0019247454862971174]
+  [english] spokesman
+  [semantics] spokesman
+N_common_animate_iobj -> r340 	[0.0019247454862971174]
+  [english] spokesman
+  [semantics] spokesman
+N_common_animate_nsubj -> r341 	[0.0019247454862971174]
+  [english] spokesman
+  [semantics] spokesman
+N_common_animate_nsubjpass -> r342 	[0.0019247454862971174]
+  [english] spokesman
+  [semantics] spokesman
+N_common_animate_dobj -> r343 	[0.0019140412800279388]
+  [english] governor
+  [semantics] governor
+N_common_animate_iobj -> r344 	[0.0019140412800279388]
+  [english] governor
+  [semantics] governor
+N_common_animate_nsubj -> r345 	[0.0019140412800279388]
+  [english] governor
+  [semantics] governor
+N_common_animate_nsubjpass -> r346 	[0.0019140412800279388]
+  [english] governor
+  [semantics] governor
+N_common_animate_dobj -> r347 	[0.0019036350980935828]
+  [english] guard
+  [semantics] guard
+N_common_animate_iobj -> r348 	[0.0019036350980935828]
+  [english] guard
+  [semantics] guard
+N_common_animate_nsubj -> r349 	[0.0019036350980935828]
+  [english] guard
+  [semantics] guard
+N_common_animate_nsubjpass -> r350 	[0.0019036350980935828]
+  [english] guard
+  [semantics] guard
+N_common_animate_dobj -> r351 	[0.001893515320507772]
+  [english] creature
+  [semantics] creature
+N_common_animate_iobj -> r352 	[0.001893515320507772]
+  [english] creature
+  [semantics] creature
+N_common_animate_nsubj -> r353 	[0.001893515320507772]
+  [english] creature
+  [semantics] creature
+N_common_animate_nsubjpass -> r354 	[0.001893515320507772]
+  [english] creature
+  [semantics] creature
+N_common_animate_dobj -> r355 	[0.0018836709069523262]
+  [english] coach
+  [semantics] coach
+N_common_animate_iobj -> r356 	[0.0018836709069523262]
+  [english] coach
+  [semantics] coach
+N_common_animate_nsubj -> r357 	[0.0018836709069523262]
+  [english] coach
+  [semantics] coach
+N_common_animate_nsubjpass -> r358 	[0.0018836709069523262]
+  [english] coach
+  [semantics] coach
+N_common_animate_dobj -> r359 	[0.0018740913616861177]
+  [english] producer
+  [semantics] producer
+N_common_animate_iobj -> r360 	[0.0018740913616861177]
+  [english] producer
+  [semantics] producer
+N_common_animate_nsubj -> r361 	[0.0018740913616861177]
+  [english] producer
+  [semantics] producer
+N_common_animate_nsubjpass -> r362 	[0.0018740913616861177]
+  [english] producer
+  [semantics] producer
+N_common_animate_dobj -> r363 	[0.0018647667009437786]
+  [english] researcher
+  [semantics] researcher
+N_common_animate_iobj -> r364 	[0.0018647667009437786]
+  [english] researcher
+  [semantics] researcher
+N_common_animate_nsubj -> r365 	[0.0018647667009437786]
+  [english] researcher
+  [semantics] researcher
+N_common_animate_nsubjpass -> r366 	[0.0018647667009437786]
+  [english] researcher
+  [semantics] researcher
+N_common_animate_dobj -> r367 	[0.0018556874226221486]
+  [english] guy
+  [semantics] guy
+N_common_animate_iobj -> r368 	[0.0018556874226221486]
+  [english] guy
+  [semantics] guy
+N_common_animate_nsubj -> r369 	[0.0018556874226221486]
+  [english] guy
+  [semantics] guy
+N_common_animate_nsubjpass -> r370 	[0.0018556874226221486]
+  [english] guy
+  [semantics] guy
+N_common_animate_dobj -> r371 	[0.0018468444780708527]
+  [english] dealer
+  [semantics] dealer
+N_common_animate_iobj -> r372 	[0.0018468444780708527]
+  [english] dealer
+  [semantics] dealer
+N_common_animate_nsubj -> r373 	[0.0018468444780708527]
+  [english] dealer
+  [semantics] dealer
+N_common_animate_nsubjpass -> r374 	[0.0018468444780708527]
+  [english] dealer
+  [semantics] dealer
+N_common_animate_dobj -> r375 	[0.0018382292458199515]
+  [english] duke
+  [semantics] duke
+N_common_animate_iobj -> r376 	[0.0018382292458199515]
+  [english] duke
+  [semantics] duke
+N_common_animate_nsubj -> r377 	[0.0018382292458199515]
+  [english] duke
+  [semantics] duke
+N_common_animate_nsubjpass -> r378 	[0.0018382292458199515]
+  [english] duke
+  [semantics] duke
+N_common_animate_dobj -> r379 	[0.001829833507092496]
+  [english] tourist
+  [semantics] tourist
+N_common_animate_iobj -> r380 	[0.001829833507092496]
+  [english] tourist
+  [semantics] tourist
+N_common_animate_nsubj -> r381 	[0.001829833507092496]
+  [english] tourist
+  [semantics] tourist
+N_common_animate_nsubjpass -> r382 	[0.001829833507092496]
+  [english] tourist
+  [semantics] tourist
+N_common_animate_dobj -> r383 	[0.0018216494229632522]
+  [english] landlord
+  [semantics] landlord
+N_common_animate_iobj -> r384 	[0.0018216494229632522]
+  [english] landlord
+  [semantics] landlord
+N_common_animate_nsubj -> r385 	[0.0018216494229632522]
+  [english] landlord
+  [semantics] landlord
+N_common_animate_nsubjpass -> r386 	[0.0018216494229632522]
+  [english] landlord
+  [semantics] landlord
+N_common_animate_dobj -> r387 	[0.0018136695130369692]
+  [english] human
+  [semantics] human
+N_common_animate_iobj -> r388 	[0.0018136695130369692]
+  [english] human
+  [semantics] human
+N_common_animate_nsubj -> r389 	[0.0018136695130369692]
+  [english] human
+  [semantics] human
+N_common_animate_nsubjpass -> r390 	[0.0018136695130369692]
+  [english] human
+  [semantics] human
+N_common_animate_dobj -> r391 	[0.0018058866355305098]
+  [english] host
+  [semantics] host
+N_common_animate_iobj -> r392 	[0.0018058866355305098]
+  [english] host
+  [semantics] host
+N_common_animate_nsubj -> r393 	[0.0018058866355305098]
+  [english] host
+  [semantics] host
+N_common_animate_nsubjpass -> r394 	[0.0018058866355305098]
+  [english] host
+  [semantics] host
+N_common_animate_dobj -> r395 	[0.0017982939686530556]
+  [english] priest
+  [semantics] priest
+N_common_animate_iobj -> r396 	[0.0017982939686530556]
+  [english] priest
+  [semantics] priest
+N_common_animate_nsubj -> r397 	[0.0017982939686530556]
+  [english] priest
+  [semantics] priest
+N_common_animate_nsubjpass -> r398 	[0.0017982939686530556]
+  [english] priest
+  [semantics] priest
+N_common_animate_dobj -> r399 	[0.001790884993187559]
+  [english] journalist
+  [semantics] journalist
+N_common_animate_iobj -> r400 	[0.001790884993187559]
+  [english] journalist
+  [semantics] journalist
+N_common_animate_nsubj -> r401 	[0.001790884993187559]
+  [english] journalist
+  [semantics] journalist
+N_common_animate_nsubjpass -> r402 	[0.001790884993187559]
+  [english] journalist
+  [semantics] journalist
+N_common_animate_dobj -> r403 	[0.001783653476184728]
+  [english] poet
+  [semantics] poet
+N_common_animate_iobj -> r404 	[0.001783653476184728]
+  [english] poet
+  [semantics] poet
+N_common_animate_nsubj -> r405 	[0.001783653476184728]
+  [english] poet
+  [semantics] poet
+N_common_animate_nsubjpass -> r406 	[0.001783653476184728]
+  [english] poet
+  [semantics] poet
+
+
+
+
+
+
+N_common_inanimate_dobj -> r407 	[0.3232777469287676]
+  [english] cake
+  [semantics] cake
+N_common_inanimate_nsubjpass -> r408 	[0.3232777469287676]
+  [english] cake
+  [semantics] cake
+N_common_inanimate_nsubj -> r409 	[0.3232777469287676]
+  [english] cake
+  [semantics] cake
+N_common_inanimate_dobj -> r410 	[0.12329017540583168]
+  [english] donut
+  [semantics] donut
+N_common_inanimate_nsubjpass -> r411 	[0.12329017540583168]
+  [english] donut
+  [semantics] donut
+N_common_inanimate_nsubj -> r412 	[0.12329017540583168]
+  [english] donut
+  [semantics] donut
+N_common_inanimate_dobj -> r413 	[0.07043922130859823]
+  [english] cookie
+  [semantics] cookie
+N_common_inanimate_nsubjpass -> r414 	[0.07043922130859823]
+  [english] cookie
+  [semantics] cookie
+N_common_inanimate_nsubj -> r415 	[0.07043922130859823]
+  [english] cookie
+  [semantics] cookie
+N_common_inanimate_dobj -> r416 	[0.04750905659245742]
+  [english] box
+  [semantics] box
+N_common_inanimate_nsubjpass -> r417 	[0.04750905659245742]
+  [english] box
+  [semantics] box
+N_common_inanimate_nsubj -> r418 	[0.04750905659245742]
+  [english] box
+  [semantics] box
+N_common_inanimate_dobj -> r419 	[0.03510345501888614]
+  [english] rose
+  [semantics] rose
+N_common_inanimate_nsubjpass -> r420 	[0.03510345501888614]
+  [english] rose
+  [semantics] rose
+N_common_inanimate_nsubj -> r421 	[0.03510345501888614]
+  [english] rose
+  [semantics] rose
+N_common_inanimate_dobj -> r422 	[0.027482289922193086]
+  [english] drink
+  [semantics] drink
+N_common_inanimate_nsubjpass -> r423 	[0.027482289922193086]
+  [english] drink
+  [semantics] drink
+N_common_inanimate_nsubj -> r424 	[0.027482289922193086]
+  [english] drink
+  [semantics] drink
+N_common_inanimate_dobj -> r425 	[0.022394803115668237]
+  [english] raisin
+  [semantics] raisin
+N_common_inanimate_nsubjpass -> r426 	[0.022394803115668237]
+  [english] raisin
+  [semantics] raisin
+N_common_inanimate_nsubj -> r427 	[0.022394803115668237]
+  [english] raisin
+  [semantics] raisin
+N_common_inanimate_dobj -> r428 	[0.018793382288926373]
+  [english] melon
+  [semantics] melon
+N_common_inanimate_nsubjpass -> r429 	[0.018793382288926373]
+  [english] melon
+  [semantics] melon
+N_common_inanimate_nsubj -> r430 	[0.018793382288926373]
+  [english] melon
+  [semantics] melon
+N_common_inanimate_dobj -> r431 	[0.016130010420161472]
+  [english] sandwich
+  [semantics] sandwich
+N_common_inanimate_nsubjpass -> r432 	[0.016130010420161472]
+  [english] sandwich
+  [semantics] sandwich
+N_common_inanimate_nsubj -> r433 	[0.016130010420161472]
+  [english] sandwich
+  [semantics] sandwich
+N_common_inanimate_dobj -> r434 	[0.01409253833327901]
+  [english] strawberry
+  [semantics] strawberry
+N_common_inanimate_nsubjpass -> r435 	[0.01409253833327901]
+  [english] strawberry
+  [semantics] strawberry
+N_common_inanimate_nsubj -> r436 	[0.01409253833327901]
+  [english] strawberry
+  [semantics] strawberry
+N_common_inanimate_dobj -> r437 	[0.01249122456159601]
+  [english] ball
+  [semantics] ball
+N_common_inanimate_nsubjpass -> r438 	[0.01249122456159601]
+  [english] ball
+  [semantics] ball
+N_common_inanimate_nsubj -> r439 	[0.01249122456159601]
+  [english] ball
+  [semantics] ball
+N_common_inanimate_dobj -> r440 	[0.011204656784986888]
+  [english] balloon
+  [semantics] balloon
+N_common_inanimate_nsubjpass -> r441 	[0.011204656784986888]
+  [english] balloon
+  [semantics] balloon
+N_common_inanimate_nsubj -> r442 	[0.011204656784986888]
+  [english] balloon
+  [semantics] balloon
+N_common_inanimate_dobj -> r443 	[0.0101518427812065]
+  [english] bat
+  [semantics] bat
+N_common_inanimate_nsubjpass -> r444 	[0.0101518427812065]
+  [english] bat
+  [semantics] bat
+N_common_inanimate_nsubj -> r445 	[0.0101518427812065]
+  [english] bat
+  [semantics] bat
+N_common_inanimate_dobj -> r446 	[0.00927685977634869]
+  [english] block
+  [semantics] block
+N_common_inanimate_nsubjpass -> r447 	[0.00927685977634869]
+  [english] block
+  [semantics] block
+N_common_inanimate_nsubj -> r448 	[0.00927685977634869]
+  [english] block
+  [semantics] block
+N_common_inanimate_dobj -> r449 	[0.008539958316252975]
+  [english] book
+  [semantics] book
+N_common_inanimate_nsubjpass -> r450 	[0.008539958316252975]
+  [english] book
+  [semantics] book
+N_common_inanimate_nsubj -> r451 	[0.008539958316252975]
+  [english] book
+  [semantics] book
+N_common_inanimate_dobj -> r452 	[0.007912176473831635]
+  [english] crayon
+  [semantics] crayon
+N_common_inanimate_nsubjpass -> r453 	[0.007912176473831635]
+  [english] crayon
+  [semantics] crayon
+N_common_inanimate_nsubj -> r454 	[0.007912176473831635]
+  [english] crayon
+  [semantics] crayon
+N_common_inanimate_dobj -> r455 	[0.007371955990526101]
+  [english] chalk
+  [semantics] chalk
+N_common_inanimate_nsubjpass -> r456 	[0.007371955990526101]
+  [english] chalk
+  [semantics] chalk
+N_common_inanimate_nsubj -> r457 	[0.007371955990526101]
+  [english] chalk
+  [semantics] chalk
+N_common_inanimate_dobj -> r458 	[0.006902947257765458]
+  [english] doll
+  [semantics] doll
+N_common_inanimate_nsubjpass -> r459 	[0.006902947257765458]
+  [english] doll
+  [semantics] doll
+N_common_inanimate_nsubj -> r460 	[0.006902947257765458]
+  [english] doll
+  [semantics] doll
+N_common_inanimate_dobj -> r461 	[0.006492545377493775]
+  [english] game
+  [semantics] game
+N_common_inanimate_nsubjpass -> r462 	[0.006492545377493775]
+  [english] game
+  [semantics] game
+N_common_inanimate_nsubj -> r463 	[0.006492545377493775]
+  [english] game
+  [semantics] game
+N_common_inanimate_dobj -> r464 	[0.006130889708792891]
+  [english] glue
+  [semantics] glue
+N_common_inanimate_nsubjpass -> r465 	[0.006130889708792891]
+  [english] glue
+  [semantics] glue
+N_common_inanimate_nsubj -> r466 	[0.006130889708792891]
+  [english] glue
+  [semantics] glue
+N_common_inanimate_dobj -> r467 	[0.005810165241298672]
+  [english] lollipop
+  [semantics] lollipop
+N_common_inanimate_nsubjpass -> r468 	[0.005810165241298672]
+  [english] lollipop
+  [semantics] lollipop
+N_common_inanimate_nsubj -> r469 	[0.005810165241298672]
+  [english] lollipop
+  [semantics] lollipop
+N_common_inanimate_dobj -> r470 	[0.005524105255812598]
+  [english] hamburger
+  [semantics] hamburger
+N_common_inanimate_nsubjpass -> r471 	[0.005524105255812598]
+  [english] hamburger
+  [semantics] hamburger
+N_common_inanimate_nsubj -> r472 	[0.005524105255812598]
+  [english] hamburger
+  [semantics] hamburger
+N_common_inanimate_dobj -> r473 	[0.005267631108556986]
+  [english] banana
+  [semantics] banana
+N_common_inanimate_nsubjpass -> r474 	[0.005267631108556986]
+  [english] banana
+  [semantics] banana
+N_common_inanimate_nsubj -> r475 	[0.005267631108556986]
+  [english] banana
+  [semantics] banana
+N_common_inanimate_dobj -> r476 	[0.005036587232576374]
+  [english] biscuit
+  [semantics] biscuit
+N_common_inanimate_nsubjpass -> r477 	[0.005036587232576374]
+  [english] biscuit
+  [semantics] biscuit
+N_common_inanimate_nsubj -> r478 	[0.005036587232576374]
+  [english] biscuit
+  [semantics] biscuit
+N_common_inanimate_dobj -> r479 	[0.004827543410259287]
+  [english] muffin
+  [semantics] muffin
+N_common_inanimate_nsubjpass -> r480 	[0.004827543410259287]
+  [english] muffin
+  [semantics] muffin
+N_common_inanimate_nsubj -> r481 	[0.004827543410259287]
+  [english] muffin
+  [semantics] muffin
+N_common_inanimate_dobj -> r482 	[0.004637645325830355]
+  [english] pancake
+  [semantics] pancake
+N_common_inanimate_nsubjpass -> r483 	[0.004637645325830355]
+  [english] pancake
+  [semantics] pancake
+N_common_inanimate_nsubj -> r484 	[0.004637645325830355]
+  [english] pancake
+  [semantics] pancake
+N_common_inanimate_dobj -> r485 	[0.0044645002686127455]
+  [english] pizza
+  [semantics] pizza
+N_common_inanimate_nsubjpass -> r486 	[0.0044645002686127455]
+  [english] pizza
+  [semantics] pizza
+N_common_inanimate_nsubj -> r487 	[0.0044645002686127455]
+  [english] pizza
+  [semantics] pizza
+N_common_inanimate_dobj -> r488 	[0.004306088766860848]
+  [english] potato
+  [semantics] potato
+N_common_inanimate_nsubjpass -> r489 	[0.004306088766860848]
+  [english] potato
+  [semantics] potato
+N_common_inanimate_nsubj -> r490 	[0.004306088766860848]
+  [english] potato
+  [semantics] potato
+N_common_inanimate_dobj -> r491 	[0.004160695583202333]
+  [english] pretzel
+  [semantics] pretzel
+N_common_inanimate_nsubjpass -> r492 	[0.004160695583202333]
+  [english] pretzel
+  [semantics] pretzel
+N_common_inanimate_nsubj -> r493 	[0.004160695583202333]
+  [english] pretzel
+  [semantics] pretzel
+N_common_inanimate_dobj -> r494 	[0.004026855329122654]
+  [english] pumpkin
+  [semantics] pumpkin
+N_common_inanimate_nsubjpass -> r495 	[0.004026855329122654]
+  [english] pumpkin
+  [semantics] pumpkin
+N_common_inanimate_nsubj -> r496 	[0.004026855329122654]
+  [english] pumpkin
+  [semantics] pumpkin
+N_common_inanimate_dobj -> r497 	[0.0039033092322919875]
+  [english] sweetcorn
+  [semantics] sweetcorn
+N_common_inanimate_nsubjpass -> r498 	[0.0039033092322919875]
+  [english] sweetcorn
+  [semantics] sweetcorn
+N_common_inanimate_nsubj -> r499 	[0.0039033092322919875]
+  [english] sweetcorn
+  [semantics] sweetcorn
+N_common_inanimate_dobj -> r500 	[0.0037889704944445426]
+  [english] yogurt
+  [semantics] yogurt
+N_common_inanimate_nsubjpass -> r501 	[0.0037889704944445426]
+  [english] yogurt
+  [semantics] yogurt
+N_common_inanimate_nsubj -> r502 	[0.0037889704944445426]
+  [english] yogurt
+  [semantics] yogurt
+N_common_inanimate_dobj -> r503 	[0.0036828963255982608]
+  [english] pickle
+  [semantics] pickle
+N_common_inanimate_nsubjpass -> r504 	[0.0036828963255982608]
+  [english] pickle
+  [semantics] pickle
+N_common_inanimate_nsubj -> r505 	[0.0036828963255982608]
+  [english] pickle
+  [semantics] pickle
+N_common_inanimate_dobj -> r506 	[0.003584265210415929]
+  [english] jigsaw
+  [semantics] jigsaw
+N_common_inanimate_nsubjpass -> r507 	[0.003584265210415929]
+  [english] jigsaw
+  [semantics] jigsaw
+N_common_inanimate_nsubj -> r508 	[0.003584265210415929]
+  [english] jigsaw
+  [semantics] jigsaw
+N_common_inanimate_dobj -> r509 	[0.00349235830704766]
+  [english] pen
+  [semantics] pen
+N_common_inanimate_nsubjpass -> r510 	[0.00349235830704766]
+  [english] pen
+  [semantics] pen
+N_common_inanimate_nsubj -> r511 	[0.00349235830704766]
+  [english] pen
+  [semantics] pen
+N_common_inanimate_dobj -> r512 	[0.0034065441338950904]
+  [english] pencil
+  [semantics] pencil
+N_common_inanimate_nsubjpass -> r513 	[0.0034065441338950904]
+  [english] pencil
+  [semantics] pencil
+N_common_inanimate_nsubj -> r514 	[0.0034065441338950904]
+  [english] pencil
+  [semantics] pencil
+N_common_inanimate_dobj -> r515 	[0.00332626589039579]
+  [english] present
+  [semantics] present
+N_common_inanimate_nsubjpass -> r516 	[0.00332626589039579]
+  [english] present
+  [semantics] present
+N_common_inanimate_nsubj -> r517 	[0.00332626589039579]
+  [english] present
+  [semantics] present
+N_common_inanimate_dobj -> r518 	[0.0032510309016813886]
+  [english] toy
+  [semantics] toy
+N_common_inanimate_nsubjpass -> r519 	[0.0032510309016813886]
+  [english] toy
+  [semantics] toy
+N_common_inanimate_nsubj -> r520 	[0.0032510309016813886]
+  [english] toy
+  [semantics] toy
+N_common_inanimate_dobj -> r521 	[0.0031804017862549824]
+  [english] cracker
+  [semantics] cracker
+N_common_inanimate_nsubjpass -> r522 	[0.0031804017862549824]
+  [english] cracker
+  [semantics] cracker
+N_common_inanimate_nsubj -> r523 	[0.0031804017862549824]
+  [english] cracker
+  [semantics] cracker
+N_common_inanimate_dobj -> r524 	[0.0031139890295758072]
+  [english] brush
+  [semantics] brush
+N_common_inanimate_nsubjpass -> r525 	[0.0031139890295758072]
+  [english] brush
+  [semantics] brush
+N_common_inanimate_nsubj -> r526 	[0.0031139890295758072]
+  [english] brush
+  [semantics] brush
+N_common_inanimate_dobj -> r527 	[0.003051444711079731]
+  [english] radio
+  [semantics] radio
+N_common_inanimate_nsubjpass -> r528 	[0.003051444711079731]
+  [english] radio
+  [semantics] radio
+N_common_inanimate_nsubj -> r529 	[0.003051444711079731]
+  [english] radio
+  [semantics] radio
+N_common_inanimate_dobj -> r530 	[0.002992457182409254]
+  [english] cloud
+  [semantics] cloud
+N_common_inanimate_nsubjpass -> r531 	[0.002992457182409254]
+  [english] cloud
+  [semantics] cloud
+N_common_inanimate_nsubj -> r532 	[0.002992457182409254]
+  [english] cloud
+  [semantics] cloud
+N_common_inanimate_dobj -> r533 	[0.002936746533941153]
+  [english] mandarin
+  [semantics] mandarin
+N_common_inanimate_nsubjpass -> r534 	[0.002936746533941153]
+  [english] mandarin
+  [semantics] mandarin
+N_common_inanimate_nsubj -> r535 	[0.002936746533941153]
+  [english] mandarin
+  [semantics] mandarin
+N_common_inanimate_dobj -> r536 	[0.0028840607176550126]
+  [english] hat
+  [semantics] hat
+N_common_inanimate_nsubjpass -> r537 	[0.0028840607176550126]
+  [english] hat
+  [semantics] hat
+N_common_inanimate_nsubj -> r538 	[0.0028840607176550126]
+  [english] hat
+  [semantics] hat
+N_common_inanimate_dobj -> r539 	[0.002834172218904694]
+  [english] basket
+  [semantics] basket
+N_common_inanimate_nsubjpass -> r540 	[0.002834172218904694]
+  [english] basket
+  [semantics] basket
+N_common_inanimate_nsubj -> r541 	[0.002834172218904694]
+  [english] basket
+  [semantics] basket
+N_common_inanimate_dobj -> r542 	[0.0027868751891857732]
+  [english] plant
+  [semantics] plant
+N_common_inanimate_nsubjpass -> r543 	[0.0027868751891857732]
+  [english] plant
+  [semantics] plant
+N_common_inanimate_nsubj -> r544 	[0.0027868751891857732]
+  [english] plant
+  [semantics] plant
+N_common_inanimate_dobj -> r545 	[0.0027419829676340332]
+  [english] flower
+  [semantics] flower
+N_common_inanimate_nsubjpass -> r546 	[0.0027419829676340332]
+  [english] flower
+  [semantics] flower
+N_common_inanimate_nsubj -> r547 	[0.0027419829676340332]
+  [english] flower
+  [semantics] flower
+N_common_inanimate_dobj -> r548 	[0.0026993259315821264]
+  [english] chair
+  [semantics] chair
+N_common_inanimate_nsubjpass -> r549 	[0.0026993259315821264]
+  [english] chair
+  [semantics] chair
+N_common_inanimate_nsubj -> r550 	[0.0026993259315821264]
+  [english] chair
+  [semantics] chair
+N_common_inanimate_dobj -> r551 	[0.0026587496266880987]
+  [english] spoon
+  [semantics] spoon
+N_common_inanimate_nsubjpass -> r552 	[0.0026587496266880987]
+  [english] spoon
+  [semantics] spoon
+N_common_inanimate_nsubj -> r553 	[0.0026587496266880987]
+  [english] spoon
+  [semantics] spoon
+N_common_inanimate_dobj -> r554 	[0.00262011313542896]
+  [english] pillow
+  [semantics] pillow
+N_common_inanimate_nsubjpass -> r555 	[0.00262011313542896]
+  [english] pillow
+  [semantics] pillow
+N_common_inanimate_nsubj -> r556 	[0.00262011313542896]
+  [english] pillow
+  [semantics] pillow
+N_common_inanimate_dobj -> r557 	[0.002583287649512057]
+  [english] gumball
+  [semantics] gumball
+N_common_inanimate_nsubjpass -> r558 	[0.002583287649512057]
+  [english] gumball
+  [semantics] gumball
+N_common_inanimate_nsubj -> r559 	[0.002583287649512057]
+  [english] gumball
+  [semantics] gumball
+N_common_inanimate_dobj -> r560 	[0.0025481552172995792]
+  [english] scarf
+  [semantics] scarf
+N_common_inanimate_nsubjpass -> r561 	[0.0025481552172995792]
+  [english] scarf
+  [semantics] scarf
+N_common_inanimate_nsubj -> r562 	[0.0025481552172995792]
+  [english] scarf
+  [semantics] scarf
+N_common_inanimate_dobj -> r563 	[0.0025146076419048425]
+  [english] shoe
+  [semantics] shoe
+N_common_inanimate_nsubjpass -> r564 	[0.0025146076419048425]
+  [english] shoe
+  [semantics] shoe
+N_common_inanimate_nsubj -> r565 	[0.0025146076419048425]
+  [english] shoe
+  [semantics] shoe
+N_common_inanimate_dobj -> r566 	[0.002482545509391049]
+  [english] jacket
+  [semantics] jacket
+N_common_inanimate_nsubjpass -> r567 	[0.002482545509391049]
+  [english] jacket
+  [semantics] jacket
+N_common_inanimate_nsubj -> r568 	[0.002482545509391049]
+  [english] jacket
+  [semantics] jacket
+N_common_inanimate_dobj -> r569 	[0.002451877329632957]
+  [english] hammer
+  [semantics] hammer
+N_common_inanimate_nsubjpass -> r570 	[0.002451877329632957]
+  [english] hammer
+  [semantics] hammer
+N_common_inanimate_nsubj -> r571 	[0.002451877329632957]
+  [english] hammer
+  [semantics] hammer
+N_common_inanimate_dobj -> r572 	[0.0024225187750082635]
+  [english] bucket
+  [semantics] bucket
+N_common_inanimate_nsubjpass -> r573 	[0.0024225187750082635]
+  [english] bucket
+  [semantics] bucket
+N_common_inanimate_nsubj -> r574 	[0.0024225187750082635]
+  [english] bucket
+  [semantics] bucket
+N_common_inanimate_dobj -> r575 	[0.0023943920042635543]
+  [english] knife
+  [semantics] knife
+N_common_inanimate_nsubjpass -> r576 	[0.0023943920042635543]
+  [english] knife
+  [semantics] knife
+N_common_inanimate_nsubj -> r577 	[0.0023943920042635543]
+  [english] knife
+  [semantics] knife
+N_common_inanimate_dobj -> r578 	[0.002367425060726038]
+  [english] cup
+  [semantics] cup
+N_common_inanimate_nsubjpass -> r579 	[0.002367425060726038]
+  [english] cup
+  [semantics] cup
+N_common_inanimate_nsubj -> r580 	[0.002367425060726038]
+  [english] cup
+  [semantics] cup
+N_common_inanimate_dobj -> r581 	[0.002341551335568623]
+  [english] plate
+  [semantics] plate
+N_common_inanimate_nsubjpass -> r582 	[0.002341551335568623]
+  [english] plate
+  [semantics] plate
+N_common_inanimate_nsubj -> r583 	[0.002341551335568623]
+  [english] plate
+  [semantics] plate
+N_common_inanimate_dobj -> r584 	[0.0023167090881324056]
+  [english] towel
+  [semantics] towel
+N_common_inanimate_nsubjpass -> r585 	[0.0023167090881324056]
+  [english] towel
+  [semantics] towel
+N_common_inanimate_nsubj -> r586 	[0.0023167090881324056]
+  [english] towel
+  [semantics] towel
+N_common_inanimate_dobj -> r587 	[0.0022928410164080315]
+  [english] bottle
+  [semantics] bottle
+N_common_inanimate_nsubjpass -> r588 	[0.0022928410164080315]
+  [english] bottle
+  [semantics] bottle
+N_common_inanimate_nsubj -> r589 	[0.0022928410164080315]
+  [english] bottle
+  [semantics] bottle
+N_common_inanimate_dobj -> r590 	[0.002269893871708921]
+  [english] bowl
+  [semantics] bowl
+N_common_inanimate_nsubjpass -> r591 	[0.002269893871708921]
+  [english] bowl
+  [semantics] bowl
+N_common_inanimate_nsubj -> r592 	[0.002269893871708921]
+  [english] bowl
+  [semantics] bowl
+N_common_inanimate_dobj -> r593 	[0.0022478181123623915]
+  [english] can
+  [semantics] can
+N_common_inanimate_nsubjpass -> r594 	[0.0022478181123623915]
+  [english] can
+  [semantics] can
+N_common_inanimate_nsubj -> r595 	[0.0022478181123623915]
+  [english] can
+  [semantics] can
+N_common_inanimate_dobj -> r596 	[0.0022265675919216055]
+  [english] clock
+  [semantics] clock
+N_common_inanimate_nsubjpass -> r597 	[0.0022265675919216055]
+  [english] clock
+  [semantics] clock
+N_common_inanimate_nsubj -> r598 	[0.0022265675919216055]
+  [english] clock
+  [semantics] clock
+N_common_inanimate_dobj -> r599 	[0.002206099277980612]
+  [english] jar
+  [semantics] jar
+N_common_inanimate_nsubjpass -> r600 	[0.002206099277980612]
+  [english] jar
+  [semantics] jar
+N_common_inanimate_nsubj -> r601 	[0.002206099277980612]
+  [english] jar
+  [semantics] jar
+N_common_inanimate_dobj -> r602 	[0.0021863729981718228]
+  [english] penny
+  [semantics] penny
+N_common_inanimate_nsubjpass -> r603 	[0.0021863729981718228]
+  [english] penny
+  [semantics] penny
+N_common_inanimate_nsubj -> r604 	[0.0021863729981718228]
+  [english] penny
+  [semantics] penny
+N_common_inanimate_dobj -> r605 	[0.002167351210352821]
+  [english] purse
+  [semantics] purse
+N_common_inanimate_nsubjpass -> r606 	[0.002167351210352821]
+  [english] purse
+  [semantics] purse
+N_common_inanimate_nsubj -> r607 	[0.002167351210352821]
+  [english] purse
+  [semantics] purse
+N_common_inanimate_dobj -> r608 	[0.002148998794358009]
+  [english] soap
+  [semantics] soap
+N_common_inanimate_nsubjpass -> r609 	[0.002148998794358009]
+  [english] soap
+  [semantics] soap
+N_common_inanimate_nsubj -> r610 	[0.002148998794358009]
+  [english] soap
+  [semantics] soap
+N_common_inanimate_dobj -> r611 	[0.002131282863009186]
+  [english] toothbrush
+  [semantics] toothbrush
+N_common_inanimate_nsubjpass -> r612 	[0.002131282863009186]
+  [english] toothbrush
+  [semantics] toothbrush
+N_common_inanimate_nsubj -> r613 	[0.002131282863009186]
+  [english] toothbrush
+  [semantics] toothbrush
+N_common_inanimate_dobj -> r614 	[0.00211417259035502]
+  [english] watch
+  [semantics] watch
+N_common_inanimate_nsubjpass -> r615 	[0.00211417259035502]
+  [english] watch
+  [semantics] watch
+N_common_inanimate_nsubj -> r616 	[0.00211417259035502]
+  [english] watch
+  [semantics] watch
+N_common_inanimate_dobj -> r617 	[0.002097639055348888]
+  [english] newspaper
+  [semantics] newspaper
+N_common_inanimate_nsubjpass -> r618 	[0.002097639055348888]
+  [english] newspaper
+  [semantics] newspaper
+N_common_inanimate_nsubj -> r619 	[0.002097639055348888]
+  [english] newspaper
+  [semantics] newspaper
+N_common_inanimate_dobj -> r620 	[0.002081655099382835]
+  [english] fig
+  [semantics] fig
+N_common_inanimate_nsubjpass -> r621 	[0.002081655099382835]
+  [english] fig
+  [semantics] fig
+N_common_inanimate_nsubj -> r622 	[0.002081655099382835]
+  [english] fig
+  [semantics] fig
+N_common_inanimate_dobj -> r623 	[0.002066195196276984]
+  [english] bag
+  [semantics] bag
+N_common_inanimate_nsubjpass -> r624 	[0.002066195196276984]
+  [english] bag
+  [semantics] bag
+N_common_inanimate_nsubj -> r625 	[0.002066195196276984]
+  [english] bag
+  [semantics] bag
+N_common_inanimate_dobj -> r626 	[0.0020512353334822733]
+  [english] wine
+  [semantics] wine
+N_common_inanimate_nsubjpass -> r627 	[0.0020512353334822733]
+  [english] wine
+  [semantics] wine
+N_common_inanimate_nsubj -> r628 	[0.0020512353334822733]
+  [english] wine
+  [semantics] wine
+N_common_inanimate_dobj -> r629 	[0.002036752903393135]
+  [english] key
+  [semantics] key
+N_common_inanimate_nsubjpass -> r630 	[0.002036752903393135]
+  [english] key
+  [semantics] key
+N_common_inanimate_nsubj -> r631 	[0.002036752903393135]
+  [english] key
+  [semantics] key
+N_common_inanimate_dobj -> r632 	[0.002022726603788363]
+  [english] weapon
+  [semantics] weapon
+N_common_inanimate_nsubjpass -> r633 	[0.002022726603788363]
+  [english] weapon
+  [semantics] weapon
+N_common_inanimate_nsubj -> r634 	[0.002022726603788363]
+  [english] weapon
+  [semantics] weapon
+N_common_inanimate_dobj -> r635 	[0.002009136346525235]
+  [english] brain
+  [semantics] brain
+N_common_inanimate_nsubjpass -> r636 	[0.002009136346525235]
+  [english] brain
+  [semantics] brain
+N_common_inanimate_nsubj -> r637 	[0.002009136346525235]
+  [english] brain
+  [semantics] brain
+N_common_inanimate_dobj -> r638 	[0.0019959631737059185]
+  [english] tool
+  [semantics] tool
+N_common_inanimate_nsubjpass -> r639 	[0.0019959631737059185]
+  [english] tool
+  [semantics] tool
+N_common_inanimate_nsubj -> r640 	[0.0019959631737059185]
+  [english] tool
+  [semantics] tool
+N_common_inanimate_dobj -> r641 	[0.0019831891806180346]
+  [english] crown
+  [semantics] crown
+N_common_inanimate_nsubjpass -> r642 	[0.0019831891806180346]
+  [english] crown
+  [semantics] crown
+N_common_inanimate_nsubj -> r643 	[0.0019831891806180346]
+  [english] crown
+  [semantics] crown
+N_common_inanimate_dobj -> r644 	[0.001970797444824356]
+  [english] ring
+  [semantics] ring
+N_common_inanimate_nsubjpass -> r645 	[0.001970797444824356]
+  [english] ring
+  [semantics] ring
+N_common_inanimate_nsubj -> r646 	[0.001970797444824356]
+  [english] ring
+  [semantics] ring
+N_common_inanimate_dobj -> r647 	[0.001958771960841278]
+  [english] leaf
+  [semantics] leaf
+N_common_inanimate_nsubjpass -> r648 	[0.001958771960841278]
+  [english] leaf
+  [semantics] leaf
+N_common_inanimate_nsubj -> r649 	[0.001958771960841278]
+  [english] leaf
+  [semantics] leaf
+N_common_inanimate_dobj -> r650 	[0.0019470975799029545]
+  [english] fruit
+  [semantics] fruit
+N_common_inanimate_nsubjpass -> r651 	[0.0019470975799029545]
+  [english] fruit
+  [semantics] fruit
+N_common_inanimate_nsubj -> r652 	[0.0019470975799029545]
+  [english] fruit
+  [semantics] fruit
+N_common_inanimate_dobj -> r653 	[0.0019357599543587938]
+  [english] mirror
+  [semantics] mirror
+N_common_inanimate_nsubjpass -> r654 	[0.0019357599543587938]
+  [english] mirror
+  [semantics] mirror
+N_common_inanimate_nsubj -> r655 	[0.0019357599543587938]
+  [english] mirror
+  [semantics] mirror
+N_common_inanimate_dobj -> r656 	[0.0019247454862971174]
+  [english] beer
+  [semantics] beer
+N_common_inanimate_nsubjpass -> r657 	[0.0019247454862971174]
+  [english] beer
+  [semantics] beer
+N_common_inanimate_nsubj -> r658 	[0.0019247454862971174]
+  [english] beer
+  [semantics] beer
+N_common_inanimate_dobj -> r659 	[0.0019140412800279388]
+  [english] shirt
+  [semantics] shirt
+N_common_inanimate_nsubjpass -> r660 	[0.0019140412800279388]
+  [english] shirt
+  [semantics] shirt
+N_common_inanimate_nsubj -> r661 	[0.0019140412800279388]
+  [english] shirt
+  [semantics] shirt
+N_common_inanimate_dobj -> r662 	[0.0019036350980935828]
+  [english] guitar
+  [semantics] guitar
+N_common_inanimate_nsubjpass -> r663 	[0.0019036350980935828]
+  [english] guitar
+  [semantics] guitar
+N_common_inanimate_nsubj -> r664 	[0.0019036350980935828]
+  [english] guitar
+  [semantics] guitar
+N_common_inanimate_dobj -> r665 	[0.001893515320507772]
+  [english] chemical
+  [semantics] chemical
+N_common_inanimate_nsubjpass -> r666 	[0.001893515320507772]
+  [english] chemical
+  [semantics] chemical
+N_common_inanimate_nsubj -> r667 	[0.001893515320507772]
+  [english] chemical
+  [semantics] chemical
+N_common_inanimate_dobj -> r668 	[0.0018836709069523262]
+  [english] seed
+  [semantics] seed
+N_common_inanimate_nsubjpass -> r669 	[0.0018836709069523262]
+  [english] seed
+  [semantics] seed
+N_common_inanimate_nsubj -> r670 	[0.0018836709069523262]
+  [english] seed
+  [semantics] seed
+N_common_inanimate_dobj -> r671 	[0.0018740913616861177]
+  [english] shell
+  [semantics] shell
+N_common_inanimate_nsubjpass -> r672 	[0.0018740913616861177]
+  [english] shell
+  [semantics] shell
+N_common_inanimate_nsubj -> r673 	[0.0018740913616861177]
+  [english] shell
+  [semantics] shell
+N_common_inanimate_dobj -> r674 	[0.0018647667009437786]
+  [english] brick
+  [semantics] brick
+N_common_inanimate_nsubjpass -> r675 	[0.0018647667009437786]
+  [english] brick
+  [semantics] brick
+N_common_inanimate_nsubj -> r676 	[0.0018647667009437786]
+  [english] brick
+  [semantics] brick
+N_common_inanimate_dobj -> r677 	[0.0018556874226221486]
+  [english] bell
+  [semantics] bell
+N_common_inanimate_nsubjpass -> r678 	[0.0018556874226221486]
+  [english] bell
+  [semantics] bell
+N_common_inanimate_nsubj -> r679 	[0.0018556874226221486]
+  [english] bell
+  [semantics] bell
+N_common_inanimate_dobj -> r680 	[0.0018468444780708527]
+  [english] coin
+  [semantics] coin
+N_common_inanimate_nsubjpass -> r681 	[0.0018468444780708527]
+  [english] coin
+  [semantics] coin
+N_common_inanimate_nsubj -> r682 	[0.0018468444780708527]
+  [english] coin
+  [semantics] coin
+N_common_inanimate_dobj -> r683 	[0.0018382292458199515]
+  [english] button
+  [semantics] button
+N_common_inanimate_nsubjpass -> r684 	[0.0018382292458199515]
+  [english] button
+  [semantics] button
+N_common_inanimate_nsubj -> r685 	[0.0018382292458199515]
+  [english] button
+  [semantics] button
+N_common_inanimate_dobj -> r686 	[0.001829833507092496]
+  [english] needle
+  [semantics] needle
+N_common_inanimate_nsubjpass -> r687 	[0.001829833507092496]
+  [english] needle
+  [semantics] needle
+N_common_inanimate_nsubj -> r688 	[0.001829833507092496]
+  [english] needle
+  [semantics] needle
+N_common_inanimate_dobj -> r689 	[0.0018216494229632522]
+  [english] molecule
+  [semantics] molecule
+N_common_inanimate_nsubjpass -> r690 	[0.0018216494229632522]
+  [english] molecule
+  [semantics] molecule
+N_common_inanimate_nsubj -> r691 	[0.0018216494229632522]
+  [english] molecule
+  [semantics] molecule
+N_common_inanimate_dobj -> r692 	[0.0018136695130369692]
+  [english] crystal
+  [semantics] crystal
+N_common_inanimate_nsubjpass -> r693 	[0.0018136695130369692]
+  [english] crystal
+  [semantics] crystal
+N_common_inanimate_nsubj -> r694 	[0.0018136695130369692]
+  [english] crystal
+  [semantics] crystal
+N_common_inanimate_dobj -> r695 	[0.0018058866355305098]
+  [english] flag
+  [semantics] flag
+N_common_inanimate_nsubjpass -> r696 	[0.0018058866355305098]
+  [english] flag
+  [semantics] flag
+N_common_inanimate_nsubj -> r697 	[0.0018058866355305098]
+  [english] flag
+  [semantics] flag
+N_common_inanimate_dobj -> r698 	[0.0017982939686530556]
+  [english] nail
+  [semantics] nail
+N_common_inanimate_nsubjpass -> r699 	[0.0017982939686530556]
+  [english] nail
+  [semantics] nail
+N_common_inanimate_nsubj -> r700 	[0.0017982939686530556]
+  [english] nail
+  [semantics] nail
+N_common_inanimate_dobj -> r701 	[0.001790884993187559]
+  [english] bean
+  [semantics] bean
+N_common_inanimate_nsubjpass -> r702 	[0.001790884993187559]
+  [english] bean
+  [semantics] bean
+N_common_inanimate_nsubj -> r703 	[0.001790884993187559]
+  [english] bean
+  [semantics] bean
+N_common_inanimate_dobj -> r704 	[0.001783653476184728]
+  [english] liver
+  [semantics] liver
+N_common_inanimate_nsubjpass -> r705 	[0.001783653476184728]
+  [english] liver
+  [semantics] liver
+N_common_inanimate_nsubj -> r706 	[0.001783653476184728]
+  [english] liver
+  [semantics] liver
+
+
+V_trans_omissible -> r1412 	[0.33402836011058906]
+  [english] ate
+  [semantics] eat
+V_trans_omissible -> r1413 	[0.13404078858765317]
+  [english] painted
+  [semantics] paint
+V_trans_omissible -> r1414 	[0.08118983449041972]
+  [english] drew
+  [semantics] draw
+V_trans_omissible -> r1415 	[0.05825966977427891]
+  [english] cleaned
+  [semantics] clean
+V_trans_omissible -> r1416 	[0.045854068200707636]
+  [english] cooked
+  [semantics] cook
+V_trans_omissible -> r1417 	[0.03823290310401458]
+  [english] dusted
+  [semantics] dust
+V_trans_omissible -> r1418 	[0.03314541629748973]
+  [english] hunted
+  [semantics] hunt
+V_trans_omissible -> r1419 	[0.029543995470747868]
+  [english] nursed
+  [semantics] nurse
+V_trans_omissible -> r1420 	[0.026880623601982966]
+  [english] sketched
+  [semantics] sketch
+V_trans_omissible -> r1421 	[0.024843151515100505]
+  [english] juggled
+  [semantics] juggle
+V_trans_omissible -> r1422 	[0.023241837743417502]
+  [english] called
+  [semantics] call
+V_trans_omissible -> r1423 	[0.021955269966808383]
+  [english] heard
+  [semantics] hear
+V_trans_omissible -> r1424 	[0.02090245596302799]
+  [english] packed
+  [semantics] pack
+V_trans_omissible -> r1425 	[0.020027472958170183]
+  [english] saw
+  [semantics] see
+V_trans_omissible -> r1426 	[0.01929057149807447]
+  [english] noticed
+  [semantics] notice
+V_trans_omissible -> r1427 	[0.018662789655653128]
+  [english] studied
+  [semantics] study
+V_trans_omissible -> r1428 	[0.018122569172347593]
+  [english] examined
+  [semantics] examine
+V_trans_omissible -> r1429 	[0.01765356043958695]
+  [english] observed
+  [semantics] observe
+V_trans_omissible -> r1430 	[0.01724315855931527]
+  [english] knew
+  [semantics] know
+V_trans_omissible -> r1431 	[0.016881502890614384]
+  [english] investigated
+  [semantics] investigate
+
+
+V_trans_omissible_inf -> r1432 	[0.33402836011058906]
+  [english] eat
+  [semantics] eat
+V_trans_omissible_inf -> r1433 	[0.13404078858765317]
+  [english] paint
+  [semantics] paint
+V_trans_omissible_inf -> r1434 	[0.08118983449041972]
+  [english] draw
+  [semantics] draw
+V_trans_omissible_inf -> r1435 	[0.05825966977427891]
+  [english] clean
+  [semantics] clean
+V_trans_omissible_inf -> r1436 	[0.045854068200707636]
+  [english] cook
+  [semantics] cook
+V_trans_omissible_inf -> r1437 	[0.03823290310401458]
+  [english] dust
+  [semantics] dust
+V_trans_omissible_inf -> r1438 	[0.03314541629748973]
+  [english] hunt
+  [semantics] hunt
+V_trans_omissible_inf -> r1439 	[0.029543995470747868]
+  [english] nurse
+  [semantics] nurse
+V_trans_omissible_inf -> r1440 	[0.026880623601982966]
+  [english] sketch
+  [semantics] sketch
+V_trans_omissible_inf -> r1441 	[0.024843151515100505]
+  [english] juggle
+  [semantics] juggle
+V_trans_omissible_inf -> r1442 	[0.023241837743417502]
+  [english] call
+  [semantics] call
+V_trans_omissible_inf -> r1443 	[0.021955269966808383]
+  [english] hear
+  [semantics] hear
+V_trans_omissible_inf -> r1444 	[0.02090245596302799]
+  [english] pack
+  [semantics] pack
+V_trans_omissible_inf -> r1445 	[0.020027472958170183]
+  [english] see
+  [semantics] see
+V_trans_omissible_inf -> r1446 	[0.01929057149807447]
+  [english] notice
+  [semantics] notice
+V_trans_omissible_inf -> r1447 	[0.018662789655653128]
+  [english] study
+  [semantics] study
+V_trans_omissible_inf -> r1448 	[0.018122569172347593]
+  [english] examine
+  [semantics] examine
+V_trans_omissible_inf -> r1449 	[0.01765356043958695]
+  [english] observe
+  [semantics] observe
+V_trans_omissible_inf -> r1450 	[0.01724315855931527]
+  [english] know
+  [semantics] know
+V_trans_omissible_inf -> r1451 	[0.016881502890614384]
+  [english] investigate
+  [semantics] investigate
+
+
+
+V_trans_omissible_pp -> r1452 	[0.33402836011058906]
+  [english] eaten
+  [semantics] eat
+V_trans_omissible_pp -> r1453 	[0.13404078858765317]
+  [english] painted
+  [semantics] paint
+V_trans_omissible_pp -> r1454 	[0.08118983449041972]
+  [english] drawn
+  [semantics] draw
+V_trans_omissible_pp -> r1455 	[0.05825966977427891]
+  [english] cleaned
+  [semantics] clean
+V_trans_omissible_pp -> r1456 	[0.045854068200707636]
+  [english] cooked
+  [semantics] cook
+V_trans_omissible_pp -> r1457 	[0.03823290310401458]
+  [english] dusted
+  [semantics] dust
+V_trans_omissible_pp -> r1458 	[0.03314541629748973]
+  [english] hunted
+  [semantics] hunt
+V_trans_omissible_pp -> r1459 	[0.029543995470747868]
+  [english] nursed
+  [semantics] nurse
+V_trans_omissible_pp -> r1460 	[0.026880623601982966]
+  [english] sketched
+  [semantics] sketch
+V_trans_omissible_pp -> r1461 	[0.024843151515100505]
+  [english] juggled
+  [semantics] juggle
+V_trans_omissible_pp -> r1462 	[0.023241837743417502]
+  [english] called
+  [semantics] call
+V_trans_omissible_pp -> r1463 	[0.021955269966808383]
+  [english] heard
+  [semantics] hear
+V_trans_omissible_pp -> r1464 	[0.02090245596302799]
+  [english] packed
+  [semantics] pack
+V_trans_omissible_pp -> r1465 	[0.020027472958170183]
+  [english] seen
+  [semantics] see
+V_trans_omissible_pp -> r1466 	[0.01929057149807447]
+  [english] noticed
+  [semantics] notice
+V_trans_omissible_pp -> r1467 	[0.018662789655653128]
+  [english] studied
+  [semantics] study
+V_trans_omissible_pp -> r1468 	[0.018122569172347593]
+  [english] examined
+  [semantics] examine
+V_trans_omissible_pp -> r1469 	[0.01765356043958695]
+  [english] observed
+  [semantics] observe
+V_trans_omissible_pp -> r1470 	[0.01724315855931527]
+  [english] known
+  [semantics] know
+V_trans_omissible_pp -> r1471 	[0.016881502890614384]
+  [english] investigated
+  [semantics] investigate
+
+
+
+
+
+
+
+V_trans_not_omissible -> r1472 	[0.33402836011058906]
+  [english] liked
+  [semantics] like
+V_trans_not_omissible -> r1473 	[0.13404078858765317]
+  [english] helped
+  [semantics] help
+V_trans_not_omissible -> r1474 	[0.08118983449041972]
+  [english] found
+  [semantics] find
+V_trans_not_omissible -> r1475 	[0.05825966977427891]
+  [english] loved
+  [semantics] love
+V_trans_not_omissible -> r1476 	[0.045854068200707636]
+  [english] poked
+  [semantics] poke
+V_trans_not_omissible -> r1477 	[0.03823290310401458]
+  [english] admired
+  [semantics] admire
+V_trans_not_omissible -> r1478 	[0.03314541629748973]
+  [english] adored
+  [semantics] adore
+V_trans_not_omissible -> r1479 	[0.029543995470747868]
+  [english] appreciated
+  [semantics] appreciate
+V_trans_not_omissible -> r1480 	[0.026880623601982966]
+  [english] missed
+  [semantics] miss
+V_trans_not_omissible -> r1481 	[0.024843151515100505]
+  [english] respected
+  [semantics] respect
+V_trans_not_omissible -> r1482 	[0.023241837743417502]
+  [english] threw
+  [semantics] throw
+V_trans_not_omissible -> r1483 	[0.021955269966808383]
+  [english] tolerated
+  [semantics] tolerate
+V_trans_not_omissible -> r1484 	[0.02090245596302799]
+  [english] valued
+  [semantics] value
+V_trans_not_omissible -> r1485 	[0.020027472958170183]
+  [english] worshipped
+  [semantics] worship
+V_trans_not_omissible -> r1486 	[0.01929057149807447]
+  [english] discovered
+  [semantics] discover
+V_trans_not_omissible -> r1487 	[0.018662789655653128]
+  [english] held
+  [semantics] hold
+V_trans_not_omissible -> r1488 	[0.018122569172347593]
+  [english] stabbed
+  [semantics] stab
+V_trans_not_omissible -> r1489 	[0.01765356043958695]
+  [english] touched
+  [semantics] touch
+V_trans_not_omissible -> r1490 	[0.01724315855931527]
+  [english] pierced
+  [semantics] pierce
+V_trans_not_omissible -> r1491 	[0.016881502890614384]
+  [english] tossed
+  [semantics] toss
+
+
+V_unerg -> r1652 	[0.33402836011058906]
+  [english] slept
+  [semantics] sleep
+V_unerg -> r1653 	[0.13404078858765317]
+  [english] smiled
+  [semantics] smile
+V_unerg -> r1654 	[0.08118983449041972]
+  [english] laughed
+  [semantics] laugh
+V_unerg -> r1655 	[0.05825966977427891]
+  [english] sneezed
+  [semantics] sneeze
+V_unerg -> r1656 	[0.045854068200707636]
+  [english] cried
+  [semantics] cry
+V_unerg -> r1657 	[0.03823290310401458]
+  [english] talked
+  [semantics] talk
+V_unerg -> r1658 	[0.03314541629748973]
+  [english] danced
+  [semantics] dance
+V_unerg -> r1659 	[0.029543995470747868]
+  [english] jogged
+  [semantics] jog
+V_unerg -> r1660 	[0.026880623601982966]
+  [english] walked
+  [semantics] walk
+V_unerg -> r1661 	[0.024843151515100505]
+  [english] ran
+  [semantics] run
+V_unerg -> r1662 	[0.023241837743417502]
+  [english] napped
+  [semantics] nap
+V_unerg -> r1663 	[0.021955269966808383]
+  [english] snoozed
+  [semantics] snooze
+V_unerg -> r1664 	[0.02090245596302799]
+  [english] screamed
+  [semantics] scream
+V_unerg -> r1665 	[0.020027472958170183]
+  [english] stuttered
+  [semantics] stutter
+V_unerg -> r1666 	[0.01929057149807447]
+  [english] frowned
+  [semantics] frown
+V_unerg -> r1667 	[0.018662789655653128]
+  [english] giggled
+  [semantics] giggle
+V_unerg -> r1668 	[0.018122569172347593]
+  [english] scoffed
+  [semantics] scoff
+V_unerg -> r1669 	[0.01765356043958695]
+  [english] snored
+  [semantics] snore
+V_unerg -> r1670 	[0.01724315855931527]
+  [english] smirked
+  [semantics] smirk
+V_unerg -> r1671 	[0.016881502890614384]
+  [english] gasped
+  [semantics] gasp
+
+
+
+Rel_pron -> r1411 	[1]
+  [english] that
+  [semantics] that
+
+
+
+S! -> S_subj_modif_main_agent_E1869(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) 	[0.4]
+  [english] *(?1, ?2)
+  [semantics] pre_agent(?2, ?1)
+
+NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E1874(NP_animate_nsubj_rec, Rel_pron, VP_RC_agent) 	[0.35]
+  [english] *(*(?1, ?2),?3)
+  [semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
+
+NP_animate_nsubj -> r1789(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
+  [english] *(*(?1, ?2), ?3)
+  [semantics] nmod(pre_det(?2, ?1), ?3)
+
+NP_animate_nsubj_rec -> r1878(NP_animate_nsubj_main) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+NP_animate_nsubj_rec -> r1879(NP_animate_nsubj_main_RC_modified) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+NP_animate_nsubj_main -> r1824(N_prop_nsubj) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+NP_animate_nsubj_main -> r1825(Det, N_common_animate_nsubj) 	[0.5]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
+
+VP_RC_agent -> r1842(V_unerg) 	[0.10525]
+  [english] ?1
+  [semantics] ?1
+
+
+VP_main_anim_subj -> r1919(V_trans_not_omissible, NP_dobj) 	[0.10525]
+  [english] *(?1, ?2)
+  [semantics] theme(?1, ?2)
+
+
+NP_dobj -> r1777(NP_animate_dobj) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
+NP_animate_dobj -> r1782(Det, N_common_animate_dobj) 	[0.25]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
