@@ -185,7 +185,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
           (N_common_animate_nsubj)
         )
       )
-      (V_trans_omissible)
+      (V_trans_not_omissible)
     )
   )
   (VP_main_anim_subj
@@ -229,7 +229,7 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
   )
   (VP_main_anim_subj
     (V_trans_not_omissible)
-    (NP_animate_dobj_rec
+    (NP_dobj
       (NP_animate_dobj
         (Det)
         (N_common_animate_dobj)
