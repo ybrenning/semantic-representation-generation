@@ -1,0 +1,88 @@
+Det  : the | a
+
+AUX  : was
+
+BY  : by
+
+N_common_animate_dobj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_iobj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_nsubj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_animate_nsubjpass  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
+
+N_common_inanimate_dobj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+N_common_inanimate_nsubjpass  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+N_common_inanimate_nsubj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
+
+V_trans_omissible  : ate | painted | drew | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | saw | noticed | studied | examined | observed | knew | investigated
+
+V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse | sketch | juggle | call | hear | pack | see | notice | study | examine | observe | know | investigate
+
+V_trans_omissible_pp  : eaten | painted | drawn | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | seen | noticed | studied | examined | observed | known | investigated
+
+V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+
+V_unerg  : slept | smiled | laughed | sneezed | cried | talked | danced | jogged | walked | ran | napped | snoozed | screamed | stuttered | frowned | giggled | scoffed | snored | smirked | gasped
+
+V_dat_pp  : given | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
+
+V_unacc_pp  : rolled | frozen | burned | shortened | floated | grown | slid | broken | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
+
+V_trans_not_omissible_pp  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | thrown | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+
+V_cp_taking  : liked | hoped | said | noticed | believed | confessed | declared | proved | thought | admired | appreciated | respected | supported | tolerated | valued | wished | dreamed | expected | imagined | meant
+
+N_on  : table | stage | bed | chair | stool | road | tree | box | surface | seat | speaker | computer | rock | boat | cabinet | TV | plate | desk | bowl | bench | shelf | cloth | piano | bible | leaflet | sheet | cupboard | truck | tray | notebook | blanket | deck | coffin | log | ladder | barrel | rug | canvas | tiger | towel | throne | booklet | sock | corpse | sofa | keyboard | book | pillow | pad | train | couch | bike | pedestal | platter | paper | rack | board | panel | tripod | branch | machine | floor | napkin | cookie | block | cot | device | yacht | dog | mattress | ball | stand | stack | windowsill | counter | cushion | hanger | trampoline | gravel | cake | carpet | plaque | boulder | leaf | mound | bun | dish | cat | podium | tabletop | beach | bag | glacier | brick | crack | vessel | futon | turntable | rag | chessboard
+
+N_in  : house | room | car | garden | box | cup | glass | bag | vehicle | hole | cabinet | bottle | shoe | storage | cot | vessel | pot | pit | tin | can | cupboard | envelope | nest | bush | coffin | drawer | container | basin | tent | soup | well | barrel | bucket | cage | sink | cylinder | parcel | cart | sack | trunk | wardrobe | basket | bin | fridge | mug | jar | corner | pool | blender | closet | pile | van | trailer | saucepan | truck | taxi | haystack | dumpster | puddle | bathtub | pod | tub | trap | bun | microwave | bookstore | package | cafe | train | castle | bunker | vase | backpack | tube | hammock | stadium | backyard | swamp | monastery | refrigerator | palace | cubicle | crib | condo | tower | crate | dungeon | teapot | tomb | casket | jeep | shoebox | wagon | bakery | fishbowl | kennel | china | spaceship | penthouse | pyramid
+
+N_beside  : table | stage | bed | chair | book | road | tree | machine | house | seat | speaker | computer | rock | car | box | cup | glass | bag | flower | boat | vehicle | key | painting | cabinet | TV | bottle | cat | desk | shoe | mirror | clock | bench | bike | lamp | lion | piano | crystal | toy | duck | sword | sculpture | rod | truck | basket | bear | nest | sphere | bush | surgeon | poster | throne | giant | trophy | hedge | log | tent | ladder | helicopter | barrel | yacht | statue | bucket | skull | beast | lemon | whale | cage | gardner | fox | sink | trainee | dragon | cylinder | monk | bat | headmaster | philosopher | foreigner | worm | chemist | corpse | wolf | torch | sailor | valve | hammer | doll | genius | baron | murderer | bicycle | keyboard | stool | pepper | warrior | pillar | monkey | cassette | broker | bin
+
+P_on  : on
+
+P_in  : in
+
+P_beside  : beside
+
+P_iobj  : to
+
+Rel_pron  : that
+
+NP_on : Det N_on PP_loc | Det N_on
+
+NP_in : Det N_in PP_loc | Det N_in
+
+NP_beside : Det N_beside PP_loc | Det N_beside
+
+PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
+
+PP_iobj : P_iobj NP_animate_iobj
+
+S : NP_animate_nsubj_main_RC_modified VP_main_anim_subj
+
+NP_animate_nsubj_main_RC_modified : NP_animate_nsubj_main Rel_pron VP_RC_agent
+
+VP_RC_agent : V_trans_not_omissible NP_inanimate_dobj_RC_modified | V_trans_omissible NP_inanimate_dobj_RC_modified
+
+NP_inanimate_dobj_RC_modified : NP_inanimate_dobj Rel_pron VP_RC_pass_theme
+
+NP_inanimate_dobj : Det N_common_inanimate_dobj
+
+VP_RC_pass_theme : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
+
+NP_animate_nsubj : Det N_common_animate_nsubj PP_loc
+
+NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj
+
+VP_main_anim_subj : V_trans_not_omissible NP_dobj
+
+NP_dobj : NP_animate_dobj
+
+NP_animate_dobj : Det N_common_animate_dobj
+
+NP_animate_iobj : Det N_common_animate_iobj | N_prop_iobj
+
