@@ -15,9 +15,9 @@ def clean_line(line):
 
 
 grammars = [
-    "main-grammar.irtg",
-    "RC_modifying_dobj_NP_main-grammar.irtg",
-    "RC_modifying_subject_NP_gen-grammar.irtg"
+    "base/main-grammar.irtg",
+    "base/RC_modifying_dobj_NP_main-grammar.irtg",
+    "base/RC_modifying_subject_NP_gen-grammar.irtg"
 ]
 
 out_file = "combined-grammars.irtg"
