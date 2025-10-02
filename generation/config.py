@@ -1,59 +1,17 @@
-from pathlib import Path
-
-# Base paths
-ROOT_DIR = Path(__file__).parent.parent
-STIM_DIR = ROOT_DIR / "stim"
-AUDIO_DIR = STIM_DIR / "audio"
-SENTENCES_DIR = STIM_DIR / "sentences"
-DATA_DIR = ROOT_DIR / "data"
-
-# API Configuration
 import os
 from dotenv import load_dotenv
+
+# API Configuration
 
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
-# Model Configuration
-# DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
-# DEFAULT_MODEL = "gpt-4o-mini"   # "gpt-4o-mini" or "gpt-4o": we could use the larger model for more complex prompts
 DEFAULT_MODEL = "gpt-4o"
-DEFAULT_TTS_MODEL = "tts-1"
-DEFAULT_VOICE = "alloy"
 
+"""
+Example of the type of prompts this repo is based on:
 
-
-tenses = {
-    "present":"Present - you may use 'I eat', 'My parents are eating', etc.",
-    "past":"Past - you may use 'I ate', 'You were eating', 'He has eaten', 'They had eaten', 'The dogs had been eating', 'The cats used to eat', etc.",
-}
-numbers = {
-    "singular":"Singular - the sentence must be fully singular.",
-    "plural":"Plural - the sentence must be fully plural.",
-}
-themes = {
-    "health": "Health and Mental Health (illness, injury, depression, habits...)",
-    "relationship": "Relationships and Family (children, parents, siblings, friends...)",
-    "housing": "Housing (home, furniture, repairs, cleaning...)",
-    "work": "Work and Education (school, university, jobs, career...)",
-    "shopping": "Shopping and Services (stores, products, prices, sales...)",
-    "weather": "Weather and Seasons (temperature, climate, time of year, natural disasters...)",
-    "emotion": "Emotions and Feelings (happiness, sadness, anger, fear...)",
-    "humanity": "Humanities and Culture (media, politics, economics, religion, history...)",
-    "art": "Art and Creativity (painting, sculpture, photography, writing, music...)",
-    "sport": "Sports and Competitions (exercise, games, fitness...)",
-    "food": "Food and Nutrition (eating, drinking, cooking, diets...)",
-    "transport": "Transportation and Travel (commuting, vehicles, vacations...)",
-    "science": "Science and Technology (math, physics, computers, cars...)",
-    "nature": "Nature and Geography (plants, animals, rivers, mountains...)",
-    "basic": "Basic Sentences and Social phrases (greetings, offer, apology, invitation...)",
-    "daily_routine": "Daily Routines and Activities (wake up, sleep, schedule, habits...)",
-    "entertainment": "Entertainment and Leisure (movies, shows, games, hobbies...)",
-    "communication": "Communication and Language (speaking, writing, messaging, calls...)"
-}
-
-prompt_relatives = """For each sentence, create six base variations, each with three additional variants:
+For each sentence, create six base variations, each with three additional variants:
 
 Base variations:
 1) Baseline (SV): Simple Subject-Verb structure
@@ -124,10 +82,4 @@ Output only the sentences themselves, without any additional information. Exampl
 6b. The doctor who the mother who the school called trusts carefully examines the patient.
 6c. The skilled doctor who the mother who the school called trusts examines the patient.
 6d. The skilled doctor who the mother who the school called trusts carefully examines the patient.
-
 """
-
-
-prompts = {}
-
-prompts["relatives"] = prompt_relatives

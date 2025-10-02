@@ -1,17 +1,8 @@
 from openai import OpenAI
-# from together import Together
 
-from generation.config.config import (
+from generation.config import (
     OPENAI_API_KEY,
-    AUDIO_DIR,
-    SENTENCES_DIR,
     DEFAULT_MODEL,
-    DEFAULT_TTS_MODEL,
-    DEFAULT_VOICE,
-    themes,
-    numbers,
-    tenses,
-    prompts
 )
 
 client = OpenAI(api_key=OPENAI_API_KEY)

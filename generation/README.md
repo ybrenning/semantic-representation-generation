@@ -1,3 +1,7 @@
+# Generation
+
+The main code used for the prompting of `gpt-4o` in this directory was adapted from the `neurospin-new-protocol` repository. Parts of the code base have been modified or removed for this project's module structure -- the rest of this README is that of the original repo:
+
 # neurospin-new-protocol
 
 
