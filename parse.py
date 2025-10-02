@@ -115,12 +115,12 @@ def parse_sents(sent_path, grammar_path, verbose=False):
         f"{sent_path}"
     )
 
-    result = subprocess.run(
-        command, shell=True, capture_output=True, text=True
-    )
-
     if verbose:
-        print(result.stdout)
+        subprocess.run(command, shell=True)
+    else:
+        subprocess.run(
+            command, shell=True, capture_output=True, text=True
+        )
 
     print("Saved representations in variable-free format to", varfree_path)
 
@@ -132,7 +132,7 @@ def main():
     grammar_path = sys.argv[2]
     assert sent_path.endswith(".txt")
     assert grammar_path.endswith(".irtg")
-    parse_sents(sent_path, grammar_path)
+    parse_sents(sent_path, grammar_path, verbose=True)
 
 
 if __name__ == "__main__":

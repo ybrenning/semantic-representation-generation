@@ -55,22 +55,22 @@ def parse_args():
     parser.add_argument(
         "grammar_path",
         type=str,
-        help="Path to the IRTG grammar file (.irtg)."
+        help="Path to the IRTG grammar file"
     )
     parser.add_argument(
         "n_prompts",
         type=int,
-        help="Number of times to prompt."
+        help="Number of times to prompt the model"
     )
     parser.add_argument(
         "n_sets",
         type=int,
-        help="Number of sentence sets per prompt"
+        help="Number of sets (each containing 6 sentences) per prompt"
     )
     parser.add_argument(
         "-v", "--verbose",
         action="store_true",
-        help="Enable verbose output."
+        help="Enable verbose output"
     )
 
     args = parser.parse_args()

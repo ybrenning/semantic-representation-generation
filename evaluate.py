@@ -90,7 +90,11 @@ def infer_n_prompts(varfree_path):
 
 
 def evaluate_parse(
-    varfree_path, grammar_path, show_stats=True, show_oov=True
+    varfree_path,
+    grammar_path,
+    show_stats=True,
+    show_oov=True,
+    save_metrics=True
 ):
     metrics = {}
 
@@ -124,9 +128,12 @@ def evaluate_parse(
     metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
     metrics["accuracies"] = get_parse_accuracies(lines)
-    with open(metrics_path, "w") as f:
-        json.dump(metrics, f)
-        print("Saved scores to", metrics_path)
+    if save_metrics:
+        with open(metrics_path, "w") as f:
+            json.dump(metrics, f)
+            print("Saved scores to", metrics_path)
+
+    return metrics
 
 
 def main():
@@ -139,7 +146,8 @@ def main():
         varfree_path,
         grammar_path,
         show_stats=True,
-        show_oov=True
+        show_oov=True,
+        save_metrics=False
     )
 
 
