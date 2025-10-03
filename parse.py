@@ -1,12 +1,20 @@
 import subprocess
-import sys
 from utils import read_grammar, en_header
 
 
 rel_prons = ["which", "who", "whom"]
 
+grammars = [
+    "grammars/g1.irtg",
+    "grammars/g2.irtg",
+    "grammars/g3.irtg",
+    "grammars/g4.irtg",
+    "grammars/g5.irtg",
+    "grammars/g6.irtg"
+]
 
-def format_sents(response_path):
+
+def format_sents(response_path, verbose=False):
     with open(response_path, "r") as f:
         lines = f.readlines()
 
@@ -39,7 +47,8 @@ def format_sents(response_path):
         )
         with open(sent_path, "w") as f:
             f.write(content)
-            print("Saved sentences to", sent_path)
+            if verbose:
+                print("Saved formatted sentences to", sent_path)
 
 
 def lexical_parse(sent_path, lex, show_oov=False):
@@ -70,92 +79,21 @@ def lexical_parse(sent_path, lex, show_oov=False):
             oov_count += oov_current_sent
             oov_sents += 1 if oov_current_sent != 0 else oov_current_sent
 
+    if show_oov:
+        print()
+
     return oov_count, oov_sents, sent_count, words
 
 
-def parse_sents_old(sent_path, grammar_path, verbose=False):
-    if grammar_path.endswith(".irtg"):
-        grammar_path_irtg = grammar_path
-        grammar_path_ebnf = grammar_path.replace(".irtg", ".ebnf")
-
-    lexical_parse(
-        sent_path,
-        grammar_path_ebnf,
-        show_oov=verbose
-    )
-
-    varfree_path = "output/varfree_lf/" + sent_path.split("/")[-1]
-    command = (
-        "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
-        "de.up.ling.irtg.script.ParsingEvaluator "
-        f"-g {grammar_path_irtg} "
-        "-I english -O semantics=cogs "
-        f"-o {varfree_path} "
-        "--no-derivations "
-        f"{sent_path}"
-    )
-
-    if verbose:
-        subprocess.run(command, shell=True)
-    else:
-        subprocess.run(
-            command, shell=True, capture_output=True, text=True
-        )
-
-    print("Saved representations in variable-free format to", varfree_path)
-
-    return varfree_path
-
-
-grammars = [
-    "grammars/g1.irtg",
-    "grammars/g2.irtg",
-    "grammars/g3.irtg",
-    "grammars/g4.irtg",
-    "grammars/g5.irtg",
-    "grammars/g6.irtg"
-]
-
-
 def parse_sents(
-        sent_path,
-        base_grammar_path,
-        sent_grammar_path,
-        verbose=False
+    response_path,
+    base_grammar_path,
+    verbose=False
 ):
-    varfree_path = sent_path.replace("english", "varfree_lf")
-    command = (
-        "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
-        "de.up.ling.irtg.script.ParsingEvaluator "
-        f"-g {sent_grammar_path} "
-        "-I english -O semantics=cogs "
-        f"-o {varfree_path} "
-        "--no-derivations "
-        f"{sent_path}"
-    )
-
-    if verbose:
-        subprocess.run(command, shell=True)
-    else:
-        subprocess.run(
-            command, shell=True, capture_output=True, text=True
-        )
-
-
-def main():
-    response_path = "generation/responses/prompt-newest-10-responses-18.txt"
-    format_sents(response_path)
-    # assert 0
-    # sent_path = sys.argv[1]
-    # grammar_path = sys.argv[2]
-    # assert sent_path.endswith(".txt")
-    # assert grammar_path.endswith(".irtg")
-    show_stats = True
     oov_count = 0
     oov_sents = 0
     sent_count = 0
     words = set()
-    base_grammar_path = "grammars/preprocessed-combined.irtg"
 
     if base_grammar_path.endswith(".irtg"):
         grammar_path = base_grammar_path.replace(".irtg", ".ebnf")
@@ -173,7 +111,9 @@ def main():
             sent_count_cur,
             words_cur
         ) = lexical_parse(
-            sent_path, lex, show_oov=True
+            sent_path,
+            lex,
+            show_oov=verbose
         )
 
         oov_count += oov_count_cur
@@ -183,14 +123,29 @@ def main():
 
         sent_grammar_path = grammars[i % 6]
 
-        parse_sents(
-            sent_path, base_grammar_path, sent_grammar_path, verbose=True
+        varfree_path = sent_path.replace("english", "varfree_lf")
+        command = (
+            "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
+            "de.up.ling.irtg.script.ParsingEvaluator "
+            f"-g {sent_grammar_path} "
+            "-I english -O semantics=cogs "
+            f"-o {varfree_path} "
+            "--no-derivations "
+            f"{sent_path}"
         )
+
+        if verbose:
+            subprocess.run(command, shell=True)
+            print()
+        else:
+            subprocess.run(
+                command, shell=True, capture_output=True, text=True
+            )
 
     oov_pct_total = oov_count / len(words)
     oov_pct_sent = oov_sents / sent_count
 
-    if show_stats:
+    if verbose:
         print("-----------")
         print(
             f"Total OOV percentage: "
@@ -203,6 +158,16 @@ def main():
             f"{oov_pct_sent:.2%}"
         )
         print("-----------")
+
+    return oov_pct_total, oov_pct_sent
+
+
+def main():
+    # TODO: Response, grammar, verbose command line args
+    response_path = "generation/responses/prompt-newest-10-responses-18.txt"
+    base_grammar_path = "grammars/preprocessed-combined.irtg"
+    format_sents(response_path, verbose=True)
+    parse_sents(response_path, base_grammar_path, verbose=True)
 
 
 if __name__ == "__main__":
