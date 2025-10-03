@@ -1,4 +1,5 @@
 import json
+import numpy as np
 import sys
 from parse import lexical_parse
 
@@ -90,65 +91,48 @@ def infer_n_prompts(varfree_path):
 
 
 def evaluate_parse(
-    varfree_path,
+    response_path,
     grammar_path,
-    show_stats=True,
-    show_oov=True,
+    verbose=False,
     save_metrics=True
 ):
-    metrics = {}
 
-    sent_path = "output/english/" + varfree_path.split("/")[-1]
     metrics_path = (
         "output/metrics/" +
-        varfree_path.split("/")[-1].replace(".txt", ".json")
+        response_path.split("/")[-1].replace(".txt", ".json")
     )
 
-    with open(varfree_path, "r") as f:
-        lines = f.readlines()
+    parses = []
+    for i in range(0, 6):
+        varfree_path = (
+            f"output/varfree_lf/{i + 1}/" + response_path.split("/")[-1]
+        )
 
-    assert len(lines) % 6 == 0, "File must contain 6-sentence batches"
+        with open(varfree_path, "r") as f:
+            lines = [line.strip() for line in f.readlines()]
 
-    n_prompts = infer_n_prompts(varfree_path)
-    sents_per_prompt = len(lines) / n_prompts
-    batches_per_prompt = int(sents_per_prompt / 6)
+        bools = np.array([line != "<null>" for line in lines], dtype=bool)
+        parses.append(bools)
+        assert len(lines) % 6 == 0, "File must contain 6-sentence batches"
 
-    metrics["n_prompts"] = n_prompts
-    metrics["n_batches"] = batches_per_prompt
-    metrics["n_sents"] = len(lines)
+    assert len(parses) == 6
+    parses = np.stack(parses)
+    print(parses)
 
-    # Show vocab-specific information
-    oov_pct_total, oov_pct_sent = lexical_parse(
-        sent_path,
-        grammar_path,
-        show_stats=show_stats,
-        show_oov=show_oov
-    )
+    # Accuracy per sentence type
+    sent_accs = parses.mean(axis=1) 
+    # Accuracy of batches
+    batch_acc = parses.all(axis=0).mean()
 
-    metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
-
-    metrics["accuracies"] = get_parse_accuracies(lines)
-    if save_metrics:
-        with open(metrics_path, "w") as f:
-            json.dump(metrics, f)
-            print("Saved scores to", metrics_path)
-
-    return metrics
+    return sent_accs, batch_acc
 
 
 def main():
     # TODO: make argparse
-    varfree_path = sys.argv[1]
-    grammar_path = sys.argv[2]
-    assert varfree_path.endswith(".txt")
-
-    evaluate_parse(
-        varfree_path,
-        grammar_path,
-        show_stats=True,
-        show_oov=True,
-        save_metrics=False
-    )
+    response_path = "generation/responses/prompt-newest-10-responses-18.txt"
+    base_grammar_path = "grammars/preprocessed-combined.irtg"
+    sent_accs, batch_acc = evaluate_parse(response_path, base_grammar_path, verbose=True)
+    print(sent_accs, batch_acc)
 
 
 if __name__ == "__main__":
