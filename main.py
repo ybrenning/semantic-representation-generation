@@ -1,6 +1,7 @@
 import argparse
+import json
 
-from generation.src.utils import test_pipeline
+from generation.utils import test_pipeline
 from parse import format_sents, parse_sents
 from evaluate import evaluate_parse
 from generation.prompt import prompt_from_grammar
@@ -63,9 +64,9 @@ def parse_args():
         help="Number of times to prompt the model"
     )
     parser.add_argument(
-        "n_sets",
+        "n_batches",
         type=int,
-        help="Number of sets (each containing 6 sentences) per prompt"
+        help="Number of batches (each containing 6 sentences) per prompt"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -85,31 +86,52 @@ def main():
     args = parse_args()
     grammar_path = args.grammar_path
     n_prompts = args.n_prompts
-    n_sets = args.n_sets
+    n_batches = args.n_batches
     verbose = args.verbose
 
-    n_sents = n_prompts * n_sets * 6
+    n_sents = n_prompts * n_batches * 6
+
+    metrics = {}
+
+    metrics["n_prompts"] = n_prompts
+    metrics["n_batches"] = n_batches
+    metrics["n_sents"] = n_sents
     english, semantics = [], []
     while len(semantics) != n_sents:
         # Generation step
         response_path = generation_loop(
             grammar_path,
             n_prompts,
-            n_sets,
+            n_batches,
             verbose
         )
 
         # Format and parse steps
         sent_path = format_sents(response_path)
-        varfree_path = parse_sents(sent_path, grammar_path)
+        varfree_path = parse_sents(response_path, grammar_path)
+
+        format_sents(response_path, verbose=verbose)
+        oov_pct_total, oov_pct_sent = parse_sents(
+            response_path, grammar_path, verbose=verbose
+        )
+
+        metrics_path = (
+            "output/metrics/" +
+            response_path.split("/")[-1].replace(".txt", ".json")
+        )
+        metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
         # Evaluation step
-        evaluate_parse(
-            varfree_path,
+        accs = evaluate_parse(
+            response_path,
             grammar_path,
-            show_stats=True,
-            show_oov=verbose
+            verbose=verbose,
         )
+        metrics["accs"] = accs
+        with open(metrics_path, "w") as f:
+            json.dump(metrics, f)
+            print("Saved scores to", metrics_path)
+        assert 0
 
         # Filtering step
         en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
