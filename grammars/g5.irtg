@@ -3744,6 +3744,15 @@ VP_RC_pass_theme -> r1841(AUX, V_dat_pp, PP_iobj, BY,NP_animate_nsubj) 	[0.125]
   [semantics] agent(recipient(?2,?3),?5)
 
 
+
+NP_animate_nsubj -> r1787(Det, N_common_animate_nsubj) 	[0.5]
+  [english] *(?1, ?2)
+  [semantics] pre_det(?2, ?1)
+
+NP_animate_nsubj -> r1788(N_prop_nsubj) 	[0.5]
+  [english] ?1
+  [semantics] ?1
+
 NP_animate_nsubj -> r1789(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
