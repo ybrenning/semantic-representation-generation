@@ -1,0 +1,36 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the student helped the scientist
+the student in the garden helped the scientist
+the student that danced helped the scientist
+the student that the doctor adored helped the scientist
+the student that adored the pickle that was eaten helped the scientist
+the student that the doctor that the lawyer respected adored helped the scientist
+the guest adored the tourist
+the guest on the yacht adored the tourist
+the guest that napped adored the tourist
+the guest that the boy respected adored the tourist
+the guest that respected the toy that was painted adored the tourist
+the guest that the boy that the girl admired respected adored the tourist
+the queen helped the servant
+the queen on the rock helped the servant
+the queen that laughed helped the servant
+the queen that the farmer adored helped the servant
+the queen that adored the pickle that was painted helped the servant
+the queen that the farmer that the friend appreciated adored helped the servant
+the penguin admired the turkey
+the penguin on the yacht admired the turkey
+the penguin that napped admired the turkey
+the penguin that the deer adored admired the turkey
+the penguin that adored the donut that was eaten admired the turkey
+the penguin that the deer that the horse loved adored admired the turkey
+the king appreciated the professor
+the king on the throne appreciated the professor
+the king that laughed appreciated the professor
+the king that the prince respected appreciated the professor
+the king that respected the newspaper that was painted appreciated the professor
+the king that the prince that the bear admired respected appreciated the professor
