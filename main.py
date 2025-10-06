@@ -1,15 +1,11 @@
 import argparse
 import json
+import numpy as np
 
 from generation.utils import test_pipeline
 from parse import format_sents, parse_sents
-from evaluate import evaluate_parse
+from evaluate import get_non_null_lines, get_non_rep_lines, get_accuracies
 from generation.prompt import prompt_from_grammar
-from postprocess import (
-    handle_null_sents,
-    handle_incorrect_sents,
-    handle_repetition_sents
-)
 from utils import get_safe_filename, en_header
 
 
@@ -106,41 +102,60 @@ def main():
             verbose
         )
 
-        # Format and parse steps
-        sent_path = format_sents(response_path)
-        varfree_path = parse_sents(response_path, grammar_path)
-
+        # Format and parse model outputs
         format_sents(response_path, verbose=verbose)
         oov_pct_total, oov_pct_sent = parse_sents(
             response_path, grammar_path, verbose=verbose
         )
 
+        # Evaluate and filter
+        # TODO: Put all this in an eval block
         metrics_path = (
             "output/metrics/" +
             response_path.split("/")[-1].replace(".txt", ".json")
         )
         metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
-        # Evaluation step
-        accs = evaluate_parse(
+        non_null_lines = get_non_null_lines(
             response_path,
             grammar_path,
-            verbose=verbose,
         )
+        accs = get_accuracies(non_null_lines, verbose=verbose)
         metrics["accs"] = accs
+
+        valid_lines = get_non_rep_lines(response_path, non_null_lines)
+        rep_accs = get_accuracies(valid_lines, verbose=verbose)
+        metrics["rep_accs"] = rep_accs
+
         with open(metrics_path, "w") as f:
             json.dump(metrics, f)
             print("Saved scores to", metrics_path)
-        assert 0
 
         # Filtering step
-        en_lines, vf_lines = handle_null_sents(sent_path, varfree_path)
-        en_lines, vf_lines, n_incorrect = handle_incorrect_sents(
-            en_lines, vf_lines
-        )
-        en_lines, vf_lines, n_repetitions = handle_repetition_sents(
-            en_lines, vf_lines
-        )
+        valid_batches = valid_lines.all(axis=0)
+        en_lines = []
+        vf_lines = []
+        for i in range(0, 6):
+            en_lines_cur = []
+            vf_lines_cur = []
+            sent_path = (
+                f"output/english/{i + 1}/" + response_path.split("/")[-1]
+            )
+            varfree_path = (
+                f"output/varfree_lf/{i + 1}/" + response_path.split("/")[-1]
+            )
+
+            with open(sent_path, "r") as f:
+
+                en_lines_cur = np.array([
+                    line for line in f.readlines()
+                    if line.strip() and not line.startswith("//")
+                ], dtype=object)
+            with open(varfree_path, "r") as f:
+                vf_lines_cur = np.array(f.readlines(), dtype=object)
+
+            en_lines.extend(en_lines_cur[valid_batches])
+            vf_lines.extend(vf_lines_cur[valid_batches])
 
         if not english and not semantics:
             english = en_lines.copy()
@@ -153,8 +168,8 @@ def main():
 
         print("Generated", len(semantics), "/", n_sents)
 
-    sent_path_out = "data/english/" + sent_path.split("/")[-1]
-    varfree_path_out = "data/varfree_lf/" + sent_path.split("/")[-1]
+    sent_path_out = "data/english/" + response_path.split("/")[-1]
+    varfree_path_out = "data/varfree_lf/" + response_path.split("/")[-1]
 
     with open(sent_path_out, "w") as f:
         f.write(en_header + "".join(english))

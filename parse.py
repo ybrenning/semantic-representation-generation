@@ -98,6 +98,7 @@ def parse_sents(
     if base_grammar_path.endswith(".irtg"):
         grammar_path = base_grammar_path.replace(".irtg", ".ebnf")
 
+    # Use the base grammar as lexicon
     lex = read_grammar(grammar_path, lex_only=True)
 
     for i in range(0, 6):
@@ -121,6 +122,7 @@ def parse_sents(
         sent_count += sent_count_cur
         words.update(words_cur)
 
+        # Use the separate sentence grammars to parse
         sent_grammar_path = grammars[i % 6]
 
         varfree_path = sent_path.replace("english", "varfree_lf")
@@ -164,9 +166,9 @@ def parse_sents(
 
 def main():
     # TODO: Response, grammar, verbose command line args
-    response_path = "generation/responses/prompt-newest-10-responses-18.txt"
+    response_path = "generation/responses/prompt-newest-response-36.txt"
     base_grammar_path = "grammars/preprocessed-combined.irtg"
-    format_sents(response_path, verbose=True)
+    # format_sents(response_path, verbose=True)
     parse_sents(response_path, base_grammar_path, verbose=True)
 
 
