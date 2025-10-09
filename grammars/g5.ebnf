@@ -2,7 +2,11 @@ Det  : the | a
 
 AUX  : was
 
+C  : that
+
 BY  : by
+
+INF  : to
 
 N_common_animate_dobj  : girl | boy | cat | dog | baby | child | teacher | frog | chicken | mouse | lion | monkey | bear | giraffe | horse | bird | duck | bunny | butterfly | penguin | student | professor | monster | hero | sailor | lawyer | customer | scientist | princess | president | cow | crocodile | goose | hen | deer | donkey | bee | fly | kitty | tiger | wolf | zebra | mother | father | patient | manager | director | king | queen | kid | fish | moose | pig | pony | puppy | sheep | squirrel | lamb | turkey | turtle | doctor | pupil | prince | driver | consumer | writer | farmer | friend | judge | visitor | guest | servant | chief | citizen | champion | prisoner | captain | soldier | passenger | tenant | politician | resident | buyer | spokesman | governor | guard | creature | coach | producer | researcher | guy | dealer | duke | tourist | landlord | human | host | priest | journalist | poet
 
@@ -18,23 +22,13 @@ N_common_inanimate_nsubjpass  : cake | donut | cookie | box | rose | drink | rai
 
 N_common_inanimate_nsubj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
 
-V_trans_omissible  : ate | painted | drew | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | saw | noticed | studied | examined | observed | knew | investigated
+N_prop_dobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
 
-V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse | sketch | juggle | call | hear | pack | see | notice | study | examine | observe | know | investigate
+N_prop_iobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
 
-V_trans_omissible_pp  : eaten | painted | drawn | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | seen | noticed | studied | examined | observed | known | investigated
+N_prop_nsubj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
 
-V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
-
-V_unerg  : slept | smiled | laughed | sneezed | cried | talked | danced | jogged | walked | ran | napped | snoozed | screamed | stuttered | frowned | giggled | scoffed | snored | smirked | gasped
-
-V_dat_pp  : given | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
-
-V_unacc_pp  : rolled | frozen | burned | shortened | floated | grown | slid | broken | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
-
-V_trans_not_omissible_pp  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | thrown | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
-
-V_cp_taking  : liked | hoped | said | noticed | believed | confessed | declared | proved | thought | admired | appreciated | respected | supported | tolerated | valued | wished | dreamed | expected | imagined | meant
+N_prop_nsubjpass  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
 
 N_on  : table | stage | bed | chair | stool | road | tree | box | surface | seat | speaker | computer | rock | boat | cabinet | TV | plate | desk | bowl | bench | shelf | cloth | piano | bible | leaflet | sheet | cupboard | truck | tray | notebook | blanket | deck | coffin | log | ladder | barrel | rug | canvas | tiger | towel | throne | booklet | sock | corpse | sofa | keyboard | book | pillow | pad | train | couch | bike | pedestal | platter | paper | rack | board | panel | tripod | branch | machine | floor | napkin | cookie | block | cot | device | yacht | dog | mattress | ball | stand | stack | windowsill | counter | cushion | hanger | trampoline | gravel | cake | carpet | plaque | boulder | leaf | mound | bun | dish | cat | podium | tabletop | beach | bag | glacier | brick | crack | vessel | futon | turntable | rag | chessboard
 
@@ -51,6 +45,40 @@ P_beside  : beside
 P_iobj  : to
 
 Rel_pron  : that
+
+V_trans_omissible  : ate | painted | drew | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | saw | noticed | studied | examined | observed | knew | investigated
+
+V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse | sketch | juggle | call | hear | pack | see | notice | study | examine | observe | know | investigate
+
+V_trans_omissible_pp  : eaten | painted | drawn | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | seen | noticed | studied | examined | observed | known | investigated
+
+V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed | saw | heard | noticed | watched | felt | grabbed | carried | caught | lifted | hit | supported | guided | followed | trusted | recognized | kissed | hugged | pushed | pulled | reached
+
+V_trans_not_omissible_inf  : like | help | find | love | poke | admire | adore | appreciate | miss | respect | throw | tolerate | value | worship | discover | hold | stab | touch | pierce | toss | see | hear | notice | watch | feel | grab | carry | catch | lift | hit | support | guide | follow | trust | recognize | kiss | hug | push | pull | reach
+
+V_trans_not_omissible_pp  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | thrown | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+
+V_cp_taking  : liked | hoped | said | noticed | believed | confessed | declared | proved | thought | admired | appreciated | respected | supported | tolerated | valued | wished | dreamed | expected | imagined | meant
+
+V_cp_taking_inf  : like | hope | say | notice | believe | confess | declare | prove | think | admire | appreciate | respect | support | tolerate | value | wish | dream | expect | imagine | mean
+
+V_inf_taking  : wanted | preferred | needed | intended | tried | attempted | planned | expected | hoped | wished | craved | liked | hated | loved | enjoyed | dreamed | meant | longed | yearned | itched
+
+V_unacc  : rolled | froze | burned | shortened | floated | grew | slid | broke | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
+
+V_unacc_inf  : roll | freeze | burn | shorten | float | grow | slide | break | crumple | split | change | snap | disintegrate | collapse | decompose | double | improve | inflate | enlarge | redden
+
+V_unacc_pp  : rolled | frozen | burned | shortened | floated | grown | slid | broken | crumpled | split | changed | snapped | disintegrated | collapsed | decomposed | doubled | improved | inflated | enlarged | reddened
+
+V_unerg  : slept | smiled | laughed | sneezed | cried | talked | danced | jogged | walked | ran | napped | snoozed | screamed | stuttered | frowned | giggled | scoffed | snored | smirked | gasped
+
+V_inf  : walk | run | sleep | sneeze | nap | eat | read | cook | hunt | paint | talk | dance | giggle | jog | smirk | call | sketch | dust | clean | investigate
+
+V_dat  : gave | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
+
+V_dat_pp  : given | lent | sold | offered | fed | passed | sent | rented | served | awarded | brought | handed | forwarded | promised | mailed | loaned | posted | returned | slipped | wired
+
+V_dat_inf  : give | lend | sell | offer | feed | pass | send | rent | serve | award | bring | hand | forward | promise | mail | loan | post | return | slip | wire
 
 NP_on : Det N_on PP_loc | Det N_on
 
@@ -74,7 +102,7 @@ NP_inanimate_dobj : Det N_common_inanimate_dobj
 
 VP_RC_pass_theme : AUX V_trans_not_omissible_pp | AUX V_trans_not_omissible_pp BY NP_animate_nsubj | AUX V_trans_omissible_pp | AUX V_trans_omissible_pp BY NP_animate_nsubj | AUX V_unacc_pp | AUX V_unacc_pp BY NP_animate_nsubj | AUX V_dat_pp PP_iobj | AUX V_dat_pp PP_iobj BY NP_animate_nsubj
 
-NP_animate_nsubj : Det N_common_animate_nsubj PP_loc
+NP_animate_nsubj : Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj PP_loc
 
 NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj
 

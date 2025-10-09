@@ -39,7 +39,28 @@
   'tossed':'toss', 'meant':'mean', 'longed':'long', 'yearned':'yearn', 'itched':'itch',
   'loaned':'loan', 'returned':'return', 'slipped':'slip', 'wired':'wire', 'crawled':'crawl',
   'shattered':'shatter', 'bought':'buy', 'squeezed':'squeeze', 'teleported':'teleport',
-  'melted':'melt', 'blessed':'bless'
+  'melted':'melt', 'blessed':'bless',
+
+  'observed': 'observe',
+  'saw': 'see',
+  'noticed': 'notice',
+  'watched': 'watch',
+  'examined': 'examine',
+  'heard': 'hear',
+  'recognized': 'recognize',
+  'trusted': 'trust',
+  'supported': 'support',
+  'guided': 'guide',
+  'kissed': 'kiss',
+  'hugged': 'hug',
+  'pushed': 'push',
+  'caught': 'catch',
+  'carried': 'carry',
+  'saved': 'save',
+  'called': 'call',
+  'investigated': 'investigate',
+  'knew': 'know',
+  'believed': 'believe'
 } %}
 
 {% set pos_d = {
@@ -278,7 +299,12 @@ V_trans_omissible_pp -> r{{ cnt.next() }} [{{ prob }}]
   'liked', 'helped', 'found', 'loved', 'poked',
   'admired', 'adored', 'appreciated', 'missed', 'respected',
   'threw', 'tolerated', 'valued', 'worshipped', 'discovered',
-  'held', 'stabbed', 'touched', 'pierced', 'tossed'
+  'held', 'stabbed', 'touched', 'pierced', 'tossed',
+
+  'observed', 'saw', 'noticed', 'watched', 'examined',
+  'heard', 'recognized', 'trusted', 'supported', 'guided',
+  'kissed', 'hugged', 'pushed', 'caught', 'carried',
+  'saved', 'called', 'investigated', 'knew', 'believed'
 ] %}
 
 {% for word, prob in V_trans_not_omissible|zipf -%}

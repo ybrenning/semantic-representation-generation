@@ -25,6 +25,26 @@ Det -> r2 	[0.5]
   [english] a
   [semantics] a
 
+AUX -> r3 	[1]
+  [english] was
+  [semantics] was
+
+C -> r4 	[1]
+  [english] that
+  [semantics] that
+
+BY -> r5 	[1]
+  [english] by
+  [semantics] by
+
+INF -> r6 	[1]
+  [english] to
+  [semantics] to
+
+
+
+
+
 N_common_animate_dobj -> r7 	[0.3232777469287676]
   [english] girl
   [semantics] girl
@@ -2133,258 +2153,1215 @@ N_common_inanimate_nsubj -> r706 	[0.001783653476184728]
   [semantics] liver
 
 
-V_trans_omissible -> r1412 	[0.33402836011058906]
-  [english] ate
-  [semantics] eat
-V_trans_omissible -> r1413 	[0.13404078858765317]
-  [english] painted
-  [semantics] paint
-V_trans_omissible -> r1414 	[0.08118983449041972]
-  [english] drew
-  [semantics] draw
-V_trans_omissible -> r1415 	[0.05825966977427891]
-  [english] cleaned
-  [semantics] clean
-V_trans_omissible -> r1416 	[0.045854068200707636]
-  [english] cooked
-  [semantics] cook
-V_trans_omissible -> r1417 	[0.03823290310401458]
-  [english] dusted
-  [semantics] dust
-V_trans_omissible -> r1418 	[0.03314541629748973]
-  [english] hunted
-  [semantics] hunt
-V_trans_omissible -> r1419 	[0.029543995470747868]
-  [english] nursed
-  [semantics] nurse
-V_trans_omissible -> r1420 	[0.026880623601982966]
-  [english] sketched
-  [semantics] sketch
-V_trans_omissible -> r1421 	[0.024843151515100505]
-  [english] juggled
-  [semantics] juggle
-V_trans_omissible -> r1422 	[0.023241837743417502]
-  [english] called
-  [semantics] call
-V_trans_omissible -> r1423 	[0.021955269966808383]
-  [english] heard
-  [semantics] hear
-V_trans_omissible -> r1424 	[0.02090245596302799]
-  [english] packed
-  [semantics] pack
-V_trans_omissible -> r1425 	[0.020027472958170183]
-  [english] saw
-  [semantics] see
-V_trans_omissible -> r1426 	[0.01929057149807447]
-  [english] noticed
-  [semantics] notice
-V_trans_omissible -> r1427 	[0.018662789655653128]
-  [english] studied
-  [semantics] study
-V_trans_omissible -> r1428 	[0.018122569172347593]
-  [english] examined
-  [semantics] examine
-V_trans_omissible -> r1429 	[0.01765356043958695]
-  [english] observed
-  [semantics] observe
-V_trans_omissible -> r1430 	[0.01724315855931527]
-  [english] knew
-  [semantics] know
-V_trans_omissible -> r1431 	[0.016881502890614384]
-  [english] investigated
-  [semantics] investigate
-
-
-V_trans_omissible_inf -> r1432 	[0.33402836011058906]
-  [english] eat
-  [semantics] eat
-V_trans_omissible_inf -> r1433 	[0.13404078858765317]
-  [english] paint
-  [semantics] paint
-V_trans_omissible_inf -> r1434 	[0.08118983449041972]
-  [english] draw
-  [semantics] draw
-V_trans_omissible_inf -> r1435 	[0.05825966977427891]
-  [english] clean
-  [semantics] clean
-V_trans_omissible_inf -> r1436 	[0.045854068200707636]
-  [english] cook
-  [semantics] cook
-V_trans_omissible_inf -> r1437 	[0.03823290310401458]
-  [english] dust
-  [semantics] dust
-V_trans_omissible_inf -> r1438 	[0.03314541629748973]
-  [english] hunt
-  [semantics] hunt
-V_trans_omissible_inf -> r1439 	[0.029543995470747868]
-  [english] nurse
-  [semantics] nurse
-V_trans_omissible_inf -> r1440 	[0.026880623601982966]
-  [english] sketch
-  [semantics] sketch
-V_trans_omissible_inf -> r1441 	[0.024843151515100505]
-  [english] juggle
-  [semantics] juggle
-V_trans_omissible_inf -> r1442 	[0.023241837743417502]
-  [english] call
-  [semantics] call
-V_trans_omissible_inf -> r1443 	[0.021955269966808383]
-  [english] hear
-  [semantics] hear
-V_trans_omissible_inf -> r1444 	[0.02090245596302799]
-  [english] pack
-  [semantics] pack
-V_trans_omissible_inf -> r1445 	[0.020027472958170183]
-  [english] see
-  [semantics] see
-V_trans_omissible_inf -> r1446 	[0.01929057149807447]
-  [english] notice
-  [semantics] notice
-V_trans_omissible_inf -> r1447 	[0.018662789655653128]
-  [english] study
-  [semantics] study
-V_trans_omissible_inf -> r1448 	[0.018122569172347593]
-  [english] examine
-  [semantics] examine
-V_trans_omissible_inf -> r1449 	[0.01765356043958695]
-  [english] observe
-  [semantics] observe
-V_trans_omissible_inf -> r1450 	[0.01724315855931527]
-  [english] know
-  [semantics] know
-V_trans_omissible_inf -> r1451 	[0.016881502890614384]
-  [english] investigate
-  [semantics] investigate
-
-
-
-V_trans_omissible_pp -> r1452 	[0.33402836011058906]
-  [english] eaten
-  [semantics] eat
-V_trans_omissible_pp -> r1453 	[0.13404078858765317]
-  [english] painted
-  [semantics] paint
-V_trans_omissible_pp -> r1454 	[0.08118983449041972]
-  [english] drawn
-  [semantics] draw
-V_trans_omissible_pp -> r1455 	[0.05825966977427891]
-  [english] cleaned
-  [semantics] clean
-V_trans_omissible_pp -> r1456 	[0.045854068200707636]
-  [english] cooked
-  [semantics] cook
-V_trans_omissible_pp -> r1457 	[0.03823290310401458]
-  [english] dusted
-  [semantics] dust
-V_trans_omissible_pp -> r1458 	[0.03314541629748973]
-  [english] hunted
-  [semantics] hunt
-V_trans_omissible_pp -> r1459 	[0.029543995470747868]
-  [english] nursed
-  [semantics] nurse
-V_trans_omissible_pp -> r1460 	[0.026880623601982966]
-  [english] sketched
-  [semantics] sketch
-V_trans_omissible_pp -> r1461 	[0.024843151515100505]
-  [english] juggled
-  [semantics] juggle
-V_trans_omissible_pp -> r1462 	[0.023241837743417502]
-  [english] called
-  [semantics] call
-V_trans_omissible_pp -> r1463 	[0.021955269966808383]
-  [english] heard
-  [semantics] hear
-V_trans_omissible_pp -> r1464 	[0.02090245596302799]
-  [english] packed
-  [semantics] pack
-V_trans_omissible_pp -> r1465 	[0.020027472958170183]
-  [english] seen
-  [semantics] see
-V_trans_omissible_pp -> r1466 	[0.01929057149807447]
-  [english] noticed
-  [semantics] notice
-V_trans_omissible_pp -> r1467 	[0.018662789655653128]
-  [english] studied
-  [semantics] study
-V_trans_omissible_pp -> r1468 	[0.018122569172347593]
-  [english] examined
-  [semantics] examine
-V_trans_omissible_pp -> r1469 	[0.01765356043958695]
-  [english] observed
-  [semantics] observe
-V_trans_omissible_pp -> r1470 	[0.01724315855931527]
-  [english] known
-  [semantics] know
-V_trans_omissible_pp -> r1471 	[0.016881502890614384]
-  [english] investigated
-  [semantics] investigate
 
 
 
 
+N_prop_dobj -> r707 	[0.3232777469287676]
+  [english] Emma
+  [semantics] Emma
+N_prop_iobj -> r708 	[0.3232777469287676]
+  [english] Emma
+  [semantics] Emma
+N_prop_nsubj -> r709 	[0.3232777469287676]
+  [english] Emma
+  [semantics] Emma
+N_prop_nsubjpass -> r710 	[0.3232777469287676]
+  [english] Emma
+  [semantics] Emma
+N_prop_dobj -> r711 	[0.12329017540583168]
+  [english] Liam
+  [semantics] Liam
+N_prop_iobj -> r712 	[0.12329017540583168]
+  [english] Liam
+  [semantics] Liam
+N_prop_nsubj -> r713 	[0.12329017540583168]
+  [english] Liam
+  [semantics] Liam
+N_prop_nsubjpass -> r714 	[0.12329017540583168]
+  [english] Liam
+  [semantics] Liam
+N_prop_dobj -> r715 	[0.07043922130859823]
+  [english] Olivia
+  [semantics] Olivia
+N_prop_iobj -> r716 	[0.07043922130859823]
+  [english] Olivia
+  [semantics] Olivia
+N_prop_nsubj -> r717 	[0.07043922130859823]
+  [english] Olivia
+  [semantics] Olivia
+N_prop_nsubjpass -> r718 	[0.07043922130859823]
+  [english] Olivia
+  [semantics] Olivia
+N_prop_dobj -> r719 	[0.04750905659245742]
+  [english] Noah
+  [semantics] Noah
+N_prop_iobj -> r720 	[0.04750905659245742]
+  [english] Noah
+  [semantics] Noah
+N_prop_nsubj -> r721 	[0.04750905659245742]
+  [english] Noah
+  [semantics] Noah
+N_prop_nsubjpass -> r722 	[0.04750905659245742]
+  [english] Noah
+  [semantics] Noah
+N_prop_dobj -> r723 	[0.03510345501888614]
+  [english] Ava
+  [semantics] Ava
+N_prop_iobj -> r724 	[0.03510345501888614]
+  [english] Ava
+  [semantics] Ava
+N_prop_nsubj -> r725 	[0.03510345501888614]
+  [english] Ava
+  [semantics] Ava
+N_prop_nsubjpass -> r726 	[0.03510345501888614]
+  [english] Ava
+  [semantics] Ava
+N_prop_dobj -> r727 	[0.027482289922193086]
+  [english] William
+  [semantics] William
+N_prop_iobj -> r728 	[0.027482289922193086]
+  [english] William
+  [semantics] William
+N_prop_nsubj -> r729 	[0.027482289922193086]
+  [english] William
+  [semantics] William
+N_prop_nsubjpass -> r730 	[0.027482289922193086]
+  [english] William
+  [semantics] William
+N_prop_dobj -> r731 	[0.022394803115668237]
+  [english] Isabella
+  [semantics] Isabella
+N_prop_iobj -> r732 	[0.022394803115668237]
+  [english] Isabella
+  [semantics] Isabella
+N_prop_nsubj -> r733 	[0.022394803115668237]
+  [english] Isabella
+  [semantics] Isabella
+N_prop_nsubjpass -> r734 	[0.022394803115668237]
+  [english] Isabella
+  [semantics] Isabella
+N_prop_dobj -> r735 	[0.018793382288926373]
+  [english] James
+  [semantics] James
+N_prop_iobj -> r736 	[0.018793382288926373]
+  [english] James
+  [semantics] James
+N_prop_nsubj -> r737 	[0.018793382288926373]
+  [english] James
+  [semantics] James
+N_prop_nsubjpass -> r738 	[0.018793382288926373]
+  [english] James
+  [semantics] James
+N_prop_dobj -> r739 	[0.016130010420161472]
+  [english] Sophia
+  [semantics] Sophia
+N_prop_iobj -> r740 	[0.016130010420161472]
+  [english] Sophia
+  [semantics] Sophia
+N_prop_nsubj -> r741 	[0.016130010420161472]
+  [english] Sophia
+  [semantics] Sophia
+N_prop_nsubjpass -> r742 	[0.016130010420161472]
+  [english] Sophia
+  [semantics] Sophia
+N_prop_dobj -> r743 	[0.01409253833327901]
+  [english] Oliver
+  [semantics] Oliver
+N_prop_iobj -> r744 	[0.01409253833327901]
+  [english] Oliver
+  [semantics] Oliver
+N_prop_nsubj -> r745 	[0.01409253833327901]
+  [english] Oliver
+  [semantics] Oliver
+N_prop_nsubjpass -> r746 	[0.01409253833327901]
+  [english] Oliver
+  [semantics] Oliver
+N_prop_dobj -> r747 	[0.01249122456159601]
+  [english] Charlotte
+  [semantics] Charlotte
+N_prop_iobj -> r748 	[0.01249122456159601]
+  [english] Charlotte
+  [semantics] Charlotte
+N_prop_nsubj -> r749 	[0.01249122456159601]
+  [english] Charlotte
+  [semantics] Charlotte
+N_prop_nsubjpass -> r750 	[0.01249122456159601]
+  [english] Charlotte
+  [semantics] Charlotte
+N_prop_dobj -> r751 	[0.011204656784986888]
+  [english] Benjamin
+  [semantics] Benjamin
+N_prop_iobj -> r752 	[0.011204656784986888]
+  [english] Benjamin
+  [semantics] Benjamin
+N_prop_nsubj -> r753 	[0.011204656784986888]
+  [english] Benjamin
+  [semantics] Benjamin
+N_prop_nsubjpass -> r754 	[0.011204656784986888]
+  [english] Benjamin
+  [semantics] Benjamin
+N_prop_dobj -> r755 	[0.0101518427812065]
+  [english] Mia
+  [semantics] Mia
+N_prop_iobj -> r756 	[0.0101518427812065]
+  [english] Mia
+  [semantics] Mia
+N_prop_nsubj -> r757 	[0.0101518427812065]
+  [english] Mia
+  [semantics] Mia
+N_prop_nsubjpass -> r758 	[0.0101518427812065]
+  [english] Mia
+  [semantics] Mia
+N_prop_dobj -> r759 	[0.00927685977634869]
+  [english] Elijah
+  [semantics] Elijah
+N_prop_iobj -> r760 	[0.00927685977634869]
+  [english] Elijah
+  [semantics] Elijah
+N_prop_nsubj -> r761 	[0.00927685977634869]
+  [english] Elijah
+  [semantics] Elijah
+N_prop_nsubjpass -> r762 	[0.00927685977634869]
+  [english] Elijah
+  [semantics] Elijah
+N_prop_dobj -> r763 	[0.008539958316252975]
+  [english] Amelia
+  [semantics] Amelia
+N_prop_iobj -> r764 	[0.008539958316252975]
+  [english] Amelia
+  [semantics] Amelia
+N_prop_nsubj -> r765 	[0.008539958316252975]
+  [english] Amelia
+  [semantics] Amelia
+N_prop_nsubjpass -> r766 	[0.008539958316252975]
+  [english] Amelia
+  [semantics] Amelia
+N_prop_dobj -> r767 	[0.007912176473831635]
+  [english] Lucas
+  [semantics] Lucas
+N_prop_iobj -> r768 	[0.007912176473831635]
+  [english] Lucas
+  [semantics] Lucas
+N_prop_nsubj -> r769 	[0.007912176473831635]
+  [english] Lucas
+  [semantics] Lucas
+N_prop_nsubjpass -> r770 	[0.007912176473831635]
+  [english] Lucas
+  [semantics] Lucas
+N_prop_dobj -> r771 	[0.007371955990526101]
+  [english] Harper
+  [semantics] Harper
+N_prop_iobj -> r772 	[0.007371955990526101]
+  [english] Harper
+  [semantics] Harper
+N_prop_nsubj -> r773 	[0.007371955990526101]
+  [english] Harper
+  [semantics] Harper
+N_prop_nsubjpass -> r774 	[0.007371955990526101]
+  [english] Harper
+  [semantics] Harper
+N_prop_dobj -> r775 	[0.006902947257765458]
+  [english] Mason
+  [semantics] Mason
+N_prop_iobj -> r776 	[0.006902947257765458]
+  [english] Mason
+  [semantics] Mason
+N_prop_nsubj -> r777 	[0.006902947257765458]
+  [english] Mason
+  [semantics] Mason
+N_prop_nsubjpass -> r778 	[0.006902947257765458]
+  [english] Mason
+  [semantics] Mason
+N_prop_dobj -> r779 	[0.006492545377493775]
+  [english] Evelyn
+  [semantics] Evelyn
+N_prop_iobj -> r780 	[0.006492545377493775]
+  [english] Evelyn
+  [semantics] Evelyn
+N_prop_nsubj -> r781 	[0.006492545377493775]
+  [english] Evelyn
+  [semantics] Evelyn
+N_prop_nsubjpass -> r782 	[0.006492545377493775]
+  [english] Evelyn
+  [semantics] Evelyn
+N_prop_dobj -> r783 	[0.006130889708792891]
+  [english] Logan
+  [semantics] Logan
+N_prop_iobj -> r784 	[0.006130889708792891]
+  [english] Logan
+  [semantics] Logan
+N_prop_nsubj -> r785 	[0.006130889708792891]
+  [english] Logan
+  [semantics] Logan
+N_prop_nsubjpass -> r786 	[0.006130889708792891]
+  [english] Logan
+  [semantics] Logan
+N_prop_dobj -> r787 	[0.005810165241298672]
+  [english] Abigail
+  [semantics] Abigail
+N_prop_iobj -> r788 	[0.005810165241298672]
+  [english] Abigail
+  [semantics] Abigail
+N_prop_nsubj -> r789 	[0.005810165241298672]
+  [english] Abigail
+  [semantics] Abigail
+N_prop_nsubjpass -> r790 	[0.005810165241298672]
+  [english] Abigail
+  [semantics] Abigail
+N_prop_dobj -> r791 	[0.005524105255812598]
+  [english] Alexander
+  [semantics] Alexander
+N_prop_iobj -> r792 	[0.005524105255812598]
+  [english] Alexander
+  [semantics] Alexander
+N_prop_nsubj -> r793 	[0.005524105255812598]
+  [english] Alexander
+  [semantics] Alexander
+N_prop_nsubjpass -> r794 	[0.005524105255812598]
+  [english] Alexander
+  [semantics] Alexander
+N_prop_dobj -> r795 	[0.005267631108556986]
+  [english] Emily
+  [semantics] Emily
+N_prop_iobj -> r796 	[0.005267631108556986]
+  [english] Emily
+  [semantics] Emily
+N_prop_nsubj -> r797 	[0.005267631108556986]
+  [english] Emily
+  [semantics] Emily
+N_prop_nsubjpass -> r798 	[0.005267631108556986]
+  [english] Emily
+  [semantics] Emily
+N_prop_dobj -> r799 	[0.005036587232576374]
+  [english] Ethan
+  [semantics] Ethan
+N_prop_iobj -> r800 	[0.005036587232576374]
+  [english] Ethan
+  [semantics] Ethan
+N_prop_nsubj -> r801 	[0.005036587232576374]
+  [english] Ethan
+  [semantics] Ethan
+N_prop_nsubjpass -> r802 	[0.005036587232576374]
+  [english] Ethan
+  [semantics] Ethan
+N_prop_dobj -> r803 	[0.004827543410259287]
+  [english] Elizabeth
+  [semantics] Elizabeth
+N_prop_iobj -> r804 	[0.004827543410259287]
+  [english] Elizabeth
+  [semantics] Elizabeth
+N_prop_nsubj -> r805 	[0.004827543410259287]
+  [english] Elizabeth
+  [semantics] Elizabeth
+N_prop_nsubjpass -> r806 	[0.004827543410259287]
+  [english] Elizabeth
+  [semantics] Elizabeth
+N_prop_dobj -> r807 	[0.004637645325830355]
+  [english] Jacob
+  [semantics] Jacob
+N_prop_iobj -> r808 	[0.004637645325830355]
+  [english] Jacob
+  [semantics] Jacob
+N_prop_nsubj -> r809 	[0.004637645325830355]
+  [english] Jacob
+  [semantics] Jacob
+N_prop_nsubjpass -> r810 	[0.004637645325830355]
+  [english] Jacob
+  [semantics] Jacob
+N_prop_dobj -> r811 	[0.0044645002686127455]
+  [english] Mila
+  [semantics] Mila
+N_prop_iobj -> r812 	[0.0044645002686127455]
+  [english] Mila
+  [semantics] Mila
+N_prop_nsubj -> r813 	[0.0044645002686127455]
+  [english] Mila
+  [semantics] Mila
+N_prop_nsubjpass -> r814 	[0.0044645002686127455]
+  [english] Mila
+  [semantics] Mila
+N_prop_dobj -> r815 	[0.004306088766860848]
+  [english] Michael
+  [semantics] Michael
+N_prop_iobj -> r816 	[0.004306088766860848]
+  [english] Michael
+  [semantics] Michael
+N_prop_nsubj -> r817 	[0.004306088766860848]
+  [english] Michael
+  [semantics] Michael
+N_prop_nsubjpass -> r818 	[0.004306088766860848]
+  [english] Michael
+  [semantics] Michael
+N_prop_dobj -> r819 	[0.004160695583202333]
+  [english] Ella
+  [semantics] Ella
+N_prop_iobj -> r820 	[0.004160695583202333]
+  [english] Ella
+  [semantics] Ella
+N_prop_nsubj -> r821 	[0.004160695583202333]
+  [english] Ella
+  [semantics] Ella
+N_prop_nsubjpass -> r822 	[0.004160695583202333]
+  [english] Ella
+  [semantics] Ella
+N_prop_dobj -> r823 	[0.004026855329122654]
+  [english] Daniel
+  [semantics] Daniel
+N_prop_iobj -> r824 	[0.004026855329122654]
+  [english] Daniel
+  [semantics] Daniel
+N_prop_nsubj -> r825 	[0.004026855329122654]
+  [english] Daniel
+  [semantics] Daniel
+N_prop_nsubjpass -> r826 	[0.004026855329122654]
+  [english] Daniel
+  [semantics] Daniel
+N_prop_dobj -> r827 	[0.0039033092322919875]
+  [english] Avery
+  [semantics] Avery
+N_prop_iobj -> r828 	[0.0039033092322919875]
+  [english] Avery
+  [semantics] Avery
+N_prop_nsubj -> r829 	[0.0039033092322919875]
+  [english] Avery
+  [semantics] Avery
+N_prop_nsubjpass -> r830 	[0.0039033092322919875]
+  [english] Avery
+  [semantics] Avery
+N_prop_dobj -> r831 	[0.0037889704944445426]
+  [english] Henry
+  [semantics] Henry
+N_prop_iobj -> r832 	[0.0037889704944445426]
+  [english] Henry
+  [semantics] Henry
+N_prop_nsubj -> r833 	[0.0037889704944445426]
+  [english] Henry
+  [semantics] Henry
+N_prop_nsubjpass -> r834 	[0.0037889704944445426]
+  [english] Henry
+  [semantics] Henry
+N_prop_dobj -> r835 	[0.0036828963255982608]
+  [english] Sofia
+  [semantics] Sofia
+N_prop_iobj -> r836 	[0.0036828963255982608]
+  [english] Sofia
+  [semantics] Sofia
+N_prop_nsubj -> r837 	[0.0036828963255982608]
+  [english] Sofia
+  [semantics] Sofia
+N_prop_nsubjpass -> r838 	[0.0036828963255982608]
+  [english] Sofia
+  [semantics] Sofia
+N_prop_dobj -> r839 	[0.003584265210415929]
+  [english] Jackson
+  [semantics] Jackson
+N_prop_iobj -> r840 	[0.003584265210415929]
+  [english] Jackson
+  [semantics] Jackson
+N_prop_nsubj -> r841 	[0.003584265210415929]
+  [english] Jackson
+  [semantics] Jackson
+N_prop_nsubjpass -> r842 	[0.003584265210415929]
+  [english] Jackson
+  [semantics] Jackson
+N_prop_dobj -> r843 	[0.00349235830704766]
+  [english] Camila
+  [semantics] Camila
+N_prop_iobj -> r844 	[0.00349235830704766]
+  [english] Camila
+  [semantics] Camila
+N_prop_nsubj -> r845 	[0.00349235830704766]
+  [english] Camila
+  [semantics] Camila
+N_prop_nsubjpass -> r846 	[0.00349235830704766]
+  [english] Camila
+  [semantics] Camila
+N_prop_dobj -> r847 	[0.0034065441338950904]
+  [english] Sebastian
+  [semantics] Sebastian
+N_prop_iobj -> r848 	[0.0034065441338950904]
+  [english] Sebastian
+  [semantics] Sebastian
+N_prop_nsubj -> r849 	[0.0034065441338950904]
+  [english] Sebastian
+  [semantics] Sebastian
+N_prop_nsubjpass -> r850 	[0.0034065441338950904]
+  [english] Sebastian
+  [semantics] Sebastian
+N_prop_dobj -> r851 	[0.00332626589039579]
+  [english] Aria
+  [semantics] Aria
+N_prop_iobj -> r852 	[0.00332626589039579]
+  [english] Aria
+  [semantics] Aria
+N_prop_nsubj -> r853 	[0.00332626589039579]
+  [english] Aria
+  [semantics] Aria
+N_prop_nsubjpass -> r854 	[0.00332626589039579]
+  [english] Aria
+  [semantics] Aria
+N_prop_dobj -> r855 	[0.0032510309016813886]
+  [english] Aiden
+  [semantics] Aiden
+N_prop_iobj -> r856 	[0.0032510309016813886]
+  [english] Aiden
+  [semantics] Aiden
+N_prop_nsubj -> r857 	[0.0032510309016813886]
+  [english] Aiden
+  [semantics] Aiden
+N_prop_nsubjpass -> r858 	[0.0032510309016813886]
+  [english] Aiden
+  [semantics] Aiden
+N_prop_dobj -> r859 	[0.0031804017862549824]
+  [english] Scarlett
+  [semantics] Scarlett
+N_prop_iobj -> r860 	[0.0031804017862549824]
+  [english] Scarlett
+  [semantics] Scarlett
+N_prop_nsubj -> r861 	[0.0031804017862549824]
+  [english] Scarlett
+  [semantics] Scarlett
+N_prop_nsubjpass -> r862 	[0.0031804017862549824]
+  [english] Scarlett
+  [semantics] Scarlett
+N_prop_dobj -> r863 	[0.0031139890295758072]
+  [english] Matthew
+  [semantics] Matthew
+N_prop_iobj -> r864 	[0.0031139890295758072]
+  [english] Matthew
+  [semantics] Matthew
+N_prop_nsubj -> r865 	[0.0031139890295758072]
+  [english] Matthew
+  [semantics] Matthew
+N_prop_nsubjpass -> r866 	[0.0031139890295758072]
+  [english] Matthew
+  [semantics] Matthew
+N_prop_dobj -> r867 	[0.003051444711079731]
+  [english] Victoria
+  [semantics] Victoria
+N_prop_iobj -> r868 	[0.003051444711079731]
+  [english] Victoria
+  [semantics] Victoria
+N_prop_nsubj -> r869 	[0.003051444711079731]
+  [english] Victoria
+  [semantics] Victoria
+N_prop_nsubjpass -> r870 	[0.003051444711079731]
+  [english] Victoria
+  [semantics] Victoria
+N_prop_dobj -> r871 	[0.002992457182409254]
+  [english] Samuel
+  [semantics] Samuel
+N_prop_iobj -> r872 	[0.002992457182409254]
+  [english] Samuel
+  [semantics] Samuel
+N_prop_nsubj -> r873 	[0.002992457182409254]
+  [english] Samuel
+  [semantics] Samuel
+N_prop_nsubjpass -> r874 	[0.002992457182409254]
+  [english] Samuel
+  [semantics] Samuel
+N_prop_dobj -> r875 	[0.002936746533941153]
+  [english] Madison
+  [semantics] Madison
+N_prop_iobj -> r876 	[0.002936746533941153]
+  [english] Madison
+  [semantics] Madison
+N_prop_nsubj -> r877 	[0.002936746533941153]
+  [english] Madison
+  [semantics] Madison
+N_prop_nsubjpass -> r878 	[0.002936746533941153]
+  [english] Madison
+  [semantics] Madison
+N_prop_dobj -> r879 	[0.0028840607176550126]
+  [english] David
+  [semantics] David
+N_prop_iobj -> r880 	[0.0028840607176550126]
+  [english] David
+  [semantics] David
+N_prop_nsubj -> r881 	[0.0028840607176550126]
+  [english] David
+  [semantics] David
+N_prop_nsubjpass -> r882 	[0.0028840607176550126]
+  [english] David
+  [semantics] David
+N_prop_dobj -> r883 	[0.002834172218904694]
+  [english] Luna
+  [semantics] Luna
+N_prop_iobj -> r884 	[0.002834172218904694]
+  [english] Luna
+  [semantics] Luna
+N_prop_nsubj -> r885 	[0.002834172218904694]
+  [english] Luna
+  [semantics] Luna
+N_prop_nsubjpass -> r886 	[0.002834172218904694]
+  [english] Luna
+  [semantics] Luna
+N_prop_dobj -> r887 	[0.0027868751891857732]
+  [english] Joseph
+  [semantics] Joseph
+N_prop_iobj -> r888 	[0.0027868751891857732]
+  [english] Joseph
+  [semantics] Joseph
+N_prop_nsubj -> r889 	[0.0027868751891857732]
+  [english] Joseph
+  [semantics] Joseph
+N_prop_nsubjpass -> r890 	[0.0027868751891857732]
+  [english] Joseph
+  [semantics] Joseph
+N_prop_dobj -> r891 	[0.0027419829676340332]
+  [english] Grace
+  [semantics] Grace
+N_prop_iobj -> r892 	[0.0027419829676340332]
+  [english] Grace
+  [semantics] Grace
+N_prop_nsubj -> r893 	[0.0027419829676340332]
+  [english] Grace
+  [semantics] Grace
+N_prop_nsubjpass -> r894 	[0.0027419829676340332]
+  [english] Grace
+  [semantics] Grace
+N_prop_dobj -> r895 	[0.0026993259315821264]
+  [english] Carter
+  [semantics] Carter
+N_prop_iobj -> r896 	[0.0026993259315821264]
+  [english] Carter
+  [semantics] Carter
+N_prop_nsubj -> r897 	[0.0026993259315821264]
+  [english] Carter
+  [semantics] Carter
+N_prop_nsubjpass -> r898 	[0.0026993259315821264]
+  [english] Carter
+  [semantics] Carter
+N_prop_dobj -> r899 	[0.0026587496266880987]
+  [english] Chloe
+  [semantics] Chloe
+N_prop_iobj -> r900 	[0.0026587496266880987]
+  [english] Chloe
+  [semantics] Chloe
+N_prop_nsubj -> r901 	[0.0026587496266880987]
+  [english] Chloe
+  [semantics] Chloe
+N_prop_nsubjpass -> r902 	[0.0026587496266880987]
+  [english] Chloe
+  [semantics] Chloe
+N_prop_dobj -> r903 	[0.00262011313542896]
+  [english] Owen
+  [semantics] Owen
+N_prop_iobj -> r904 	[0.00262011313542896]
+  [english] Owen
+  [semantics] Owen
+N_prop_nsubj -> r905 	[0.00262011313542896]
+  [english] Owen
+  [semantics] Owen
+N_prop_nsubjpass -> r906 	[0.00262011313542896]
+  [english] Owen
+  [semantics] Owen
+N_prop_dobj -> r907 	[0.002583287649512057]
+  [english] Penelope
+  [semantics] Penelope
+N_prop_iobj -> r908 	[0.002583287649512057]
+  [english] Penelope
+  [semantics] Penelope
+N_prop_nsubj -> r909 	[0.002583287649512057]
+  [english] Penelope
+  [semantics] Penelope
+N_prop_nsubjpass -> r910 	[0.002583287649512057]
+  [english] Penelope
+  [semantics] Penelope
+N_prop_dobj -> r911 	[0.0025481552172995792]
+  [english] Wyatt
+  [semantics] Wyatt
+N_prop_iobj -> r912 	[0.0025481552172995792]
+  [english] Wyatt
+  [semantics] Wyatt
+N_prop_nsubj -> r913 	[0.0025481552172995792]
+  [english] Wyatt
+  [semantics] Wyatt
+N_prop_nsubjpass -> r914 	[0.0025481552172995792]
+  [english] Wyatt
+  [semantics] Wyatt
+N_prop_dobj -> r915 	[0.0025146076419048425]
+  [english] Layla
+  [semantics] Layla
+N_prop_iobj -> r916 	[0.0025146076419048425]
+  [english] Layla
+  [semantics] Layla
+N_prop_nsubj -> r917 	[0.0025146076419048425]
+  [english] Layla
+  [semantics] Layla
+N_prop_nsubjpass -> r918 	[0.0025146076419048425]
+  [english] Layla
+  [semantics] Layla
+N_prop_dobj -> r919 	[0.002482545509391049]
+  [english] John
+  [semantics] John
+N_prop_iobj -> r920 	[0.002482545509391049]
+  [english] John
+  [semantics] John
+N_prop_nsubj -> r921 	[0.002482545509391049]
+  [english] John
+  [semantics] John
+N_prop_nsubjpass -> r922 	[0.002482545509391049]
+  [english] John
+  [semantics] John
+N_prop_dobj -> r923 	[0.002451877329632957]
+  [english] Riley
+  [semantics] Riley
+N_prop_iobj -> r924 	[0.002451877329632957]
+  [english] Riley
+  [semantics] Riley
+N_prop_nsubj -> r925 	[0.002451877329632957]
+  [english] Riley
+  [semantics] Riley
+N_prop_nsubjpass -> r926 	[0.002451877329632957]
+  [english] Riley
+  [semantics] Riley
+N_prop_dobj -> r927 	[0.0024225187750082635]
+  [english] Jack
+  [semantics] Jack
+N_prop_iobj -> r928 	[0.0024225187750082635]
+  [english] Jack
+  [semantics] Jack
+N_prop_nsubj -> r929 	[0.0024225187750082635]
+  [english] Jack
+  [semantics] Jack
+N_prop_nsubjpass -> r930 	[0.0024225187750082635]
+  [english] Jack
+  [semantics] Jack
+N_prop_dobj -> r931 	[0.0023943920042635543]
+  [english] Zoey
+  [semantics] Zoey
+N_prop_iobj -> r932 	[0.0023943920042635543]
+  [english] Zoey
+  [semantics] Zoey
+N_prop_nsubj -> r933 	[0.0023943920042635543]
+  [english] Zoey
+  [semantics] Zoey
+N_prop_nsubjpass -> r934 	[0.0023943920042635543]
+  [english] Zoey
+  [semantics] Zoey
+N_prop_dobj -> r935 	[0.002367425060726038]
+  [english] Luke
+  [semantics] Luke
+N_prop_iobj -> r936 	[0.002367425060726038]
+  [english] Luke
+  [semantics] Luke
+N_prop_nsubj -> r937 	[0.002367425060726038]
+  [english] Luke
+  [semantics] Luke
+N_prop_nsubjpass -> r938 	[0.002367425060726038]
+  [english] Luke
+  [semantics] Luke
+N_prop_dobj -> r939 	[0.002341551335568623]
+  [english] Nora
+  [semantics] Nora
+N_prop_iobj -> r940 	[0.002341551335568623]
+  [english] Nora
+  [semantics] Nora
+N_prop_nsubj -> r941 	[0.002341551335568623]
+  [english] Nora
+  [semantics] Nora
+N_prop_nsubjpass -> r942 	[0.002341551335568623]
+  [english] Nora
+  [semantics] Nora
+N_prop_dobj -> r943 	[0.0023167090881324056]
+  [english] Jayden
+  [semantics] Jayden
+N_prop_iobj -> r944 	[0.0023167090881324056]
+  [english] Jayden
+  [semantics] Jayden
+N_prop_nsubj -> r945 	[0.0023167090881324056]
+  [english] Jayden
+  [semantics] Jayden
+N_prop_nsubjpass -> r946 	[0.0023167090881324056]
+  [english] Jayden
+  [semantics] Jayden
+N_prop_dobj -> r947 	[0.0022928410164080315]
+  [english] Lily
+  [semantics] Lily
+N_prop_iobj -> r948 	[0.0022928410164080315]
+  [english] Lily
+  [semantics] Lily
+N_prop_nsubj -> r949 	[0.0022928410164080315]
+  [english] Lily
+  [semantics] Lily
+N_prop_nsubjpass -> r950 	[0.0022928410164080315]
+  [english] Lily
+  [semantics] Lily
+N_prop_dobj -> r951 	[0.002269893871708921]
+  [english] Dylan
+  [semantics] Dylan
+N_prop_iobj -> r952 	[0.002269893871708921]
+  [english] Dylan
+  [semantics] Dylan
+N_prop_nsubj -> r953 	[0.002269893871708921]
+  [english] Dylan
+  [semantics] Dylan
+N_prop_nsubjpass -> r954 	[0.002269893871708921]
+  [english] Dylan
+  [semantics] Dylan
+N_prop_dobj -> r955 	[0.0022478181123623915]
+  [english] Eleanor
+  [semantics] Eleanor
+N_prop_iobj -> r956 	[0.0022478181123623915]
+  [english] Eleanor
+  [semantics] Eleanor
+N_prop_nsubj -> r957 	[0.0022478181123623915]
+  [english] Eleanor
+  [semantics] Eleanor
+N_prop_nsubjpass -> r958 	[0.0022478181123623915]
+  [english] Eleanor
+  [semantics] Eleanor
+N_prop_dobj -> r959 	[0.0022265675919216055]
+  [english] Grayson
+  [semantics] Grayson
+N_prop_iobj -> r960 	[0.0022265675919216055]
+  [english] Grayson
+  [semantics] Grayson
+N_prop_nsubj -> r961 	[0.0022265675919216055]
+  [english] Grayson
+  [semantics] Grayson
+N_prop_nsubjpass -> r962 	[0.0022265675919216055]
+  [english] Grayson
+  [semantics] Grayson
+N_prop_dobj -> r963 	[0.002206099277980612]
+  [english] Hannah
+  [semantics] Hannah
+N_prop_iobj -> r964 	[0.002206099277980612]
+  [english] Hannah
+  [semantics] Hannah
+N_prop_nsubj -> r965 	[0.002206099277980612]
+  [english] Hannah
+  [semantics] Hannah
+N_prop_nsubjpass -> r966 	[0.002206099277980612]
+  [english] Hannah
+  [semantics] Hannah
+N_prop_dobj -> r967 	[0.0021863729981718228]
+  [english] Levi
+  [semantics] Levi
+N_prop_iobj -> r968 	[0.0021863729981718228]
+  [english] Levi
+  [semantics] Levi
+N_prop_nsubj -> r969 	[0.0021863729981718228]
+  [english] Levi
+  [semantics] Levi
+N_prop_nsubjpass -> r970 	[0.0021863729981718228]
+  [english] Levi
+  [semantics] Levi
+N_prop_dobj -> r971 	[0.002167351210352821]
+  [english] Lillian
+  [semantics] Lillian
+N_prop_iobj -> r972 	[0.002167351210352821]
+  [english] Lillian
+  [semantics] Lillian
+N_prop_nsubj -> r973 	[0.002167351210352821]
+  [english] Lillian
+  [semantics] Lillian
+N_prop_nsubjpass -> r974 	[0.002167351210352821]
+  [english] Lillian
+  [semantics] Lillian
+N_prop_dobj -> r975 	[0.002148998794358009]
+  [english] Isaac
+  [semantics] Isaac
+N_prop_iobj -> r976 	[0.002148998794358009]
+  [english] Isaac
+  [semantics] Isaac
+N_prop_nsubj -> r977 	[0.002148998794358009]
+  [english] Isaac
+  [semantics] Isaac
+N_prop_nsubjpass -> r978 	[0.002148998794358009]
+  [english] Isaac
+  [semantics] Isaac
+N_prop_dobj -> r979 	[0.002131282863009186]
+  [english] Addison
+  [semantics] Addison
+N_prop_iobj -> r980 	[0.002131282863009186]
+  [english] Addison
+  [semantics] Addison
+N_prop_nsubj -> r981 	[0.002131282863009186]
+  [english] Addison
+  [semantics] Addison
+N_prop_nsubjpass -> r982 	[0.002131282863009186]
+  [english] Addison
+  [semantics] Addison
+N_prop_dobj -> r983 	[0.00211417259035502]
+  [english] Gabriel
+  [semantics] Gabriel
+N_prop_iobj -> r984 	[0.00211417259035502]
+  [english] Gabriel
+  [semantics] Gabriel
+N_prop_nsubj -> r985 	[0.00211417259035502]
+  [english] Gabriel
+  [semantics] Gabriel
+N_prop_nsubjpass -> r986 	[0.00211417259035502]
+  [english] Gabriel
+  [semantics] Gabriel
+N_prop_dobj -> r987 	[0.002097639055348888]
+  [english] Aubrey
+  [semantics] Aubrey
+N_prop_iobj -> r988 	[0.002097639055348888]
+  [english] Aubrey
+  [semantics] Aubrey
+N_prop_nsubj -> r989 	[0.002097639055348888]
+  [english] Aubrey
+  [semantics] Aubrey
+N_prop_nsubjpass -> r990 	[0.002097639055348888]
+  [english] Aubrey
+  [semantics] Aubrey
+N_prop_dobj -> r991 	[0.002081655099382835]
+  [english] Julian
+  [semantics] Julian
+N_prop_iobj -> r992 	[0.002081655099382835]
+  [english] Julian
+  [semantics] Julian
+N_prop_nsubj -> r993 	[0.002081655099382835]
+  [english] Julian
+  [semantics] Julian
+N_prop_nsubjpass -> r994 	[0.002081655099382835]
+  [english] Julian
+  [semantics] Julian
+N_prop_dobj -> r995 	[0.002066195196276984]
+  [english] Ellie
+  [semantics] Ellie
+N_prop_iobj -> r996 	[0.002066195196276984]
+  [english] Ellie
+  [semantics] Ellie
+N_prop_nsubj -> r997 	[0.002066195196276984]
+  [english] Ellie
+  [semantics] Ellie
+N_prop_nsubjpass -> r998 	[0.002066195196276984]
+  [english] Ellie
+  [semantics] Ellie
+N_prop_dobj -> r999 	[0.0020512353334822733]
+  [english] Mateo
+  [semantics] Mateo
+N_prop_iobj -> r1000 	[0.0020512353334822733]
+  [english] Mateo
+  [semantics] Mateo
+N_prop_nsubj -> r1001 	[0.0020512353334822733]
+  [english] Mateo
+  [semantics] Mateo
+N_prop_nsubjpass -> r1002 	[0.0020512353334822733]
+  [english] Mateo
+  [semantics] Mateo
+N_prop_dobj -> r1003 	[0.002036752903393135]
+  [english] Stella
+  [semantics] Stella
+N_prop_iobj -> r1004 	[0.002036752903393135]
+  [english] Stella
+  [semantics] Stella
+N_prop_nsubj -> r1005 	[0.002036752903393135]
+  [english] Stella
+  [semantics] Stella
+N_prop_nsubjpass -> r1006 	[0.002036752903393135]
+  [english] Stella
+  [semantics] Stella
+N_prop_dobj -> r1007 	[0.002022726603788363]
+  [english] Anthony
+  [semantics] Anthony
+N_prop_iobj -> r1008 	[0.002022726603788363]
+  [english] Anthony
+  [semantics] Anthony
+N_prop_nsubj -> r1009 	[0.002022726603788363]
+  [english] Anthony
+  [semantics] Anthony
+N_prop_nsubjpass -> r1010 	[0.002022726603788363]
+  [english] Anthony
+  [semantics] Anthony
+N_prop_dobj -> r1011 	[0.002009136346525235]
+  [english] Natalie
+  [semantics] Natalie
+N_prop_iobj -> r1012 	[0.002009136346525235]
+  [english] Natalie
+  [semantics] Natalie
+N_prop_nsubj -> r1013 	[0.002009136346525235]
+  [english] Natalie
+  [semantics] Natalie
+N_prop_nsubjpass -> r1014 	[0.002009136346525235]
+  [english] Natalie
+  [semantics] Natalie
+N_prop_dobj -> r1015 	[0.0019959631737059185]
+  [english] Jaxon
+  [semantics] Jaxon
+N_prop_iobj -> r1016 	[0.0019959631737059185]
+  [english] Jaxon
+  [semantics] Jaxon
+N_prop_nsubj -> r1017 	[0.0019959631737059185]
+  [english] Jaxon
+  [semantics] Jaxon
+N_prop_nsubjpass -> r1018 	[0.0019959631737059185]
+  [english] Jaxon
+  [semantics] Jaxon
+N_prop_dobj -> r1019 	[0.0019831891806180346]
+  [english] Zoe
+  [semantics] Zoe
+N_prop_iobj -> r1020 	[0.0019831891806180346]
+  [english] Zoe
+  [semantics] Zoe
+N_prop_nsubj -> r1021 	[0.0019831891806180346]
+  [english] Zoe
+  [semantics] Zoe
+N_prop_nsubjpass -> r1022 	[0.0019831891806180346]
+  [english] Zoe
+  [semantics] Zoe
+N_prop_dobj -> r1023 	[0.001970797444824356]
+  [english] Lincoln
+  [semantics] Lincoln
+N_prop_iobj -> r1024 	[0.001970797444824356]
+  [english] Lincoln
+  [semantics] Lincoln
+N_prop_nsubj -> r1025 	[0.001970797444824356]
+  [english] Lincoln
+  [semantics] Lincoln
+N_prop_nsubjpass -> r1026 	[0.001970797444824356]
+  [english] Lincoln
+  [semantics] Lincoln
+N_prop_dobj -> r1027 	[0.001958771960841278]
+  [english] Leah
+  [semantics] Leah
+N_prop_iobj -> r1028 	[0.001958771960841278]
+  [english] Leah
+  [semantics] Leah
+N_prop_nsubj -> r1029 	[0.001958771960841278]
+  [english] Leah
+  [semantics] Leah
+N_prop_nsubjpass -> r1030 	[0.001958771960841278]
+  [english] Leah
+  [semantics] Leah
+N_prop_dobj -> r1031 	[0.0019470975799029545]
+  [english] Joshua
+  [semantics] Joshua
+N_prop_iobj -> r1032 	[0.0019470975799029545]
+  [english] Joshua
+  [semantics] Joshua
+N_prop_nsubj -> r1033 	[0.0019470975799029545]
+  [english] Joshua
+  [semantics] Joshua
+N_prop_nsubjpass -> r1034 	[0.0019470975799029545]
+  [english] Joshua
+  [semantics] Joshua
+N_prop_dobj -> r1035 	[0.0019357599543587938]
+  [english] Hazel
+  [semantics] Hazel
+N_prop_iobj -> r1036 	[0.0019357599543587938]
+  [english] Hazel
+  [semantics] Hazel
+N_prop_nsubj -> r1037 	[0.0019357599543587938]
+  [english] Hazel
+  [semantics] Hazel
+N_prop_nsubjpass -> r1038 	[0.0019357599543587938]
+  [english] Hazel
+  [semantics] Hazel
+N_prop_dobj -> r1039 	[0.0019247454862971174]
+  [english] Christopher
+  [semantics] Christopher
+N_prop_iobj -> r1040 	[0.0019247454862971174]
+  [english] Christopher
+  [semantics] Christopher
+N_prop_nsubj -> r1041 	[0.0019247454862971174]
+  [english] Christopher
+  [semantics] Christopher
+N_prop_nsubjpass -> r1042 	[0.0019247454862971174]
+  [english] Christopher
+  [semantics] Christopher
+N_prop_dobj -> r1043 	[0.0019140412800279388]
+  [english] Violet
+  [semantics] Violet
+N_prop_iobj -> r1044 	[0.0019140412800279388]
+  [english] Violet
+  [semantics] Violet
+N_prop_nsubj -> r1045 	[0.0019140412800279388]
+  [english] Violet
+  [semantics] Violet
+N_prop_nsubjpass -> r1046 	[0.0019140412800279388]
+  [english] Violet
+  [semantics] Violet
+N_prop_dobj -> r1047 	[0.0019036350980935828]
+  [english] Andrew
+  [semantics] Andrew
+N_prop_iobj -> r1048 	[0.0019036350980935828]
+  [english] Andrew
+  [semantics] Andrew
+N_prop_nsubj -> r1049 	[0.0019036350980935828]
+  [english] Andrew
+  [semantics] Andrew
+N_prop_nsubjpass -> r1050 	[0.0019036350980935828]
+  [english] Andrew
+  [semantics] Andrew
+N_prop_dobj -> r1051 	[0.001893515320507772]
+  [english] Aurora
+  [semantics] Aurora
+N_prop_iobj -> r1052 	[0.001893515320507772]
+  [english] Aurora
+  [semantics] Aurora
+N_prop_nsubj -> r1053 	[0.001893515320507772]
+  [english] Aurora
+  [semantics] Aurora
+N_prop_nsubjpass -> r1054 	[0.001893515320507772]
+  [english] Aurora
+  [semantics] Aurora
+N_prop_dobj -> r1055 	[0.0018836709069523262]
+  [english] Theodore
+  [semantics] Theodore
+N_prop_iobj -> r1056 	[0.0018836709069523262]
+  [english] Theodore
+  [semantics] Theodore
+N_prop_nsubj -> r1057 	[0.0018836709069523262]
+  [english] Theodore
+  [semantics] Theodore
+N_prop_nsubjpass -> r1058 	[0.0018836709069523262]
+  [english] Theodore
+  [semantics] Theodore
+N_prop_dobj -> r1059 	[0.0018740913616861177]
+  [english] Savannah
+  [semantics] Savannah
+N_prop_iobj -> r1060 	[0.0018740913616861177]
+  [english] Savannah
+  [semantics] Savannah
+N_prop_nsubj -> r1061 	[0.0018740913616861177]
+  [english] Savannah
+  [semantics] Savannah
+N_prop_nsubjpass -> r1062 	[0.0018740913616861177]
+  [english] Savannah
+  [semantics] Savannah
+N_prop_dobj -> r1063 	[0.0018647667009437786]
+  [english] Caleb
+  [semantics] Caleb
+N_prop_iobj -> r1064 	[0.0018647667009437786]
+  [english] Caleb
+  [semantics] Caleb
+N_prop_nsubj -> r1065 	[0.0018647667009437786]
+  [english] Caleb
+  [semantics] Caleb
+N_prop_nsubjpass -> r1066 	[0.0018647667009437786]
+  [english] Caleb
+  [semantics] Caleb
+N_prop_dobj -> r1067 	[0.0018556874226221486]
+  [english] Audrey
+  [semantics] Audrey
+N_prop_iobj -> r1068 	[0.0018556874226221486]
+  [english] Audrey
+  [semantics] Audrey
+N_prop_nsubj -> r1069 	[0.0018556874226221486]
+  [english] Audrey
+  [semantics] Audrey
+N_prop_nsubjpass -> r1070 	[0.0018556874226221486]
+  [english] Audrey
+  [semantics] Audrey
+N_prop_dobj -> r1071 	[0.0018468444780708527]
+  [english] Ryan
+  [semantics] Ryan
+N_prop_iobj -> r1072 	[0.0018468444780708527]
+  [english] Ryan
+  [semantics] Ryan
+N_prop_nsubj -> r1073 	[0.0018468444780708527]
+  [english] Ryan
+  [semantics] Ryan
+N_prop_nsubjpass -> r1074 	[0.0018468444780708527]
+  [english] Ryan
+  [semantics] Ryan
+N_prop_dobj -> r1075 	[0.0018382292458199515]
+  [english] Brooklyn
+  [semantics] Brooklyn
+N_prop_iobj -> r1076 	[0.0018382292458199515]
+  [english] Brooklyn
+  [semantics] Brooklyn
+N_prop_nsubj -> r1077 	[0.0018382292458199515]
+  [english] Brooklyn
+  [semantics] Brooklyn
+N_prop_nsubjpass -> r1078 	[0.0018382292458199515]
+  [english] Brooklyn
+  [semantics] Brooklyn
+N_prop_dobj -> r1079 	[0.001829833507092496]
+  [english] Asher
+  [semantics] Asher
+N_prop_iobj -> r1080 	[0.001829833507092496]
+  [english] Asher
+  [semantics] Asher
+N_prop_nsubj -> r1081 	[0.001829833507092496]
+  [english] Asher
+  [semantics] Asher
+N_prop_nsubjpass -> r1082 	[0.001829833507092496]
+  [english] Asher
+  [semantics] Asher
+N_prop_dobj -> r1083 	[0.0018216494229632522]
+  [english] Bella
+  [semantics] Bella
+N_prop_iobj -> r1084 	[0.0018216494229632522]
+  [english] Bella
+  [semantics] Bella
+N_prop_nsubj -> r1085 	[0.0018216494229632522]
+  [english] Bella
+  [semantics] Bella
+N_prop_nsubjpass -> r1086 	[0.0018216494229632522]
+  [english] Bella
+  [semantics] Bella
+N_prop_dobj -> r1087 	[0.0018136695130369692]
+  [english] Nathan
+  [semantics] Nathan
+N_prop_iobj -> r1088 	[0.0018136695130369692]
+  [english] Nathan
+  [semantics] Nathan
+N_prop_nsubj -> r1089 	[0.0018136695130369692]
+  [english] Nathan
+  [semantics] Nathan
+N_prop_nsubjpass -> r1090 	[0.0018136695130369692]
+  [english] Nathan
+  [semantics] Nathan
+N_prop_dobj -> r1091 	[0.0018058866355305098]
+  [english] Claire
+  [semantics] Claire
+N_prop_iobj -> r1092 	[0.0018058866355305098]
+  [english] Claire
+  [semantics] Claire
+N_prop_nsubj -> r1093 	[0.0018058866355305098]
+  [english] Claire
+  [semantics] Claire
+N_prop_nsubjpass -> r1094 	[0.0018058866355305098]
+  [english] Claire
+  [semantics] Claire
+N_prop_dobj -> r1095 	[0.0017982939686530556]
+  [english] Thomas
+  [semantics] Thomas
+N_prop_iobj -> r1096 	[0.0017982939686530556]
+  [english] Thomas
+  [semantics] Thomas
+N_prop_nsubj -> r1097 	[0.0017982939686530556]
+  [english] Thomas
+  [semantics] Thomas
+N_prop_nsubjpass -> r1098 	[0.0017982939686530556]
+  [english] Thomas
+  [semantics] Thomas
+N_prop_dobj -> r1099 	[0.001790884993187559]
+  [english] Skylar
+  [semantics] Skylar
+N_prop_iobj -> r1100 	[0.001790884993187559]
+  [english] Skylar
+  [semantics] Skylar
+N_prop_nsubj -> r1101 	[0.001790884993187559]
+  [english] Skylar
+  [semantics] Skylar
+N_prop_nsubjpass -> r1102 	[0.001790884993187559]
+  [english] Skylar
+  [semantics] Skylar
+N_prop_dobj -> r1103 	[0.001783653476184728]
+  [english] Leo
+  [semantics] Leo
+N_prop_iobj -> r1104 	[0.001783653476184728]
+  [english] Leo
+  [semantics] Leo
+N_prop_nsubj -> r1105 	[0.001783653476184728]
+  [english] Leo
+  [semantics] Leo
+N_prop_nsubjpass -> r1106 	[0.001783653476184728]
+  [english] Leo
+  [semantics] Leo
 
 
 
-V_trans_not_omissible -> r1472 	[0.33402836011058906]
-  [english] liked
-  [semantics] like
-V_trans_not_omissible -> r1473 	[0.13404078858765317]
-  [english] helped
-  [semantics] help
-V_trans_not_omissible -> r1474 	[0.08118983449041972]
-  [english] found
-  [semantics] find
-V_trans_not_omissible -> r1475 	[0.05825966977427891]
-  [english] loved
-  [semantics] love
-V_trans_not_omissible -> r1476 	[0.045854068200707636]
-  [english] poked
-  [semantics] poke
-V_trans_not_omissible -> r1477 	[0.03823290310401458]
-  [english] admired
-  [semantics] admire
-V_trans_not_omissible -> r1478 	[0.03314541629748973]
-  [english] adored
-  [semantics] adore
-V_trans_not_omissible -> r1479 	[0.029543995470747868]
-  [english] appreciated
-  [semantics] appreciate
-V_trans_not_omissible -> r1480 	[0.026880623601982966]
-  [english] missed
-  [semantics] miss
-V_trans_not_omissible -> r1481 	[0.024843151515100505]
-  [english] respected
-  [semantics] respect
-V_trans_not_omissible -> r1482 	[0.023241837743417502]
-  [english] threw
-  [semantics] throw
-V_trans_not_omissible -> r1483 	[0.021955269966808383]
-  [english] tolerated
-  [semantics] tolerate
-V_trans_not_omissible -> r1484 	[0.02090245596302799]
-  [english] valued
-  [semantics] value
-V_trans_not_omissible -> r1485 	[0.020027472958170183]
-  [english] worshipped
-  [semantics] worship
-V_trans_not_omissible -> r1486 	[0.01929057149807447]
-  [english] discovered
-  [semantics] discover
-V_trans_not_omissible -> r1487 	[0.018662789655653128]
-  [english] held
-  [semantics] hold
-V_trans_not_omissible -> r1488 	[0.018122569172347593]
-  [english] stabbed
-  [semantics] stab
-V_trans_not_omissible -> r1489 	[0.01765356043958695]
-  [english] touched
-  [semantics] touch
-V_trans_not_omissible -> r1490 	[0.01724315855931527]
-  [english] pierced
-  [semantics] pierce
-V_trans_not_omissible -> r1491 	[0.016881502890614384]
-  [english] tossed
-  [semantics] toss
+
+
 
 
 N_on -> r1107 	[0.3232777469287676]
@@ -3314,60 +4291,1276 @@ P_beside -> r1409 	[1]
   [english] beside
   [semantics] beside
 
+P_iobj -> r1410 	[1]
+  [english] to
+  [semantics] to
 
-S! -> r1752(NP_animate_nsubj, VP_external) 	[0.49]
+Rel_pron -> r1411 	[1]
+  [english] that
+  [semantics] that
+
+
+
+
+
+
+V_trans_omissible -> r1412 	[0.33402836011058906]
+  [english] ate
+  [semantics] eat
+V_trans_omissible -> r1413 	[0.13404078858765317]
+  [english] painted
+  [semantics] paint
+V_trans_omissible -> r1414 	[0.08118983449041972]
+  [english] drew
+  [semantics] draw
+V_trans_omissible -> r1415 	[0.05825966977427891]
+  [english] cleaned
+  [semantics] clean
+V_trans_omissible -> r1416 	[0.045854068200707636]
+  [english] cooked
+  [semantics] cook
+V_trans_omissible -> r1417 	[0.03823290310401458]
+  [english] dusted
+  [semantics] dust
+V_trans_omissible -> r1418 	[0.03314541629748973]
+  [english] hunted
+  [semantics] hunt
+V_trans_omissible -> r1419 	[0.029543995470747868]
+  [english] nursed
+  [semantics] nurse
+V_trans_omissible -> r1420 	[0.026880623601982966]
+  [english] sketched
+  [semantics] sketch
+V_trans_omissible -> r1421 	[0.024843151515100505]
+  [english] juggled
+  [semantics] juggle
+V_trans_omissible -> r1422 	[0.023241837743417502]
+  [english] called
+  [semantics] call
+V_trans_omissible -> r1423 	[0.021955269966808383]
+  [english] heard
+  [semantics] hear
+V_trans_omissible -> r1424 	[0.02090245596302799]
+  [english] packed
+  [semantics] pack
+V_trans_omissible -> r1425 	[0.020027472958170183]
+  [english] saw
+  [semantics] see
+V_trans_omissible -> r1426 	[0.01929057149807447]
+  [english] noticed
+  [semantics] notice
+V_trans_omissible -> r1427 	[0.018662789655653128]
+  [english] studied
+  [semantics] study
+V_trans_omissible -> r1428 	[0.018122569172347593]
+  [english] examined
+  [semantics] examine
+V_trans_omissible -> r1429 	[0.01765356043958695]
+  [english] observed
+  [semantics] observe
+V_trans_omissible -> r1430 	[0.01724315855931527]
+  [english] knew
+  [semantics] know
+V_trans_omissible -> r1431 	[0.016881502890614384]
+  [english] investigated
+  [semantics] investigate
+
+
+V_trans_omissible_inf -> r1432 	[0.33402836011058906]
+  [english] eat
+  [semantics] eat
+V_trans_omissible_inf -> r1433 	[0.13404078858765317]
+  [english] paint
+  [semantics] paint
+V_trans_omissible_inf -> r1434 	[0.08118983449041972]
+  [english] draw
+  [semantics] draw
+V_trans_omissible_inf -> r1435 	[0.05825966977427891]
+  [english] clean
+  [semantics] clean
+V_trans_omissible_inf -> r1436 	[0.045854068200707636]
+  [english] cook
+  [semantics] cook
+V_trans_omissible_inf -> r1437 	[0.03823290310401458]
+  [english] dust
+  [semantics] dust
+V_trans_omissible_inf -> r1438 	[0.03314541629748973]
+  [english] hunt
+  [semantics] hunt
+V_trans_omissible_inf -> r1439 	[0.029543995470747868]
+  [english] nurse
+  [semantics] nurse
+V_trans_omissible_inf -> r1440 	[0.026880623601982966]
+  [english] sketch
+  [semantics] sketch
+V_trans_omissible_inf -> r1441 	[0.024843151515100505]
+  [english] juggle
+  [semantics] juggle
+V_trans_omissible_inf -> r1442 	[0.023241837743417502]
+  [english] call
+  [semantics] call
+V_trans_omissible_inf -> r1443 	[0.021955269966808383]
+  [english] hear
+  [semantics] hear
+V_trans_omissible_inf -> r1444 	[0.02090245596302799]
+  [english] pack
+  [semantics] pack
+V_trans_omissible_inf -> r1445 	[0.020027472958170183]
+  [english] see
+  [semantics] see
+V_trans_omissible_inf -> r1446 	[0.01929057149807447]
+  [english] notice
+  [semantics] notice
+V_trans_omissible_inf -> r1447 	[0.018662789655653128]
+  [english] study
+  [semantics] study
+V_trans_omissible_inf -> r1448 	[0.018122569172347593]
+  [english] examine
+  [semantics] examine
+V_trans_omissible_inf -> r1449 	[0.01765356043958695]
+  [english] observe
+  [semantics] observe
+V_trans_omissible_inf -> r1450 	[0.01724315855931527]
+  [english] know
+  [semantics] know
+V_trans_omissible_inf -> r1451 	[0.016881502890614384]
+  [english] investigate
+  [semantics] investigate
+
+
+
+V_trans_omissible_pp -> r1452 	[0.33402836011058906]
+  [english] eaten
+  [semantics] eat
+V_trans_omissible_pp -> r1453 	[0.13404078858765317]
+  [english] painted
+  [semantics] paint
+V_trans_omissible_pp -> r1454 	[0.08118983449041972]
+  [english] drawn
+  [semantics] draw
+V_trans_omissible_pp -> r1455 	[0.05825966977427891]
+  [english] cleaned
+  [semantics] clean
+V_trans_omissible_pp -> r1456 	[0.045854068200707636]
+  [english] cooked
+  [semantics] cook
+V_trans_omissible_pp -> r1457 	[0.03823290310401458]
+  [english] dusted
+  [semantics] dust
+V_trans_omissible_pp -> r1458 	[0.03314541629748973]
+  [english] hunted
+  [semantics] hunt
+V_trans_omissible_pp -> r1459 	[0.029543995470747868]
+  [english] nursed
+  [semantics] nurse
+V_trans_omissible_pp -> r1460 	[0.026880623601982966]
+  [english] sketched
+  [semantics] sketch
+V_trans_omissible_pp -> r1461 	[0.024843151515100505]
+  [english] juggled
+  [semantics] juggle
+V_trans_omissible_pp -> r1462 	[0.023241837743417502]
+  [english] called
+  [semantics] call
+V_trans_omissible_pp -> r1463 	[0.021955269966808383]
+  [english] heard
+  [semantics] hear
+V_trans_omissible_pp -> r1464 	[0.02090245596302799]
+  [english] packed
+  [semantics] pack
+V_trans_omissible_pp -> r1465 	[0.020027472958170183]
+  [english] seen
+  [semantics] see
+V_trans_omissible_pp -> r1466 	[0.01929057149807447]
+  [english] noticed
+  [semantics] notice
+V_trans_omissible_pp -> r1467 	[0.018662789655653128]
+  [english] studied
+  [semantics] study
+V_trans_omissible_pp -> r1468 	[0.018122569172347593]
+  [english] examined
+  [semantics] examine
+V_trans_omissible_pp -> r1469 	[0.01765356043958695]
+  [english] observed
+  [semantics] observe
+V_trans_omissible_pp -> r1470 	[0.01724315855931527]
+  [english] known
+  [semantics] know
+V_trans_omissible_pp -> r1471 	[0.016881502890614384]
+  [english] investigated
+  [semantics] investigate
+
+
+
+
+
+
+
+V_trans_not_omissible -> r1472 	[0.326583257298835]
+  [english] liked
+  [semantics] like
+V_trans_not_omissible -> r1473 	[0.12659568577589908]
+  [english] helped
+  [semantics] help
+V_trans_not_omissible -> r1474 	[0.07374473167866562]
+  [english] found
+  [semantics] find
+V_trans_not_omissible -> r1475 	[0.05081456696252481]
+  [english] loved
+  [semantics] love
+V_trans_not_omissible -> r1476 	[0.03840896538895353]
+  [english] poked
+  [semantics] poke
+V_trans_not_omissible -> r1477 	[0.030787800292260477]
+  [english] admired
+  [semantics] admire
+V_trans_not_omissible -> r1478 	[0.025700313485735628]
+  [english] adored
+  [semantics] adore
+V_trans_not_omissible -> r1479 	[0.022098892658993764]
+  [english] appreciated
+  [semantics] appreciate
+V_trans_not_omissible -> r1480 	[0.019435520790228863]
+  [english] missed
+  [semantics] miss
+V_trans_not_omissible -> r1481 	[0.0173980487033464]
+  [english] respected
+  [semantics] respect
+V_trans_not_omissible -> r1482 	[0.0157967349316634]
+  [english] threw
+  [semantics] throw
+V_trans_not_omissible -> r1483 	[0.014510167155054278]
+  [english] tolerated
+  [semantics] tolerate
+V_trans_not_omissible -> r1484 	[0.01345735315127389]
+  [english] valued
+  [semantics] value
+V_trans_not_omissible -> r1485 	[0.01258237014641608]
+  [english] worshipped
+  [semantics] worship
+V_trans_not_omissible -> r1486 	[0.011845468686320365]
+  [english] discovered
+  [semantics] discover
+V_trans_not_omissible -> r1487 	[0.011217686843899025]
+  [english] held
+  [semantics] hold
+V_trans_not_omissible -> r1488 	[0.01067746636059349]
+  [english] stabbed
+  [semantics] stab
+V_trans_not_omissible -> r1489 	[0.010208457627832847]
+  [english] touched
+  [semantics] touch
+V_trans_not_omissible -> r1490 	[0.009798055747561164]
+  [english] pierced
+  [semantics] pierce
+V_trans_not_omissible -> r1491 	[0.00943640007886028]
+  [english] tossed
+  [semantics] toss
+V_trans_not_omissible -> r1492 	[0.009115675611366062]
+  [english] observed
+  [semantics] observe
+V_trans_not_omissible -> r1493 	[0.008829615625879987]
+  [english] saw
+  [semantics] see
+V_trans_not_omissible -> r1494 	[0.008573141478624376]
+  [english] noticed
+  [semantics] notice
+V_trans_not_omissible -> r1495 	[0.008342097602643764]
+  [english] watched
+  [semantics] watch
+V_trans_not_omissible -> r1496 	[0.008133053780326676]
+  [english] examined
+  [semantics] examine
+V_trans_not_omissible -> r1497 	[0.007943155695897744]
+  [english] heard
+  [semantics] hear
+V_trans_not_omissible -> r1498 	[0.007770010638680136]
+  [english] recognized
+  [semantics] recognize
+V_trans_not_omissible -> r1499 	[0.007611599136928238]
+  [english] trusted
+  [semantics] trust
+V_trans_not_omissible -> r1500 	[0.007466205953269722]
+  [english] supported
+  [semantics] support
+V_trans_not_omissible -> r1501 	[0.007332365699190043]
+  [english] guided
+  [semantics] guide
+V_trans_not_omissible -> r1502 	[0.007208819602359378]
+  [english] kissed
+  [semantics] kiss
+V_trans_not_omissible -> r1503 	[0.007094480864511932]
+  [english] hugged
+  [semantics] hug
+V_trans_not_omissible -> r1504 	[0.00698840669566565]
+  [english] pushed
+  [semantics] push
+V_trans_not_omissible -> r1505 	[0.006889775580483318]
+  [english] caught
+  [semantics] catch
+V_trans_not_omissible -> r1506 	[0.00679786867711505]
+  [english] carried
+  [semantics] carry
+V_trans_not_omissible -> r1507 	[0.00671205450396248]
+  [english] saved
+  [semantics] save
+V_trans_not_omissible -> r1508 	[0.0066317762604631795]
+  [english] called
+  [semantics] call
+V_trans_not_omissible -> r1509 	[0.006556541271748778]
+  [english] investigated
+  [semantics] investigate
+V_trans_not_omissible -> r1510 	[0.006485912156322372]
+  [english] knew
+  [semantics] know
+V_trans_not_omissible -> r1511 	[0.006419499399643197]
+  [english] believed
+  [semantics] believe
+
+
+V_trans_not_omissible_inf -> r1512 	[0.326583257298835]
+  [english] like
+  [semantics] like
+V_trans_not_omissible_inf -> r1513 	[0.12659568577589908]
+  [english] help
+  [semantics] help
+V_trans_not_omissible_inf -> r1514 	[0.07374473167866562]
+  [english] find
+  [semantics] find
+V_trans_not_omissible_inf -> r1515 	[0.05081456696252481]
+  [english] love
+  [semantics] love
+V_trans_not_omissible_inf -> r1516 	[0.03840896538895353]
+  [english] poke
+  [semantics] poke
+V_trans_not_omissible_inf -> r1517 	[0.030787800292260477]
+  [english] admire
+  [semantics] admire
+V_trans_not_omissible_inf -> r1518 	[0.025700313485735628]
+  [english] adore
+  [semantics] adore
+V_trans_not_omissible_inf -> r1519 	[0.022098892658993764]
+  [english] appreciate
+  [semantics] appreciate
+V_trans_not_omissible_inf -> r1520 	[0.019435520790228863]
+  [english] miss
+  [semantics] miss
+V_trans_not_omissible_inf -> r1521 	[0.0173980487033464]
+  [english] respect
+  [semantics] respect
+V_trans_not_omissible_inf -> r1522 	[0.0157967349316634]
+  [english] throw
+  [semantics] throw
+V_trans_not_omissible_inf -> r1523 	[0.014510167155054278]
+  [english] tolerate
+  [semantics] tolerate
+V_trans_not_omissible_inf -> r1524 	[0.01345735315127389]
+  [english] value
+  [semantics] value
+V_trans_not_omissible_inf -> r1525 	[0.01258237014641608]
+  [english] worship
+  [semantics] worship
+V_trans_not_omissible_inf -> r1526 	[0.011845468686320365]
+  [english] discover
+  [semantics] discover
+V_trans_not_omissible_inf -> r1527 	[0.011217686843899025]
+  [english] hold
+  [semantics] hold
+V_trans_not_omissible_inf -> r1528 	[0.01067746636059349]
+  [english] stab
+  [semantics] stab
+V_trans_not_omissible_inf -> r1529 	[0.010208457627832847]
+  [english] touch
+  [semantics] touch
+V_trans_not_omissible_inf -> r1530 	[0.009798055747561164]
+  [english] pierce
+  [semantics] pierce
+V_trans_not_omissible_inf -> r1531 	[0.00943640007886028]
+  [english] toss
+  [semantics] toss
+V_trans_not_omissible_inf -> r1532 	[0.009115675611366062]
+  [english] observe
+  [semantics] observe
+V_trans_not_omissible_inf -> r1533 	[0.008829615625879987]
+  [english] see
+  [semantics] see
+V_trans_not_omissible_inf -> r1534 	[0.008573141478624376]
+  [english] notice
+  [semantics] notice
+V_trans_not_omissible_inf -> r1535 	[0.008342097602643764]
+  [english] watch
+  [semantics] watch
+V_trans_not_omissible_inf -> r1536 	[0.008133053780326676]
+  [english] examine
+  [semantics] examine
+V_trans_not_omissible_inf -> r1537 	[0.007943155695897744]
+  [english] hear
+  [semantics] hear
+V_trans_not_omissible_inf -> r1538 	[0.007770010638680136]
+  [english] recognize
+  [semantics] recognize
+V_trans_not_omissible_inf -> r1539 	[0.007611599136928238]
+  [english] trust
+  [semantics] trust
+V_trans_not_omissible_inf -> r1540 	[0.007466205953269722]
+  [english] support
+  [semantics] support
+V_trans_not_omissible_inf -> r1541 	[0.007332365699190043]
+  [english] guide
+  [semantics] guide
+V_trans_not_omissible_inf -> r1542 	[0.007208819602359378]
+  [english] kiss
+  [semantics] kiss
+V_trans_not_omissible_inf -> r1543 	[0.007094480864511932]
+  [english] hug
+  [semantics] hug
+V_trans_not_omissible_inf -> r1544 	[0.00698840669566565]
+  [english] push
+  [semantics] push
+V_trans_not_omissible_inf -> r1545 	[0.006889775580483318]
+  [english] catch
+  [semantics] catch
+V_trans_not_omissible_inf -> r1546 	[0.00679786867711505]
+  [english] carry
+  [semantics] carry
+V_trans_not_omissible_inf -> r1547 	[0.00671205450396248]
+  [english] save
+  [semantics] save
+V_trans_not_omissible_inf -> r1548 	[0.0066317762604631795]
+  [english] call
+  [semantics] call
+V_trans_not_omissible_inf -> r1549 	[0.006556541271748778]
+  [english] investigate
+  [semantics] investigate
+V_trans_not_omissible_inf -> r1550 	[0.006485912156322372]
+  [english] know
+  [semantics] know
+V_trans_not_omissible_inf -> r1551 	[0.006419499399643197]
+  [english] believe
+  [semantics] believe
+
+
+
+V_trans_not_omissible_pp -> r1552 	[0.33402836011058906]
+  [english] liked
+  [semantics] like
+V_trans_not_omissible_pp -> r1553 	[0.13404078858765317]
+  [english] helped
+  [semantics] help
+V_trans_not_omissible_pp -> r1554 	[0.08118983449041972]
+  [english] found
+  [semantics] find
+V_trans_not_omissible_pp -> r1555 	[0.05825966977427891]
+  [english] loved
+  [semantics] love
+V_trans_not_omissible_pp -> r1556 	[0.045854068200707636]
+  [english] poked
+  [semantics] poke
+V_trans_not_omissible_pp -> r1557 	[0.03823290310401458]
+  [english] admired
+  [semantics] admire
+V_trans_not_omissible_pp -> r1558 	[0.03314541629748973]
+  [english] adored
+  [semantics] adore
+V_trans_not_omissible_pp -> r1559 	[0.029543995470747868]
+  [english] appreciated
+  [semantics] appreciate
+V_trans_not_omissible_pp -> r1560 	[0.026880623601982966]
+  [english] missed
+  [semantics] miss
+V_trans_not_omissible_pp -> r1561 	[0.024843151515100505]
+  [english] respected
+  [semantics] respect
+V_trans_not_omissible_pp -> r1562 	[0.023241837743417502]
+  [english] thrown
+  [semantics] throw
+V_trans_not_omissible_pp -> r1563 	[0.021955269966808383]
+  [english] tolerated
+  [semantics] tolerate
+V_trans_not_omissible_pp -> r1564 	[0.02090245596302799]
+  [english] valued
+  [semantics] value
+V_trans_not_omissible_pp -> r1565 	[0.020027472958170183]
+  [english] worshipped
+  [semantics] worship
+V_trans_not_omissible_pp -> r1566 	[0.01929057149807447]
+  [english] discovered
+  [semantics] discover
+V_trans_not_omissible_pp -> r1567 	[0.018662789655653128]
+  [english] held
+  [semantics] hold
+V_trans_not_omissible_pp -> r1568 	[0.018122569172347593]
+  [english] stabbed
+  [semantics] stab
+V_trans_not_omissible_pp -> r1569 	[0.01765356043958695]
+  [english] touched
+  [semantics] touch
+V_trans_not_omissible_pp -> r1570 	[0.01724315855931527]
+  [english] pierced
+  [semantics] pierce
+V_trans_not_omissible_pp -> r1571 	[0.016881502890614384]
+  [english] tossed
+  [semantics] toss
+
+
+
+
+V_cp_taking -> r1572 	[0.33402836011058906]
+  [english] liked
+  [semantics] like
+V_cp_taking -> r1573 	[0.13404078858765317]
+  [english] hoped
+  [semantics] hope
+V_cp_taking -> r1574 	[0.08118983449041972]
+  [english] said
+  [semantics] say
+V_cp_taking -> r1575 	[0.05825966977427891]
+  [english] noticed
+  [semantics] notice
+V_cp_taking -> r1576 	[0.045854068200707636]
+  [english] believed
+  [semantics] believe
+V_cp_taking -> r1577 	[0.03823290310401458]
+  [english] confessed
+  [semantics] confess
+V_cp_taking -> r1578 	[0.03314541629748973]
+  [english] declared
+  [semantics] declare
+V_cp_taking -> r1579 	[0.029543995470747868]
+  [english] proved
+  [semantics] prove
+V_cp_taking -> r1580 	[0.026880623601982966]
+  [english] thought
+  [semantics] think
+V_cp_taking -> r1581 	[0.024843151515100505]
+  [english] admired
+  [semantics] admire
+V_cp_taking -> r1582 	[0.023241837743417502]
+  [english] appreciated
+  [semantics] appreciate
+V_cp_taking -> r1583 	[0.021955269966808383]
+  [english] respected
+  [semantics] respect
+V_cp_taking -> r1584 	[0.02090245596302799]
+  [english] supported
+  [semantics] support
+V_cp_taking -> r1585 	[0.020027472958170183]
+  [english] tolerated
+  [semantics] tolerate
+V_cp_taking -> r1586 	[0.01929057149807447]
+  [english] valued
+  [semantics] value
+V_cp_taking -> r1587 	[0.018662789655653128]
+  [english] wished
+  [semantics] wish
+V_cp_taking -> r1588 	[0.018122569172347593]
+  [english] dreamed
+  [semantics] dream
+V_cp_taking -> r1589 	[0.01765356043958695]
+  [english] expected
+  [semantics] expect
+V_cp_taking -> r1590 	[0.01724315855931527]
+  [english] imagined
+  [semantics] imagine
+V_cp_taking -> r1591 	[0.016881502890614384]
+  [english] meant
+  [semantics] mean
+
+
+V_cp_taking_inf -> r1592 	[0.33402836011058906]
+  [english] like
+  [semantics] like
+V_cp_taking_inf -> r1593 	[0.13404078858765317]
+  [english] hope
+  [semantics] hope
+V_cp_taking_inf -> r1594 	[0.08118983449041972]
+  [english] say
+  [semantics] say
+V_cp_taking_inf -> r1595 	[0.05825966977427891]
+  [english] notice
+  [semantics] notice
+V_cp_taking_inf -> r1596 	[0.045854068200707636]
+  [english] believe
+  [semantics] believe
+V_cp_taking_inf -> r1597 	[0.03823290310401458]
+  [english] confess
+  [semantics] confess
+V_cp_taking_inf -> r1598 	[0.03314541629748973]
+  [english] declare
+  [semantics] declare
+V_cp_taking_inf -> r1599 	[0.029543995470747868]
+  [english] prove
+  [semantics] prove
+V_cp_taking_inf -> r1600 	[0.026880623601982966]
+  [english] think
+  [semantics] think
+V_cp_taking_inf -> r1601 	[0.024843151515100505]
+  [english] admire
+  [semantics] admire
+V_cp_taking_inf -> r1602 	[0.023241837743417502]
+  [english] appreciate
+  [semantics] appreciate
+V_cp_taking_inf -> r1603 	[0.021955269966808383]
+  [english] respect
+  [semantics] respect
+V_cp_taking_inf -> r1604 	[0.02090245596302799]
+  [english] support
+  [semantics] support
+V_cp_taking_inf -> r1605 	[0.020027472958170183]
+  [english] tolerate
+  [semantics] tolerate
+V_cp_taking_inf -> r1606 	[0.01929057149807447]
+  [english] value
+  [semantics] value
+V_cp_taking_inf -> r1607 	[0.018662789655653128]
+  [english] wish
+  [semantics] wish
+V_cp_taking_inf -> r1608 	[0.018122569172347593]
+  [english] dream
+  [semantics] dream
+V_cp_taking_inf -> r1609 	[0.01765356043958695]
+  [english] expect
+  [semantics] expect
+V_cp_taking_inf -> r1610 	[0.01724315855931527]
+  [english] imagine
+  [semantics] imagine
+V_cp_taking_inf -> r1611 	[0.016881502890614384]
+  [english] mean
+  [semantics] mean
+
+
+
+
+
+V_inf_taking -> r1612 	[0.33402836011058906]
+  [english] wanted
+  [semantics] "want[agent=xcomp!agent]"
+V_inf_taking -> r1613 	[0.13404078858765317]
+  [english] preferred
+  [semantics] "prefer[agent=xcomp!agent]"
+V_inf_taking -> r1614 	[0.08118983449041972]
+  [english] needed
+  [semantics] "need[agent=xcomp!agent]"
+V_inf_taking -> r1615 	[0.05825966977427891]
+  [english] intended
+  [semantics] "intend[agent=xcomp!agent]"
+V_inf_taking -> r1616 	[0.045854068200707636]
+  [english] tried
+  [semantics] "try[agent=xcomp!agent]"
+V_inf_taking -> r1617 	[0.03823290310401458]
+  [english] attempted
+  [semantics] "attempt[agent=xcomp!agent]"
+V_inf_taking -> r1618 	[0.03314541629748973]
+  [english] planned
+  [semantics] "plan[agent=xcomp!agent]"
+V_inf_taking -> r1619 	[0.029543995470747868]
+  [english] expected
+  [semantics] "expect[agent=xcomp!agent]"
+V_inf_taking -> r1620 	[0.026880623601982966]
+  [english] hoped
+  [semantics] "hope[agent=xcomp!agent]"
+V_inf_taking -> r1621 	[0.024843151515100505]
+  [english] wished
+  [semantics] "wish[agent=xcomp!agent]"
+V_inf_taking -> r1622 	[0.023241837743417502]
+  [english] craved
+  [semantics] "crave[agent=xcomp!agent]"
+V_inf_taking -> r1623 	[0.021955269966808383]
+  [english] liked
+  [semantics] "like[agent=xcomp!agent]"
+V_inf_taking -> r1624 	[0.02090245596302799]
+  [english] hated
+  [semantics] "hate[agent=xcomp!agent]"
+V_inf_taking -> r1625 	[0.020027472958170183]
+  [english] loved
+  [semantics] "love[agent=xcomp!agent]"
+V_inf_taking -> r1626 	[0.01929057149807447]
+  [english] enjoyed
+  [semantics] "enjoy[agent=xcomp!agent]"
+V_inf_taking -> r1627 	[0.018662789655653128]
+  [english] dreamed
+  [semantics] "dream[agent=xcomp!agent]"
+V_inf_taking -> r1628 	[0.018122569172347593]
+  [english] meant
+  [semantics] "mean[agent=xcomp!agent]"
+V_inf_taking -> r1629 	[0.01765356043958695]
+  [english] longed
+  [semantics] "long[agent=xcomp!agent]"
+V_inf_taking -> r1630 	[0.01724315855931527]
+  [english] yearned
+  [semantics] "yearn[agent=xcomp!agent]"
+V_inf_taking -> r1631 	[0.016881502890614384]
+  [english] itched
+  [semantics] "itch[agent=xcomp!agent]"
+
+
+
+
+
+V_unacc -> r1632 	[0.33402836011058906]
+  [english] rolled
+  [semantics] roll
+V_unacc -> r1633 	[0.13404078858765317]
+  [english] froze
+  [semantics] freeze
+V_unacc -> r1634 	[0.08118983449041972]
+  [english] burned
+  [semantics] burn
+V_unacc -> r1635 	[0.05825966977427891]
+  [english] shortened
+  [semantics] shorten
+V_unacc -> r1636 	[0.045854068200707636]
+  [english] floated
+  [semantics] float
+V_unacc -> r1637 	[0.03823290310401458]
+  [english] grew
+  [semantics] grow
+V_unacc -> r1638 	[0.03314541629748973]
+  [english] slid
+  [semantics] slide
+V_unacc -> r1639 	[0.029543995470747868]
+  [english] broke
+  [semantics] break
+V_unacc -> r1640 	[0.026880623601982966]
+  [english] crumpled
+  [semantics] crumple
+V_unacc -> r1641 	[0.024843151515100505]
+  [english] split
+  [semantics] split
+V_unacc -> r1642 	[0.023241837743417502]
+  [english] changed
+  [semantics] change
+V_unacc -> r1643 	[0.021955269966808383]
+  [english] snapped
+  [semantics] snap
+V_unacc -> r1644 	[0.02090245596302799]
+  [english] disintegrated
+  [semantics] disintegrate
+V_unacc -> r1645 	[0.020027472958170183]
+  [english] collapsed
+  [semantics] collapse
+V_unacc -> r1646 	[0.01929057149807447]
+  [english] decomposed
+  [semantics] decompose
+V_unacc -> r1647 	[0.018662789655653128]
+  [english] doubled
+  [semantics] double
+V_unacc -> r1648 	[0.018122569172347593]
+  [english] improved
+  [semantics] improve
+V_unacc -> r1649 	[0.01765356043958695]
+  [english] inflated
+  [semantics] inflate
+V_unacc -> r1650 	[0.01724315855931527]
+  [english] enlarged
+  [semantics] enlarge
+V_unacc -> r1651 	[0.016881502890614384]
+  [english] reddened
+  [semantics] redden
+
+
+V_unacc_inf -> r1652 	[0.33402836011058906]
+  [english] roll
+  [semantics] roll
+V_unacc_inf -> r1653 	[0.13404078858765317]
+  [english] freeze
+  [semantics] freeze
+V_unacc_inf -> r1654 	[0.08118983449041972]
+  [english] burn
+  [semantics] burn
+V_unacc_inf -> r1655 	[0.05825966977427891]
+  [english] shorten
+  [semantics] shorten
+V_unacc_inf -> r1656 	[0.045854068200707636]
+  [english] float
+  [semantics] float
+V_unacc_inf -> r1657 	[0.03823290310401458]
+  [english] grow
+  [semantics] grow
+V_unacc_inf -> r1658 	[0.03314541629748973]
+  [english] slide
+  [semantics] slide
+V_unacc_inf -> r1659 	[0.029543995470747868]
+  [english] break
+  [semantics] break
+V_unacc_inf -> r1660 	[0.026880623601982966]
+  [english] crumple
+  [semantics] crumple
+V_unacc_inf -> r1661 	[0.024843151515100505]
+  [english] split
+  [semantics] split
+V_unacc_inf -> r1662 	[0.023241837743417502]
+  [english] change
+  [semantics] change
+V_unacc_inf -> r1663 	[0.021955269966808383]
+  [english] snap
+  [semantics] snap
+V_unacc_inf -> r1664 	[0.02090245596302799]
+  [english] disintegrate
+  [semantics] disintegrate
+V_unacc_inf -> r1665 	[0.020027472958170183]
+  [english] collapse
+  [semantics] collapse
+V_unacc_inf -> r1666 	[0.01929057149807447]
+  [english] decompose
+  [semantics] decompose
+V_unacc_inf -> r1667 	[0.018662789655653128]
+  [english] double
+  [semantics] double
+V_unacc_inf -> r1668 	[0.018122569172347593]
+  [english] improve
+  [semantics] improve
+V_unacc_inf -> r1669 	[0.01765356043958695]
+  [english] inflate
+  [semantics] inflate
+V_unacc_inf -> r1670 	[0.01724315855931527]
+  [english] enlarge
+  [semantics] enlarge
+V_unacc_inf -> r1671 	[0.016881502890614384]
+  [english] redden
+  [semantics] redden
+
+
+
+V_unacc_pp -> r1672 	[0.33402836011058906]
+  [english] rolled
+  [semantics] roll
+V_unacc_pp -> r1673 	[0.13404078858765317]
+  [english] frozen
+  [semantics] freeze
+V_unacc_pp -> r1674 	[0.08118983449041972]
+  [english] burned
+  [semantics] burn
+V_unacc_pp -> r1675 	[0.05825966977427891]
+  [english] shortened
+  [semantics] shorten
+V_unacc_pp -> r1676 	[0.045854068200707636]
+  [english] floated
+  [semantics] float
+V_unacc_pp -> r1677 	[0.03823290310401458]
+  [english] grown
+  [semantics] grow
+V_unacc_pp -> r1678 	[0.03314541629748973]
+  [english] slid
+  [semantics] slide
+V_unacc_pp -> r1679 	[0.029543995470747868]
+  [english] broken
+  [semantics] break
+V_unacc_pp -> r1680 	[0.026880623601982966]
+  [english] crumpled
+  [semantics] crumple
+V_unacc_pp -> r1681 	[0.024843151515100505]
+  [english] split
+  [semantics] split
+V_unacc_pp -> r1682 	[0.023241837743417502]
+  [english] changed
+  [semantics] change
+V_unacc_pp -> r1683 	[0.021955269966808383]
+  [english] snapped
+  [semantics] snap
+V_unacc_pp -> r1684 	[0.02090245596302799]
+  [english] disintegrated
+  [semantics] disintegrate
+V_unacc_pp -> r1685 	[0.020027472958170183]
+  [english] collapsed
+  [semantics] collapse
+V_unacc_pp -> r1686 	[0.01929057149807447]
+  [english] decomposed
+  [semantics] decompose
+V_unacc_pp -> r1687 	[0.018662789655653128]
+  [english] doubled
+  [semantics] double
+V_unacc_pp -> r1688 	[0.018122569172347593]
+  [english] improved
+  [semantics] improve
+V_unacc_pp -> r1689 	[0.01765356043958695]
+  [english] inflated
+  [semantics] inflate
+V_unacc_pp -> r1690 	[0.01724315855931527]
+  [english] enlarged
+  [semantics] enlarge
+V_unacc_pp -> r1691 	[0.016881502890614384]
+  [english] reddened
+  [semantics] redden
+
+
+
+
+V_unerg -> r1692 	[0.33402836011058906]
+  [english] slept
+  [semantics] sleep
+V_unerg -> r1693 	[0.13404078858765317]
+  [english] smiled
+  [semantics] smile
+V_unerg -> r1694 	[0.08118983449041972]
+  [english] laughed
+  [semantics] laugh
+V_unerg -> r1695 	[0.05825966977427891]
+  [english] sneezed
+  [semantics] sneeze
+V_unerg -> r1696 	[0.045854068200707636]
+  [english] cried
+  [semantics] cry
+V_unerg -> r1697 	[0.03823290310401458]
+  [english] talked
+  [semantics] talk
+V_unerg -> r1698 	[0.03314541629748973]
+  [english] danced
+  [semantics] dance
+V_unerg -> r1699 	[0.029543995470747868]
+  [english] jogged
+  [semantics] jog
+V_unerg -> r1700 	[0.026880623601982966]
+  [english] walked
+  [semantics] walk
+V_unerg -> r1701 	[0.024843151515100505]
+  [english] ran
+  [semantics] run
+V_unerg -> r1702 	[0.023241837743417502]
+  [english] napped
+  [semantics] nap
+V_unerg -> r1703 	[0.021955269966808383]
+  [english] snoozed
+  [semantics] snooze
+V_unerg -> r1704 	[0.02090245596302799]
+  [english] screamed
+  [semantics] scream
+V_unerg -> r1705 	[0.020027472958170183]
+  [english] stuttered
+  [semantics] stutter
+V_unerg -> r1706 	[0.01929057149807447]
+  [english] frowned
+  [semantics] frown
+V_unerg -> r1707 	[0.018662789655653128]
+  [english] giggled
+  [semantics] giggle
+V_unerg -> r1708 	[0.018122569172347593]
+  [english] scoffed
+  [semantics] scoff
+V_unerg -> r1709 	[0.01765356043958695]
+  [english] snored
+  [semantics] snore
+V_unerg -> r1710 	[0.01724315855931527]
+  [english] smirked
+  [semantics] smirk
+V_unerg -> r1711 	[0.016881502890614384]
+  [english] gasped
+  [semantics] gasp
+
+
+
+
+
+
+V_inf -> r1712 	[0.33402836011058906]
+  [english] walk
+  [semantics] walk
+V_inf -> r1713 	[0.13404078858765317]
+  [english] run
+  [semantics] run
+V_inf -> r1714 	[0.08118983449041972]
+  [english] sleep
+  [semantics] sleep
+V_inf -> r1715 	[0.05825966977427891]
+  [english] sneeze
+  [semantics] sneeze
+V_inf -> r1716 	[0.045854068200707636]
+  [english] nap
+  [semantics] nap
+V_inf -> r1717 	[0.03823290310401458]
+  [english] eat
+  [semantics] eat
+V_inf -> r1718 	[0.03314541629748973]
+  [english] read
+  [semantics] read
+V_inf -> r1719 	[0.029543995470747868]
+  [english] cook
+  [semantics] cook
+V_inf -> r1720 	[0.026880623601982966]
+  [english] hunt
+  [semantics] hunt
+V_inf -> r1721 	[0.024843151515100505]
+  [english] paint
+  [semantics] paint
+V_inf -> r1722 	[0.023241837743417502]
+  [english] talk
+  [semantics] talk
+V_inf -> r1723 	[0.021955269966808383]
+  [english] dance
+  [semantics] dance
+V_inf -> r1724 	[0.02090245596302799]
+  [english] giggle
+  [semantics] giggle
+V_inf -> r1725 	[0.020027472958170183]
+  [english] jog
+  [semantics] jog
+V_inf -> r1726 	[0.01929057149807447]
+  [english] smirk
+  [semantics] smirk
+V_inf -> r1727 	[0.018662789655653128]
+  [english] call
+  [semantics] call
+V_inf -> r1728 	[0.018122569172347593]
+  [english] sketch
+  [semantics] sketch
+V_inf -> r1729 	[0.01765356043958695]
+  [english] dust
+  [semantics] dust
+V_inf -> r1730 	[0.01724315855931527]
+  [english] clean
+  [semantics] clean
+V_inf -> r1731 	[0.016881502890614384]
+  [english] investigate
+  [semantics] investigate
+
+
+
+V_dat -> r1732 	[0.33402836011058906]
+  [english] gave
+  [semantics] give
+V_dat -> r1733 	[0.13404078858765317]
+  [english] lent
+  [semantics] lend
+V_dat -> r1734 	[0.08118983449041972]
+  [english] sold
+  [semantics] sell
+V_dat -> r1735 	[0.05825966977427891]
+  [english] offered
+  [semantics] offer
+V_dat -> r1736 	[0.045854068200707636]
+  [english] fed
+  [semantics] feed
+V_dat -> r1737 	[0.03823290310401458]
+  [english] passed
+  [semantics] pass
+V_dat -> r1738 	[0.03314541629748973]
+  [english] sent
+  [semantics] send
+V_dat -> r1739 	[0.029543995470747868]
+  [english] rented
+  [semantics] rent
+V_dat -> r1740 	[0.026880623601982966]
+  [english] served
+  [semantics] serve
+V_dat -> r1741 	[0.024843151515100505]
+  [english] awarded
+  [semantics] award
+V_dat -> r1742 	[0.023241837743417502]
+  [english] brought
+  [semantics] bring
+V_dat -> r1743 	[0.021955269966808383]
+  [english] handed
+  [semantics] hand
+V_dat -> r1744 	[0.02090245596302799]
+  [english] forwarded
+  [semantics] forward
+V_dat -> r1745 	[0.020027472958170183]
+  [english] promised
+  [semantics] promise
+V_dat -> r1746 	[0.01929057149807447]
+  [english] mailed
+  [semantics] mail
+V_dat -> r1747 	[0.018662789655653128]
+  [english] loaned
+  [semantics] loan
+V_dat -> r1748 	[0.018122569172347593]
+  [english] posted
+  [semantics] post
+V_dat -> r1749 	[0.01765356043958695]
+  [english] returned
+  [semantics] return
+V_dat -> r1750 	[0.01724315855931527]
+  [english] slipped
+  [semantics] slip
+V_dat -> r1751 	[0.016881502890614384]
+  [english] wired
+  [semantics] wire
+
+
+
+
+V_dat_pp -> r1752 	[0.33402836011058906]
+  [english] given
+  [semantics] give
+V_dat_pp -> r1753 	[0.13404078858765317]
+  [english] lent
+  [semantics] lend
+V_dat_pp -> r1754 	[0.08118983449041972]
+  [english] sold
+  [semantics] sell
+V_dat_pp -> r1755 	[0.05825966977427891]
+  [english] offered
+  [semantics] offer
+V_dat_pp -> r1756 	[0.045854068200707636]
+  [english] fed
+  [semantics] feed
+V_dat_pp -> r1757 	[0.03823290310401458]
+  [english] passed
+  [semantics] pass
+V_dat_pp -> r1758 	[0.03314541629748973]
+  [english] sent
+  [semantics] send
+V_dat_pp -> r1759 	[0.029543995470747868]
+  [english] rented
+  [semantics] rent
+V_dat_pp -> r1760 	[0.026880623601982966]
+  [english] served
+  [semantics] serve
+V_dat_pp -> r1761 	[0.024843151515100505]
+  [english] awarded
+  [semantics] award
+V_dat_pp -> r1762 	[0.023241837743417502]
+  [english] brought
+  [semantics] bring
+V_dat_pp -> r1763 	[0.021955269966808383]
+  [english] handed
+  [semantics] hand
+V_dat_pp -> r1764 	[0.02090245596302799]
+  [english] forwarded
+  [semantics] forward
+V_dat_pp -> r1765 	[0.020027472958170183]
+  [english] promised
+  [semantics] promise
+V_dat_pp -> r1766 	[0.01929057149807447]
+  [english] mailed
+  [semantics] mail
+V_dat_pp -> r1767 	[0.018662789655653128]
+  [english] loaned
+  [semantics] loan
+V_dat_pp -> r1768 	[0.018122569172347593]
+  [english] posted
+  [semantics] post
+V_dat_pp -> r1769 	[0.01765356043958695]
+  [english] returned
+  [semantics] return
+V_dat_pp -> r1770 	[0.01724315855931527]
+  [english] slipped
+  [semantics] slip
+V_dat_pp -> r1771 	[0.016881502890614384]
+  [english] wired
+  [semantics] wire
+
+
+V_dat_inf -> r1772 	[0.33402836011058906]
+  [english] give
+  [semantics] give
+V_dat_inf -> r1773 	[0.13404078858765317]
+  [english] lend
+  [semantics] lend
+V_dat_inf -> r1774 	[0.08118983449041972]
+  [english] sell
+  [semantics] sell
+V_dat_inf -> r1775 	[0.05825966977427891]
+  [english] offer
+  [semantics] offer
+V_dat_inf -> r1776 	[0.045854068200707636]
+  [english] feed
+  [semantics] feed
+V_dat_inf -> r1777 	[0.03823290310401458]
+  [english] pass
+  [semantics] pass
+V_dat_inf -> r1778 	[0.03314541629748973]
+  [english] send
+  [semantics] send
+V_dat_inf -> r1779 	[0.029543995470747868]
+  [english] rent
+  [semantics] rent
+V_dat_inf -> r1780 	[0.026880623601982966]
+  [english] serve
+  [semantics] serve
+V_dat_inf -> r1781 	[0.024843151515100505]
+  [english] award
+  [semantics] award
+V_dat_inf -> r1782 	[0.023241837743417502]
+  [english] bring
+  [semantics] bring
+V_dat_inf -> r1783 	[0.021955269966808383]
+  [english] hand
+  [semantics] hand
+V_dat_inf -> r1784 	[0.02090245596302799]
+  [english] forward
+  [semantics] forward
+V_dat_inf -> r1785 	[0.020027472958170183]
+  [english] promise
+  [semantics] promise
+V_dat_inf -> r1786 	[0.01929057149807447]
+  [english] mail
+  [semantics] mail
+V_dat_inf -> r1787 	[0.018662789655653128]
+  [english] loan
+  [semantics] loan
+V_dat_inf -> r1788 	[0.018122569172347593]
+  [english] post
+  [semantics] post
+V_dat_inf -> r1789 	[0.01765356043958695]
+  [english] return
+  [semantics] return
+V_dat_inf -> r1790 	[0.01724315855931527]
+  [english] slip
+  [semantics] slip
+V_dat_inf -> r1791 	[0.016881502890614384]
+  [english] wire
+  [semantics] wire
+
+
+
+
+
+
+
+S! -> r1792(NP_animate_nsubj, VP_external) 	[0.49]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-NP_animate_nsubj -> r1789(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
+NP_animate_nsubj -> r1793(Det, N_common_animate_nsubj, PP_loc) 	[0.0]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
 
-NP_on -> r1796(Det, N_on, PP_loc) 	[0.1]
+NP_on -> r1794(Det, N_on, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_on -> r1797(Det, N_on) 	[0.9]
+NP_on -> r1795(Det, N_on) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_in -> r1798(Det, N_in, PP_loc) 	[0.1]
+NP_in -> r1796(Det, N_in, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_in -> r1799(Det, N_in) 	[0.9]
+NP_in -> r1797(Det, N_in) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_beside -> r1800(Det, N_beside, PP_loc) 	[0.1]
+NP_beside -> r1798(Det, N_beside, PP_loc) 	[0.1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_beside -> r1801(Det, N_beside) 	[0.9]
+NP_beside -> r1799(Det, N_beside) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-PP_loc -> r1802(P_on, NP_on) 	[0.334]
+PP_loc -> r1800(P_on, NP_on) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1803(P_in, NP_in) 	[0.333]
+PP_loc -> r1801(P_in, NP_in) 	[0.333]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1804(P_beside, NP_beside) 	[0.334]
+PP_loc -> r1802(P_beside, NP_beside) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-VP_external -> r1760(V_trans_not_omissible, NP_dobj) 	[0.10525] 
+VP_external -> r1803(V_trans_not_omissible, NP_dobj) 	[0.10525] 
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-NP_dobj -> r1777(NP_animate_dobj) 	[0.5]
+NP_dobj -> r1804(NP_animate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_dobj -> r1782(Det, N_common_animate_dobj) 	[0.25]
+NP_animate_dobj -> r1805(Det, N_common_animate_dobj) 	[0.25]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)

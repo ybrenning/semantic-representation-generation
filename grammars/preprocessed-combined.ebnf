@@ -52,9 +52,9 @@ V_trans_omissible_inf  : eat | paint | draw | clean | cook | dust | hunt | nurse
 
 V_trans_omissible_pp  : eaten | painted | drawn | cleaned | cooked | dusted | hunted | nursed | sketched | juggled | called | heard | packed | seen | noticed | studied | examined | observed | known | investigated
 
-V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
+V_trans_not_omissible  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | threw | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed | observed | saw | noticed | watched | examined | heard | recognized | trusted | supported | guided | kissed | hugged | pushed | caught | carried | saved | called | investigated | knew | believed
 
-V_trans_not_omissible_inf  : like | help | find | love | poke | admire | adore | appreciate | miss | respect | throw | tolerate | value | worship | discover | hold | stab | touch | pierce | toss
+V_trans_not_omissible_inf  : like | help | find | love | poke | admire | adore | appreciate | miss | respect | throw | tolerate | value | worship | discover | hold | stab | touch | pierce | toss | observe | see | notice | watch | examine | hear | recognize | trust | support | guide | kiss | hug | push | catch | carry | save | call | investigate | know | believe
 
 V_trans_not_omissible_pp  : liked | helped | found | loved | poked | admired | adored | appreciated | missed | respected | thrown | tolerated | valued | worshipped | discovered | held | stabbed | touched | pierced | tossed
 
