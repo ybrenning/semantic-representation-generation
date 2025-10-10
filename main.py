@@ -6,7 +6,7 @@ from generation.utils import test_pipeline
 from parse import format_sents, parse_sents
 from evaluate import get_non_null_lines, get_non_rep_lines, get_accuracies
 from generation.prompt import prompt_from_grammar
-from utils import get_safe_filename, en_header
+from utils import get_safe_filename, en_header, create_out_path
 
 
 def generation_loop(grammar_path, n_prompts, n_sets, verbose=False):
@@ -21,7 +21,7 @@ def generation_loop(grammar_path, n_prompts, n_sets, verbose=False):
 
         response = test_pipeline(
             prompt,
-            temperature=0.7,
+            temperature=0.5,
             top_p=0.9,
             verbose=verbose
         )
@@ -98,7 +98,7 @@ def main():
     metrics["n_batches"] = n_batches
     metrics["n_sents"] = n_sents
     english, semantics = [], []
-    while len(semantics) != n_sents:
+    while len(semantics) != n_batches:
         # Generation step
         response_path = generation_loop(
             grammar_path,
@@ -115,30 +115,16 @@ def main():
 
         # Evaluate and filter
         # TODO: Put all this in an eval block
-        # metrics_path = (
-        #     "output/metrics/" +
-        #     response_path.split("/")[-1].replace(".txt", ".json")
-        # )
         oov_pct_total_list.append(oov_pct_total)
         oov_pct_sent_list.append(oov_pct_sent)
-        # metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
-        non_null_lines = get_non_null_lines(
-            response_path,
-            grammar_path,
-        )
+        non_null_lines = get_non_null_lines(response_path, grammar_path)
         accs = get_accuracies(non_null_lines, verbose=verbose)
-        # metrics["accs"] = accs
         accs_list.append(accs)
 
         valid_lines = get_non_rep_lines(response_path, non_null_lines)
         rep_accs = get_accuracies(valid_lines, verbose=verbose)
         rep_accs_list.append(rep_accs)
-        # metrics["rep_accs"] = rep_accs
-
-        # with open(metrics_path, "w") as f:
-        #     json.dump(metrics, f)
-        #     print("Saved scores to", metrics_path)
 
         # Filtering step
         valid_batches = valid_lines.all(axis=0)
@@ -147,30 +133,39 @@ def main():
         for i in range(0, 6):
             en_lines_cur = []
             vf_lines_cur = []
-            sent_path = (
-                f"output/english/{i + 1}/" + response_path.split("/")[-1]
+            sent_path = create_out_path(
+                f"output/english/{i + 1}",
+                response_path,
+                check_exists=False,
+                ext=".txt"
             )
-            varfree_path = (
-                f"output/varfree_lf/{i + 1}/" + response_path.split("/")[-1]
+            varfree_path = create_out_path(
+                f"output/varfree_lf/{i + 1}",
+                response_path,
+                check_exists=False,
+                ext=".txt"
             )
 
             with open(sent_path, "r") as f:
-
                 en_lines_cur = np.array([
                     line for line in f.readlines()
                     if line.strip() and not line.startswith("//")
                 ], dtype=object)
+
             with open(varfree_path, "r") as f:
                 vf_lines_cur = np.array(f.readlines(), dtype=object)
 
             print(en_lines_cur)
             print(valid_batches)
-            en_lines.extend(en_lines_cur[valid_batches])
-            vf_lines.extend(vf_lines_cur[valid_batches])
+            en_lines.append(en_lines_cur[valid_batches])
+            vf_lines.append(vf_lines_cur[valid_batches])
+
+        en_lines = np.array(en_lines, dtype=object).T.tolist()
+        vf_lines = np.array(vf_lines, dtype=object).T.tolist()
 
         if not english and not semantics:
-            english = en_lines.copy()
-            semantics = vf_lines.copy()
+            english = list(en_lines)
+            semantics = list(vf_lines)
         else:
             remainder = n_sents - len(semantics)
             assert remainder > 0
@@ -178,33 +173,42 @@ def main():
             semantics.extend(vf_lines[:remainder])
 
         n_loops += 1
-        print("Generated", len(semantics), "/", n_sents)
+        print("Generated", len(semantics), "/", n_batches)
 
-    sent_path_out = "data/english/" + response_path.split("/")[-1]
-    varfree_path_out = "data/varfree_lf/" + response_path.split("/")[-1]
+    sent_path = create_out_path(
+        "data/english", response_path, check_exists=True, ext=".txt"
+    )
+    varfree_path = create_out_path(
+        "data/varfree_lf", response_path, check_exists=True, ext=".txt"
+    )
 
-    with open(sent_path_out, "w") as f:
-        f.write(en_header + "".join(english))
-        print("Saved sentences to", sent_path_out)
+    with open(sent_path, "w") as f:
+        f.write(
+            en_header + "".join(line for batch in english for line in batch)
+        )
+        print("Saved sentences to", sent_path)
 
-    with open(varfree_path_out, "w") as f:
-        f.write("".join(semantics))
-        print("Saved representations to", varfree_path_out)
+    with open(varfree_path, "w") as f:
+        f.write("".join(line for batch in semantics for line in batch))
+        print("Saved representations to", varfree_path)
 
+    assert (
+        len(oov_pct_total_list) == len(oov_pct_sent_list) == n_loops
+    )
     metrics["oov_pct_total"] = oov_pct_total_list
     metrics["oov_pct_sent"] = oov_pct_sent_list
     metrics["accs"] = accs_list
     metrics["rep_accs"] = rep_accs_list
     metrics["n_loops"] = n_loops
 
-    metrics_path = (
-        "data/metrics/" +
-        sent_path_out.split("/")[-1].replace(".txt", ".json")
+    metrics_path = create_out_path(
+        "data/metrics", response_path, check_exists=True, ext=".json"
     )
 
     with open(metrics_path, "w") as f:
         json.dump(metrics, f)
         print("Saved scores to", metrics_path)
+
     # Postprocessing step
     ...
 

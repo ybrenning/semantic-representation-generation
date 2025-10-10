@@ -10,6 +10,18 @@ en_header = """
 """
 
 
+def create_out_path(base_dir, response_path, check_exists, ext):
+    filename = os.path.basename(response_path)
+    base, _ = os.path.splitext(filename)
+    filename = base + ext
+    output_path = os.path.join(base_dir, filename)
+
+    if check_exists and os.path.exists(output_path):
+        raise FileExistsError(f"Output file already exists: {output_path}")
+
+    return output_path
+
+
 def read_grammar(grammar_path, lex_only=False):
     grammar = {}
     with open(grammar_path, "r") as f:
