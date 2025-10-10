@@ -82,8 +82,8 @@ Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
 - Make sure the content makes logical sense
-- Make sure embedded subjects and verbs within the same sentence are *different* from one another
-- Make sure to choose varied terminals from one set to another
+- Make sure embedded subjects and verbs within the same sentence are *different from one another*
+  * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
 
 So your task is to generate {n_sets} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
@@ -93,7 +93,8 @@ Constraints:
 
 - Always use the *same* main subject, main verb and following object throughout the 6 sentences
 - Make sure the content makes logical sense
-- Make sure embedded subjects and verbs within the same sentence are *different* from one another
+- Make sure embedded subjects and verbs within the same sentence are *different from one another*
+  * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
 
 So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """

@@ -38,7 +38,7 @@ def postprocess_varfree(sent_path, varfree_path, verbose=False):
     )
 
     cogs_path = create_out_path(
-        "data/metrics", sent_path, check_exists=True, ext=".tsv"
+        "data/cogs_lf", sent_path, check_exists=True, ext=".tsv"
     )
     df_alto[["source", "cogs_lf"]].to_csv(
         cogs_path,
