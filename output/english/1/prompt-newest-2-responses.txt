@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king admired the queen
+the boy trusted the professor
+the monster discovered the scientist
+the teacher watched the student
+the lawyer respected the judge
+the journalist observed the director

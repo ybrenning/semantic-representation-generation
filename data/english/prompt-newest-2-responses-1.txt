@@ -1,0 +1,24 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king admired the queen
+the king on the throne admired the queen
+the king that danced admired the queen
+the king that the president kissed admired the queen
+the king that kissed the pizza that was eaten admired the queen
+the king that the president that the poet hugged kissed admired the queen
+the bear called a friend
+the bear on the podium called a friend
+the bear that laughed called a friend
+the bear that the duke trusted called a friend
+the bear that trusted the banana that was painted called a friend
+the bear that the duke that the boy poked trusted called a friend
+the king guided the champion
+the king in the tent guided the champion
+the king that jogged guided the champion
+the king that the soldier recognized guided the champion
+the king that recognized the shoe that was cleaned guided the champion
+the king that the soldier that the child missed recognized guided the champion

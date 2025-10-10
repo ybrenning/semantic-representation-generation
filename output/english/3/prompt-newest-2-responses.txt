@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king that danced admired the queen
+the boy that laughed trusted the professor
+the monster that smirked discovered the scientist
+the teacher that laughed watched the student
+the lawyer that smiled respected the judge
+the journalist that ran observed the director

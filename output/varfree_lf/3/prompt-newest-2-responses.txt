@@ -1,0 +1,6 @@
+admire ( agent = * king ( nmod = dance ( agent = * king ) ) , theme = * queen )
+trust ( agent = * boy ( nmod = laugh ( agent = * boy ) ) , theme = * professor )
+discover ( agent = * monster ( nmod = smirk ( agent = * monster ) ) , theme = * scientist )
+watch ( agent = * teacher ( nmod = laugh ( agent = * teacher ) ) , theme = * student )
+respect ( agent = * lawyer ( nmod = smile ( agent = * lawyer ) ) , theme = * judge )
+observe ( agent = * journalist ( nmod = run ( agent = * journalist ) ) , theme = * director )

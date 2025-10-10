@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the poet that hugged the radio that was cleaned by the host hugged a king
+the driver that trusted the doll that was sketched by the guard trusted a scientist
+the soldier that discovered the pizza that was eaten by the creature discovered a bunny
+the bear that trusted the banana that was painted called a friend
+the teacher that discovered the doll that was mailed respected the student
+the king that recognized the shoe that was cleaned guided the champion

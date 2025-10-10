@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king that kissed the pizza that was eaten admired the queen
+the boy that respected the book that was read trusted the professor
+the monster that poked the guitar that was played discovered the scientist
+the teacher that guided the book that was read by the boy watched the student
+the lawyer that guided the case that was examined by the soldier respected the judge
+the journalist that admired the newspaper that was read by the poet observed the director

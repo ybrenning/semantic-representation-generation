@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the poet on the stool hugged a king
+the driver in the trailer trusted a scientist
+the soldier beside the statue discovered a bunny
+the bear on the podium called a friend
+the teacher beside the bike respected the student
+the king in the tent guided the champion

@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king on the throne admired the queen
+the boy on the bike trusted the professor
+the monster in the cave discovered the scientist
+the teacher on the stage watched the student
+the lawyer in the courtroom respected the judge
+the journalist beside the tree observed the director

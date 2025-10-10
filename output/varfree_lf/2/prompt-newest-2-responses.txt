@@ -1,0 +1,6 @@
+admire ( agent = * king ( nmod . on = * throne ) , theme = * queen )
+trust ( agent = * boy ( nmod . on = * bike ) , theme = * professor )
+<null>
+watch ( agent = * teacher ( nmod . on = * stage ) , theme = * student )
+<null>
+observe ( agent = * journalist ( nmod . beside = * tree ) , theme = * director )

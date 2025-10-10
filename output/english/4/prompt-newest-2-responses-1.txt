@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the poet that the judge kissed hugged a king
+the driver that the professor poked trusted a scientist
+the soldier that the kid hugged discovered a bunny
+the bear that the duke trusted called a friend
+the teacher that the boy discovered respected the student
+the king that the soldier recognized guided the champion

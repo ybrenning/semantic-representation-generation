@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the poet hugged a king
+the driver trusted a scientist
+the soldier discovered a bunny
+the bear called a friend
+the teacher respected the student
+the king guided the champion

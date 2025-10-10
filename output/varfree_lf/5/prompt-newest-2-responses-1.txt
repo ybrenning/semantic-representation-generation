@@ -1,0 +1,6 @@
+hug ( agent = * poet ( nmod = hug ( theme = * radio ( nmod = clean ( theme = * radio , agent = * host ) ) , theme = * poet ) ) , theme = king )
+trust ( agent = * driver ( nmod = trust ( theme = * doll ( nmod = sketch ( theme = * doll , agent = * guard ) ) , theme = * driver ) ) , theme = scientist )
+discover ( agent = * soldier ( nmod = discover ( theme = * pizza ( nmod = eat ( theme = * pizza , agent = * creature ) ) , theme = * soldier ) ) , theme = bunny )
+call ( agent = * bear ( nmod = trust ( theme = * banana ( nmod = paint ( theme = * banana ) ) , theme = * bear ) ) , theme = friend )
+<null>
+guide ( agent = * king ( nmod = recognize ( theme = * shoe ( nmod = clean ( theme = * shoe ) ) , theme = * king ) ) , theme = * champion )

@@ -1,0 +1,6 @@
+admire ( agent = * king , theme = * queen )
+trust ( agent = * boy , theme = * professor )
+discover ( agent = * monster , theme = * scientist )
+watch ( agent = * teacher , theme = * student )
+respect ( agent = * lawyer , theme = * judge )
+observe ( agent = * journalist , theme = * director )

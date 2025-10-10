@@ -1,0 +1,6 @@
+hug ( agent = * poet ( nmod . on = * stool ) , theme = king )
+trust ( agent = * driver ( nmod . in = * trailer ) , theme = scientist )
+discover ( agent = * soldier ( nmod . beside = * statue ) , theme = bunny )
+call ( agent = * bear ( nmod . on = * podium ) , theme = friend )
+respect ( agent = * teacher ( nmod . beside = * bike ) , theme = * student )
+guide ( agent = * king ( nmod . in = * tent ) , theme = * champion )

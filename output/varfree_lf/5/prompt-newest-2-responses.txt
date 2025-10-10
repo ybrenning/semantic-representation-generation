@@ -1,0 +1,6 @@
+admire ( agent = * king ( nmod = kiss ( theme = * pizza ( nmod = eat ( theme = * pizza ) ) , theme = * king ) ) , theme = * queen )
+<null>
+<null>
+<null>
+<null>
+<null>

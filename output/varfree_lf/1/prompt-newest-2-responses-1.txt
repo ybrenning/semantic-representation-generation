@@ -1,0 +1,6 @@
+hug ( agent = * poet , theme = king )
+trust ( agent = * driver , theme = scientist )
+discover ( agent = * soldier , theme = bunny )
+call ( agent = * bear , theme = friend )
+respect ( agent = * teacher , theme = * student )
+guide ( agent = * king , theme = * champion )

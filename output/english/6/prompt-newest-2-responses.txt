@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the king that the president that the poet hugged kissed admired the queen
+the boy that the poet that the visitor helped respected trusted the professor
+the monster that the deer that the visitor assisted poked discovered the scientist
+the teacher that the child that the girl liked helped watched the student
+the lawyer that the captain that the sailor trusted admired respected the judge
+the journalist that the lawyer that the doctor liked noticed observed the director

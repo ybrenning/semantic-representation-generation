@@ -1,0 +1,6 @@
+hug ( agent = * poet ( nmod = snore ( agent = * poet ) ) , theme = king )
+trust ( agent = * driver ( nmod = dance ( agent = * driver ) ) , theme = scientist )
+discover ( agent = * soldier ( nmod = laugh ( agent = * soldier ) ) , theme = bunny )
+call ( agent = * bear ( nmod = laugh ( agent = * bear ) ) , theme = friend )
+respect ( agent = * teacher ( nmod = smile ( agent = * teacher ) ) , theme = * student )
+guide ( agent = * king ( nmod = jog ( agent = * king ) ) , theme = * champion )

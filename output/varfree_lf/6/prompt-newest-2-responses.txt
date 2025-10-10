@@ -1,0 +1,6 @@
+admire ( agent = * king ( nmod = kiss ( agent = * president ( nmod = hug ( agent = * poet , theme = * president ) ) , theme = * king ) ) , theme = * queen )
+trust ( agent = * boy ( nmod = respect ( agent = * poet ( nmod = help ( agent = * visitor , theme = * poet ) ) , theme = * boy ) ) , theme = * professor )
+<null>
+watch ( agent = * teacher ( nmod = help ( agent = * child ( nmod = like ( agent = * girl , theme = * child ) ) , theme = * teacher ) ) , theme = * student )
+respect ( agent = * lawyer ( nmod = admire ( agent = * captain ( nmod = trust ( agent = * sailor , theme = * captain ) ) , theme = * lawyer ) ) , theme = * judge )
+observe ( agent = * journalist ( nmod = notice ( agent = * lawyer ( nmod = like ( agent = * doctor , theme = * lawyer ) ) , theme = * journalist ) ) , theme = * director )

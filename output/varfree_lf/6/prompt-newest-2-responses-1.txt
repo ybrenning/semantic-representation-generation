@@ -1,0 +1,6 @@
+<null>
+<null>
+<null>
+call ( agent = * bear ( nmod = trust ( agent = * duke ( nmod = poke ( agent = * boy , theme = * duke ) ) , theme = * bear ) ) , theme = friend )
+respect ( agent = * teacher ( nmod = discover ( agent = * boy ( nmod = adore ( agent = * girl , theme = * boy ) ) , theme = * teacher ) ) , theme = * student )
+guide ( agent = * king ( nmod = recognize ( agent = * soldier ( nmod = miss ( agent = * child , theme = * soldier ) ) , theme = * king ) ) , theme = * champion )

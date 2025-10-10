@@ -1,0 +1,12 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the poet that snored hugged a king
+the driver that danced trusted a scientist
+the soldier that laughed discovered a bunny
+the bear that laughed called a friend
+the teacher that smiled respected the student
+the king that jogged guided the champion
