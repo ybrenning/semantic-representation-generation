@@ -7,6 +7,7 @@ from parse import format_sents, parse_sents
 from evaluate import get_non_null_lines, get_non_rep_lines, get_accuracies
 from generation.prompt import prompt_from_grammar
 from utils import get_safe_filename, en_header, create_out_path
+from postprocess import postprocess_varfree
 
 
 def generation_loop(grammar_path, n_prompts, n_sets, verbose=False):
@@ -210,7 +211,7 @@ def main():
         print("Saved scores to", metrics_path)
 
     # Postprocessing step
-    ...
+    postprocess_varfree(sent_path, varfree_path, verbose=verbose)
 
 
 if __name__ == "__main__":
