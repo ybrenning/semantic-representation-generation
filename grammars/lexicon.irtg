@@ -152,26 +152,7 @@ inanimate_nouns = [
 
 
 {# 100 names, picked from https://www.ssa.gov/OACT/babynames/ #}
-{% set proper_nouns = [
-    'Emma', 'Liam', 'Olivia', 'Noah', 'Ava', 'William', 'Isabella', 'James', 'Sophia', 'Oliver',
-    'Charlotte', 'Benjamin', 'Mia', 'Elijah', 'Amelia', 'Lucas', 'Harper', 'Mason', 'Evelyn', 'Logan',
-    'Abigail', 'Alexander', 'Emily', 'Ethan', 'Elizabeth', 'Jacob', 'Mila', 'Michael', 'Ella', 'Daniel',
-    'Avery', 'Henry', 'Sofia', 'Jackson', 'Camila', 'Sebastian', 'Aria', 'Aiden', 'Scarlett', 'Matthew',
-    'Victoria', 'Samuel', 'Madison', 'David', 'Luna', 'Joseph', 'Grace', 'Carter', 'Chloe', 'Owen',
-    'Penelope', 'Wyatt', 'Layla', 'John', 'Riley', 'Jack', 'Zoey', 'Luke', 'Nora', 'Jayden',
-    'Lily', 'Dylan', 'Eleanor', 'Grayson', 'Hannah', 'Levi', 'Lillian', 'Isaac', 'Addison', 'Gabriel',
-    'Aubrey', 'Julian', 'Ellie', 'Mateo', 'Stella', 'Anthony', 'Natalie', 'Jaxon', 'Zoe', 'Lincoln',
-    'Leah', 'Joshua', 'Hazel', 'Christopher', 'Violet', 'Andrew', 'Aurora', 'Theodore', 'Savannah', 'Caleb',
-    'Audrey', 'Ryan', 'Brooklyn', 'Asher', 'Bella', 'Nathan', 'Claire', 'Thomas', 'Skylar', 'Leo'
-]%}
-
-{% for word, prob in proper_nouns|zipf -%}
-{% for cat in ['N_prop_dobj', 'N_prop_iobj', 'N_prop_nsubj', 'N_prop_nsubjpass'] -%}
-{{ cat }} -> r{{ cnt.next() }} [{{ prob }}]
-[english] {{ word }}
-[semantics] {{ word }}
-{% endfor %}{% endfor %}
-
+{# Proper nouns removed by Yannick #}
 
 {# P + N: N from BNC + COCA #}
 {# 100 nouns that can appear with "on" #}

@@ -22,14 +22,6 @@ N_common_inanimate_nsubjpass  : cake | donut | cookie | box | rose | drink | rai
 
 N_common_inanimate_nsubj  : cake | donut | cookie | box | rose | drink | raisin | melon | sandwich | strawberry | ball | balloon | bat | block | book | crayon | chalk | doll | game | glue | lollipop | hamburger | banana | biscuit | muffin | pancake | pizza | potato | pretzel | pumpkin | sweetcorn | yogurt | pickle | jigsaw | pen | pencil | present | toy | cracker | brush | radio | cloud | mandarin | hat | basket | plant | flower | chair | spoon | pillow | gumball | scarf | shoe | jacket | hammer | bucket | knife | cup | plate | towel | bottle | bowl | can | clock | jar | penny | purse | soap | toothbrush | watch | newspaper | fig | bag | wine | key | weapon | brain | tool | crown | ring | leaf | fruit | mirror | beer | shirt | guitar | chemical | seed | shell | brick | bell | coin | button | needle | molecule | crystal | flag | nail | bean | liver
 
-N_prop_dobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
-
-N_prop_iobj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
-
-N_prop_nsubj  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
-
-N_prop_nsubjpass  : Emma | Liam | Olivia | Noah | Ava | William | Isabella | James | Sophia | Oliver | Charlotte | Benjamin | Mia | Elijah | Amelia | Lucas | Harper | Mason | Evelyn | Logan | Abigail | Alexander | Emily | Ethan | Elizabeth | Jacob | Mila | Michael | Ella | Daniel | Avery | Henry | Sofia | Jackson | Camila | Sebastian | Aria | Aiden | Scarlett | Matthew | Victoria | Samuel | Madison | David | Luna | Joseph | Grace | Carter | Chloe | Owen | Penelope | Wyatt | Layla | John | Riley | Jack | Zoey | Luke | Nora | Jayden | Lily | Dylan | Eleanor | Grayson | Hannah | Levi | Lillian | Isaac | Addison | Gabriel | Aubrey | Julian | Ellie | Mateo | Stella | Anthony | Natalie | Jaxon | Zoe | Lincoln | Leah | Joshua | Hazel | Christopher | Violet | Andrew | Aurora | Theodore | Savannah | Caleb | Audrey | Ryan | Brooklyn | Asher | Bella | Nathan | Claire | Thomas | Skylar | Leo
-
 N_on  : table | stage | bed | chair | stool | road | tree | box | surface | seat | speaker | computer | rock | boat | cabinet | TV | plate | desk | bowl | bench | shelf | cloth | piano | bible | leaflet | sheet | cupboard | truck | tray | notebook | blanket | deck | coffin | log | ladder | barrel | rug | canvas | tiger | towel | throne | booklet | sock | corpse | sofa | keyboard | book | pillow | pad | train | couch | bike | pedestal | platter | paper | rack | board | panel | tripod | branch | machine | floor | napkin | cookie | block | cot | device | yacht | dog | mattress | ball | stand | stack | windowsill | counter | cushion | hanger | trampoline | gravel | cake | carpet | plaque | boulder | leaf | mound | bun | dish | cat | podium | tabletop | beach | bag | glacier | brick | crack | vessel | futon | turntable | rag | chessboard
 
 N_in  : house | room | car | garden | box | cup | glass | bag | vehicle | hole | cabinet | bottle | shoe | storage | cot | vessel | pot | pit | tin | can | cupboard | envelope | nest | bush | coffin | drawer | container | basin | tent | soup | well | barrel | bucket | cage | sink | cylinder | parcel | cart | sack | trunk | wardrobe | basket | bin | fridge | mug | jar | corner | pool | blender | closet | pile | van | trailer | saucepan | truck | taxi | haystack | dumpster | puddle | bathtub | pod | tub | trap | bun | microwave | bookstore | package | cafe | train | castle | bunker | vase | backpack | tube | hammock | stadium | backyard | swamp | monastery | refrigerator | palace | cubicle | crib | condo | tower | crate | dungeon | teapot | tomb | casket | jeep | shoebox | wagon | bakery | fishbowl | kennel | china | spaceship | penthouse | pyramid
@@ -94,15 +86,15 @@ NP_dobj : NP_inanimate_dobj | NP_animate_dobj
 
 NP_unacc_subj : NP_inanimate_dobj_noPP | NP_animate_dobj_noPP | Det N_common_animate_dobj
 
-NP_animate_dobj_noPP : Det N_common_animate_dobj | N_prop_dobj
+NP_animate_dobj_noPP : Det N_common_animate_dobj
 
-NP_animate_dobj : Det N_common_animate_dobj | Det N_common_animate_dobj PP_loc | N_prop_dobj
+NP_animate_dobj : Det N_common_animate_dobj | Det N_common_animate_dobj PP_loc
 
-NP_animate_iobj : Det N_common_animate_iobj | N_prop_iobj
+NP_animate_iobj : Det N_common_animate_iobj
 
-NP_animate_nsubj : Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj PP_loc
+NP_animate_nsubj : Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc
 
-NP_animate_nsubjpass : Det N_common_animate_nsubjpass | N_prop_nsubjpass
+NP_animate_nsubjpass : Det N_common_animate_nsubjpass
 
 NP_inanimate_dobj : Det N_common_inanimate_dobj | Det N_common_inanimate_dobj PP_loc
 
@@ -132,7 +124,7 @@ VP_RC_theme : NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissi
 
 VP_dat_RC_theme : NP_animate_nsubj V_dat NP_animate_iobj
 
-NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj
+NP_animate_nsubj_main : Det N_common_animate_nsubj
 
 VP_RC_unacc_theme : V_unacc
 
