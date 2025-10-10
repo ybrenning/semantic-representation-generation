@@ -21,7 +21,7 @@ def generation_loop(grammar_path, n_prompts, n_sets, verbose=False):
 
         response = test_pipeline(
             prompt,
-            temperature=0.4,
+            temperature=0.7,
             top_p=0.9,
             verbose=verbose
         )
@@ -89,6 +89,11 @@ def main():
 
     metrics = {}
 
+    oov_pct_total_list = []
+    oov_pct_sent_list = []
+    accs_list = []
+    rep_accs_list = []
+    n_loops = 0
     metrics["n_prompts"] = n_prompts
     metrics["n_batches"] = n_batches
     metrics["n_sents"] = n_sents
@@ -99,7 +104,7 @@ def main():
             grammar_path,
             n_prompts,
             n_batches,
-            verbose
+            verbose=verbose
         )
 
         # Format and parse model outputs
@@ -110,26 +115,30 @@ def main():
 
         # Evaluate and filter
         # TODO: Put all this in an eval block
-        metrics_path = (
-            "output/metrics/" +
-            response_path.split("/")[-1].replace(".txt", ".json")
-        )
-        metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
+        # metrics_path = (
+        #     "output/metrics/" +
+        #     response_path.split("/")[-1].replace(".txt", ".json")
+        # )
+        oov_pct_total_list.append(oov_pct_total)
+        oov_pct_sent_list.append(oov_pct_sent)
+        # metrics["oov"] = {"oov_total": oov_pct_total, "oov_sent": oov_pct_sent}
 
         non_null_lines = get_non_null_lines(
             response_path,
             grammar_path,
         )
         accs = get_accuracies(non_null_lines, verbose=verbose)
-        metrics["accs"] = accs
+        # metrics["accs"] = accs
+        accs_list.append(accs)
 
         valid_lines = get_non_rep_lines(response_path, non_null_lines)
         rep_accs = get_accuracies(valid_lines, verbose=verbose)
-        metrics["rep_accs"] = rep_accs
+        rep_accs_list.append(rep_accs)
+        # metrics["rep_accs"] = rep_accs
 
-        with open(metrics_path, "w") as f:
-            json.dump(metrics, f)
-            print("Saved scores to", metrics_path)
+        # with open(metrics_path, "w") as f:
+        #     json.dump(metrics, f)
+        #     print("Saved scores to", metrics_path)
 
         # Filtering step
         valid_batches = valid_lines.all(axis=0)
@@ -154,6 +163,8 @@ def main():
             with open(varfree_path, "r") as f:
                 vf_lines_cur = np.array(f.readlines(), dtype=object)
 
+            print(en_lines_cur)
+            print(valid_batches)
             en_lines.extend(en_lines_cur[valid_batches])
             vf_lines.extend(vf_lines_cur[valid_batches])
 
@@ -166,6 +177,7 @@ def main():
             english.extend(en_lines[:remainder])
             semantics.extend(vf_lines[:remainder])
 
+        n_loops += 1
         print("Generated", len(semantics), "/", n_sents)
 
     sent_path_out = "data/english/" + response_path.split("/")[-1]
@@ -179,6 +191,20 @@ def main():
         f.write("".join(semantics))
         print("Saved representations to", varfree_path_out)
 
+    metrics["oov_pct_total"] = oov_pct_total_list
+    metrics["oov_pct_sent"] = oov_pct_sent_list
+    metrics["accs"] = accs_list
+    metrics["rep_accs"] = rep_accs_list
+    metrics["n_loops"] = n_loops
+
+    metrics_path = (
+        "data/metrics/" +
+        sent_path_out.split("/")[-1].replace(".txt", ".json")
+    )
+
+    with open(metrics_path, "w") as f:
+        json.dump(metrics, f)
+        print("Saved scores to", metrics_path)
     # Postprocessing step
     ...
 
