@@ -99,7 +99,7 @@ def main():
     metrics["n_batches"] = n_batches
     metrics["n_sents"] = n_sents
     english, semantics = [], []
-    while len(semantics) != n_batches:
+    while len(semantics) != (n_batches*n_prompts):
         # Generation step
         response_path = generation_loop(
             grammar_path,
@@ -156,8 +156,6 @@ def main():
             with open(varfree_path, "r") as f:
                 vf_lines_cur = np.array(f.readlines(), dtype=object)
 
-            print(en_lines_cur)
-            print(valid_batches)
             en_lines.append(en_lines_cur[valid_batches])
             vf_lines.append(vf_lines_cur[valid_batches])
 
@@ -168,13 +166,13 @@ def main():
             english = list(en_lines)
             semantics = list(vf_lines)
         else:
-            remainder = n_sents - len(semantics)
+            remainder = n_batches*n_prompts - len(semantics)
             assert remainder > 0
             english.extend(en_lines[:remainder])
             semantics.extend(vf_lines[:remainder])
 
         n_loops += 1
-        print("Generated", len(semantics), "/", n_batches)
+        print("Generated", len(semantics), "/", n_batches*n_prompts)
 
     sent_path = create_out_path(
         "data/english", response_path, check_exists=True, ext=".txt"
