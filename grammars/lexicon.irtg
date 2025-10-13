@@ -60,7 +60,28 @@
   'called': 'call',
   'investigated': 'investigate',
   'knew': 'know',
-  'believed': 'believe'
+  'believed': 'believe',
+
+  'forgave': 'forgive',
+  'followed': 'follow',
+  'thanked': 'thank',
+  'reminded': 'remind',
+  'consulted': 'consult',
+  'questioned': 'question',
+  'challenged': 'challenge',
+  'hired': 'hire',
+  'fired': 'fire',
+  'invited': 'invite',
+  'accused': 'accuse',
+  'envied': 'envy',
+  'blamed': 'blame',
+  'congratulated': 'congratulate',
+  'trained': 'train',
+  'insulted': 'insult',
+  'calmed': 'calm',
+  'motivated': 'motivate',
+  'offended': 'offend',
+  'avoided': 'avoid'
 } %}
 
 {% set pos_d = {
@@ -285,7 +306,12 @@ V_trans_omissible_pp -> r{{ cnt.next() }} [{{ prob }}]
   'observed', 'saw', 'noticed', 'watched', 'examined',
   'heard', 'recognized', 'trusted', 'supported', 'guided',
   'kissed', 'hugged', 'pushed', 'caught', 'carried',
-  'saved', 'called', 'investigated', 'knew', 'believed'
+  'saved', 'called', 'investigated', 'knew', 'believed',
+
+  'forgave', 'followed', 'thanked', 'reminded', 'consulted',
+  'questioned', 'challenged', 'hired', 'fired', 'invited',
+  'accused', 'envied', 'blamed', 'congratulated', 'trained',
+  'insulted', 'calmed', 'motivated', 'offended', 'avoided'
 ] %}
 
 {% for word, prob in V_trans_not_omissible|zipf -%}
