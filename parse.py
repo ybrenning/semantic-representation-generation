@@ -1,5 +1,6 @@
+import argparse
 import subprocess
-from utils import read_grammar, en_header
+from utils import read_grammar, en_header, create_out_path
 
 
 rel_prons = ["which", "who", "whom"]
@@ -15,6 +16,22 @@ grammars = [
 
 
 def format_sents(response_path, verbose=False):
+    """
+    From the raw GPT-5 output saved in the `responses` directory,
+    write a file into the `english` directory that contains the
+    sentences in an Alto-parseable format like this:
+
+
+    // IRTG unannotated corpus file, v1.0
+    //
+    // interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+    the researcher touched the journalist
+    the captain accused the lawyer
+    the farmer hugged a dog
+    the queen saved a patient
+    """
     with open(response_path, "r") as f:
         lines = f.readlines()
 
@@ -42,8 +59,11 @@ def format_sents(response_path, verbose=False):
         sent_types[n - 1] += sent + "\n"
 
     for i, content in enumerate(sent_types):
-        sent_path = (
-            f"output/english/{i + 1}/" + response_path.split("/")[-1]
+        sent_path = create_out_path(
+            f"output/english/{i + 1}/",
+            response_path,
+            check_exists=False,
+            ext=".txt"
         )
         with open(sent_path, "w") as f:
             f.write(content)
@@ -52,6 +72,10 @@ def format_sents(response_path, verbose=False):
 
 
 def lexical_parse(sent_path, lex, show_oov=False):
+    """
+    Given on a file containing English sentences, find and count
+    any OOV words and sentencens based on a given lexicon.
+    """
     words = set()
     sent_count = 0
     oov_count = 0
@@ -85,11 +109,21 @@ def lexical_parse(sent_path, lex, show_oov=False):
     return oov_count, oov_sents, sent_count, words
 
 
-def parse_sents(
-    response_path,
-    base_grammar_path,
-    verbose=False
-):
+def parse_sents(response_path, base_grammar_path, verbose=False):
+    """
+    The main parse function takes the response name as well as the
+    "base" grammar (i.e., the main grammar used within the prompt).
+
+    It then goes through every sentence type (1)-(6) and uses the
+    corresponding semantics grammar to produce semantic representations
+    in the `varfree` logical form.
+
+    These parse results can then be used in the evaluation step.
+    If the parse is not valid, the corresponding line contains <null>, which
+    we use to filter which sentence batches to keep as well as to compute
+    an accuracy score. In addition, this function performs a lexical parse
+    on each sentence file in order to evaluate OOV percentages.
+    """
     oov_count = 0
     oov_sents = 0
     sent_count = 0
@@ -102,8 +136,11 @@ def parse_sents(
     lex = read_grammar(grammar_path, lex_only=True)
 
     for i in range(0, 6):
-        sent_path = (
-            f"output/english/{i + 1}/" + response_path.split("/")[-1]
+        sent_path = create_out_path(
+            f"output/english/{i + 1}/",
+            response_path,
+            check_exists=False,
+            ext=".txt"
         )
 
         (
@@ -165,11 +202,34 @@ def parse_sents(
 
 
 def main():
-    # TODO: Response, grammar, verbose command line args
-    response_path = "generation/responses/prompt-newest-response-36.txt"
-    base_grammar_path = "grammars/preprocessed-combined.irtg"
-    # format_sents(response_path, verbose=True)
-    parse_sents(response_path, base_grammar_path, verbose=True)
+    parser = argparse.ArgumentParser(
+        description="Execute data generation pipeline"
+    )
+
+    parser.add_argument(
+        "response_path",
+        type=str,
+        help="Path to the unformatted response"
+    )
+    parser.add_argument(
+        "grammar_path",
+        type=str,
+        help="Path to the IRTG grammar file"
+    )
+    parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Enable verbose output"
+    )
+
+    args = parser.parse_args()
+
+    response_path = args.response_path
+    grammar_path = args.grammar_path
+    verbose = args.verbose
+
+    format_sents(response_path, verbose=verbose)
+    parse_sents(response_path, grammar_path, verbose=verbose)
 
 
 if __name__ == "__main__":
