@@ -1,5 +1,7 @@
+import argparse
 import numpy as np
 from tabulate import tabulate
+from utils import create_out_path
 
 
 DET = ["the", "a"]
@@ -27,7 +29,7 @@ def get_accuracies(valid_lines, verbose=False):
             (f"Type {i+1}", f"{acc:.2%}") for i, acc in enumerate(sent_accs)
         ]
         print(tabulate(table, headers=headers, tablefmt="fancy_grid"))
-        print(f"\nBatch Accuracy: {batch_acc:.2%}")
+        print(f"\nBatch Accuracy: {batch_acc:.2%}\n")
 
     return accs
 
@@ -38,8 +40,11 @@ def get_non_null_lines(
 ):
     parses = []
     for i in range(0, 6):
-        varfree_path = (
-            f"output/varfree_lf/{i + 1}/" + response_path.split("/")[-1]
+        varfree_path = create_out_path(
+            f"output/varfree_lf/{i + 1}/",
+            response_path,
+            check_exists=False,
+            ext=".txt"
         )
 
         with open(varfree_path, "r") as f:
@@ -57,8 +62,11 @@ def get_non_rep_lines(response_path, non_null_lines):
     n_repetitions = 0
 
     for i in range(0, 6):
-        sent_path = (
-            f"output/english/{i + 1}/" + response_path.split("/")[-1]
+        sent_path = create_out_path(
+            f"output/english/{i + 1}/",
+            response_path,
+            check_exists=False,
+            ext=".txt"
         )
 
         with open(sent_path, "r") as f:
@@ -82,15 +90,44 @@ def get_non_rep_lines(response_path, non_null_lines):
 
 
 def main():
-    # TODO: make argparse
-    response_path = "generation/responses/prompt-newest-5-responses-2.txt"
-    base_grammar_path = "grammars/preprocessed-combined.irtg"
-    lines_b = get_non_null_lines(
-        response_path, base_grammar_path
+    parser = argparse.ArgumentParser(
+        description="Execute data generation pipeline"
     )
-    print(lines_b)
-    lines = get_non_rep_lines(response_path, lines_b)
-    print(lines)
+
+    parser.add_argument(
+        "response_path",
+        type=str,
+        help="Path to the unformatted response"
+    )
+    parser.add_argument(
+        "grammar_path",
+        type=str,
+        help="Path to the IRTG grammar file"
+    )
+    parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Enable verbose output"
+    )
+
+    args = parser.parse_args()
+
+    response_path = args.response_path
+    grammar_path = args.grammar_path
+    verbose = args.verbose
+
+    lines_non_null = get_non_null_lines(response_path, grammar_path)
+    print("Parse accuracies")
+    accs = get_accuracies(lines_non_null, verbose=verbose)
+
+    lines_non_rep = get_non_rep_lines(response_path, lines_non_null)
+    print("Non-repetition sentences")
+    accs_rep = get_accuracies(lines_non_rep, verbose=verbose)
+
+    if verbose:
+        print(accs)
+        print()
+        print(accs_rep)
 
 
 if __name__ == "__main__":
