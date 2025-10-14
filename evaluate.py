@@ -1,4 +1,5 @@
 import argparse
+import re
 import numpy as np
 from tabulate import tabulate
 from utils import create_out_path
@@ -89,6 +90,49 @@ def get_non_rep_lines(response_path, non_null_lines):
     return non_null_lines
 
 
+def get_consistent_lines(response_path, non_null_lines):
+    valid_lines = non_null_lines
+    valid_batches = non_null_lines.all(axis=0)
+    vf_lines = []
+
+    for i in range(0, 6):
+        varfree_path = create_out_path(
+            f"output/varfree_lf/{i + 1}/",
+            response_path,
+            check_exists=False,
+            ext=".txt"
+        )
+
+        with open(varfree_path, "r") as f:
+            vf_lines_cur = np.array(f.readlines(), dtype=object)
+        vf_lines.append(vf_lines_cur[valid_batches])
+
+    vf_lines = np.array(vf_lines, dtype=object).T.tolist()
+
+    pattern = re.compile(r'^(\w+)\s*\(\s*agent\s*=\s*\*?\s*(\w+)', re.M)
+
+    for i, batch in enumerate(vf_lines, start=1):
+        verbs, agents = [], []
+        for line in batch:
+            m = pattern.match(line.strip())
+            if m:
+                verbs.append(m.group(1))
+                agents.append(m.group(2))
+
+        main_verb = verbs[0] if verbs else None
+        main_agent = agents[0] if agents else None
+
+        for j, (v, a) in enumerate(zip(verbs, agents)):
+            if v != main_verb or a != main_agent:
+                print(
+                    f"Batch {i+1}, sentence {j+1}: "
+                    f"Verb/agent mismatch (verb='{v}', agent='{a}')"
+                )
+                valid_lines[j, i] = False
+
+    return valid_lines
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Execute data generation pipeline"
@@ -120,12 +164,18 @@ def main():
     print("Parse accuracies")
     accs = get_accuracies(lines_non_null, verbose=verbose)
 
-    lines_non_rep = get_non_rep_lines(response_path, lines_non_null)
+    lines_consistent = get_consistent_lines(response_path, lines_non_null)
+    print("Sentences w/ consistent main S/V")
+    accs_cons = get_accuracies(lines_consistent, verbose=verbose)
+
+    lines_non_rep = get_non_rep_lines(response_path, lines_consistent)
     print("Non-repetition sentences")
     accs_rep = get_accuracies(lines_non_rep, verbose=verbose)
 
     if verbose:
         print(accs)
+        print()
+        print(accs_cons)
         print()
         print(accs_rep)
 
