@@ -251,20 +251,16 @@ You are an expert linguist. You need to generate 6 sentences based on the follow
     (Rel_pron)
     (VP_RC_object_extracted_theme
       (NP_animate_nsubj_rec
-        (NP_animate_nsubj_main_RC_modified
-          (NP_animate_nsubj_rec
+        (NP_animate_nsubj_main_RC_modified_inner
+          (NP_animate_nsubj_main
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (Rel_pron)
+          (VP_RC_object_extracted_theme_inner
             (NP_animate_nsubj_main
               (Det)
               (N_common_animate_nsubj)
-            )
-          )
-          (Rel_pron)
-          (VP_RC_object_extracted_theme
-            (NP_animate_nsubj_rec
-              (NP_animate_nsubj_main
-                (Det)
-                (N_common_animate_nsubj)
-              )
             )
             (V_trans_not_omissible)
           )
