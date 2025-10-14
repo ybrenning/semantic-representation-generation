@@ -15,6 +15,7 @@ def main():
         if "->" in line:
             rules = line.strip().split("->")
             lhs, rhs = rules[0], rules[1]
+            lhs = lhs.strip()
             if "(" not in rhs:  # Terminal
                 rhs = [lines[i+1].split(" ")[-1]]
             else:  # Non-terminal
@@ -22,7 +23,6 @@ def main():
                 _, midright = rhs.split("(")
                 rhs, _ = midright.split(")")
 
-                lhs = lhs.strip()
                 lhs = lhs.replace("!", "") if lhs == "S!" else lhs
                 rhs = rhs.strip().split(",")
 

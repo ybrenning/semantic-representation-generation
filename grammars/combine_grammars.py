@@ -1,16 +1,19 @@
+import re
+
+
 def clean_line(line):
-    # Remove rule probability
-    cleaned = re.sub(r"\s*\[[^\]]+\]$", "", line)
+    # Normalize spaces and remove rule probability
+    cleaned = re.sub(r"\s*->\s*", " -> ", line.strip())
+    cleaned = re.sub(r"\s*\[[^\]]+\]$", "", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned)
 
     # Normalize comma spacing inside parentheses
     def normalize_commas(match):
         inside = match.group(1)
-        # Single space after commas
         inside = re.sub(r"\s*,\s*", ", ", inside)
         return f"({inside})"
 
     cleaned = re.sub(r"\(([^()]*)\)", normalize_commas, cleaned)
-
     return cleaned
 
 
@@ -58,23 +61,18 @@ with open(out_file, "w") as f_out:
             skip_count = 0
             for line in f_in:
                 if skip_count > 0:
-                    print("skipping subsequent", line)
                     skip_count -= 1
                     continue
 
-                import re
                 if "->" in line:
                     cleaned = clean_line(line)
                     if cleaned not in seen:
-                        f_out.write(line)
+                        f_out.write(cleaned + "\n")
                         seen.add(cleaned)
                     else:
-                        print("skipping", line)
-                        print(cleaned)
                         skip_count = 2
                 elif line.startswith("interpretation"):
                     continue
                 else:
-                    print("writing", line)
                     f_out.write(line)
         f_out.write("\n")
