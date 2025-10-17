@@ -4,7 +4,12 @@ import numpy as np
 
 from generation.utils import test_pipeline
 from parse import format_sents, parse_sents
-from evaluate import get_non_null_lines, get_non_rep_lines, get_accuracies
+from evaluate import (
+    get_non_null_lines,
+    get_non_rep_lines,
+    get_consistent_lines,
+    get_accuracies
+)
 from generation.prompt import prompt_from_grammar
 from utils import get_safe_filename, en_header, create_out_path
 from postprocess import postprocess_varfree
@@ -94,6 +99,7 @@ def main():
     oov_pct_sent_list = []
     accs_list = []
     rep_accs_list = []
+    consistent_accs_list = []
     n_loops = 0
     metrics["n_prompts"] = n_prompts
     metrics["n_batches"] = n_batches
@@ -123,12 +129,16 @@ def main():
         accs = get_accuracies(non_null_lines, verbose=verbose)
         accs_list.append(accs)
 
-        valid_lines = get_non_rep_lines(response_path, non_null_lines)
-        rep_accs = get_accuracies(valid_lines, verbose=verbose)
+        consistent_lines = get_consistent_lines(response_path, non_null_lines)
+        consistent_accs = get_accuracies(consistent_lines, verbose=verbose)
+        consistent_accs_list.append(consistent_accs)
+
+        non_rep_lines = get_non_rep_lines(response_path, consistent_lines)
+        rep_accs = get_accuracies(non_rep_lines, verbose=verbose)
         rep_accs_list.append(rep_accs)
 
         # Filtering step
-        valid_batches = valid_lines.all(axis=0)
+        valid_batches = rep_accs.all(axis=0)
         en_lines = []
         vf_lines = []
         for i in range(0, 6):
@@ -197,6 +207,7 @@ def main():
     metrics["oov_pct_total"] = oov_pct_total_list
     metrics["oov_pct_sent"] = oov_pct_sent_list
     metrics["accs"] = accs_list
+    metrics["consistent_accs"] = consistent_accs_list
     metrics["rep_accs"] = rep_accs_list
     metrics["n_loops"] = n_loops
 
