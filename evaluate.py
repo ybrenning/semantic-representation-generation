@@ -36,11 +36,10 @@ def get_accuracies(valid_lines, verbose=False):
 
 
 def get_non_null_lines(
-    response_path,
-    grammar_path,
+    response_path, batch_size
 ):
     parses = []
-    for i in range(0, 6):
+    for i in range(0, batch_size):
         varfree_path = create_out_path(
             f"output/varfree_lf/{i + 1}/",
             response_path,
@@ -57,12 +56,12 @@ def get_non_null_lines(
     return np.stack(parses)
 
 
-def get_non_rep_lines(response_path, non_null_lines):
+def get_non_rep_lines(response_path, non_null_lines, batch_size):
     en_lines = []
     ignore_list = DET + AUX + BY + INF + REL_PRON + PP_LOC
     n_repetitions = 0
 
-    for i in range(0, 6):
+    for i in range(0, batch_size):
         sent_path = create_out_path(
             f"output/english/{i + 1}/",
             response_path,
@@ -90,12 +89,12 @@ def get_non_rep_lines(response_path, non_null_lines):
     return non_null_lines
 
 
-def get_consistent_lines(response_path, non_null_lines):
+def get_consistent_lines(response_path, non_null_lines, batch_size):
     valid_lines = non_null_lines
     valid_batches = non_null_lines.all(axis=0)
     vf_lines = []
 
-    for i in range(0, 6):
+    for i in range(0, batch_size):
         varfree_path = create_out_path(
             f"output/varfree_lf/{i + 1}/",
             response_path,
@@ -139,14 +138,14 @@ def main():
     )
 
     parser.add_argument(
+        "dataset_type",
+        choices=["batch", "slog"],
+        help="Type of generation to attempt (batch or slog)"
+    )
+    parser.add_argument(
         "response_path",
         type=str,
         help="Path to the unformatted response"
-    )
-    parser.add_argument(
-        "grammar_path",
-        type=str,
-        help="Path to the IRTG grammar file"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -157,18 +156,27 @@ def main():
     args = parser.parse_args()
 
     response_path = args.response_path
-    grammar_path = args.grammar_path
+    dataset_type = args.dataset_type
     verbose = args.verbose
 
-    lines_non_null = get_non_null_lines(response_path, grammar_path)
+    batch_size = 6 if dataset_type == "batch" else 2
+
+    lines_non_null = get_non_null_lines(response_path, batch_size)
     print("Parse accuracies")
     accs = get_accuracies(lines_non_null, verbose=verbose)
 
-    lines_consistent = get_consistent_lines(response_path, lines_non_null)
-    print("Sentences w/ consistent main S/V")
-    accs_cons = get_accuracies(lines_consistent, verbose=verbose)
+    if dataset_type == "batch":
+        lines_consistent = get_consistent_lines(
+            response_path, lines_non_null, batch_size
+        )
+        print("Sentences w/ consistent main S/V")
+        accs_cons = get_accuracies(lines_consistent, verbose=verbose)
+    else:
+        accs_cons = []
 
-    lines_non_rep = get_non_rep_lines(response_path, lines_consistent)
+    lines_non_rep = get_non_rep_lines(
+        response_path, lines_consistent, batch_size
+    )
     print("Non-repetition sentences")
     accs_rep = get_accuracies(lines_non_rep, verbose=verbose)
 

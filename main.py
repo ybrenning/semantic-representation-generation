@@ -10,7 +10,7 @@ from evaluate import (
     get_consistent_lines,
     get_accuracies
 )
-from generation.prompt import prompt_from_grammar, get_pp_rec_prompt
+from generation.prompt import prompt_from_grammar
 from utils import get_safe_filename, en_header, create_out_path
 from postprocess import postprocess_varfree
 
@@ -19,18 +19,18 @@ def generation_loop(
     dataset_type,
     grammar_path,
     n_prompts,
-    n_sets,
+    n_batches,
     verbose=False
 ):
     responses = ""
     for _ in range(n_prompts):
         # Maybe also save the generated prompts?
-        # prompt = prompt_from_grammar(
-        #     grammar_path,
-        #     n_sets=n_sets,
-        #     k=30
-        # )
-        prompt = get_pp_rec_prompt(2, 4)
+        prompt = prompt_from_grammar(
+            dataset_type,
+            grammar_path,
+            n_batches=n_batches,
+            k=30
+        )
 
         response = test_pipeline(
             prompt,
@@ -98,24 +98,28 @@ def parse_args():
 
 def main():
 
-    sent_type_grammars = [
-        "grammars/g1.irtg",
-        "grammars/g2.irtg",
-        "grammars/g3.irtg",
-        "grammars/g4.irtg",
-        "grammars/g5.irtg",
-        "grammars/g6.irtg"
-    ]
     args = parse_args()
     dataset_type = args.dataset_type
-    grammar_path = args.grammar_path
+    prompt_grammar = args.grammar_path
     n_prompts = args.n_prompts
     n_batches = args.n_batches
     verbose = args.verbose
 
     if dataset_type == "batch":
         batch_size = 6
+        control_grammars = [
+            "grammars/g1.irtg",
+            "grammars/g2.irtg",
+            "grammars/g3.irtg",
+            "grammars/g4.irtg",
+            "grammars/g5.irtg",
+            "grammars/g6.irtg"
+        ]
     elif dataset_type == "slog":
+        control_grammars = [
+            "grammars/preprocessed-rec_pp.irtg",
+            "grammars/preprocessed-rec_pp.irtg"
+        ]
         batch_size = 2
 
     n_sents = n_prompts * n_batches * batch_size
@@ -137,7 +141,7 @@ def main():
         # Generation step
         response_path = generation_loop(
             dataset_type,
-            grammar_path,
+            prompt_grammar,
             n_prompts,
             n_batches,
             verbose=verbose
@@ -145,12 +149,12 @@ def main():
 
         assert 0
         # Format and parse model outputs
-        format_sents(response_path, verbose=verbose)
+        format_sents(response_path, batch_size, verbose=verbose)
         oov_pct_total, oov_pct_sent = parse_sents(
             response_path,
-            grammar_path,
-            sent_type_grammars,
-            batch_size=batch_size,
+            prompt_grammar,
+            control_grammars,
+            batch_size,
             verbose=verbose
         )
 
@@ -159,15 +163,24 @@ def main():
         oov_pct_total_list.append(oov_pct_total)
         oov_pct_sent_list.append(oov_pct_sent)
 
-        non_null_lines = get_non_null_lines(response_path, grammar_path)
+        non_null_lines = get_non_null_lines(
+            response_path, prompt_grammar, batch_size
+        )
         accs = get_accuracies(non_null_lines, verbose=verbose)
         accs_list.append(accs)
 
-        consistent_lines = get_consistent_lines(response_path, non_null_lines)
-        consistent_accs = get_accuracies(consistent_lines, verbose=verbose)
-        consistent_accs_list.append(consistent_accs)
+        if dataset_type == "batch":
+            consistent_lines = get_consistent_lines(
+                response_path, non_null_lines, batch_size
+            )
+            consistent_accs = get_accuracies(consistent_lines, verbose=verbose)
+            consistent_accs_list.append(consistent_accs)
+        else:
+            consistent_lines = non_null_lines
 
-        non_rep_lines = get_non_rep_lines(response_path, consistent_lines)
+        non_rep_lines = get_non_rep_lines(
+            response_path, consistent_lines, batch_size
+        )
         rep_accs = get_accuracies(non_rep_lines, verbose=verbose)
         rep_accs_list.append(rep_accs)
 
@@ -175,7 +188,7 @@ def main():
         valid_batches = rep_accs.all(axis=0)
         en_lines = []
         vf_lines = []
-        for i in range(0, 6):
+        for i in range(0, batch_size):
             en_lines_cur = []
             vf_lines_cur = []
             sent_path = create_out_path(

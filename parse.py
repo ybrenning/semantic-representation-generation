@@ -5,17 +5,8 @@ from utils import read_grammar, en_header, create_out_path
 
 rel_prons = ["which", "who", "whom"]
 
-grammars = [
-    "grammars/g1.irtg",
-    "grammars/g2.irtg",
-    "grammars/g3.irtg",
-    "grammars/g4.irtg",
-    "grammars/g5.irtg",
-    "grammars/g6.irtg"
-]
 
-
-def format_sents(response_path, verbose=False):
+def format_sents(response_path, batch_size, verbose=False):
     """
     From the raw GPT-5 output saved in the `responses` directory,
     write a file into the `english` directory that contains the
@@ -35,11 +26,11 @@ def format_sents(response_path, verbose=False):
     with open(response_path, "r") as f:
         lines = f.readlines()
 
-    sent_types = [en_header for _ in range(6)]
+    sent_types = [en_header for _ in range(batch_size)]
     for line in lines:
         if not line[0].isdigit():
             continue
-        assert 1 <= (n := int(line[0])) <= 6
+        assert 1 <= (n := int(line[0])) <= batch_size
 
         sent = line[3:]
         sent = sent[0].lower() + sent[1:]
@@ -109,7 +100,13 @@ def lexical_parse(sent_path, lex, show_oov=False):
     return oov_count, oov_sents, sent_count, words
 
 
-def parse_sents(response_path, base_grammar_path, verbose=False):
+def parse_sents(
+    response_path,
+    prompt_grammar,
+    control_grammars,
+    batch_size,
+    verbose=False
+):
     """
     The main parse function takes the response name as well as the
     "base" grammar (i.e., the main grammar used within the prompt).
@@ -124,18 +121,19 @@ def parse_sents(response_path, base_grammar_path, verbose=False):
     an accuracy score. In addition, this function performs a lexical parse
     on each sentence file in order to evaluate OOV percentages.
     """
+    assert len(control_grammars) == batch_size
     oov_count = 0
     oov_sents = 0
     sent_count = 0
     words = set()
 
-    if base_grammar_path.endswith(".irtg"):
-        grammar_path = base_grammar_path.replace(".irtg", ".ebnf")
+    if prompt_grammar.endswith(".irtg"):
+        grammar_path = prompt_grammar.replace(".irtg", ".ebnf")
 
     # Use the base grammar as lexicon
     lex = read_grammar(grammar_path, lex_only=True)
 
-    for i in range(0, 6):
+    for i in range(0, batch_size):
         sent_path = create_out_path(
             f"output/english/{i + 1}/",
             response_path,
@@ -160,7 +158,7 @@ def parse_sents(response_path, base_grammar_path, verbose=False):
         words.update(words_cur)
 
         # Use the separate sentence grammars to parse
-        sent_grammar_path = grammars[i % 6]
+        sent_grammar_path = control_grammars[i % batch_size]
 
         varfree_path = sent_path.replace("english", "varfree_lf")
         command = (
