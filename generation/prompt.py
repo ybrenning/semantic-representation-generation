@@ -83,10 +83,10 @@ def get_constraints(dataset_type, n_batches):
         return f"""
 Constraints:
 
+- Make sure to have *variation* in the verbs, subjects, prepositional phrases etc.
 - Make sure the content makes logical sense
-- Make sure to have variation in the verbs, subjects, prepositional phrases etc.
 
-So your task is to generate {n_batches} of 2 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+So your task is to generate {n_batches} sentences of type 1 and {n_batches} sentences of type 2, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
         ...
     if n_batches > 1:
@@ -301,7 +301,7 @@ def get_derivations(dataset_type):
         depth_1 = 2
         depth_2 = 5
         derivations = f"""
-        1.
+1.
 ```
 (S
   (NP_animate_nsubj
@@ -323,7 +323,7 @@ def get_derivations(dataset_type):
             (Det)
             (N_common_animate_dobj)
             (PP_loc
-              ... to depth {depth_1}
+              ... recurse to depth {depth_1}
             )
           )
         )
@@ -355,7 +355,7 @@ def get_derivations(dataset_type):
             (Det)
             (N_common_animate_dobj)
             (PP_loc
-              ... to depth {depth_2}
+              ... recurse to depth {depth_2}
             )
           )
         )
@@ -375,7 +375,7 @@ def prompt_from_grammar(dataset_type, grammar_path, n_batches=3, k=None):
     constraints = get_constraints(dataset_type, n_batches)
 
     prompt = f"""
-You are an expert linguist. You need to generate sentences based on the following derivations from a context-free grammar:
+You are an expert linguist. You need to generate sentences with different PP recursion depths based on the following derivations from a context-free grammar:
 
 {derivations}
 
