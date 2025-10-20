@@ -10,20 +10,27 @@ from evaluate import (
     get_consistent_lines,
     get_accuracies
 )
-from generation.prompt import prompt_from_grammar
+from generation.prompt import prompt_from_grammar, get_pp_rec_prompt
 from utils import get_safe_filename, en_header, create_out_path
 from postprocess import postprocess_varfree
 
 
-def generation_loop(grammar_path, n_prompts, n_sets, verbose=False):
+def generation_loop(
+    dataset_type,
+    grammar_path,
+    n_prompts,
+    n_sets,
+    verbose=False
+):
     responses = ""
     for _ in range(n_prompts):
         # Maybe also save the generated prompts?
-        prompt = prompt_from_grammar(
-            grammar_path,
-            n_sets=n_sets,
-            k=30
-        )
+        # prompt = prompt_from_grammar(
+        #     grammar_path,
+        #     n_sets=n_sets,
+        #     k=30
+        # )
+        prompt = get_pp_rec_prompt(2, 4)
 
         response = test_pipeline(
             prompt,
@@ -56,6 +63,11 @@ def parse_args():
         description="Execute data generation pipeline"
     )
     parser.add_argument(
+        "dataset_type",
+        choices=["batch", "slog"],
+        help="Type of generation to attempt (batch or slog)"
+    )
+    parser.add_argument(
         "grammar_path",
         type=str,
         help="Path to the IRTG grammar file"
@@ -68,7 +80,7 @@ def parse_args():
     parser.add_argument(
         "n_batches",
         type=int,
-        help="Number of batches (each containing 6 sentences) per prompt"
+        help="Number of batches per prompt"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -85,13 +97,28 @@ def parse_args():
 
 
 def main():
+
+    sent_type_grammars = [
+        "grammars/g1.irtg",
+        "grammars/g2.irtg",
+        "grammars/g3.irtg",
+        "grammars/g4.irtg",
+        "grammars/g5.irtg",
+        "grammars/g6.irtg"
+    ]
     args = parse_args()
+    dataset_type = args.dataset_type
     grammar_path = args.grammar_path
     n_prompts = args.n_prompts
     n_batches = args.n_batches
     verbose = args.verbose
 
-    n_sents = n_prompts * n_batches * 6
+    if dataset_type == "batch":
+        batch_size = 6
+    elif dataset_type == "slog":
+        batch_size = 2
+
+    n_sents = n_prompts * n_batches * batch_size
 
     metrics = {}
 
@@ -101,6 +128,7 @@ def main():
     rep_accs_list = []
     consistent_accs_list = []
     n_loops = 0
+    metrics["dataset_type"] = dataset_type
     metrics["n_prompts"] = n_prompts
     metrics["n_batches"] = n_batches
     metrics["n_sents"] = n_sents
@@ -108,16 +136,22 @@ def main():
     while len(semantics) != (n_batches*n_prompts):
         # Generation step
         response_path = generation_loop(
+            dataset_type,
             grammar_path,
             n_prompts,
             n_batches,
             verbose=verbose
         )
 
+        assert 0
         # Format and parse model outputs
         format_sents(response_path, verbose=verbose)
         oov_pct_total, oov_pct_sent = parse_sents(
-            response_path, grammar_path, verbose=verbose
+            response_path,
+            grammar_path,
+            sent_type_grammars,
+            batch_size=batch_size,
+            verbose=verbose
         )
 
         # Evaluate and filter
