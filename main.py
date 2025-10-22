@@ -15,11 +15,25 @@ from utils import get_safe_filename, en_header, create_out_path
 from postprocess import postprocess_varfree
 
 
+slog_datasets = [
+    "slog-rec_pp",
+    "slog-rec-cp",
+    "slog-rec_center_emb",
+    ...
+
+    # TODO: Implement each SLOG generalization case.
+    # Note that this would necessitate a separate control grammar
+    # for each type of dataset
+]
+
+
 def generation_loop(
     dataset_type,
     grammar_path,
     n_prompts,
     n_batches,
+    depth_train=None,
+    depth_gen=None,
     verbose=False
 ):
     responses = ""
@@ -29,7 +43,9 @@ def generation_loop(
             dataset_type,
             grammar_path,
             n_batches=n_batches,
-            k=30
+            k=30,
+            depth_train=depth_train,
+            depth_gen=depth_gen
         )
 
         response = test_pipeline(
@@ -40,7 +56,7 @@ def generation_loop(
         )
         responses += response + "\n"
 
-    response_path = "generation/responses/prompt-newest"
+    response_path = f"generation/responses/{dataset_type}"
 
     suffix = (
         f"-{n_prompts}-responses.txt" if n_prompts > 1 else "-response.txt"
@@ -64,7 +80,7 @@ def parse_args():
     )
     parser.add_argument(
         "dataset_type",
-        choices=["batch", "slog"],
+        choices=["batch"] + slog_datasets,
         help="Type of generation to attempt (batch or slog)"
     )
     parser.add_argument(
@@ -83,12 +99,30 @@ def parse_args():
         help="Number of batches per prompt"
     )
     parser.add_argument(
+        "-rt", "--rec_depth_train",
+        type=int,
+        help="Recursion depth for train sentences"
+    )
+    parser.add_argument(
+        "-rg", "--rec_depth_gen",
+        type=int,
+        help="Recursion depth for generalization sentences"
+    )
+    parser.add_argument(
         "-v", "--verbose",
         action="store_true",
         help="Enable verbose output"
     )
 
     args = parser.parse_args()
+
+    if (
+        "rec" in args.dataset_type and
+        (not args.rec_depth_train or not args.rec_depth_gen)
+    ):
+        parser.error(
+            "Specify recursion depths for train and generalization (-rt -rg)"
+        )
 
     if not args.grammar_path.endswith(".irtg"):
         parser.error("The grammar file must have a .irtg extension")
@@ -97,12 +131,13 @@ def parse_args():
 
 
 def main():
-
     args = parse_args()
     dataset_type = args.dataset_type
     prompt_grammar = args.grammar_path
     n_prompts = args.n_prompts
     n_batches = args.n_batches
+    rec_depth_train = args.rec_depth_train
+    rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
 
     if dataset_type == "batch":
@@ -115,10 +150,29 @@ def main():
             "grammars/g5.irtg",
             "grammars/g6.irtg"
         ]
-    elif dataset_type == "slog":
+    elif dataset_type == "slog-rec_pp":
+        # TODO: grammars must correspond to recursion depths
         control_grammars = [
             "grammars/preprocessed-rec_pp.irtg",
             "grammars/preprocessed-rec_pp.irtg"
+        ]
+        batch_size = 2
+    elif dataset_type == "slog-rec_cp":
+        raise NotImplementedError
+        control_grammars = [
+            ...
+        ]
+        batch_size = 2
+    elif dataset_type == "slog-rec_cp":
+        raise NotImplementedError
+        control_grammars = [
+            ...
+        ]
+        batch_size = 2
+    elif dataset_type == "slog-rec_center_emb":
+        raise NotImplementedError
+        control_grammars = [
+            ...
         ]
         batch_size = 2
 
@@ -144,6 +198,8 @@ def main():
             prompt_grammar,
             n_prompts,
             n_batches,
+            depth_train=rec_depth_train,
+            depth_gen=rec_depth_gen,
             verbose=verbose
         )
 

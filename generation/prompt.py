@@ -115,7 +115,7 @@ So your task is to generate 6 sentences, from a restricted vocabulary, all deriv
         """
 
 
-def get_derivations(dataset_type):
+def get_derivations(dataset_type, depth_train=None, depth_gen=None):
     if dataset_type == "batch":
         derivations = """
 1.
@@ -296,10 +296,7 @@ def get_derivations(dataset_type):
 )
 ```
         """
-    elif dataset_type == "slog":
-        # This is only handling the first SLOG sent type!
-        depth_1 = 2
-        depth_2 = 5
+    elif dataset_type == "slog-rec_pp":
         derivations = f"""
 1.
 ```
@@ -323,7 +320,7 @@ def get_derivations(dataset_type):
             (Det)
             (N_common_animate_dobj)
             (PP_loc
-              ... recurse to depth {depth_1}
+              ... recurse to depth {depth_train}
             )
           )
         )
@@ -355,7 +352,7 @@ def get_derivations(dataset_type):
             (Det)
             (N_common_animate_dobj)
             (PP_loc
-              ... recurse to depth {depth_2}
+              ... recurse to depth {depth_gen}
             )
           )
         )
@@ -369,8 +366,20 @@ def get_derivations(dataset_type):
     return derivations
 
 
-def prompt_from_grammar(dataset_type, grammar_path, n_batches=3, k=None):
-    derivations = get_derivations(dataset_type)
+def prompt_from_grammar(
+    dataset_type,
+    grammar_path,
+    n_batches=3,
+    k=None,
+    depth_train=None,
+    depth_gen=None
+):
+    derivations = get_derivations(
+        dataset_type,
+        depth_train=depth_train,
+        depth_gen=depth_gen
+    )
+
     rules, lexicon = read_grammar(grammar_path, k)
     constraints = get_constraints(dataset_type, n_batches)
 
