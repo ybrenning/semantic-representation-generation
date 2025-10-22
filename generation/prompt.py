@@ -79,7 +79,7 @@ def read_grammar(grammar_path, k):
 
 
 def get_constraints(dataset_type, n_batches):
-    if dataset_type == "slog":
+    if dataset_type == "slog-rec_pp":
         return f"""
 Constraints:
 
@@ -305,24 +305,14 @@ def get_derivations(dataset_type, depth_train=None, depth_gen=None):
     (Det)
     (N_common_animate_nsubj)
   )
-  (VP_CP
-    (V_cp_taking)
-    (C)
-    (S
-      (NP_animate_nsubj
+  (VP_external
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
         (Det)
-        (N_common_animate_nsubj)
-      )
-      (VP_external
-        (V_trans_not_omissible)
-        (NP_dobj
-          (NP_animate_dobj
-            (Det)
-            (N_common_animate_dobj)
-            (PP_loc
-              ... recurse to depth {depth_train}
-            )
-          )
+        (N_common_animate_dobj)
+        (PP_loc
+          ... recurse to depth {depth_train}
         )
       )
     )
@@ -337,24 +327,14 @@ def get_derivations(dataset_type, depth_train=None, depth_gen=None):
     (Det)
     (N_common_animate_nsubj)
   )
-  (VP_CP
-    (V_cp_taking)
-    (C)
-    (S
-      (NP_animate_nsubj
+  (VP_external
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
         (Det)
-        (N_common_animate_nsubj)
-      )
-      (VP_external
-        (V_trans_not_omissible)
-        (NP_dobj
-          (NP_animate_dobj
-            (Det)
-            (N_common_animate_dobj)
-            (PP_loc
-              ... recurse to depth {depth_gen}
-            )
-          )
+        (N_common_animate_dobj)
+        (PP_loc
+          ... recurse to depth {depth_gen}
         )
       )
     )
@@ -384,7 +364,7 @@ def prompt_from_grammar(
     constraints = get_constraints(dataset_type, n_batches)
 
     prompt = f"""
-You are an expert linguist. You need to generate sentences with different PP recursion depths based on the following derivations from a context-free grammar:
+You are an expert linguist. You need to generate sentences based on the following derivations from a context-free grammar:
 
 {derivations}
 

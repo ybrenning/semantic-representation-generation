@@ -4427,113 +4427,105 @@ S! -> r1432(NP_animate_nsubj, VP_external) 	[0.9]
   [english] *(?1, ?2)
   [semantics] pre_agent(?2, ?1)
 
-S! -> r1433(NP_animate_nsubj, VP_CP) 	[0.1]
-  [english] *(?1, ?2)
-  [semantics] pre_agent(?2, ?1)
-
-VP_CP -> r1434(V_cp_taking, C, S!) 	[1]
-  [english] *(?1, *(?2, ?3))
-  [semantics] ccomp(?1, ?3)
-
-VP_external -> r1435(V_unacc, NP_dobj) 	[0.2]
+VP_external -> r1433(V_unacc, NP_dobj) 	[0.2]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1436(V_trans_omissible, NP_dobj) 	[0.2]
+VP_external -> r1434(V_trans_omissible, NP_dobj) 	[0.2]
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> r1437(V_trans_not_omissible, NP_dobj) 	[0.2] 
+VP_external -> r1435(V_trans_not_omissible, NP_dobj) 	[0.2] 
   [english] *(?1, ?2)
   [semantics] theme(?1, ?2)
 
-VP_external -> I_dobj_before_iobj_F1438(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.2]
+VP_external -> I_dobj_before_iobj_F1436(V_dat, NP_inanimate_dobj, PP_iobj) 	[0.2]
   [english] *(*(?1, ?2), ?3)
   [semantics] recipient(theme(?1, ?2), ?3)
 
-VP_external -> I_dobj_after_iobj_F1439(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.2]
+VP_external -> I_dobj_after_iobj_F1437(V_dat, NP_animate_iobj, NP_inanimate_dobj) 	[0.2]
   [english] *(*(?1, ?2), ?3)
   [semantics] theme(recipient(?1, ?2), ?3)
 
 
 
 
-NP_dobj -> r1440(NP_inanimate_dobj) 	[0.5]
+NP_dobj -> r1438(NP_inanimate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_dobj -> r1441(NP_animate_dobj) 	[0.5]
+NP_dobj -> r1439(NP_animate_dobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_animate_dobj -> S_PP_E1442(Det, N_common_animate_dobj, PP_loc) 	[1]
+NP_animate_dobj -> S_PP_E1440(Det, N_common_animate_dobj, PP_loc) 	[1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_animate_iobj -> r1443(Det, N_common_animate_iobj) 	[0.5]
+NP_animate_iobj -> r1441(Det, N_common_animate_iobj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_iobj -> r1444(N_prop_iobj) 	[0.5]
+NP_animate_iobj -> r1442(N_prop_iobj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
 
 
-NP_animate_nsubj -> r1445(Det, N_common_animate_nsubj) 	[0.5]
+NP_animate_nsubj -> r1443(Det, N_common_animate_nsubj) 	[0.5]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_animate_nsubj -> r1446(N_prop_nsubj) 	[0.5]
+NP_animate_nsubj -> r1444(N_prop_nsubj) 	[0.5]
   [english] ?1
   [semantics] ?1
 
-NP_inanimate_dobj -> S_PP_E1447(Det, N_common_inanimate_dobj, PP_loc) 	[1]
+NP_inanimate_dobj -> S_PP_E1445(Det, N_common_inanimate_dobj, PP_loc) 	[1]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
 
-NP_on -> S_PP_E1448(Det, N_on, PP_loc) 	[0.9]
+NP_on -> S_PP_E1446(Det, N_on, PP_loc) 	[0.9]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_on -> r1449(Det, N_on) 	[0.1]
+NP_on -> r1447(Det, N_on) 	[0.1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
-NP_in -> S_PP_E1450(Det, N_in, PP_loc) 	[0.9]
+NP_in -> S_PP_E1448(Det, N_in, PP_loc) 	[0.9]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_in -> r1451(Det, N_in) 	[0.1]
+NP_in -> r1449(Det, N_in) 	[0.1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
-NP_beside -> S_PP_E1452(Det, N_beside, PP_loc) 	[0.9]
+NP_beside -> S_PP_E1450(Det, N_beside, PP_loc) 	[0.9]
   [english] *(*(?1, ?2), ?3)
   [semantics] nmod(pre_det(?2, ?1), ?3)
 
-NP_beside -> r1453(Det, N_beside) 	[0.1]
+NP_beside -> r1451(Det, N_beside) 	[0.1]
   [english] *(?1, ?2)
   [semantics] pre_det(?2, ?1)
 
 
 
 
-PP_loc -> r1454(P_on, NP_on) 	[0.334]
+PP_loc -> r1452(P_on, NP_on) 	[0.334]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1455(P_in, NP_in) 	[0.333]
+PP_loc -> r1453(P_in, NP_in) 	[0.333]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_loc -> r1456(P_beside, NP_beside) 	[0.333]
+PP_loc -> r1454(P_beside, NP_beside) 	[0.333]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 
-PP_iobj -> r1457 (P_iobj,NP_animate_iobj)	[1]
+PP_iobj -> r1455 (P_iobj,NP_animate_iobj)	[1]
   [english] *(?1, ?2)
   [semantics] pre_case(?2, ?1)
 

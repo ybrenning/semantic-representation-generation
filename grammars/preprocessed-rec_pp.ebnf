@@ -72,9 +72,7 @@ V_dat_pp : given | lent | sold | offered | fed | passed | sent | rented | served
 
 V_dat_inf : give | lend | sell | offer | feed | pass | send | rent | serve | award | bring | hand | forward | promise | mail | loan | post | return | slip | wire
 
-S : NP_animate_nsubj VP_external | NP_animate_nsubj VP_CP
-
-VP_CP : V_cp_taking C S
+S : NP_animate_nsubj VP_external
 
 VP_external : V_unacc NP_dobj | V_trans_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_dat NP_inanimate_dobj PP_iobj | V_dat NP_animate_iobj NP_inanimate_dobj
 
