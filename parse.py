@@ -6,7 +6,7 @@ from utils import read_grammar, en_header, create_out_path
 rel_prons = ["which", "who", "whom"]
 
 
-def format_sents(response_path, batch_size, verbose=False):
+def format_sents(dataset_type, response_path, batch_size, n_batches, verbose=False):
     """
     From the raw GPT-5 output saved in the `responses` directory,
     write a file into the `english` directory that contains the
@@ -26,11 +26,15 @@ def format_sents(response_path, batch_size, verbose=False):
     with open(response_path, "r") as f:
         lines = f.readlines()
 
-    sent_types = [en_header for _ in range(batch_size)]
+    sent_types = [[] for _ in range(batch_size)]
     for line in lines:
         if not line[0].isdigit():
             continue
-        assert 1 <= (n := int(line[0])) <= batch_size
+
+        if dataset_type == "batch":
+            assert 1 <= (n := int(line[0])) <= batch_size
+        else:
+            assert 1 <= (n := int(line[0])) <= n_batches
 
         sent = line[3:]
         sent = sent[0].lower() + sent[1:]
@@ -40,16 +44,23 @@ def format_sents(response_path, batch_size, verbose=False):
         ])
         sent = sent.replace(" an ", " the ")
 
-        if n == 1:
+        if dataset_type == "batch" and n == 1:
             batch_det = sent.split(" ")[0]
+            sent = batch_det + " " + " ".join(sent.split(" ")[1:])
 
-        sent = batch_det + " " + " ".join(sent.split(" ")[1:])
         sent = sent.replace(",", "")
         sent = sent.strip()
         sent = sent.rstrip(".")
-        sent_types[n - 1] += sent + "\n"
+        if dataset_type == "batch":
+            sent_types[n - 1].append(sent)
+        else:
+            if len(sent_types[0]) < n_batches:
+                sent_types[0].append(sent)
+            else:
+                sent_types[1].append(sent)
 
-    for i, content in enumerate(sent_types):
+    for i, sent_list in enumerate(sent_types):
+        content = "\n".join(sent_list)
         sent_path = create_out_path(
             f"output/english/{i + 1}/",
             response_path,
@@ -57,7 +68,7 @@ def format_sents(response_path, batch_size, verbose=False):
             ext=".txt"
         )
         with open(sent_path, "w") as f:
-            f.write(content)
+            f.write(en_header + content + "\n")
             if verbose:
                 print("Saved formatted sentences to", sent_path)
 
