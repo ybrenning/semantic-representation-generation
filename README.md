@@ -66,27 +66,67 @@ Run the script with the preprocessed CFG and the number of times to prompt as a 
 $ python3 main.py grammars/preprocessed-combined.irtg 10
 ``` 
 
-Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately:
+Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately. Note that the step is only executable if the files of the previous pipeline steps have already been generated. For example, we can use the `evaluate` script as follows:
 
 ```bash
-$ python3 evaluate.py output/varfree_lf/prompt-newest-10-responses-18.txt grammars/preprocessed-combined.irtg 
+$ python3 evaluate.py batch generation/responses/batch-2-responses-1.txt --verbose 
 
------------
-Total OOV percentage: 1 / 156 = 0.64%
-OOV sentences: 1 / 180 = 0.56%
------------
-Line parse accuracy: 175/180 = 97.22%
-Batch parse accuracy: 25/30 = 83.33%
-Batch form accuracy: 25/30 = 83.33%
------------
-Accuracy per sentence type:
-  Sentence 1: 30/30= 100.00%
-  Sentence 2: 28/30= 93.33%
-  Sentence 3: 30/30= 100.00%
-  Sentence 4: 30/30= 100.00%
-  Sentence 5: 27/30= 90.00%
-  Sentence 6: 30/30= 100.00%
------------
+Parse accuracies
+╒═════════════════╤════════════╕
+│ Sentence Type   │ Accuracy   │
+╞═════════════════╪════════════╡
+│ Type 1          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 2          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 3          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 4          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 5          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 6          │ 100.00%    │
+╘═════════════════╧════════════╛
+
+Batch Accuracy: 100.00%
+
+Sentences w/ consistent main S/V
+╒═════════════════╤════════════╕
+│ Sentence Type   │ Accuracy   │
+╞═════════════════╪════════════╡
+│ Type 1          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 2          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 3          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 4          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 5          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 6          │ 100.00%    │
+╘═════════════════╧════════════╛
+
+Batch Accuracy: 100.00%
+
+Non-repetition sentences
+╒═════════════════╤════════════╕
+│ Sentence Type   │ Accuracy   │
+╞═════════════════╪════════════╡
+│ Type 1          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 2          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 3          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 4          │ 100.00%    │
+├─────────────────┼────────────┤
+│ Type 5          │ 87.50%     │
+├─────────────────┼────────────┤
+│ Type 6          │ 100.00%    │
+╘═════════════════╧════════════╛
+
+Batch Accuracy: 87.50%
 ```
 
 ## Grammars
