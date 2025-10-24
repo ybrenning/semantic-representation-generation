@@ -1,9 +1,9 @@
 Jinja2==3.1.2
-numpy==1.21.5
+numpy==2.3.4
 openai==1.107.1
 pandas==2.0.2
 pydantic==2.11.7
 python-dotenv==1.1.1
-scipy==1.8.0
+scipy==1.16.2
 tqdm==4.66.2
 transformers==4.41.0
