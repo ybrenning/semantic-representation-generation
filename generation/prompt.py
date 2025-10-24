@@ -83,10 +83,10 @@ def get_constraints(dataset_type, n_batches):
         return f"""
 Constraints:
 
-- Make sure to have *variation* in the verbs, subjects, prepositional phrases etc.
 - Make sure the content makes logical sense
+- Make sure to have *variation* in the verbs, subjects, prepositional phrases within one sentence
 
-So your task is to generate {n_batches} sentences of type 1 and {n_batches} sentences of type 2, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+So your task is to generate {n_batches} sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
         ...
     if n_batches > 1:
@@ -115,7 +115,7 @@ So your task is to generate 6 sentences, from a restricted vocabulary, all deriv
         """
 
 
-def get_derivations(dataset_type, depth_train=None, depth_gen=None):
+def get_derivations(dataset_type, rec_depth=None):
     if dataset_type == "batch":
         derivations = """
 1.
@@ -298,7 +298,6 @@ def get_derivations(dataset_type, depth_train=None, depth_gen=None):
         """
     elif dataset_type == "slog-rec_pp":
         derivations = f"""
-1.
 ```
 (S
   (NP_animate_nsubj
@@ -312,29 +311,7 @@ def get_derivations(dataset_type, depth_train=None, depth_gen=None):
         (Det)
         (N_common_animate_dobj)
         (PP_loc
-          ... recurse to depth {depth_train}
-        )
-      )
-    )
-  )
-)
-```
-
-2.
-```
-(S
-  (NP_animate_nsubj
-    (Det)
-    (N_common_animate_nsubj)
-  )
-  (VP_external
-    (V_trans_not_omissible)
-    (NP_dobj
-      (NP_animate_dobj
-        (Det)
-        (N_common_animate_dobj)
-        (PP_loc
-          ... recurse to depth {depth_gen}
+          ... repeat {rec_depth} times
         )
       )
     )
@@ -349,21 +326,17 @@ def get_derivations(dataset_type, depth_train=None, depth_gen=None):
 def prompt_from_grammar(
     dataset_type,
     grammar_path,
-    n_batches=3,
+    n_batches,
     k=None,
-    depth_train=None,
-    depth_gen=None
+    rec_depth=None,
 ):
-    derivations = get_derivations(
-        dataset_type,
-        depth_train=depth_train,
-        depth_gen=depth_gen
-    )
+    derivations = get_derivations(dataset_type, rec_depth=rec_depth)
 
     rules, lexicon = read_grammar(grammar_path, k)
     constraints = get_constraints(dataset_type, n_batches)
 
-    prompt = f"""
+    if dataset_type == "batch":
+        prompt = f"""
 You are an expert linguist. You need to generate sentences based on the following derivations from a context-free grammar:
 
 {derivations}
@@ -383,6 +356,28 @@ Importantly, you'll need to restrict the words to the following lexicon of termi
 {constraints}
 
 Output just the numbered sentences without any extra information.
-    """
+        """
+    elif dataset_type == "slog-rec_pp":
+        prompt = f"""
+You are an expert linguist. You need to generate sentences based on the following context-free grammar:
+
+```
+{rules}
+```
+
+The sentences should follow this grammar rule derivation:
+
+{derivations}
+
+Importantly, you'll need to restrict the words to the following lexicon of terminals:
+
+```
+{lexicon}
+```
+
+{constraints}
+
+Output just the numbered sentences without any extra information.
+        """
 
     return prompt

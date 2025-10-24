@@ -39,22 +39,25 @@ def generation_loop(
     responses = ""
     for _ in range(n_prompts):
         # Maybe also save the generated prompts?
-        prompt = prompt_from_grammar(
-            dataset_type,
-            grammar_path,
-            n_batches=n_batches,
-            k=30,
-            depth_train=depth_train,
-            depth_gen=depth_gen
-        )
+        for depth in [depth_train, depth_gen]:
+            prompt = prompt_from_grammar(
+                dataset_type,
+                grammar_path,
+                n_batches=n_batches,
+                k=30,
+                rec_depth=depth,
+            )
 
-        response = test_pipeline(
-            prompt,
-            temperature=0.5,
-            top_p=0.9,
-            verbose=verbose
-        )
-        responses += response + "\n"
+            response = test_pipeline(
+                prompt,
+                temperature=0.5,
+                top_p=0.9,
+                verbose=verbose
+            )
+            responses += response + "\n"
+
+            if depth is None:
+                break
 
     response_path = f"generation/responses/{dataset_type}"
 
@@ -203,9 +206,12 @@ def main():
             verbose=verbose
         )
 
-        assert 0
         # Format and parse model outputs
-        format_sents(response_path, batch_size, verbose=verbose)
+        format_sents(
+            dataset_type, response_path, batch_size, n_batches, verbose=verbose
+        )
+
+        # TODO: How to parse variable recursion depths ??
         oov_pct_total, oov_pct_sent = parse_sents(
             response_path,
             prompt_grammar,
@@ -220,7 +226,7 @@ def main():
         oov_pct_sent_list.append(oov_pct_sent)
 
         non_null_lines = get_non_null_lines(
-            response_path, prompt_grammar, batch_size
+            response_path, batch_size
         )
         accs = get_accuracies(non_null_lines, verbose=verbose)
         accs_list.append(accs)
@@ -241,7 +247,7 @@ def main():
         rep_accs_list.append(rep_accs)
 
         # Filtering step
-        valid_batches = rep_accs.all(axis=0)
+        valid_batches = non_rep_lines.all(axis=0)
         en_lines = []
         vf_lines = []
         for i in range(0, batch_size):
