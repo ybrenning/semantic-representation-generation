@@ -94,3 +94,32 @@ def get_safe_filename(filename):
         new_filename = f"{base}-{counter}{ext}"
         counter += 1
     return new_filename
+
+
+def generate_rec_pp_rules(n):
+    out = []
+    for prep in ["on", "in", "beside"]:
+        for i in reversed(range(n)):
+            out.append(
+                f"PP_loc_{i} -> "
+                "r{{{{ cnt.next() }}}} (P_{prep},NP_{prep}_{i}) [0.0]"
+            )
+            out.append("[english] *(?1, ?2)")
+            out.append("[semantics] pre_case(?2, ?1)")
+
+            if i == 0:
+                out.append(
+                    f"NP_{prep}_{i} -> "
+                    "r{{{{ cnt.next() }}}} (Det, N_{prep}) [0.0]"
+                )
+                out.append("[english] *(?1, ?2)")
+                out.append("[semantics] pre_det(?2, ?1)")
+            else:
+                out.append(
+                    f"NP_{prep}_{i} "
+                    "-> S_PP_E{{{{ cnt.next() }}}} (Det, N_{prep}, PP_loc_{i-1}) [0.0]"
+                )
+                out.append("[english] *(*(?1, ?2), ?3)")
+                out.append("[semantics] nmod(pre_det(?2, ?1), ?3)")
+            out.append("")
+    print("\n".join(out))
