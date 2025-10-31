@@ -6,7 +6,9 @@ from utils import read_grammar, en_header, create_out_path
 rel_prons = ["which", "who", "whom"]
 
 
-def format_sents(dataset_type, response_path, batch_size, n_batches, verbose=False):
+def format_sents(
+        dataset_type, response_path, batch_size, n_batches, verbose=False
+):
     """
     From the raw GPT-5 output saved in the `responses` directory,
     write a file into the `english` directory that contains the
@@ -211,10 +213,25 @@ def parse_sents(
 
 
 def main():
+    slog_datasets = [
+        "slog-rec_pp",
+        "slog-rec-cp",
+        "slog-rec_center_emb",
+        ...
+
+        # TODO: Implement each SLOG generalization case.
+        # Note that this would necessitate a separate control grammar
+        # for each type of dataset
+    ]
     parser = argparse.ArgumentParser(
         description="Execute data generation pipeline"
     )
 
+    parser.add_argument(
+        "dataset_type",
+        choices=["batch"] + slog_datasets,
+        help="Type of generation to attempt (batch or slog)"
+    )
     parser.add_argument(
         "response_path",
         type=str,
@@ -226,6 +243,21 @@ def main():
         help="Path to the IRTG grammar file"
     )
     parser.add_argument(
+        "n_batches",
+        type=int,
+        help="Number of batches per prompt"
+    )
+    parser.add_argument(
+        "-rt", "--rec_depth_train",
+        type=int,
+        help="Recursion depth for train sentences"
+    )
+    parser.add_argument(
+        "-rg", "--rec_depth_gen",
+        type=int,
+        help="Recursion depth for generalization sentences"
+    )
+    parser.add_argument(
         "-v", "--verbose",
         action="store_true",
         help="Enable verbose output"
@@ -233,12 +265,41 @@ def main():
 
     args = parser.parse_args()
 
+    dataset_type = args.dataset_type
     response_path = args.response_path
-    grammar_path = args.grammar_path
+    prompt_grammar = args.grammar_path
+    n_batches = args.n_batches
+    rec_depth_train = args.rec_depth_train
+    rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
 
-    format_sents(response_path, verbose=verbose)
-    parse_sents(response_path, grammar_path, verbose=verbose)
+    if dataset_type == "batch":
+        batch_size = 6
+        control_grammars = [
+            "grammars/g1.irtg",
+            "grammars/g2.irtg",
+            "grammars/g3.irtg",
+            "grammars/g4.irtg",
+            "grammars/g5.irtg",
+            "grammars/g6.irtg"
+        ]
+    elif dataset_type == "slog-rec_pp":
+        # TODO: grammars must correspond to recursion depths
+        control_grammars = [
+            f"grammars/preprocessed-rec_pp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-rec_pp_{rec_depth_gen}.irtg"
+        ]
+        batch_size = 2
+
+    format_sents(dataset_type, response_path, batch_size, n_batches, verbose)
+
+    oov_pct_total, oov_pct_sent = parse_sents(
+        response_path,
+        prompt_grammar,
+        control_grammars,
+        batch_size,
+        verbose=verbose
+    )
 
 
 if __name__ == "__main__":
