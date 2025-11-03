@@ -178,7 +178,7 @@ PP_iobj -> r{{ cnt.next() }} (P_iobj,NP_animate_iobj)[1]
             if i == 0:
                 out.append(
                     f"NP_{prep}_{i} -> "
-                    "r{{{{ cnt.next() }}}} (Det, N_{prep}) [0.0]"
+                    f"r{{{{ cnt.next() }}}} (Det, N_{prep}) [0.0]"
                 )
                 out.append("[english] *(?1, ?2)")
                 out.append("[semantics] pre_det(?2, ?1)")
