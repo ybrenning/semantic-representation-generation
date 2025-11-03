@@ -154,10 +154,9 @@ def main():
             "grammars/g6.irtg"
         ]
     elif dataset_type == "slog-rec_pp":
-        # TODO: grammars must correspond to recursion depths
         control_grammars = [
-            "grammars/preprocessed-rec_pp.irtg",
-            "grammars/preprocessed-rec_pp.irtg"
+            f"grammars/preprocessed-rec_pp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-rec_pp_{rec_depth_gen}.irtg",
         ]
         batch_size = 2
     elif dataset_type == "slog-rec_cp":
