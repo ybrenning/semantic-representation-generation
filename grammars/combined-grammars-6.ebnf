@@ -72,37 +72,37 @@ V_dat_pp : given | lent | sold | offered | fed | passed | sent | rented | served
 
 V_dat_inf : give | lend | sell | offer | feed | pass | send | rent | serve | award | bring | hand | forward | promise | mail | loan | post | return | slip | wire
 
-S : NP_animate_nsubj VP_external | NP_animate_nsubj_main_RC_modified VP_RC_agent | NP_animate_nsubj_main_RC_modified VP_main_anim_subj
+S : NP_animate_nsubj VP_external | NP_animate_nsubj_main_RC_modified VP_main_anim_subj
 
-NP_animate_nsubj : Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc | N_prop_nsubj
+NP_animate_nsubj : Det N_common_animate_nsubj | Det N_common_animate_nsubj PP_loc | Det N_common_animate_nsubj PP_loc | Det N_common_animate_nsubj PP_loc | Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj PP_loc
 
-VP_external : V_trans_not_omissible NP_dobj
+VP_external : V_trans_not_omissible NP_dobj | V_trans_not_omissible NP_dobj
 
-NP_dobj : NP_inanimate_dobj | NP_animate_dobj
+NP_dobj : NP_animate_dobj | NP_animate_dobj | NP_animate_dobj | NP_animate_dobj | NP_animate_dobj | NP_animate_dobj
 
-NP_animate_dobj : Det N_common_animate_dobj
+NP_animate_dobj : Det N_common_animate_dobj | Det N_common_animate_dobj | Det N_common_animate_dobj | Det N_common_animate_dobj | Det N_common_animate_dobj | Det N_common_animate_dobj
 
-NP_on : Det N_on PP_loc | Det N_on
+NP_on : Det N_on PP_loc | Det N_on | Det N_on PP_loc | Det N_on
 
-NP_in : Det N_in PP_loc | Det N_in
+NP_in : Det N_in PP_loc | Det N_in | Det N_in PP_loc | Det N_in
 
-NP_beside : Det N_beside PP_loc | Det N_beside
+NP_beside : Det N_beside PP_loc | Det N_beside | Det N_beside PP_loc | Det N_beside
 
-PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside
-
-PP_iobj : P_iobj NP_animate_iobj
+PP_loc : P_on NP_on | P_in NP_in | P_beside NP_beside | P_on NP_on | P_in NP_in | P_beside NP_beside
 
 NP_animate_nsubj_main_RC_modified : NP_animate_nsubj_rec Rel_pron VP_RC_agent | NP_animate_nsubj_rec Rel_pron VP_RC_object_extracted_theme | NP_animate_nsubj_main Rel_pron VP_RC_agent | NP_animate_nsubj_main Rel_pron VP_RC_object_extracted_theme
 
-VP_RC_agent : V_trans_not_omissible NP_dobj | V_trans_omissible | V_trans_omissible NP_dobj | V_unacc NP_dobj | V_cp_taking C S_internal | V_unerg | V_trans_not_omissible NP_inanimate_dobj_RC_modified | V_trans_omissible NP_inanimate_dobj_RC_modified
+NP_animate_nsubj_rec : NP_animate_nsubj_main | NP_animate_nsubj_main_RC_modified | NP_animate_nsubj_main | NP_animate_nsubj_main_RC_modified_inner
 
-NP_animate_nsubj_rec : NP_animate_nsubj_main | NP_animate_nsubj_main_RC_modified_inner
+NP_animate_nsubj_main : N_prop_nsubj | Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj | N_prop_nsubj | Det N_common_animate_nsubj
 
-NP_animate_nsubj_main : Det N_common_animate_nsubj | N_prop_nsubj
+VP_RC_agent : V_unerg | V_trans_not_omissible NP_inanimate_dobj_RC_modified | V_trans_omissible NP_inanimate_dobj_RC_modified
 
-VP_RC_object_extracted_theme : NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissible | NP_animate_nsubj_rec V_trans_not_omissible | V_cp_taking C S_internal
+VP_main_anim_subj : V_trans_not_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_trans_not_omissible NP_dobj | V_trans_not_omissible NP_dobj
 
-VP_main_anim_subj : V_trans_not_omissible NP_dobj
+VP_RC_object_extracted_theme : NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissible | NP_animate_nsubj_rec V_trans_not_omissible | V_cp_taking C S_internal | NP_animate_nsubj_rec V_unacc | NP_animate_nsubj_rec V_trans_omissible | NP_animate_nsubj_rec V_trans_not_omissible
+
+PP_iobj : P_iobj NP_animate_iobj
 
 NP_inanimate_dobj_RC_modified : NP_inanimate_dobj Rel_pron VP_RC_pass_theme
 

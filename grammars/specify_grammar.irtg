@@ -5,7 +5,7 @@ interpretation semantics: de.saar.coli.algebra.OrderedFeatureTreeAlgebra
 
 
 {% include 'lexicon.irtg' %}
-{% include 'slog-rec_pp_5.irtg' %}
+{% include 'g2.irtg' %}
 
 
 
