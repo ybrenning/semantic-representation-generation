@@ -81,7 +81,13 @@
   'calmed': 'calm',
   'motivated': 'motivate',
   'offended': 'offend',
-  'avoided': 'avoid'
+  'avoided': 'avoid',
+
+  'met': 'meet',
+  'kicked': 'kick',
+  'emailed': 'email',
+  'texted': 'text',
+  'criticized': 'criticize',
 } %}
 
 {% set pos_d = {
@@ -311,7 +317,9 @@ V_trans_omissible_pp -> r{{ cnt.next() }} [{{ prob }}]
   'forgave', 'followed', 'thanked', 'reminded', 'consulted',
   'questioned', 'challenged', 'hired', 'fired', 'invited',
   'accused', 'envied', 'blamed', 'congratulated', 'trained',
-  'insulted', 'calmed', 'motivated', 'offended', 'avoided'
+  'insulted', 'calmed', 'motivated', 'offended', 'avoided',
+
+  'met', 'kicked', 'emailed', 'texted', 'criticized'
 ] %}
 
 {% for word, prob in V_trans_not_omissible|zipf -%}

@@ -3,5 +3,7 @@
 
 	"blessed": "bless", "observed": "observe", "saw": "see", "noticed": "notice", "watched": "watch", "examined": "examine", "heard": "hear", "recognized": "recognize", "trusted": "trust", "supported": "support", "guided": "guide", "kissed": "kiss", "hugged": "hug", "pushed": "push", "caught": "catch", "carried": "carry", "saved": "save", "called": "call", "investigated": "investigate", "knew": "know", "believed": "believe",
 
-	"forgave": "forgive", "followed": "follow", "thanked": "thank", "reminded": "remind", "consulted": "consult", "questioned": "question", "challenged": "challenge", "hired": "hire", "fired": "fire", "invited": "invite", "accused": "accuse", "envied": "envy", "blamed": "blame", "congratulated": "congratulate", "trained": "train", "insulted": "insult", "calmed": "calm", "motivated": "motivate", "offended": "offend", "avoided": "avoid"
+	"forgave": "forgive", "followed": "follow", "thanked": "thank", "reminded": "remind", "consulted": "consult", "questioned": "question", "challenged": "challenge", "hired": "hire", "fired": "fire", "invited": "invite", "accused": "accuse", "envied": "envy", "blamed": "blame", "congratulated": "congratulate", "trained": "train", "insulted": "insult", "calmed": "calm", "motivated": "motivate", "offended": "offend", "avoided": "avoid",
+
+	"met": "meet", "kicked": "kick", "emailed": "email", "texted": "text", "criticized": "criticize"
 }
