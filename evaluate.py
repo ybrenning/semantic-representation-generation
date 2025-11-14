@@ -89,9 +89,8 @@ def get_non_rep_lines(response_path, non_null_lines, batch_size):
     return non_null_lines
 
 
-def get_consistent_lines(response_path, non_null_lines, batch_size):
+def get_consistent_lines(response_path, non_null_lines, batch_size, verbose):
     valid_lines = non_null_lines
-    valid_batches = non_null_lines.all(axis=0)
     vf_lines = []
 
     for i in range(0, batch_size):
@@ -104,13 +103,13 @@ def get_consistent_lines(response_path, non_null_lines, batch_size):
 
         with open(varfree_path, "r") as f:
             vf_lines_cur = np.array(f.readlines(), dtype=object)
-        vf_lines.append(vf_lines_cur[valid_batches])
+        vf_lines.append(vf_lines_cur)
 
     vf_lines = np.array(vf_lines, dtype=object).T.tolist()
 
     pattern = re.compile(r'^(\w+)\s*\(\s*agent\s*=\s*\*?\s*(\w+)', re.M)
 
-    for i, batch in enumerate(vf_lines, start=1):
+    for i, batch in enumerate(vf_lines):
         verbs, agents = [], []
         for line in batch:
             m = pattern.match(line.strip())
@@ -123,11 +122,20 @@ def get_consistent_lines(response_path, non_null_lines, batch_size):
 
         for j, (v, a) in enumerate(zip(verbs, agents)):
             if v != main_verb or a != main_agent:
-                print(
-                    f"Batch {i+1}, sentence {j+1}: "
-                    f"Verb/agent mismatch (verb='{v}', agent='{a}')"
-                )
+                if verbose:
+                    print(
+                        f"Batch {i+1}, sentence {j+1}: "
+                        f"Verb/agent mismatch: expected "
+                        f"(main_verb='{main_verb}', main_agent='{main_agent}),"
+                        f" actual (verb='{v}', agent='{a}')"
+                    )
                 valid_lines[j, i] = False
+            else:
+                ...
+                # print(v, a, "consistent with", main_verb, main_agent)
+
+    if verbose:
+        print()
 
     return valid_lines
 
@@ -167,7 +175,7 @@ def main():
 
     if dataset_type == "batch":
         lines_consistent = get_consistent_lines(
-            response_path, lines_non_null, batch_size
+            response_path, lines_non_null, batch_size, verbose=verbose
         )
         print("Sentences w/ consistent main S/V")
         accs_cons = get_accuracies(lines_consistent, verbose=verbose)
