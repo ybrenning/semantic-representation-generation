@@ -95,10 +95,12 @@ I would like you to repeat this process in {n_batches} sets of 6 sentences.
 
 Constraints:
 
-- Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
-- Make sure the content makes logical sense
+- Always use the *same* main subject, main verb and following object and embedded verb throughout the 6 sentences
+- The embedded subjects and verbs must also remain the same throughout the set
+
 - Make sure embedded subjects and verbs within the same sentence are *different from one another*
   * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
+- Make sure the content makes logical sense
 
 So your task is to generate {n_batches} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
@@ -162,17 +164,23 @@ def get_derivations(dataset_type, rec_depth=None):
 (S
   (NP_animate_nsubj_main_RC_modified
     (NP_animate_nsubj_rec
-        (NP_animate_nsubj_main
-          (Det)
-          (N_common_animate_nsubj)
-        )
+      (NP_animate_nsubj_main
+        (Det)
+        (N_common_animate_nsubj)
+      )
     )
     (Rel_pron)
     (VP_RC_agent
-      (V_unerg)
+      (V_trans_not_omissible)
+      (NP_dobj
+        (NP_animate_dobj
+          (Det)
+          (N_common_animate_dobj)
+        )
+      )
     )
   )
-  (VP_main_anim_subj
+  (VP_RC_agent
     (V_trans_not_omissible)
     (NP_dobj
       (NP_animate_dobj
