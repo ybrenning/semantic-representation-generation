@@ -14,6 +14,7 @@ def clean_line(line):
         return f"({inside})"
 
     cleaned = re.sub(r"\(([^()]*)\)", normalize_commas, cleaned)
+    cleaned += " [0.0]"
     return cleaned
 
 
@@ -31,31 +32,31 @@ grammars = [
 
 out_file = "combined-grammars-6.irtg"
 
-header = """
-
-
-interpretation english: de.up.ling.irtg.algebra.StringAlgebra
-interpretation semantics: de.saar.coli.algebra.OrderedFeatureTreeAlgebra
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
+# header = """
+#
+#
+# interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+# interpretation semantics: de.saar.coli.algebra.OrderedFeatureTreeAlgebra
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# """
 seen = set()
 with open(out_file, "w") as f_out:
-    f_out.write(header)
+    # f_out.write(header)
     for grammar in grammars:
         with open(grammar, "r") as f_in:
             skip_count = 0
