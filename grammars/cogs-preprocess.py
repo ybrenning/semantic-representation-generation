@@ -89,3 +89,7 @@ def main():
     with open(grammar_path, "w") as f:
         f.write(aligned_string)
         print("Saved preprocessed grammar to", grammar_path)
+
+
+if __name__ == "__main__":
+    main()
