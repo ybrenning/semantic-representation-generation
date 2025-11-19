@@ -202,29 +202,29 @@ def generate_rec_cp_rules(n):
     grammar_path = f"grammars/slog-rec_pp_{n}.irtg"
 
     out = """
-S! -> r{{ cnt.next() }}(NP_animate_nsubj, VP_CP_0) [0.96]
+S! -> r{{ cnt.next() }}(NP_animate_nsubj, VP_CP_0) [0.0]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
-
-
     """
+
+    # Generate VP_CP_i and S_i for i = 0 .. n-2
     for i in range(0, n - 1):
         out += f"""
-VP_CP_{i} -> S_embedded_cp_E{{{{ cnt.next() }}}}(V_cp_taking, C, S_{i}) [1]
+VP_CP_{i} -> S_embedded_cp_E{{{{ cnt.next() }}}}(V_cp_taking, C, S_{i}) [0.0]
 [english] *(?1, *(?2, ?3))
 [semantics] ccomp(?1, ?3)
 
-S_{i} -> r{{{{ cnt.next() }}}}(NP_animate_nsubj, VP_CP_{i+1}) [0.96]
+S_{i} -> r{{{{ cnt.next() }}}}(NP_animate_nsubj, VP_CP_{i+1}) [0.0]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
-
-VP_CP_1 -> S_embedded_cp_E{{{{ cnt.next() }}}}(V_cp_taking, C, S_1) [1]
-[english] *(?1, *(?2, ?3))
-[semantics] ccomp(?1, ?3)
         """
 
     out += f"""
-S_{n-1} -> r{{{{ cnt.next() }}}}(NP_animate_nsubj, VP_external) [0.01]
+VP_CP_{n-1} -> S_embedded_cp_E{{{{ cnt.next() }}}}(V_cp_taking, C, S_{n-1}) [0.0]
+[english] *(?1, *(?2, ?3))
+[semantics] ccomp(?1, ?3)
+
+S_{n-1} -> r{{{{ cnt.next() }}}}(NP_animate_nsubj, VP_external) [0.0]
 [english] *(?1, ?2)
 [semantics] pre_agent(?2, ?1)
     """
