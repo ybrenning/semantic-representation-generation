@@ -88,7 +88,15 @@ Constraints:
 
 So your task is to generate {n_batches} sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
-        ...
+    elif dataset_type == "slog-rec_cp":
+        return f"""
+Constraints:
+
+- Make sure the content makes logical sense
+- Make sure to have *variation* in the verbs, subjects and objects within one sentence
+
+So your task is to generate {n_batches} sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+        """
     if n_batches > 1:
         return f"""
 I would like you to repeat this process in {n_batches} sets of 6 sentences.
@@ -328,7 +336,220 @@ def get_derivations(dataset_type, rec_depth=None):
 ```
         """
 
+    elif dataset_type == "slog-rec_cp":
+        if rec_depth == 2:
+            derivations = """
+```
+(S
+  (NP_animate_nsubj
+    (Det)
+    (N_common_animate_nsubj)
+  )
+  (VP_CP
+    (V_cp_taking)
+    (C)
+    (S
+      (NP_animate_nsubj
+        (Det)
+        (N_common_animate_nsubj)
+      )
+      (VP_CP
+        (V_cp_taking)
+        (C)
+        (S
+          (NP_animate_nsubj
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (VP_external)
+        )
+      )
+    )
+  )
+)
+```
+            """
+        elif rec_depth == 3:
+            derivations = """
+```
+(S
+  (NP_animate_nsubj
+    (Det)
+    (N_common_animate_nsubj)
+  )
+  (VP_CP
+    (V_cp_taking)
+    (C)
+    (S
+      (NP_animate_nsubj
+        (Det)
+        (N_common_animate_nsubj)
+      )
+      (VP_CP
+        (V_cp_taking)
+        (C)
+        (S
+          (NP_animate_nsubj
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (VP_CP
+            (V_cp_taking)
+            (C)
+            (S
+              (NP_animate_nsubj
+                (Det)
+                (N_common_animate_nsubj)
+              )
+              (VP_external)
+            )
+          )
+        )
+      )
+    )
+  )
+)
+```
+            """
+        elif rec_depth == 4:
+            derivations = """
+```
+(S
+  (NP_animate_nsubj
+    (Det)
+    (N_common_animate_nsubj)
+  )
+  (VP_CP
+    (V_cp_taking)
+    (C)
+    (S
+      (NP_animate_nsubj
+        (Det)
+        (N_common_animate_nsubj)
+      )
+      (VP_CP
+        (V_cp_taking)
+        (C)
+        (S
+          (NP_animate_nsubj
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (VP_CP
+            (V_cp_taking)
+            (C)
+            (S
+              (NP_animate_nsubj
+                (Det)
+                (N_common_animate_nsubj)
+              )
+              (VP_CP
+                (V_cp_taking)
+                (C)
+                (S
+                  (NP_animate_nsubj
+                    (Det)
+                    (N_common_animate_nsubj)
+                  )
+                  (VP_external)
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+```
+            """
+        elif rec_depth == 5:
+            derivations = """
+```
+(S
+  (NP_animate_nsubj
+    (Det)
+    (N_common_animate_nsubj)
+  )
+  (VP_CP
+    (V_cp_taking)
+    (C)
+    (S
+      (NP_animate_nsubj
+        (Det)
+        (N_common_animate_nsubj)
+      )
+      (VP_CP
+        (V_cp_taking)
+        (C)
+        (S
+          (NP_animate_nsubj
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (VP_CP
+            (V_cp_taking)
+            (C)
+            (S
+              (NP_animate_nsubj
+                (Det)
+                (N_common_animate_nsubj)
+              )
+              (VP_CP
+                (V_cp_taking)
+                (C)
+                (S
+                  (NP_animate_nsubj
+                    (Det)
+                    (N_common_animate_nsubj)
+                  )
+                  (VP_CP
+                    (V_cp_taking)
+                    (C)
+                    (S
+                      (NP_animate_nsubj
+                        (Det)
+                        (N_common_animate_nsubj)
+                      )
+                      (VP_external)
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+```
+            """
+        else:
+            raise ValueError("Invalid recursion depth")
+
     return derivations
+"""
+(S
+  (NP_animate_nsubj
+    (Det)
+    (N_common_animate_nsubj)
+  )
+  (VP_CP
+    (V_cp_taking)
+    (C)
+    (S
+      ... repeat {rec_depth} times
+        (S
+          (NP_animate_nsubj
+            (Det)
+            (N_common_animate_nsubj)
+          )
+          (VP_external)
+        )
+    )
+  )
+"""
 
 
 def prompt_from_grammar(
@@ -365,7 +586,7 @@ Importantly, you'll need to restrict the words to the following lexicon of termi
 
 Output just the numbered sentences without any extra information.
         """
-    elif dataset_type == "slog-rec_pp":
+    else:
         prompt = f"""
 You are an expert linguist. You need to generate sentences based on the following context-free grammar:
 

@@ -17,7 +17,7 @@ from postprocess import postprocess_varfree
 
 slog_datasets = [
     "slog-rec_pp",
-    "slog-rec-cp",
+    "slog-rec_cp",
     "slog-rec_center_emb",
     ...
 
@@ -39,13 +39,30 @@ def generation_loop(
     responses = ""
     for _ in range(n_prompts):
         # Maybe also save the generated prompts?
-        for depth in [depth_train, depth_gen]:
+        prompt = prompt_from_grammar(
+            dataset_type,
+            grammar_path,
+            n_batches=n_batches,
+            k=30,
+            rec_depth=depth_train,
+        )
+
+        response = test_pipeline(
+            prompt,
+            temperature=0.5,
+            top_p=0.9,
+            verbose=verbose
+        )
+        responses += response + "\n"
+
+    if depth_gen is not None:
+        for _ in range(n_prompts):
             prompt = prompt_from_grammar(
                 dataset_type,
                 grammar_path,
                 n_batches=n_batches,
                 k=30,
-                rec_depth=depth,
+                rec_depth=depth_gen,
             )
 
             response = test_pipeline(
@@ -55,9 +72,6 @@ def generation_loop(
                 verbose=verbose
             )
             responses += response + "\n"
-
-            if depth is None:
-                break
 
     response_path = f"generation/responses/{dataset_type}"
 
@@ -126,6 +140,13 @@ def parse_args():
         parser.error(
             "Specify recursion depths for train and generalization (-rt -rg)"
         )
+    if (
+        "rec" not in args.dataset_type and
+        (args.rec_depth_train or args.rec_depth_gen)
+    ):
+        parser.error(
+            "Recursion depths provided for non-recursive dataset"
+        )
 
     if not args.grammar_path.endswith(".irtg"):
         parser.error("The grammar file must have a .irtg extension")
@@ -146,29 +167,23 @@ def main():
     if dataset_type == "batch":
         batch_size = 6
         control_grammars = [
-            "grammars/g1.irtg",
-            "grammars/g2.irtg",
-            "grammars/g3.irtg",
-            "grammars/g4.irtg",
-            "grammars/g5.irtg",
-            "grammars/g6.irtg"
+            "grammars/preprocessed-g1.irtg",
+            "grammars/preprocessed-g2.irtg",
+            "grammars/preprocessed-g3.irtg",
+            "grammars/preprocessed-g4.irtg",
+            "grammars/preprocessed-g5.irtg",
+            "grammars/preprocessed-g6.irtg"
         ]
     elif dataset_type == "slog-rec_pp":
         control_grammars = [
-            f"grammars/preprocessed-rec_pp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-rec_pp_{rec_depth_gen}.irtg",
+            f"grammars/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg",
         ]
         batch_size = 2
     elif dataset_type == "slog-rec_cp":
-        raise NotImplementedError
         control_grammars = [
-            ...
-        ]
-        batch_size = 2
-    elif dataset_type == "slog-rec_cp":
-        raise NotImplementedError
-        control_grammars = [
-            ...
+            f"grammars/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg",
         ]
         batch_size = 2
     elif dataset_type == "slog-rec_center_emb":
@@ -178,7 +193,8 @@ def main():
         ]
         batch_size = 2
 
-    n_sents = n_prompts * n_batches * batch_size
+    sents_per_batch = n_prompts * n_batches
+    n_sents_total = sents_per_batch * batch_size
 
     metrics = {}
 
@@ -191,7 +207,7 @@ def main():
     metrics["dataset_type"] = dataset_type
     metrics["n_prompts"] = n_prompts
     metrics["n_batches"] = n_batches
-    metrics["n_sents"] = n_sents
+    metrics["n_sents_total"] = n_sents_total
     english, semantics = [], []
     while len(semantics) != (n_batches*n_prompts):
         # Generation step
@@ -207,10 +223,14 @@ def main():
 
         # Format and parse model outputs
         format_sents(
-            dataset_type, response_path, batch_size, n_batches, verbose=verbose
+            dataset_type,
+            response_path,
+            batch_size,
+            n_batches,
+            n_prompts,
+            verbose=verbose
         )
 
-        # TODO: How to parse variable recursion depths ??
         oov_pct_total, oov_pct_sent = parse_sents(
             response_path,
             prompt_grammar,
@@ -227,13 +247,16 @@ def main():
         non_null_lines = get_non_null_lines(
             response_path, batch_size
         )
+
+        print("Parse accuracies")
         accs = get_accuracies(non_null_lines, verbose=verbose)
         accs_list.append(accs)
 
         if dataset_type == "batch":
             consistent_lines = get_consistent_lines(
-                response_path, non_null_lines, batch_size
+                response_path, non_null_lines, batch_size, verbose=verbose
             )
+            print("Sentences w/ consistent main S/V")
             consistent_accs = get_accuracies(consistent_lines, verbose=verbose)
             consistent_accs_list.append(consistent_accs)
         else:
@@ -242,6 +265,7 @@ def main():
         non_rep_lines = get_non_rep_lines(
             response_path, consistent_lines, batch_size
         )
+        print("Non-repetition sentences")
         rep_accs = get_accuracies(non_rep_lines, verbose=verbose)
         rep_accs_list.append(rep_accs)
 

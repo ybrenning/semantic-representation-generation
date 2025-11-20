@@ -7,7 +7,7 @@ rel_prons = ["which", "who", "whom"]
 
 
 def format_sents(
-        dataset_type, response_path, batch_size, n_batches, verbose=False
+        dataset_type, response_path, batch_size, n_batches, n_prompts, verbose=False
 ):
     """
     From the raw GPT-5 output saved in the `responses` directory,
@@ -25,13 +25,15 @@ def format_sents(
     the farmer hugged a dog
     the queen saved a patient
     """
+    sents_per_batch = n_batches * n_prompts
     with open(response_path, "r") as f:
-        lines = f.readlines()
+        lines = [line for line in f.readlines() if line.strip()]
 
+    assert len(lines) == batch_size * n_batches * n_prompts
     sent_types = [[] for _ in range(batch_size)]
     for line in lines:
-        if not line[0].isdigit():
-            continue
+        # if not line[0].isdigit():
+        #     continue
 
         if dataset_type == "batch":
             assert 1 <= (n := int(line[0])) <= batch_size
@@ -56,7 +58,8 @@ def format_sents(
         if dataset_type == "batch":
             sent_types[n - 1].append(sent)
         else:
-            if len(sent_types[0]) < n_batches:
+            print(sent_types)
+            if len(sent_types[0]) < sents_per_batch:
                 sent_types[0].append(sent)
             else:
                 sent_types[1].append(sent)
@@ -215,7 +218,7 @@ def parse_sents(
 def main():
     slog_datasets = [
         "slog-rec_pp",
-        "slog-rec-cp",
+        "slog-rec_cp",
         "slog-rec_center_emb",
         ...
 
@@ -242,11 +245,11 @@ def main():
         type=str,
         help="Path to the IRTG grammar file"
     )
-    parser.add_argument(
-        "n_batches",
-        type=int,
-        help="Number of batches per prompt"
-    )
+    # parser.add_argument(
+    #     "n_batches",
+    #     type=int,
+    #     help="Number of batches per prompt"
+    # )
     parser.add_argument(
         "-rt", "--rec_depth_train",
         type=int,
@@ -265,10 +268,25 @@ def main():
 
     args = parser.parse_args()
 
+    if (
+        "rec" in args.dataset_type and
+        (not args.rec_depth_train or not args.rec_depth_gen)
+    ):
+        parser.error(
+            "Specify recursion depths for train and generalization (-rt -rg)"
+        )
+    if (
+        "rec" not in args.dataset_type and
+        (args.rec_depth_train or args.rec_depth_gen)
+    ):
+        parser.error(
+            "Recursion depths provided for non-recursive dataset"
+        )
+
     dataset_type = args.dataset_type
     response_path = args.response_path
     prompt_grammar = args.grammar_path
-    n_batches = args.n_batches
+    # n_batches = args.n_batches
     rec_depth_train = args.rec_depth_train
     rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
@@ -276,22 +294,29 @@ def main():
     if dataset_type == "batch":
         batch_size = 6
         control_grammars = [
-            "grammars/g1.irtg",
-            "grammars/g2.irtg",
-            "grammars/g3.irtg",
-            "grammars/g4.irtg",
-            "grammars/g5.irtg",
-            "grammars/g6.irtg"
+            "grammars/preprocessed-g1.irtg",
+            "grammars/preprocessed-g2.irtg",
+            "grammars/preprocessed-g3.irtg",
+            "grammars/preprocessed-g4.irtg",
+            "grammars/preprocessed-g5.irtg",
+            "grammars/preprocessed-g6.irtg"
         ]
     elif dataset_type == "slog-rec_pp":
-        # TODO: grammars must correspond to recursion depths
         control_grammars = [
-            f"grammars/preprocessed-rec_pp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-rec_pp_{rec_depth_gen}.irtg"
+            f"grammars/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg"
+        ]
+        batch_size = 2
+    elif dataset_type == "slog-rec_cp":
+        control_grammars = [
+            f"grammars/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
+            f"grammars/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg"
         ]
         batch_size = 2
 
-    format_sents(dataset_type, response_path, batch_size, n_batches, verbose)
+    n_batches = 2
+    n_prompts = 2
+    format_sents(dataset_type, response_path, batch_size, n_batches, n_prompts, verbose)
 
     oov_pct_total, oov_pct_sent = parse_sents(
         response_path,
