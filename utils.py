@@ -199,7 +199,7 @@ PP_iobj -> r{{ cnt.next() }} (P_iobj,NP_animate_iobj)[1]
 def generate_rec_cp_rules(n):
     assert n >= 2, "Recursion depth must be greater than or equal to two"
 
-    grammar_path = f"grammars/slog-rec_pp_{n}.irtg"
+    grammar_path = f"grammars/slog-rec_cp_{n}.irtg"
 
     out = """
 S! -> r{{ cnt.next() }}(NP_animate_nsubj, VP_CP_0) [0.0]
@@ -289,3 +289,4 @@ NP_animate_dobj -> r{{ cnt.next() }}(Det, N_common_animate_dobj) [0.25]
 
     with open(grammar_path, "w") as f:
         f.write(out + base_grammar)
+        print("Saved grammar to", grammar_path)

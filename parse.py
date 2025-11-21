@@ -7,7 +7,7 @@ rel_prons = ["which", "who", "whom"]
 
 
 def format_sents(
-        dataset_type, response_path, batch_size, n_batches, n_prompts, verbose=False
+        dataset_type, response_path, batch_size, n_batches, n_prompts, verbose
 ):
     """
     From the raw GPT-5 output saved in the `responses` directory,
@@ -27,7 +27,10 @@ def format_sents(
     """
     sents_per_batch = n_batches * n_prompts
     with open(response_path, "r") as f:
-        lines = [line for line in f.readlines() if line.strip()]
+        lines = [
+            line for line in f.readlines()
+            if line.strip() and line[0].isdigit()
+        ]
 
     assert len(lines) == batch_size * n_batches * n_prompts
     sent_types = [[] for _ in range(batch_size)]
