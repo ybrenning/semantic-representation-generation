@@ -76,28 +76,3 @@ def test_pipeline(
         print("-" * 50)
 
     return response
-
-
-def get_structure(number: int, variation: str, category: str) -> str:
-    """Get structure type based on number and variation."""
-    # Determine sentence type from file name
-    structures = {
-        1: 'baseline',
-        2: 'control',
-        3: 'standard_subject',
-        4: 'standard_object',
-        5: 'nested_subject',
-        6: 'nested_object',
-    }
-
-    base_structure = structures.get(number, 'unknown')
-    if base_structure == 'unknown':
-        print(f"Unknown structure number: {number}")
-
-    # Convert variation to letter index (a=1, b=2, c=3, etc.)
-    if not variation:
-        variation_num = 'a'  # Default to 'a' if no variation
-    else:
-        variation_num = variation.lower()
-
-    return f"{base_structure}_{variation_num}"
