@@ -167,23 +167,23 @@ def main():
     if dataset_type == "batch":
         batch_size = 6
         control_grammars = [
-            "grammars/preprocessed-g1.irtg",
-            "grammars/preprocessed-g2.irtg",
-            "grammars/preprocessed-g3.irtg",
-            "grammars/preprocessed-g4.irtg",
-            "grammars/preprocessed-g5.irtg",
-            "grammars/preprocessed-g6.irtg"
+            "grammars/batch/preprocessed-g1.irtg",
+            "grammars/batch/preprocessed-g2.irtg",
+            "grammars/batch/preprocessed-g3.irtg",
+            "grammars/batch/preprocessed-g4.irtg",
+            "grammars/batch/preprocessed-g5.irtg",
+            "grammars/batch/preprocessed-g6.irtg"
         ]
     elif dataset_type == "slog-rec_pp":
         control_grammars = [
-            f"grammars/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg",
+            f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
+            f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg",
         ]
         batch_size = 2
     elif dataset_type == "slog-rec_cp":
         control_grammars = [
-            f"grammars/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg",
+            f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
+            f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg",
         ]
         batch_size = 2
     elif dataset_type == "slog-rec_center_emb":
