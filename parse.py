@@ -181,7 +181,7 @@ def parse_sents(
 
         varfree_path = sent_path.replace("english", "varfree_lf")
         command = (
-            "java -cp ../alto/build/libs/alto-2.3.8-SNAPSHOT-all.jar "
+            "java -cp alto-2.3.9-SNAPSHOT-all.jar "
             "de.up.ling.irtg.script.ParsingEvaluator "
             f"-g {sent_grammar_path} "
             "-I english -O semantics=cogs "
