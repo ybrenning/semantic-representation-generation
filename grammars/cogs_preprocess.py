@@ -1,4 +1,5 @@
 import argparse
+import os
 import numpy as np
 from scipy.stats import zipf
 from jinja2 import Environment, FileSystemLoader
@@ -85,7 +86,15 @@ def main():
     if verbose:
         print(aligned_string)
 
-    grammar_path = "preprocessed-" + grammar_path
+    dirname, filename = os.path.split(grammar_path)
+
+    preprocessed_filename = "preprocessed-" + filename
+
+    if dirname:
+        grammar_path = os.path.join(dirname, preprocessed_filename)
+    else:
+        grammar_path = preprocessed_filename
+
     with open(grammar_path, "w") as f:
         f.write(aligned_string)
         print("Saved preprocessed grammar to", grammar_path)
