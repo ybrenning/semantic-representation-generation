@@ -1,0 +1,40 @@
+S! -> S_subj_modif_main_agent_E{{ cnt.next() }}(NP_animate_nsubj_main_RC_modified, VP_main_anim_subj) [0.4]
+[english] *(?1, ?2)
+[semantics] pre_agent(?2, ?1)
+
+NP_animate_nsubj_main_RC_modified -> S_RC_agent_subj_extracted_E{{ cnt.next() }}(NP_animate_nsubj_rec, Rel_pron, VP_RC_agent) [0.35]
+[english] *(*(?1, ?2),?3)
+[semantics] 'nmod<that>'(?1, pre_agent(?3,?2))
+
+NP_animate_nsubj_main -> r{{ cnt.next() }}(Det, N_common_animate_nsubj) [0.5]
+[english] *(?1, ?2)
+[semantics] pre_det(?2, ?1)
+
+NP_animate_nsubj_main -> r{{ cnt.next() }}(N_prop_nsubj) [0.5]
+[english] ?1
+[semantics] ?1
+
+NP_animate_nsubj_rec -> r{{ cnt.next() }}(NP_animate_nsubj_main) [0.5]
+[english] ?1
+[semantics] ?1
+
+NP_animate_nsubj_rec -> r{{ cnt.next() }}(NP_animate_nsubj_main_RC_modified) [0.5]
+[english] ?1
+[semantics] ?1
+
+VP_RC_agent -> r{{ cnt.next() }}(V_unerg) [0.10525]
+[english] ?1
+[semantics] ?1
+
+VP_main_anim_subj -> r{{ cnt.next() }}(V_trans_not_omissible, NP_dobj) [0.10525]
+[english] *(?1, ?2)
+[semantics] theme(?1, ?2)
+
+NP_dobj -> r{{ cnt.next() }}(NP_animate_dobj) [0.5]
+[english] ?1
+[semantics] ?1
+pre_det(?2, ?1)
+
+NP_animate_dobj -> r{{ cnt.next() }}(Det, N_common_animate_dobj) [0.25]
+[english] *(?1, ?2)
+[semantics] pre_det(?2, ?1)
