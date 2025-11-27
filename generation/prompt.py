@@ -125,7 +125,65 @@ So your task is to generate 6 sentences, from a restricted vocabulary, all deriv
         """
 
 
-def get_derivations(dataset_type, rec_depth=None):
+def get_derivations(dataset_type, rec_depth=None, prev_sent_three=False):
+    if prev_sent_three:
+        sent_three_deriv = """
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_rec
+        (NP_animate_nsubj_main
+          (Det)
+          (N_common_animate_nsubj)
+        )
+    )
+    (Rel_pron)
+    (VP_RC_agent
+      (V_unerg)
+    )
+  )
+  (VP_main_anim_subj
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)
+      )
+    )
+  )
+)
+    """
+else:
+    """
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_rec
+      (NP_animate_nsubj_main
+        (Det)
+        (N_common_animate_nsubj)
+      )
+    )
+    (Rel_pron)
+    (VP_RC_agent
+      (V_trans_not_omissible)
+      (NP_dobj
+        (NP_animate_dobj
+          (Det)
+          (N_common_animate_dobj)
+        )
+      )
+    )
+  )
+  (VP_RC_agent
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)
+      )
+    )
+  )
+)
+    """
     if dataset_type == "batch":
         derivations = """
 1.
@@ -169,35 +227,7 @@ def get_derivations(dataset_type, rec_depth=None):
 
 3.
 ```
-(S
-  (NP_animate_nsubj_main_RC_modified
-    (NP_animate_nsubj_rec
-      (NP_animate_nsubj_main
-        (Det)
-        (N_common_animate_nsubj)
-      )
-    )
-    (Rel_pron)
-    (VP_RC_agent
-      (V_trans_not_omissible)
-      (NP_dobj
-        (NP_animate_dobj
-          (Det)
-          (N_common_animate_dobj)
-        )
-      )
-    )
-  )
-  (VP_RC_agent
-    (V_trans_not_omissible)
-    (NP_dobj
-      (NP_animate_dobj
-        (Det)
-        (N_common_animate_dobj)
-      )
-    )
-  )
-)
+{sent_three_deriv}
 ```
 
 4.
@@ -558,8 +588,13 @@ def prompt_from_grammar(
     n_batches,
     k=None,
     rec_depth=None,
+    prev_sent_three=False,
 ):
-    derivations = get_derivations(dataset_type, rec_depth=rec_depth)
+    derivations = get_derivations(
+        dataset_type,
+        rec_depth=rec_depth,
+        prev_sent_three=prev_sent_three
+    )
 
     rules, lexicon = read_grammar(grammar_path, k)
     constraints = get_constraints(dataset_type, n_batches)

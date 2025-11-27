@@ -34,7 +34,8 @@ def generation_loop(
     n_batches,
     depth_train=None,
     depth_gen=None,
-    verbose=False
+    prev_sent_three=prev_sent_three,
+    verbose=False,
 ):
     responses = ""
     for _ in range(n_prompts):
@@ -45,6 +46,7 @@ def generation_loop(
             n_batches=n_batches,
             k=30,
             rec_depth=depth_train,
+            prev_sent_three=prev_sent_three,
         )
 
         response = test_pipeline(
@@ -55,6 +57,8 @@ def generation_loop(
         )
         responses += response + "\n"
 
+    # SLOG-like dataset - run second prompt loop w/ recursion depth
+    # TODO: Handle non-recursive SLOG-like datasets
     if depth_gen is not None:
         for _ in range(n_prompts):
             prompt = prompt_from_grammar(
@@ -63,6 +67,7 @@ def generation_loop(
                 n_batches=n_batches,
                 k=30,
                 rec_depth=depth_gen,
+                prev_sent_three=prev_sent_three,
             )
 
             response = test_pipeline(
@@ -165,6 +170,7 @@ def main():
     verbose = args.verbose
 
     if dataset_type == "batch":
+        prev_sent_three = False
         batch_size = 6
         control_grammars = [
             "grammars/batch/preprocessed-g1.irtg",
@@ -174,6 +180,16 @@ def main():
             "grammars/batch/preprocessed-g5.irtg",
             "grammars/batch/preprocessed-g6.irtg"
         ]
+        if dataset_type.endswith("-prev"):
+            prev_sent_three = True
+            control_grammars = [
+                "grammars/batch/preprocessed-g1.irtg",
+                "grammars/batch/preprocessed-g2.irtg",
+                "grammars/batch/preprocessed-g3-v0.irtg",
+                "grammars/batch/preprocessed-g4.irtg",
+                "grammars/batch/preprocessed-g5.irtg",
+                "grammars/batch/preprocessed-g6.irtg"
+            ]
     elif dataset_type == "slog-rec_pp":
         control_grammars = [
             f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
@@ -218,6 +234,7 @@ def main():
             n_batches,
             depth_train=rec_depth_train,
             depth_gen=rec_depth_gen,
+            prev_sent_three=prev_sent_three,
             verbose=verbose
         )
 
