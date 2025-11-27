@@ -61,7 +61,6 @@ def format_sents(
         if dataset_type == "batch":
             sent_types[n - 1].append(sent)
         else:
-            print(sent_types)
             if len(sent_types[0]) < sents_per_batch:
                 sent_types[0].append(sent)
             else:
