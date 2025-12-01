@@ -1,0 +1,8 @@
+believe ( agent = * moose , ccomp = appreciate ( agent = * poet , ccomp = smile ( agent = * horse ) ) )
+admire ( agent = * horse , ccomp = hope ( agent = * guest , ccomp = imagine ( agent = * scientist , ccomp = wish ( agent = * hero , ccomp = laugh ( agent = * dog ) ) ) ) )
+imagine ( agent = frog , ccomp = hope ( agent = * kitty , ccomp = dance ( agent = * bird ) ) )
+declare ( agent = * king , ccomp = respect ( agent = * director , ccomp = say ( agent = * researcher , ccomp = confess ( agent = * driver , ccomp = giggle ( agent = * politician ) ) ) ) )
+confess ( agent = * doctor , ccomp = imagine ( agent = * sailor , ccomp = nap ( agent = * king ) ) )
+believe ( agent = * sailor , ccomp = imagine ( agent = * boy , ccomp = respect ( agent = * child , ccomp = declare ( agent = * professor , ccomp = dance ( agent = * girl ) ) ) ) )
+respect ( agent = pig , ccomp = like ( agent = visitor , ccomp = run ( agent = * moose ) ) )
+admire ( agent = * citizen , ccomp = confess ( agent = * visitor , ccomp = hope ( agent = * customer , ccomp = expect ( agent = * driver , ccomp = run ( agent = * director ) ) ) ) )

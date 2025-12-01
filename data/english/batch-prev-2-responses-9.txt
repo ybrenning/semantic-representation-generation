@@ -1,0 +1,30 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the scientist observed the butterfly
+the scientist on the counter observed the butterfly
+the scientist that sneezed observed the butterfly
+the scientist that the journalist met observed the butterfly
+the scientist that noticed the pickle that was eaten by the judge observed the butterfly
+the scientist that the journalist that the boy trained met observed the butterfly
+the captain discovered the hero
+the captain in the bookstore discovered the hero
+the captain that ran discovered the hero
+the captain that the lawyer followed discovered the hero
+the captain that recognized the guitar that was sketched by the princess discovered the hero
+the captain that the lawyer that the queen helped followed discovered the hero
+the doctor respected the teacher
+the doctor on the road respected the teacher
+the doctor that laughed respected the teacher
+the doctor that the captain followed respected the teacher
+the doctor that believed the game that was painted by the captain respected the teacher
+the doctor that the captain that the kid trusted followed respected the teacher
+the captain watched the hero
+the captain beside the sculpture watched the hero
+the captain that jogged watched the hero
+the captain that the kid carried watched the hero
+the captain that hugged the chair that was cleaned by the kid watched the hero
+the captain that the kid that the teacher liked carried watched the hero

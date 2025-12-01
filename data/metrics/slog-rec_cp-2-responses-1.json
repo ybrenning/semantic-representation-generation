@@ -1,0 +1,1 @@
+{"dataset_type": "slog-rec_cp", "n_prompts": 2, "n_batches": 2, "n_sents_total": 8, "oov_pct_total": [0.0], "oov_pct_sent": [0.0], "accs": [{"sent_accs": [1.0, 1.0], "batch_acc": 1.0}], "consistent_accs": [], "rep_accs": [{"sent_accs": [1.0, 1.0], "batch_acc": 1.0}], "n_loops": 1}

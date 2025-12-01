@@ -1,0 +1,14 @@
+
+// IRTG unannotated corpus file, v1.0
+//
+// interpretation english: de.up.ling.irtg.algebra.StringAlgebra
+
+
+the moose believed that the poet appreciated that the horse smiled
+the horse admired that the guest hoped that the scientist imagined that the hero wished that the dog laughed
+a frog imagined that the kitty hoped that the bird danced
+the king declared that the director respected that the researcher said that the driver confessed that the politician giggled
+the doctor confessed that the sailor imagined that the king napped
+the sailor believed that the boy imagined that the child respected that the professor declared that the girl danced
+a pig respected that a visitor liked that the moose ran
+the citizen admired that the visitor confessed that the customer hoped that the driver expected that the director ran
