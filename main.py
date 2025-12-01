@@ -103,11 +103,6 @@ def parse_args():
         help="Type of generation to attempt (batch or slog)"
     )
     parser.add_argument(
-        "grammar_path",
-        type=str,
-        help="Path to the IRTG grammar file"
-    )
-    parser.add_argument(
         "n_prompts",
         type=int,
         help="Number of times to prompt the model"
@@ -150,16 +145,12 @@ def parse_args():
             "Recursion depths provided for non-recursive dataset"
         )
 
-    if not args.grammar_path.endswith(".irtg"):
-        parser.error("The grammar file must have a .irtg extension")
-
     return args
 
 
 def main():
     args = parse_args()
     dataset_type = args.dataset_type
-    prompt_grammar = args.grammar_path
     n_prompts = args.n_prompts
     n_batches = args.n_batches
     rec_depth_train = args.rec_depth_train
@@ -168,6 +159,8 @@ def main():
 
     if dataset_type.startswith("batch"):
         batch_size = 6
+
+        prompt_grammar = "grammars/batch/preprocessed-combined-6.irtg"
         control_grammars = [
             "grammars/batch/preprocessed-g1.irtg",
             "grammars/batch/preprocessed-g2.irtg",
@@ -176,27 +169,31 @@ def main():
             "grammars/batch/preprocessed-g5.irtg",
             "grammars/batch/preprocessed-g6.irtg"
         ]
-        if dataset_type.endswith("-prev"):
-            control_grammars = [
-                "grammars/batch/preprocessed-g1.irtg",
-                "grammars/batch/preprocessed-g2.irtg",
-                "grammars/batch/preprocessed-g3-v0.irtg",
-                "grammars/batch/preprocessed-g4.irtg",
-                "grammars/batch/preprocessed-g5.irtg",
-                "grammars/batch/preprocessed-g6.irtg"
-            ]
+    elif dataset_type == "batch-prev":
+        batch_size = 6
+        prompt_grammar = "grammars/batch/preprocessed-combined-grammars-prev.irtg"
+        control_grammars = [
+            "grammars/batch/preprocessed-g1.irtg",
+            "grammars/batch/preprocessed-g2.irtg",
+            "grammars/batch/preprocessed-g3-v0.irtg",
+            "grammars/batch/preprocessed-g4.irtg",
+            "grammars/batch/preprocessed-g5.irtg",
+            "grammars/batch/preprocessed-g6.irtg"
+        ]
     elif dataset_type == "slog-rec_pp":
+        batch_size = 2
+        prompt_grammar = "grammars/slog/preprocessed-slog-rec_pp.irtg"
         control_grammars = [
             f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
             f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg",
         ]
-        batch_size = 2
     elif dataset_type == "slog-rec_cp":
+        batch_size = 2
+        prompt_grammar = "grammars/slog/preprocessed-slog-rec_cp.irtg"
         control_grammars = [
             f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
             f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg",
         ]
-        batch_size = 2
     elif dataset_type == "slog-rec_center_emb":
         raise NotImplementedError
         control_grammars = [
