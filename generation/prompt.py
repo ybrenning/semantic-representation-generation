@@ -97,18 +97,16 @@ Constraints:
 
 So your task is to generate {n_batches} sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
-    if n_batches > 1:
-        return f"""
+    if dataset_type == "batch-prev" and n_batches > 1:
+                return f"""
 I would like you to repeat this process in {n_batches} sets of 6 sentences.
 
 Constraints:
 
-- Always use the *same* main subject, main verb and following object and embedded verb throughout the 6 sentences
-- The embedded subjects and verbs must also remain the same throughout the set
-
+- Always use the *same* main subject, main verb and following object throughout the set (6 sentences)
+- Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different from one another*
   * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
-- Make sure the content makes logical sense
 
 So your task is to generate {n_batches} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
@@ -125,8 +123,8 @@ So your task is to generate 6 sentences, from a restricted vocabulary, all deriv
         """
 
 
-def get_derivations(dataset_type, rec_depth=None, prev_sent_three=False):
-    if prev_sent_three:
+def get_derivations(dataset_type, rec_depth=None):
+    if dataset_type == "batch-prev":
         sent_three_deriv = """
 (S
   (NP_animate_nsubj_main_RC_modified
@@ -151,9 +149,9 @@ def get_derivations(dataset_type, rec_depth=None, prev_sent_three=False):
     )
   )
 )
-    """
-else:
-    """
+        """
+    elif dataset_type == "batch":
+        sent_three_deriv = """
 (S
   (NP_animate_nsubj_main_RC_modified
     (NP_animate_nsubj_rec
@@ -183,9 +181,9 @@ else:
     )
   )
 )
-    """
-    if dataset_type == "batch":
-        derivations = """
+        """
+    if dataset_type.startswith("batch"):
+        derivations = f"""
 1.
 ```
 (S
@@ -588,12 +586,10 @@ def prompt_from_grammar(
     n_batches,
     k=None,
     rec_depth=None,
-    prev_sent_three=False,
 ):
     derivations = get_derivations(
         dataset_type,
         rec_depth=rec_depth,
-        prev_sent_three=prev_sent_three
     )
 
     rules, lexicon = read_grammar(grammar_path, k)

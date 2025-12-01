@@ -34,7 +34,6 @@ def generation_loop(
     n_batches,
     depth_train=None,
     depth_gen=None,
-    prev_sent_three=prev_sent_three,
     verbose=False,
 ):
     responses = ""
@@ -46,7 +45,6 @@ def generation_loop(
             n_batches=n_batches,
             k=30,
             rec_depth=depth_train,
-            prev_sent_three=prev_sent_three,
         )
 
         response = test_pipeline(
@@ -67,7 +65,6 @@ def generation_loop(
                 n_batches=n_batches,
                 k=30,
                 rec_depth=depth_gen,
-                prev_sent_three=prev_sent_three,
             )
 
             response = test_pipeline(
@@ -102,7 +99,7 @@ def parse_args():
     )
     parser.add_argument(
         "dataset_type",
-        choices=["batch"] + slog_datasets,
+        choices=["batch", "batch-prev"] + slog_datasets,
         help="Type of generation to attempt (batch or slog)"
     )
     parser.add_argument(
@@ -169,8 +166,7 @@ def main():
     rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
 
-    if dataset_type == "batch":
-        prev_sent_three = False
+    if dataset_type.startswith("batch"):
         batch_size = 6
         control_grammars = [
             "grammars/batch/preprocessed-g1.irtg",
@@ -181,7 +177,6 @@ def main():
             "grammars/batch/preprocessed-g6.irtg"
         ]
         if dataset_type.endswith("-prev"):
-            prev_sent_three = True
             control_grammars = [
                 "grammars/batch/preprocessed-g1.irtg",
                 "grammars/batch/preprocessed-g2.irtg",
@@ -234,7 +229,6 @@ def main():
             n_batches,
             depth_train=rec_depth_train,
             depth_gen=rec_depth_gen,
-            prev_sent_three=prev_sent_three,
             verbose=verbose
         )
 

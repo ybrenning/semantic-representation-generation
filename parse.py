@@ -38,7 +38,7 @@ def format_sents(
         # if not line[0].isdigit():
         #     continue
 
-        if dataset_type == "batch":
+        if dataset_type.startswith("batch"):
             assert 1 <= (n := int(line[0])) <= batch_size
         else:
             assert 1 <= (n := int(line[0])) <= n_batches
@@ -51,14 +51,14 @@ def format_sents(
         ])
         sent = sent.replace(" an ", " the ")
 
-        if dataset_type == "batch" and n == 1:
+        if dataset_type.startswith("batch") and n == 1:
             batch_det = sent.split(" ")[0]
             sent = batch_det + " " + " ".join(sent.split(" ")[1:])
 
         sent = sent.replace(",", "")
         sent = sent.strip()
         sent = sent.rstrip(".")
-        if dataset_type == "batch":
+        if dataset_type.startswith("batch"):
             sent_types[n - 1].append(sent)
         else:
             if len(sent_types[0]) < sents_per_batch:
@@ -299,6 +299,16 @@ def main():
             "grammars/preprocessed-g1.irtg",
             "grammars/preprocessed-g2.irtg",
             "grammars/preprocessed-g3.irtg",
+            "grammars/preprocessed-g4.irtg",
+            "grammars/preprocessed-g5.irtg",
+            "grammars/preprocessed-g6.irtg"
+        ]
+    elif dataset_type == "batch-prev":
+        batch_size = 6
+        control_grammars = [
+            "grammars/preprocessed-g1.irtg",
+            "grammars/preprocessed-g2.irtg",
+            "grammars/preprocessed-g3-v0.irtg",
             "grammars/preprocessed-g4.irtg",
             "grammars/preprocessed-g5.irtg",
             "grammars/preprocessed-g6.irtg"
