@@ -33,7 +33,6 @@ VP_main_anim_subj -> r{{ cnt.next() }}(V_trans_not_omissible, NP_dobj) [0.10525]
 NP_dobj -> r{{ cnt.next() }}(NP_animate_dobj) [0.5]
 [english] ?1
 [semantics] ?1
-pre_det(?2, ?1)
 
 NP_animate_dobj -> r{{ cnt.next() }}(Det, N_common_animate_dobj) [0.25]
 [english] *(?1, ?2)

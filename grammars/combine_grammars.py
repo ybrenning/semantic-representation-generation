@@ -22,15 +22,15 @@ grammars = [
     # "base/main-grammar.irtg",
     # "base/RC_modifying_dobj_NP_main-grammar.irtg",
     # "base/RC_modifying_subject_NP_gen-grammar.irtg"
-    "g1.irtg",
-    "g2.irtg",
-    "g3.irtg",
-    "g4.irtg",
-    "g5.irtg",
-    "g6.irtg"
+    "batch/g1.irtg",
+    "batch/g2.irtg",
+    "batch/g3-v0.irtg",
+    "batch/g4.irtg",
+    "batch/g5.irtg",
+    "batch/g6.irtg"
 ]
 
-out_file = "combined-grammars-6.irtg"
+out_file = "combined-grammars-prev.irtg"
 
 # header = """
 #
