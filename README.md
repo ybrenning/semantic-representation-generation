@@ -10,7 +10,7 @@ The base grammars, from Li et al. (2023) are currently in the IRTG (Interpreted 
 
 This part of the workflow can be found in `grammars` directory of this repository, which also makes use of SLOG's original [preprocessing source code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/grammars). This also applies to the [postprocessing code](https://github.com/bingzhilee/SLOG/tree/main/generation_scripts/varfree2cogs_converter) used in later parts of the workflow.
 
-The resulting English grammar can then simply be used as part of a GPT model prompt (more information can be found in the `prompts` directory), or with a constrained decoding library in order to generate English sentences.
+The resulting English grammar can then simply be used as part of a GPT model prompt (more information can be found in the `prompts` directory), or with a constrained decoding library in order to generate English sentences (work in progress).
 
 These English sentences must then be annotated in order to obtain a semantic representation for each one. To this end, we use the Alto parser employed by SLOG in order to create semantic representations for each sentence. These are generated in the so-called *variable-free logical form* (LF), and are converted to the unambiguous COGS LF using the postprocessing script adapted from Li et al.
 
@@ -60,16 +60,16 @@ $ . venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Run the script with the preprocessed CFG and the number of times to prompt as a command line argument:
+Run the script by passing in the dataset type, number of prompts and number of batches per prompt. Check [the wiki](https://github.com/ybrenning/semantic-representation-generation/wiki#script-usage) for information on the possible arguments.
 
-```bash
-$ python3 main.py grammars/preprocessed-combined.irtg 10
+```text
+$ python main.py batch 2 2 --verbose
 ``` 
 
 Similarly, the `parse` and `evaluate` modules can also be executed as scripts separately. Note that the step is only executable if the files of the previous pipeline steps have already been generated. For example, we can use the `evaluate` script as follows:
 
-```bash
-$ python3 evaluate.py batch generation/responses/batch-2-responses-1.txt --verbose 
+```text
+$ python evaluate.py batch generation/responses/batch-2-responses-1.txt --verbose 
 
 Parse accuracies
 ╒═════════════════╤════════════╕
