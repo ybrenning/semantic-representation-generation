@@ -228,7 +228,7 @@ def main():
         accs = get_accuracies(non_null_lines, verbose=verbose)
         accs_list.append(accs)
 
-        if dataset_type == "batch":
+        if dataset_type.startswith("batch"):
             consistent_lines = get_consistent_lines(
                 response_path, non_null_lines, batch_size, verbose=verbose
             )
