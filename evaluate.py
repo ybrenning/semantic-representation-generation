@@ -130,9 +130,6 @@ def get_consistent_lines(response_path, non_null_lines, batch_size, verbose):
                         f" actual (verb='{v}', agent='{a}')"
                     )
                 valid_lines[j, i] = False
-            else:
-                ...
-                # print(v, a, "consistent with", main_verb, main_agent)
 
     if verbose:
         print()
@@ -142,13 +139,13 @@ def get_consistent_lines(response_path, non_null_lines, batch_size, verbose):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Execute data generation pipeline"
+        description="Execute evaluation step"
     )
 
     parser.add_argument(
         "dataset_type",
-        choices=["batch", "slog"],
-        help="Type of generation to attempt (batch or slog)"
+        choices=["batch", "batch-prev", "slog"],
+        help="Type of evaluation to attempt (batch or slog)"
     )
     parser.add_argument(
         "response_path",
@@ -167,13 +164,13 @@ def main():
     dataset_type = args.dataset_type
     verbose = args.verbose
 
-    batch_size = 6 if dataset_type == "batch" else 2
+    batch_size = 6 if dataset_type.startswith("batch") else 2
 
     lines_non_null = get_non_null_lines(response_path, batch_size)
     print("Parse accuracies")
     accs = get_accuracies(lines_non_null, verbose=verbose)
 
-    if dataset_type == "batch":
+    if dataset_type.startswith("batch"):
         lines_consistent = get_consistent_lines(
             response_path, lines_non_null, batch_size, verbose=verbose
         )
