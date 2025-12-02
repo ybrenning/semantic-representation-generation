@@ -1,3 +1,4 @@
+import argparse
 import re
 import regex
 from collections import defaultdict
@@ -198,32 +199,9 @@ def varfree_to_cogs_lf(sent, varfreeLF):
         return " AND ".join(main_lf)
 
 
-def conversion_precision():
-    """Conversion precision test using original cogs generalization set
-    and its variable-free format from Qiu et al. 2022
-    """
-    varfree_lf_file = "cogs_two_formats/gen_varfree_lf.tsv"
-    cogs_file = "cogs_two_formats/gen_cogs_lf.tsv"
-    df_varfree = pd.read_csv(
-        varfree_lf_file, sep="\t", names=["sent", "varfree_lf", "type"]
-    )
-    df_cogs = pd.read_csv(
-        cogs_file, sep="\t", names=["sent", "cogs_lf", "type"]
-    )
-    df_varfree["converted_lf"] = df_varfree.apply(
-        lambda x: varfree_to_cogs_lf(x.sent, x.varfree_lf), axis=1
-    )
-    df_varfree["cogs_lf"] = df_cogs["cogs_lf"]
-    exact_match = (df_varfree["converted_lf"] == df_varfree["cogs_lf"]).sum()
-    total_items = df_varfree.shape[0]
-    ratio = exact_match / total_items
-    print(
-        f"Exact match rate between converted LFs and original cogs LFs: "
-        f"{exact_match}/{total_items} ({ratio*100:.1f}%)"
-    )
-
-
-def postprocess_varfree(sent_path, varfree_path, verbose=False):
+def postprocess_varfree(
+        sent_path, varfree_path, verbose=False, save=False
+):
     with open(sent_path, "r", encoding="utf-8") as f1:
         col1 = [
             line.strip() for line in f1
@@ -256,13 +234,8 @@ def postprocess_varfree(sent_path, varfree_path, verbose=False):
     )
 
     cogs_path = create_out_path(
-        "data/cogs_lf", sent_path, check_exists=True, ext=".tsv"
+        "data/cogs_lf", sent_path, check_exists=save, ext=".tsv"
     )
-    df_alto[["source", "cogs_lf"]].to_csv(
-        cogs_path,
-        sep='\t', index=False, header=False
-    )
-    print("Saved COGS LF to", cogs_path)
 
     # df_alto[["source", "varfree_lf", "types"]].to_csv(
     #     "data/varfree_lf/varfree_" + grammar_prefix + ".tsv",
@@ -274,11 +247,51 @@ def postprocess_varfree(sent_path, varfree_path, verbose=False):
         print("")
         print(df_alto[["source", "cogs_lf"]])
 
+    if save:
+        df_alto[["source", "cogs_lf"]].to_csv(
+            cogs_path,
+            sep='\t', index=False, header=False
+        )
+        print("Saved COGS LF to", cogs_path)
+
 
 def main():
-    sent_path = "data/english/prompt-newest-response-22.txt"
-    varfree_path = "data/varfree_lf/prompt-newest-response-22.txt"
-    postprocess_varfree(sent_path, varfree_path, verbose=True)
+    parser = argparse.ArgumentParser(
+        description="Run postprocessing step"
+    )
+
+    parser.add_argument(
+        "response_path",
+        type=str,
+        help="Path to the unformatted response"
+    )
+    parser.add_argument(
+        "-s", "--save",
+        action="store_true",
+        help="Save (potentially overwrite) postprocessed table"
+    )
+
+    args = parser.parse_args()
+
+    response_path = args.response_path
+    save = args.save
+
+    sent_path = create_out_path(
+        f"data/english/",
+        response_path,
+        check_exists=False,
+        ext=".txt"
+    )
+    varfree_path = create_out_path(
+        f"data/varfree_lf/",
+        response_path,
+        check_exists=False,
+        ext=".txt"
+    )
+
+    postprocess_varfree(
+        sent_path, varfree_path, verbose=True, save=save
+    )
 
 
 if __name__ == "__main__":
