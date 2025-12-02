@@ -32,7 +32,11 @@ def format_sents(
             if line.strip() and line[0].isdigit()
         ]
 
-    assert len(lines) == batch_size * n_batches * n_prompts
+    assert (
+        len(lines) == batch_size * n_batches * n_prompts,
+        f"{len(lines)} != {batch_size * n_batches * n_prompts}"
+    )
+
     sent_types = [[] for _ in range(batch_size)]
     for line in lines:
         # if not line[0].isdigit():

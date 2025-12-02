@@ -11,7 +11,12 @@ from evaluate import (
     get_accuracies
 )
 from generation.prompt import prompt_from_grammar
-from utils import get_safe_filename, en_header, create_out_path
+from utils import (
+    get_safe_filename,
+    en_header,
+    create_out_path,
+    grammars_from_dataset
+)
 from postprocess import postprocess_varfree
 
 
@@ -157,49 +162,12 @@ def main():
     rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
 
-    if dataset_type.startswith("batch"):
-        batch_size = 6
-
-        prompt_grammar = "grammars/batch/preprocessed-combined-6.irtg"
-        control_grammars = [
-            "grammars/batch/preprocessed-g1.irtg",
-            "grammars/batch/preprocessed-g2.irtg",
-            "grammars/batch/preprocessed-g3.irtg",
-            "grammars/batch/preprocessed-g4.irtg",
-            "grammars/batch/preprocessed-g5.irtg",
-            "grammars/batch/preprocessed-g6.irtg"
-        ]
-    elif dataset_type == "batch-prev":
-        batch_size = 6
-        prompt_grammar = "grammars/batch/preprocessed-combined-grammars-prev.irtg"
-        control_grammars = [
-            "grammars/batch/preprocessed-g1.irtg",
-            "grammars/batch/preprocessed-g2.irtg",
-            "grammars/batch/preprocessed-g3-v0.irtg",
-            "grammars/batch/preprocessed-g4.irtg",
-            "grammars/batch/preprocessed-g5.irtg",
-            "grammars/batch/preprocessed-g6.irtg"
-        ]
-    elif dataset_type == "slog-rec_pp":
-        batch_size = 2
-        prompt_grammar = "grammars/slog/preprocessed-slog-rec_pp.irtg"
-        control_grammars = [
-            f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
-            f"grammars/slog/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg",
-        ]
-    elif dataset_type == "slog-rec_cp":
-        batch_size = 2
-        prompt_grammar = "grammars/slog/preprocessed-slog-rec_cp.irtg"
-        control_grammars = [
-            f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
-            f"grammars/slog/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg",
-        ]
-    elif dataset_type == "slog-rec_center_emb":
-        raise NotImplementedError
-        control_grammars = [
-            ...
-        ]
-        batch_size = 2
+    prompt_grammar, control_grammars = grammars_from_dataset(
+        dataset_type,
+        rec_depth_train,
+        rec_depth_gen
+    )
+    batch_size = len(control_grammars)
 
     sents_per_batch = n_prompts * n_batches
     n_sents_total = sents_per_batch * batch_size
