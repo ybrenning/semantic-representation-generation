@@ -13,7 +13,7 @@ def grammars_from_dataset(dataset_type, rec_depth_train=None, rec_depth_gen=None
                 "grammars/batch/preprocessed-g6.irtg"
             ]
         )
-    elif dataset_type == "batch_prev":
+    elif dataset_type == "batch-prev":
         return (
             "grammars/batch/preprocessed-combined-grammars-prev.irtg",
             [
