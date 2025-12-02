@@ -1,17 +1,30 @@
 import argparse
+import tempfile
+import os
 import subprocess
-from utils import read_grammar, en_header, create_out_path
+from utils import (
+    read_grammar,
+    en_header,
+    create_out_path,
+    grammars_from_dataset
+)
 
 
 rel_prons = ["which", "who", "whom"]
 
 
 def format_sents(
-        dataset_type, response_path, batch_size, n_batches, n_prompts, verbose
+    dataset_type,
+    response_path,
+    batch_size,
+    n_batches,
+    n_prompts,
+    verbose=False,
+    save=False,
 ):
     """
-    From the raw GPT-5 output saved in the `responses` directory,
-    write a file into the `english` directory that contains the
+    From the raw GPT-4o output saved in the `generation/responses` directory,
+    write a file into the `output/english` directory that contains the
     sentences in an Alto-parseable format like this:
 
 
@@ -32,10 +45,8 @@ def format_sents(
             if line.strip() and line[0].isdigit()
         ]
 
-    assert (
-        len(lines) == batch_size * n_batches * n_prompts,
-        f"{len(lines)} != {batch_size * n_batches * n_prompts}"
-    )
+    assert len(lines) == batch_size * n_batches * n_prompts, \
+           f"{len(lines)} != {batch_size * n_batches * n_prompts}"
 
     sent_types = [[] for _ in range(batch_size)]
     for line in lines:
@@ -78,9 +89,13 @@ def format_sents(
             check_exists=False,
             ext=".txt"
         )
-        with open(sent_path, "w") as f:
-            f.write(en_header + content + "\n")
-            if verbose:
+
+        if verbose:
+            print(en_header + content + "\n")
+
+        if save:
+            with open(sent_path, "w") as f:
+                f.write(en_header + content + "\n")
                 print("Saved formatted sentences to", sent_path)
 
 
@@ -127,7 +142,8 @@ def parse_sents(
     prompt_grammar,
     control_grammars,
     batch_size,
-    verbose=False
+    verbose=False,
+    save=False
 ):
     """
     The main parse function takes the response name as well as the
@@ -182,7 +198,13 @@ def parse_sents(
         # Use the separate sentence grammars to parse
         sent_grammar_path = control_grammars[i % batch_size]
 
-        varfree_path = sent_path.replace("english", "varfree_lf")
+        if save:
+            varfree_path = sent_path.replace("english", "varfree_lf")
+        else:
+            tmp_file = tempfile.NamedTemporaryFile(delete=False)
+            tmp_file.close()
+            varfree_path = tmp_file.name
+
         command = (
             "java -cp alto-2.3.9-SNAPSHOT-all.jar "
             "de.up.ling.irtg.script.ParsingEvaluator "
@@ -196,6 +218,12 @@ def parse_sents(
         if verbose:
             subprocess.run(command, shell=True)
             print()
+
+            with open(varfree_path, "r") as f:
+                print(f.read())
+
+            if not save:
+                os.remove(varfree_path)
         else:
             subprocess.run(
                 command, shell=True, capture_output=True, text=True
@@ -233,12 +261,12 @@ def main():
         # for each type of dataset
     ]
     parser = argparse.ArgumentParser(
-        description="Execute data generation pipeline"
+        description="Execute format and parse steps"
     )
 
     parser.add_argument(
         "dataset_type",
-        choices=["batch"] + slog_datasets,
+        choices=["batch", "batch-prev"] + slog_datasets,
         help="Type of generation to attempt (batch or slog)"
     )
     parser.add_argument(
@@ -247,15 +275,15 @@ def main():
         help="Path to the unformatted response"
     )
     parser.add_argument(
-        "grammar_path",
-        type=str,
-        help="Path to the IRTG grammar file"
+        "n_prompts",
+        type=int,
+        help="Number of times to prompt"
     )
-    # parser.add_argument(
-    #     "n_batches",
-    #     type=int,
-    #     help="Number of batches per prompt"
-    # )
+    parser.add_argument(
+        "n_batches",
+        type=int,
+        help="Number of batches per prompt"
+    )
     parser.add_argument(
         "-rt", "--rec_depth_train",
         type=int,
@@ -270,6 +298,11 @@ def main():
         "-v", "--verbose",
         action="store_true",
         help="Enable verbose output"
+    )
+    parser.add_argument(
+        "-s", "--save",
+        action="store_true",
+        help="Save (potentially overwrite) formatted english sentences"
     )
 
     args = parser.parse_args()
@@ -291,55 +324,37 @@ def main():
 
     dataset_type = args.dataset_type
     response_path = args.response_path
-    prompt_grammar = args.grammar_path
-    # n_batches = args.n_batches
+    n_prompts = args.n_prompts
+    n_batches = args.n_batches
     rec_depth_train = args.rec_depth_train
     rec_depth_gen = args.rec_depth_gen
     verbose = args.verbose
+    save = args.save
 
-    if dataset_type == "batch":
-        batch_size = 6
-        control_grammars = [
-            "grammars/preprocessed-g1.irtg",
-            "grammars/preprocessed-g2.irtg",
-            "grammars/preprocessed-g3.irtg",
-            "grammars/preprocessed-g4.irtg",
-            "grammars/preprocessed-g5.irtg",
-            "grammars/preprocessed-g6.irtg"
-        ]
-    elif dataset_type == "batch-prev":
-        batch_size = 6
-        control_grammars = [
-            "grammars/preprocessed-g1.irtg",
-            "grammars/preprocessed-g2.irtg",
-            "grammars/preprocessed-g3-v0.irtg",
-            "grammars/preprocessed-g4.irtg",
-            "grammars/preprocessed-g5.irtg",
-            "grammars/preprocessed-g6.irtg"
-        ]
-    elif dataset_type == "slog-rec_pp":
-        control_grammars = [
-            f"grammars/preprocessed-slog-rec_pp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-slog-rec_pp_{rec_depth_gen}.irtg"
-        ]
-        batch_size = 2
-    elif dataset_type == "slog-rec_cp":
-        control_grammars = [
-            f"grammars/preprocessed-slog-rec_cp_{rec_depth_train}.irtg",
-            f"grammars/preprocessed-slog-rec_cp_{rec_depth_gen}.irtg"
-        ]
-        batch_size = 2
+    prompt_grammar, control_grammars = grammars_from_dataset(
+        dataset_type,
+        rec_depth_train,
+        rec_depth_gen
+    )
+    batch_size = len(control_grammars)
 
-    n_batches = 2
-    n_prompts = 2
-    format_sents(dataset_type, response_path, batch_size, n_batches, n_prompts, verbose)
+    format_sents(
+        dataset_type, 
+        response_path,
+        batch_size,
+        n_batches,
+        n_prompts,
+        verbose=verbose,
+        save=save
+    )
 
     oov_pct_total, oov_pct_sent = parse_sents(
         response_path,
         prompt_grammar,
         control_grammars,
         batch_size,
-        verbose=verbose
+        verbose=verbose,
+        save=save
     )
 
 
