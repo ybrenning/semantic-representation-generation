@@ -204,7 +204,8 @@ def main():
             batch_size,
             n_batches,
             n_prompts,
-            verbose=verbose
+            verbose=verbose,
+            save=True
         )
 
         oov_pct_total, oov_pct_sent = parse_sents(
@@ -212,7 +213,8 @@ def main():
             prompt_grammar,
             control_grammars,
             batch_size,
-            verbose=verbose
+            verbose=verbose,
+            save=True
         )
 
         # Evaluate and filter
