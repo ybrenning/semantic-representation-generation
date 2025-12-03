@@ -110,7 +110,7 @@ Constraints:
 
 So your task is to generate {n_batches} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
-    else:
+    elif dataset_type == "batch_prev" and n_batches == 1:
         return """
 Constraints:
 
@@ -118,6 +118,32 @@ Constraints:
 - Make sure the content makes logical sense
 - Make sure embedded subjects and verbs within the same sentence are *different from one another*
   * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
+
+So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+        """
+    if dataset_type == "batch" and n_batches > 1:
+                return f"""
+I would like you to repeat this process in {n_batches} sets of 6 sentences.
+
+Constraints:
+
+- Always use the *same* subjects, verbs and following objects throughout the set (6 sentences)
+- Make sure the content makes logical sense
+- Make sure embedded subjects and verbs within the same sentence are *different from one another*
+  * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
+- Entities may vary within each sentence, but remain consistent across the set
+
+So your task is to generate {n_batches} sets of 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
+        """
+    elif dataset_type == "batch" and n_batches == 1:
+        return """
+Constraints:
+
+- Always use the *same* subjects, verbs and following objects throughout the set (6 sentences)
+- Make sure the content makes logical sense
+- Make sure embedded subjects and verbs within the same sentence are *different from one another*
+  * In other words, V_trans_not_omissible_1 != V_trans_not_omissible_2 != V_trans_not_omissible_3
+- Entities may vary within each sentence, but remain consistent across the set
 
 So your task is to generate 6 sentences, from a restricted vocabulary, all derived from specific grammar rules. You need to follow the constraints.
         """
@@ -150,6 +176,44 @@ def get_derivations(dataset_type, rec_depth=None):
   )
 )
         """
+        sent_five_deriv = """
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_rec
+      (NP_animate_nsubj_main
+        (Det)
+        (N_common_animate_nsubj
+      )
+      (Rel_pron)
+      (VP_RC_agent
+        (V_trans_not_omissible)
+        (NP_inanimate_dobj_rec
+          (NP_inanimate_dobj_RC_modified
+            (NP_inanimate_dobj_rec
+              (NP_inanimate_dobj
+                (Det)
+                (N_common_inanimate_dobj)
+              )
+            )
+            (Rel_pron)
+            (VP_RC_pass_theme)
+          )
+        )
+      )
+    )
+  )
+  (VP_main_anim_subj
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)
+      )
+    )
+  )
+)
+        """
+
     elif dataset_type == "batch":
         sent_three_deriv = """
 (S
@@ -158,6 +222,51 @@ def get_derivations(dataset_type, rec_depth=None):
       (NP_animate_nsubj_main
         (Det)
         (N_common_animate_nsubj)
+      )
+    )
+    (Rel_pron)
+    (VP_RC_agent
+      (V_trans_not_omissible)
+      (NP_dobj
+        (NP_animate_dobj
+          (Det)
+          (N_common_animate_dobj)
+        )
+      )
+    )
+  )
+  (VP_RC_agent
+    (V_trans_not_omissible)
+    (NP_dobj
+      (NP_animate_dobj
+        (Det)
+        (N_common_animate_dobj)
+      )
+    )
+  )
+)
+        """
+        sent_five_deriv = """
+(S
+  (NP_animate_nsubj_main_RC_modified
+    (NP_animate_nsubj_rec
+      (NP_animate_nsubj_main_RC_modified
+        (NP_animate_nsubj_rec
+          (NP_animate_nsubj_main
+            (Det)
+            (N_common_animate_nsubj)
+          )
+        )
+        (Rel_pron)
+        (VP_RC_agent
+          (V_trans_not_omissible)
+          (NP_dobj
+            (NP_animate_dobj
+              (Det)
+              (N_common_animate_dobj)
+            )
+          )
+        )
       )
     )
     (Rel_pron)
@@ -230,6 +339,11 @@ def get_derivations(dataset_type, rec_depth=None):
 
 4.
 ```
+{sent_five_deriv}
+```
+
+5. 
+```
 (S
   (NP_animate_nsubj_main_RC_modified
     (NP_animate_nsubj_rec
@@ -247,45 +361,6 @@ def get_derivations(dataset_type, rec_depth=None):
         )
       )
       (V_trans_not_omissible)
-    )
-  )
-  (VP_main_anim_subj
-    (V_trans_not_omissible)
-    (NP_dobj
-      (NP_animate_dobj
-        (Det)
-        (N_common_animate_dobj)
-      )
-    )
-  )
-)
-```
-
-5.
-```
-(S
-  (NP_animate_nsubj_main_RC_modified
-    (NP_animate_nsubj_rec
-      (NP_animate_nsubj_main
-        (Det)
-        (N_common_animate_nsubj
-      )
-      (Rel_pron)
-      (VP_RC_agent
-        (V_trans_not_omissible)
-        (NP_inanimate_dobj_rec
-          (NP_inanimate_dobj_RC_modified
-            (NP_inanimate_dobj_rec
-              (NP_inanimate_dobj
-                (Det)
-                (N_common_inanimate_dobj)
-              )
-            )
-            (Rel_pron)
-            (VP_RC_pass_theme)
-          )
-        )
-      )
     )
   )
   (VP_main_anim_subj
