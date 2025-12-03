@@ -8,8 +8,8 @@ def grammars_from_dataset(dataset_type, rec_depth_train=None, rec_depth_gen=None
                 "grammars/batch/preprocessed-g1.irtg",
                 "grammars/batch/preprocessed-g2.irtg",
                 "grammars/batch/preprocessed-g3.irtg",
-                "grammars/batch/preprocessed-g4.irtg",
                 "grammars/batch/preprocessed-g5.irtg",
+                "grammars/batch/preprocessed-g4.irtg",
                 "grammars/batch/preprocessed-g6.irtg"
             ]
         )
@@ -21,7 +21,7 @@ def grammars_from_dataset(dataset_type, rec_depth_train=None, rec_depth_gen=None
                 "grammars/batch/preprocessed-g2.irtg",
                 "grammars/batch/preprocessed-g3-v0.irtg",
                 "grammars/batch/preprocessed-g4.irtg",
-                "grammars/batch/preprocessed-g5.irtg",
+                "grammars/batch/preprocessed-g5-v0.irtg",
                 "grammars/batch/preprocessed-g6.irtg"
             ]
         )
